@@ -1,0 +1,473 @@
+{
+  "schema_version": "beyond_proximity.ieee_revision2.predicted_maps.summary.v1",
+  "B1": {
+    "replica_denominator_rule": "run_predicted_map_pair._summarize divides by len(rows) = every benchmark query in the map scenes (56); negatives have expected_bboxes_3d=[] so best_bbox_iou_3d returns None and `or 0.0` scores them as misses",
+    "ScanNet": {
+      "flat_bge_predicted_map": {
+        "n": 48,
+        "acc_at_0_25": 0.125,
+        "acc_at_0_5": 0.020833,
+        "recall_at_3_iou_0_25": 0.1875,
+        "mean_top1_iou": 0.083659,
+        "acc_at_0_25_wilson_95": [
+          0.058571,
+          0.247005
+        ]
+      },
+      "graph_bge_predicted_map": {
+        "n": 48,
+        "acc_at_0_25": 0.125,
+        "acc_at_0_5": 0.020833,
+        "recall_at_3_iou_0_25": 0.1875,
+        "mean_top1_iou": 0.083659,
+        "acc_at_0_25_wilson_95": [
+          0.058571,
+          0.247005
+        ]
+      },
+      "native_conceptgraphs": {
+        "n": 48,
+        "acc_at_0_25": 0.0625,
+        "acc_at_0_5": 0.0,
+        "mean_top1_iou": 0.069561
+      }
+    },
+    "Replica_reported_n56": {
+      "flat_bge_predicted_map": {
+        "n": 56,
+        "acc_at_0_25": 0.053571,
+        "acc_at_0_5": 0.0,
+        "recall_at_3_iou_0_25": 0.071429,
+        "mean_top1_iou": 0.023652,
+        "acc_at_0_25_wilson_95": [
+          0.018386,
+          0.146073
+        ]
+      },
+      "graph_bge_predicted_map": {
+        "n": 56,
+        "acc_at_0_25": 0.053571,
+        "acc_at_0_5": 0.0,
+        "recall_at_3_iou_0_25": 0.071429,
+        "mean_top1_iou": 0.023652,
+        "acc_at_0_25_wilson_95": [
+          0.018386,
+          0.146073
+        ]
+      }
+    },
+    "Replica_positives_n48_original_gt": {
+      "flat_bge_predicted_map": {
+        "n": 48,
+        "acc_at_0_25": 0.0625,
+        "acc_at_0_5": 0.0,
+        "recall_at_3_iou_0_25": 0.083333,
+        "mean_top1_iou": 0.027594,
+        "acc_at_0_25_wilson_95": [
+          0.021483,
+          0.168354
+        ]
+      },
+      "graph_bge_predicted_map": {
+        "n": 48,
+        "acc_at_0_25": 0.0625,
+        "acc_at_0_5": 0.0,
+        "recall_at_3_iou_0_25": 0.083333,
+        "mean_top1_iou": 0.027594,
+        "acc_at_0_25_wilson_95": [
+          0.021483,
+          0.168354
+        ]
+      },
+      "native_conceptgraphs": {
+        "n": 48,
+        "acc_at_0_25": 0.0625,
+        "acc_at_0_5": 0.041667,
+        "mean_top1_iou": 0.062388
+      }
+    }
+  },
+  "B2_sanity_gt_as_prediction": {
+    "ScanNet": {
+      "direct_best_bbox_iou_3d": {
+        "acc_at_0_25": 1.0,
+        "acc_at_0_5": 1.0,
+        "n": 48
+      },
+      "through_run_predicted_map_pair._result_row_flat": {
+        "acc_at_0_25": 1.0,
+        "acc_at_0_5": 1.0,
+        "n": 48
+      },
+      "through_run_predicted_map_pair._result_row_graph": {
+        "acc_at_0_25": 1.0,
+        "acc_at_0_5": 1.0,
+        "n": 48
+      }
+    },
+    "Replica": {
+      "direct_best_bbox_iou_3d": {
+        "acc_at_0_25": 1.0,
+        "acc_at_0_5": 1.0,
+        "n": 48
+      },
+      "through_run_predicted_map_pair._result_row_flat": {
+        "acc_at_0_25": 1.0,
+        "acc_at_0_5": 1.0,
+        "n": 48
+      },
+      "through_run_predicted_map_pair._result_row_graph": {
+        "acc_at_0_25": 1.0,
+        "acc_at_0_5": 1.0,
+        "n": 48
+      }
+    }
+  },
+  "B2_frame_checks": {
+    "ScanNet": {
+      "identity (as evaluated)": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.2406,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 0.6499,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 1.1841,
+        "same_label_n": 18,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.125,
+        "native_cg_acc_at_0_25": 0.0625,
+        "native_cg_acc_at_0_5": 0.0,
+        "native_cg_mean_iou": 0.069561
+      },
+      "pred <- axisAlignment @ pred (hyp: preds in raw .sens frame)": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.0,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 3.3653,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 4.8374,
+        "same_label_n": 18,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.0,
+        "native_cg_acc_at_0_25": 0.0,
+        "native_cg_acc_at_0_5": 0.0,
+        "native_cg_mean_iou": 0.001142
+      },
+      "pred <- inv(axisAlignment) @ pred (hyp: double alignment)": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.0,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 3.2769,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 3.8789,
+        "same_label_n": 18,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.0417,
+        "native_cg_acc_at_0_25": 0.0,
+        "native_cg_acc_at_0_5": 0.0,
+        "native_cg_mean_iou": 0.000856
+      },
+      "pred Y-up -> Z-up": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.0086,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 2.0312,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 2.2731,
+        "same_label_n": 18,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.0,
+        "native_cg_acc_at_0_25": 0.0,
+        "native_cg_acc_at_0_5": 0.0,
+        "native_cg_mean_iou": 0.006678
+      }
+    },
+    "Replica": {
+      "GT as_used (abb, orientation dropped); pred identity": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.065,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 1.127,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 1.5586,
+        "same_label_n": 17,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.0833,
+        "native_cg_acc_at_0_25": 0.0625,
+        "native_cg_acc_at_0_5": 0.041667,
+        "native_cg_mean_iou": 0.062388
+      },
+      "GT R*abb+t (orientation applied); pred identity": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.407,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 0.5414,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 0.3564,
+        "same_label_n": 17,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.2917,
+        "native_cg_acc_at_0_25": 0.270833,
+        "native_cg_acc_at_0_5": 0.145833,
+        "native_cg_mean_iou": 0.190965
+      },
+      "GT R^T*abb+t; pred identity": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.0363,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 1.3156,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 2.1905,
+        "same_label_n": 17,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.0833,
+        "native_cg_acc_at_0_25": 0.0625,
+        "native_cg_acc_at_0_5": 0.041667,
+        "native_cg_mean_iou": 0.052245
+      },
+      "GT as_used; pred Y-up -> Z-up": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.0,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 1.6936,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 2.2822,
+        "same_label_n": 17,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.0,
+        "native_cg_acc_at_0_25": 0.0,
+        "native_cg_acc_at_0_5": 0.0,
+        "native_cg_mean_iou": 0.003991
+      },
+      "GT as_used; pred Z-up -> Y-up": {
+        "median_best_iou_of_known_pred_vs_any_gt": 0.0,
+        "gt_target_to_nearest_known_pred_center_median_m_any_label": 1.9344,
+        "gt_target_to_nearest_known_pred_center_median_m_same_label": 2.1224,
+        "same_label_n": 17,
+        "frac_targets_with_known_pred_iou_ge_0_25_lower_bound": 0.0,
+        "native_cg_acc_at_0_25": 0.0,
+        "native_cg_acc_at_0_5": 0.0,
+        "native_cg_mean_iou": 0.006983
+      }
+    }
+  },
+  "B2_bug": {
+    "found": true,
+    "dataset": "Replica only",
+    "location": "scripts/import_replica_semantic_mesh.py boxes_from_info_semantic: uses info_semantic.json oriented_bbox.abb center/sizes as a world AABB and drops oriented_bbox.orientation (rotation quaternion; translation is 0 for all 575 objects)",
+    "fix": "world AABB of R*abb corners + t; corrected queries in outputs/ieee_revision2/predicted_maps/replica_queries_corrected_gt_boxes.json",
+    "scannet": "no frame bug found: identity is the best of 4 tested transforms"
+  },
+  "corrected_native_conceptgraphs_replica_n48": {
+    "acc_at_0_25": {
+      "value": 0.270833,
+      "numerator": 13,
+      "denominator": 48,
+      "wilson_95": [
+        0.16566,
+        0.40997
+      ]
+    },
+    "acc_at_0_5": {
+      "value": 0.145833,
+      "numerator": 7,
+      "denominator": 48,
+      "wilson_95": [
+        0.072482,
+        0.271672
+      ]
+    },
+    "mean_top1_iou": 0.190965
+  },
+  "corrected_bge_replica": {
+    "status": "BLOCKED: raw ConceptGraphs maps (native_data/*/pcd_*.pkl.gz) are not on this machine (run_config gt_source points to C:\\GitProjects\\beyond-proximity); script ready: scripts/run_predicted_map_pair_corrected.py",
+    "partial_subset_top1_box_saved": {
+      "n": 8,
+      "original_gt_acc_at_0_25": 0.0,
+      "corrected_gt_acc_at_0_25": 0.5,
+      "note": "8 of 48 positives; flat and hierarchical identical; not representative"
+    }
+  },
+  "hierarchy_used_on_predicted_maps": "recursive spatial median split (<=12 objects/leaf); branch score = max BGE leaf proxy; softmax T=0.1, cumulative mass 0.7, cap 5; plus global top-1 (m=1); keep top k=3 by the same BGE score. Structurally Algorithm 1 (max_leaf_proxy, adaptive mass, m=1) but implemented separately in run_predicted_map_pair.py, not by backend/query/recall_controlled.py, and with (tau=0.7,T=0.1) rather than the paper BGE setting (0.5,0.1,5,1). Because the leaf scorer equals the proxy and the flat top-1 is always in C, top-1 is identical to flat by construction (104/104 rows).",
+  "oracle_same_scorer_flat_bge": {
+    "scannet_core:label": {
+      "n": 48,
+      "acc_at_0_25": 0.354167,
+      "acc_at_0_5": 0.333333,
+      "recall_at_1": 0.333333,
+      "recall_at_3": 0.854167,
+      "hier_acc_at_0_25": 0.354167
+    },
+    "scannet_core:candidate_text": {
+      "n": 48,
+      "acc_at_0_25": 0.25,
+      "acc_at_0_5": 0.25,
+      "recall_at_1": 0.25,
+      "recall_at_3": 0.666667,
+      "hier_acc_at_0_25": 0.25
+    },
+    "replica:label": {
+      "n": 48,
+      "acc_at_0_25": 1.0,
+      "acc_at_0_5": 1.0,
+      "recall_at_1": 1.0,
+      "recall_at_3": 1.0,
+      "hier_acc_at_0_25": 1.0
+    },
+    "replica:candidate_text": {
+      "n": 48,
+      "acc_at_0_25": 0.9375,
+      "acc_at_0_5": 0.9375,
+      "recall_at_1": 0.9375,
+      "recall_at_3": 1.0,
+      "hier_acc_at_0_25": 0.9375
+    }
+  },
+  "oracle_saved_v3_flat_embedding_reproduced": {
+    "scannet_core_acc_at_0_25": 0.3125,
+    "replica_acc_at_0_25": 0.979167,
+    "note": "parsed target vs candidate text, relation rerank; outputs/ieee_revision2/predicted_maps/oracle_repro_v3"
+  },
+  "B8_algorithm1_oracle": {
+    "scannet_core": {
+      "algorithm1_k3_m1_T0.25_mass0.7_cap5": {
+        "n": 48,
+        "recall_at_1": 0.604167,
+        "recall_at_3": 0.8125,
+        "acc_at_0_25": 0.604167,
+        "acc_at_0_25_num_den": [
+          29,
+          48
+        ],
+        "acc_at_0_5": 0.604167,
+        "negative_accuracy": null,
+        "objects_per_query": 21.291667,
+        "estimated_tokens_per_query": 927.583333
+      },
+      "v3_graph_reference": {
+        "n": 48,
+        "recall_at_1": 0.604167,
+        "recall_at_3": 0.8125,
+        "acc_at_0_25": 0.604167,
+        "acc_at_0_25_num_den": [
+          29,
+          48
+        ],
+        "acc_at_0_5": 0.604167,
+        "negative_accuracy": null,
+        "objects_per_query": 4.729167,
+        "estimated_tokens_per_query": 219.3125
+      },
+      "v3_flat_lexical_reference": {
+        "n": 48,
+        "recall_at_1": 0.625,
+        "recall_at_3": 0.833333,
+        "acc_at_0_25": 0.604167,
+        "acc_at_0_25_num_den": [
+          29,
+          48
+        ],
+        "acc_at_0_5": 0.604167,
+        "negative_accuracy": null,
+        "objects_per_query": 49.0,
+        "estimated_tokens_per_query": 2116.770833
+      }
+    },
+    "scannet_extended": {
+      "algorithm1_k3_m1_T0.25_mass0.7_cap5": {
+        "n": 64,
+        "recall_at_1": 0.589286,
+        "recall_at_3": 0.767857,
+        "acc_at_0_25": 0.589286,
+        "acc_at_0_25_num_den": [
+          33,
+          56
+        ],
+        "acc_at_0_5": 0.589286,
+        "negative_accuracy": 1.0,
+        "objects_per_query": 24.234375,
+        "estimated_tokens_per_query": 1053.03125
+      },
+      "v3_graph_reference": {
+        "n": 64,
+        "recall_at_1": 0.607143,
+        "recall_at_3": 0.785714,
+        "acc_at_0_25": 0.589286,
+        "acc_at_0_25_num_den": [
+          33,
+          56
+        ],
+        "acc_at_0_5": 0.589286,
+        "negative_accuracy": 1.0,
+        "objects_per_query": 4.375,
+        "estimated_tokens_per_query": 200.0625
+      },
+      "v3_flat_lexical_reference": {
+        "n": 64,
+        "recall_at_1": 0.625,
+        "recall_at_3": 0.821429,
+        "acc_at_0_25": 0.589286,
+        "acc_at_0_25_num_den": [
+          33,
+          56
+        ],
+        "acc_at_0_5": 0.589286,
+        "negative_accuracy": 1.0,
+        "objects_per_query": 49.0,
+        "estimated_tokens_per_query": 2114.984375
+      }
+    },
+    "replica": {
+      "algorithm1_k3_m1_T0.25_mass0.7_cap5": {
+        "n": 56,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "acc_at_0_25": 1.0,
+        "acc_at_0_25_num_den": [
+          48,
+          48
+        ],
+        "acc_at_0_5": 1.0,
+        "negative_accuracy": 1.0,
+        "objects_per_query": 30.267857,
+        "estimated_tokens_per_query": 747.964286
+      },
+      "v3_graph_reference": {
+        "n": 56,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "acc_at_0_25": 1.0,
+        "acc_at_0_25_num_den": [
+          48,
+          48
+        ],
+        "acc_at_0_5": 1.0,
+        "negative_accuracy": 1.0,
+        "objects_per_query": 12.107143,
+        "estimated_tokens_per_query": 302.678571
+      },
+      "v3_flat_lexical_reference": {
+        "n": 56,
+        "recall_at_1": 1.0,
+        "recall_at_3": 1.0,
+        "acc_at_0_25": 1.0,
+        "acc_at_0_25_num_den": [
+          48,
+          48
+        ],
+        "acc_at_0_5": 1.0,
+        "negative_accuracy": 1.0,
+        "objects_per_query": 71.875,
+        "estimated_tokens_per_query": 1765.178571
+      }
+    }
+  },
+  "B8_graph_rows_explanation": "v3 \"graph\" = backend/query/grounding.py graph_pruned_candidate_ids: the oracle trees are flat (root -> one node per GT object + one region node), so each top-level \"branch\" is a single object node; branch score = |target tokens & node tokens|/|target tokens|; keep nodes >= 0.5*best; if best==0 keep only the lexicographically first child. 4.73 = mean size of that token-overlap-filtered set (ScanNet per-query sizes: 1 x9, 2 x17, 3 x8, 4 x5, 5 x4, 9 x2, 17 x1, 28 x1, 57 x1).",
+  "B11_sweeps_scannet_core": {
+    "relation_boost (confidence_threshold=0.45)": {
+      "0.2": {
+        "graph": 0.604167,
+        "graph_fallback": 0.604167,
+        "flat_lexical": 0.604167
+      },
+      "0.35": {
+        "graph": 0.604167,
+        "graph_fallback": 0.604167,
+        "flat_lexical": 0.604167
+      },
+      "0.5": {
+        "graph": 0.604167,
+        "graph_fallback": 0.604167,
+        "flat_lexical": 0.604167
+      }
+    },
+    "confidence_threshold (relation_boost=0.20)": {
+      "0.35": {
+        "graph": 0.604167,
+        "graph_fallback": 0.604167,
+        "flat_lexical": 0.604167
+      },
+      "0.45": {
+        "graph": 0.604167,
+        "graph_fallback": 0.604167,
+        "flat_lexical": 0.604167
+      },
+      "0.55": {
+        "graph": 0.604167,
+        "graph_fallback": 0.604167,
+        "flat_lexical": 0.604167
+      }
+    }
+  },
+  "B11_notes": "Code default relation_boost is 0.20 (paper text says 0.35 and a -0.35*0.35 violation penalty, which is the superseded v1 scorer). All 14 relation-applied top-1 objects have pre-relation lexical score 1.0 (clipped), so the boost adds 0 and relation effect comes only from the sort-key tie-break; beta is inert in [0.2,0.5]. Graph top-1 scores take values <=0.375 or >=0.75, so thresholds 0.45 and 0.55 trigger identically; 0.35 changes low-confidence status for 3 queries (score 0.375) which still fall back for relation_unresolved.",
+  "B4": "Yes (in-sample): benchmark built 2026-07-12 (4cc58e8); v1 scorer evaluated on the same 48 queries 2026-07-13 (ae9f120), relation reranking did not help; v3 scorer rewritten and reported on the same 48 queries 2026-07-24 (57e8b23); extended set reuses the 48 and adds no relational queries; no held-out ScanNet split.",
+  "negative_accuracy_rule": "evaluate_grounding: negative_correct = (result.found is False) for verified-absence queries; run_grounding_variants sets found = (search.status == \"ok\"), status ok iff top candidate score > 0. So a lexical variant abstains only when no object has any label/text/synonym/affordance token overlap with the target. No calibrated threshold (0.45 only triggers fallback). flat_embedding never abstains (score=(cos+1)/2>0) -> 0.0."
+}

@@ -1,0 +1,202 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v003",
+  "scene_id": "Museume-capture",
+  "image_path": "images/v003.png",
+  "depth_path": "depths/v003_depth.npy",
+  "pose_ref": "transforms.json#/frames/2/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Museum exhibition corridor with large informational panels, a yellow circular graphic, black metal mesh partitions, and a red/pink vertical panel.",
+  "visible_regions": [
+    {
+      "label": "exhibition corridor",
+      "description": "linear gallery space with wall panels and mesh partitions",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "information display area",
+      "description": "area with large printed exhibition panels",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "red panel area",
+      "description": "bright red or pink panel near the corridor",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "informational panels",
+      "attributes": [
+        "large",
+        "printed",
+        "museum text"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "yellow circular graphic",
+      "attributes": [
+        "bright",
+        "human silhouettes"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": [
+        0.524,
+        0.5712,
+        0.716,
+        0.8088
+      ],
+      "bbox_3d": {
+        "center": [
+          -10.873975525475874,
+          20.72461189696669,
+          34.17143300066388
+        ],
+        "size": [
+          34.18636144322283,
+          39.34722906168361,
+          67.49733712675314
+        ],
+        "label": "yellow circular graphic"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "red vertical panel",
+      "attributes": [
+        "large",
+        "pink-red"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "metal mesh partitions",
+      "attributes": [
+        "black",
+        "grid"
+      ],
+      "approx_location": "left and rear",
+      "confidence": null,
+      "bbox_2d": [
+        0.04,
+        0.18,
+        0.48,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          -43.8298347353069,
+          18.838488897821474,
+          -10.076794083510851
+        ],
+        "size": [
+          90.66855022244567,
+          49.39434612549372,
+          31.175449205636916
+        ],
+        "label": "metal mesh partitions"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "display stand",
+      "attributes": [
+        "small",
+        "slanted"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.284,
+        0.3704,
+        0.476,
+        0.6696
+      ],
+      "bbox_3d": {
+        "center": [
+          -32.907241107348845,
+          18.412816516040458,
+          23.135232827565016
+        ],
+        "size": [
+          66.52081837552619,
+          33.7714660512834,
+          41.80753571037328
+        ],
+        "label": "display stand"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "bench or low seating",
+      "attributes": [
+        "dark",
+        "simple"
+      ],
+      "approx_location": "far right",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.42,
+        0.96,
+        0.96
+      ],
+      "bbox_3d": {
+        "center": [
+          -8.835661202364898,
+          16.430215988060205,
+          26.5268217484304
+        ],
+        "size": [
+          29.293383209764155,
+          29.88895041336686,
+          50.06601155764922
+        ],
+        "label": "bench or low seating"
+      },
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "yellow circular graphic",
+      "description": "bright yellow graphic with figures that clearly identifies this gallery section",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red vertical panel",
+      "description": "large red/pink exhibition panel",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "metal mesh partitions",
+      "description": "black grid partitions used throughout the exhibition",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good view for queries about information boards, yellow graphic, and red exhibition panel.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

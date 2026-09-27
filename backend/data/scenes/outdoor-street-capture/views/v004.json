@@ -1,0 +1,132 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v004",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v004.png",
+  "depth_path": "depths/v004_depth.npy",
+  "pose_ref": "transforms.json#/frames/3/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Blurred covered passage leading out to a red brick building or courtyard, with tiled walls and a bright outdoor opening.",
+  "visible_regions": [
+    {
+      "label": "covered passage",
+      "description": "covered walkway or tunnel under a building",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "bright courtyard opening",
+      "description": "open exterior space visible beyond the passage",
+      "approx_location": "back center",
+      "source": "manual"
+    },
+    {
+      "label": "brick building view",
+      "description": "red brick facade visible outside",
+      "approx_location": "background",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "covered walkway",
+      "attributes": [
+        "tunnel-like",
+        "blurred"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.44,
+        0.78,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -6.0010787220981,
+          1.5193728269806401,
+          -12.762407955394103
+        ],
+        "size": [
+          9.020682733933288,
+          6.0856567721733015,
+          5.285449272271633
+        ],
+        "label": "covered walkway"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "tiled wall",
+      "attributes": [
+        "beige",
+        "side wall"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "bright outdoor opening",
+      "attributes": [
+        "overexposed",
+        "exit from passage"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red brick building",
+      "attributes": [
+        "distant",
+        "background"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "paved floor",
+      "attributes": [
+        "outdoor",
+        "passage floor"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "bright passage opening",
+      "description": "exit-like opening from the covered passage",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red brick building",
+      "description": "distinct red facade visible beyond the passage",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Image is blurred/overexposed; use mainly for passage-to-courtyard orientation.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

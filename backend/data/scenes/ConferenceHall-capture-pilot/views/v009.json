@@ -1,0 +1,148 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v009",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v009.png",
+  "depth_path": "depths/v009_depth.npy",
+  "pose_ref": "transforms.json#/frames/8/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Long lobby corridor with columns, lounge seating on the left, wall artwork on the right, a green exit sign, and a distant reception or corridor end.",
+  "visible_regions": [
+    {
+      "label": "long lobby corridor",
+      "description": "extended corridor-like open area",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "lounge side",
+      "description": "seating side with sofas",
+      "approx_location": "left foreground",
+      "source": "manual"
+    },
+    {
+      "label": "art wall side",
+      "description": "wall with framed picture and lamp",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "columns",
+      "attributes": [
+        "large",
+        "multiple"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "sofa",
+      "attributes": [
+        "cream",
+        "foreground"
+      ],
+      "approx_location": "left foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall artwork",
+      "attributes": [
+        "framed"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "green exit sign",
+      "attributes": [
+        "illuminated"
+      ],
+      "approx_location": "right-center upper area",
+      "confidence": null,
+      "bbox_2d": [
+        0.6344,
+        0.1208,
+        0.8456,
+        0.2792
+      ],
+      "bbox_3d": {
+        "center": [
+          -2.231462163404645,
+          -1.5240093422600711,
+          -30.002223582187007
+        ],
+        "size": [
+          5.070519865799879,
+          3.2763811050599636,
+          8.42200370069018
+        ],
+        "label": "green exit sign"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling light feature",
+      "attributes": [
+        "pinkish",
+        "long"
+      ],
+      "approx_location": "ceiling",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "green exit sign",
+      "description": "illuminated sign useful for navigation",
+      "approx_location": "right-center upper area",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "long row of columns",
+      "description": "columns define the corridor direction",
+      "approx_location": "left and center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "lounge sofa",
+      "description": "seating cluster at the start of the corridor",
+      "approx_location": "left foreground",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Strong corridor orientation view with exit sign, columns, and seating.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

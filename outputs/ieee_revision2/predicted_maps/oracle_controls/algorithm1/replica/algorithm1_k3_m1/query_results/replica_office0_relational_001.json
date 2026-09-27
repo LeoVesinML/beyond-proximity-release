@@ -1,0 +1,170 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "replica_bbq_aligned_public_dataset_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "replica_office0",
+  "query_id": "replica_office0_relational_001",
+  "query": "Find the tv screen near Replica object 64",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "tv screen",
+    "relation": "near",
+    "anchor": "replica 64",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_002_tv_screen"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_002_tv_screen"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_002_tv_screen",
+    "object_v001_011_clock",
+    "object_v001_029_door",
+    "object_v001_031_vent",
+    "object_v001_048_blinds",
+    "object_v001_055_indoor_plant",
+    "object_v001_056_lamp",
+    "object_v001_058_wall",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "66",
+    "57",
+    "16",
+    "17",
+    "15",
+    "22",
+    "21",
+    "24"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "tv-screen",
+    "selected_object_id": "66",
+    "ranked_object_ids": [
+      "66",
+      "15",
+      "16"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "66",
+        "label": "tv-screen",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "15",
+        "label": "blinds",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "16",
+        "label": "door",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_002_tv_screen",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        2.01408,
+        -0.720388,
+        0.099364
+      ],
+      "size": [
+        0.158347,
+        2.568809,
+        1.132711
+      ],
+      "label": "tv-screen",
+      "object_id": "66",
+      "coordinate_frame": "replica_habitat_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 66.",
+    "relation_satisfied": false,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "near",
+      "anchor": "replica 64",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [],
+      "anchor_evidence": {
+        "status": "rejected",
+        "reason": "low_anchor_confidence",
+        "top_score": 0.2,
+        "second_score": 0.1,
+        "score_margin": 0.1,
+        "candidate_count": 64,
+        "confidence": 0.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0026082499999997566,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0026082499999997566
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 9,
+    "checked_view_count": 1,
+    "checked_object_count": 8,
+    "context_size_chars": 776,
+    "prompt_size_chars": 817,
+    "estimated_input_tokens": 204,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

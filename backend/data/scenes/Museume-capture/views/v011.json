@@ -1,0 +1,142 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v011",
+  "scene_id": "Museume-capture",
+  "image_path": "images/v011.png",
+  "depth_path": "depths/v011_depth.npy",
+  "pose_ref": "transforms.json#/frames/10/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Gallery corridor with a large white illustrated panel, black mesh partitions, display cases or railings, and a dark doorway area.",
+  "visible_regions": [
+    {
+      "label": "illustrated panel area",
+      "description": "large white panel with line drawings",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "mesh corridor",
+      "description": "corridor defined by black metal mesh partitions",
+      "approx_location": "right and foreground",
+      "source": "manual"
+    },
+    {
+      "label": "dark doorway area",
+      "description": "dark opening or passage near the right side",
+      "approx_location": "right rear",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "illustrated white panel",
+      "attributes": [
+        "large",
+        "line drawings",
+        "historical sketches"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "metal mesh partitions",
+      "attributes": [
+        "black",
+        "grid"
+      ],
+      "approx_location": "foreground and right",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.48,
+        0.96,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -0.6327102166033036,
+          26.981343063415796,
+          26.342096505947907
+        ],
+        "size": [
+          59.89414142828566,
+          42.66713347999933,
+          55.761554924013524
+        ],
+        "label": "metal mesh partitions"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "display railing",
+      "attributes": [
+        "black",
+        "low"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "dark doorway or opening",
+      "attributes": [
+        "dark",
+        "rectangular"
+      ],
+      "approx_location": "right rear",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small display labels",
+      "attributes": [
+        "caption labels"
+      ],
+      "approx_location": "near panel",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "gray gallery floor",
+      "attributes": [
+        "open walkway"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "illustrated white panel",
+      "description": "large drawing panel useful as a gallery landmark",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "dark doorway",
+      "description": "dark opening at the end of the mesh corridor",
+      "approx_location": "right rear",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good for queries about illustrated panels, mesh corridor, and dark doorway.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

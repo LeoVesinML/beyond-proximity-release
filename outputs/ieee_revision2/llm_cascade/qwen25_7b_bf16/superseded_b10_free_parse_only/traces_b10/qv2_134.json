@@ -1,0 +1,75 @@
+{
+  "query_id": "qv2_134",
+  "scene_id": "outdoor-drone",
+  "query": "Find the bridge or road lines across the bay",
+  "query_type": "relational",
+  "expected_view_ids": [
+    "v009"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016"
+      ],
+      "prompt_sha256": "49836477220881b588a5844c573e41a64b3267061d26db0ce58ce6a0ba112b5a",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 1116,
+      "output_tokens": 5,
+      "latency_ms": 2989.2516,
+      "correct": false,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "0251f91910149eb45c43070a4dbb28f8f5491d2048b16964b33f8f811c60a037",
+      "raw_output": "v009",
+      "chosen_id": "v009",
+      "valid": true,
+      "input_tokens": 268,
+      "output_tokens": 5,
+      "latency_ms": 958.7287,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "0251f91910149eb45c43070a4dbb28f8f5491d2048b16964b33f8f811c60a037",
+      "raw_output": "v009",
+      "chosen_id": "v009",
+      "valid": true,
+      "input_tokens": 268,
+      "output_tokens": 5,
+      "latency_ms": 920.266,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

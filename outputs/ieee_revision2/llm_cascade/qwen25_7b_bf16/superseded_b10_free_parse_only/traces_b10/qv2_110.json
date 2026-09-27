@@ -1,0 +1,83 @@
+{
+  "query_id": "qv2_110",
+  "scene_id": "outdoor-street",
+  "query": "Find the beige building facade on the facade wall",
+  "query_type": "multi_hop",
+  "expected_view_ids": [
+    "v001",
+    "v005",
+    "v008",
+    "v020"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020",
+        "v021"
+      ],
+      "prompt_sha256": "e419eec6e9c7f156919038f479cd7a7f24b94c84681cd5f176ea0d0a381349ae",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 1455,
+      "output_tokens": 5,
+      "latency_ms": 3650.726,
+      "correct": false,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v017",
+        "v020"
+      ],
+      "prompt_sha256": "828cb57c551f021910e15f865554506cb315f971bd96afb5ffd91b257a4a907c",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 265,
+      "output_tokens": 5,
+      "latency_ms": 929.7624,
+      "correct": false,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v017",
+        "v020"
+      ],
+      "prompt_sha256": "828cb57c551f021910e15f865554506cb315f971bd96afb5ffd91b257a4a907c",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 265,
+      "output_tokens": 5,
+      "latency_ms": 938.4932,
+      "correct": false,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

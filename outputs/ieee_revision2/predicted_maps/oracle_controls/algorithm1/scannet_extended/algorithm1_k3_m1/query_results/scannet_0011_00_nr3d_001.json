@@ -1,0 +1,184 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0011_00",
+  "query_id": "scannet_0011_00_nr3d_001",
+  "query": "This is the large conference table with many chairs.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "this large conference table with many chairs",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_008_table"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_008_table"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_wall",
+    "object_v001_002_ceiling",
+    "object_v001_003_window",
+    "object_v001_004_sink",
+    "object_v001_005_refrigerator",
+    "object_v001_006_cabinet",
+    "object_v002_002_chair",
+    "object_v003_001_floor",
+    "object_v003_004_chair",
+    "object_v003_005_chair",
+    "object_v003_006_wall",
+    "object_v003_007_trash_can",
+    "object_v004_001_kitchen_cabinets",
+    "object_v004_002_table",
+    "object_v004_003_chair",
+    "object_v004_004_chair",
+    "object_v004_005_chair",
+    "object_v004_006_chair",
+    "object_v004_007_wall",
+    "object_v004_008_table",
+    "object_v004_009_tv",
+    "object_v004_010_refrigerator",
+    "object_v004_011_cabinet",
+    "object_v004_012_window",
+    "object_v004_013_kitchen_counter",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v003",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "21",
+    "22",
+    "24",
+    "26",
+    "27",
+    "28",
+    "8",
+    "0",
+    "12",
+    "13",
+    "14",
+    "15",
+    "1",
+    "2",
+    "4",
+    "5",
+    "6",
+    "7",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "23",
+    "25"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "table",
+    "selected_object_id": "17",
+    "ranked_object_ids": [
+      "17",
+      "2",
+      "25"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "17",
+        "label": "table",
+        "score": 0.125,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "2",
+        "label": "table",
+        "score": 0.125,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "25",
+        "label": "kitchen counter",
+        "score": 0.125,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v004_008_table",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.449621,
+        -2.95396,
+        0.440978
+      ],
+      "size": [
+        1.669378,
+        0.40858,
+        0.845284
+      ],
+      "label": "table",
+      "object_id": "17",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.125,
+    "explanation": "algorithm1_k3_m1 selected object 17.",
+    "relation_satisfied": null,
+    "relation_audit": {},
+    "search_score": 0.125,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.166667,
+      "text_overlap": 0.166667,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.125
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0014460840000012354,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0014460840000012354
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 26,
+    "checked_view_count": 4,
+    "checked_object_count": 25,
+    "context_size_chars": 4259,
+    "prompt_size_chars": 4311,
+    "estimated_input_tokens": 1078,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

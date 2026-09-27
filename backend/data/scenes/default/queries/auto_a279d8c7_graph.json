@@ -1,0 +1,99 @@
+{
+  "session_id": "auto_a279d8c7_g",
+  "scene_id": "default",
+  "original_query": "where is the exit sign in the lobby",
+  "source": "benchmark_auto_graph",
+  "started_at": "2026-06-11T17:45:47.377685+00:00",
+  "finished_at": "2026-06-11T17:45:47.378590+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "exit sign",
+        "location_constraints": "lobby",
+        "query_type": "object_finding",
+        "output_type": "3d_bbox",
+        "source": "graph_auto"
+      },
+      "prompt_excerpt": "Decompose query for semantic tree navigation: where is the exit sign in the lobby",
+      "reasoning": "Parsed query 'where is the exit sign in the lobby'. Target keywords and room constraints extracted; navigating semantic tree instead of scanning all views.",
+      "ts": "2026-06-11T17:45:47.377685+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_lobby_reception"
+      ],
+      "reasoning": "At 'Conference Hall' (root). Zone summary: Full venue: lobby reception wing and main ballroom with stage, service, and exits. Descending into 'Lobby & reception' — summary 'Circulation, lounges, foyer, bar, vestibule, and reception desk before the main ballroom doors.' matches query room/object constraints. Siblings not taken: Ballroom.",
+      "ts": "2026-06-11T17:45:47.377688+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_lobby_reception",
+      "node_name": "Lobby & reception",
+      "children_count": 3,
+      "children_names": [
+        "Corridor & lounge wing",
+        "Foyer & pre-function lounge",
+        "Bar, vestibule & reception"
+      ],
+      "descend_into": [
+        "leaf_lobby_foyer_prefunction"
+      ],
+      "reasoning": "At 'Lobby & reception' (zone). Zone summary: Circulation, lounges, foyer, bar, vestibule, and reception desk before the main ballroom doors. Descending into 'Foyer & pre-function lounge' — summary 'Grand piano foyer, double doors, and pre-function lounge with artwork and egress signage.' matches query room/object constraints. Siblings not taken: Corridor & lounge wing, Bar, vestibule & reception.",
+      "ts": "2026-06-11T17:45:47.377691+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_foyer_prefunction",
+      "node_name": "Foyer & pre-function lounge",
+      "view_id": "v006",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Wide foyer with marble pillars receding left, black grand piano against a textured wall, and pale double doors on the right; blue patterned carpet fills the floor.",
+      "reasoning": "Confirm object in view v006 within leaf 'Foyer & pre-function lounge'. No match.",
+      "ts": "2026-06-11T17:45:47.377735+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_foyer_prefunction",
+      "node_name": "Foyer & pre-function lounge",
+      "view_id": "v007",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Hall with marble pillars on the left, black grand piano centre-right, cream double doors on the right wall, and blue wave-pattern carpet.",
+      "reasoning": "Confirm object in view v007 within leaf 'Foyer & pre-function lounge'. No match.",
+      "ts": "2026-06-11T17:45:47.377772+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_foyer_prefunction",
+      "node_name": "Foyer & pre-function lounge",
+      "view_id": "v008",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Pre-function lounge with large left wall painting, central cocktail table, right-side sofa cluster, chandeliers, and green exit signs on pillars and distant doorway.",
+      "reasoning": "Confirm object in view v008 within leaf 'Foyer & pre-function lounge'. No match.",
+      "ts": "2026-06-11T17:45:47.377815+00:00"
+    }
+  ],
+  "result": {
+    "found": false,
+    "view_id": null,
+    "mode": "graph_auto",
+    "explanation": "Pre-function lounge with large left wall painting, central cocktail table, right-side sofa cluster, chandeliers, and green exit signs on pillars and distant doorway."
+  }
+}

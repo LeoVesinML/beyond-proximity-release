@@ -1,0 +1,132 @@
+{
+  "session_id": "c08f0105",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "original_query": "find a place where i can play music",
+  "started_at": "2026-07-22T11:35:17.296937+00:00",
+  "finished_at": "2026-07-22T11:35:18.434298+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "i music performance piano play",
+        "query_type": "object_finding",
+        "parser": "deterministic_tokenizer_v1"
+      },
+      "prompt_excerpt": "Analyze this query for a 3D scene search system.\nQuery: 'find a place where i can play music'\n\nExtract:\n- target: the primary object or subject being sought\n- location_constraints: explicit spatial scope mentioned in the query (or null)\n- attribute_constraints: color, size, material, style, etc. (ob",
+      "ts": "2026-07-22T11:35:17.377010+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root",
+      "node_name": "ConferenceHall-capture-pilot",
+      "children_count": 5,
+      "children_names": [
+        "conference and banquet hall",
+        "elevator and doorway access",
+        "exit and wayfinding",
+        "lounge seating and corridor",
+        "reception and service counter"
+      ],
+      "descend_into": [
+        "manual_zone_conferencehall_elevator_access"
+      ],
+      "reasoning": "[stub] Deterministic lexical traversal over the saved captured semantic index.",
+      "ts": "2026-07-22T11:35:17.728589+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "manual_zone_conferencehall_elevator_access",
+      "node_name": "elevator and doorway access",
+      "children_count": 43,
+      "children_names": [
+        "elevator doors",
+        "black piano",
+        "marble columns",
+        "black piano",
+        "golden elevator wall",
+        "two potted plants",
+        "central elevator or doorway",
+        "lounge seating corner",
+        "golden door or elevator panel",
+        "columns",
+        "elevator doors",
+        "piano",
+        "sofa",
+        "wall picture",
+        "blue patterned carpet",
+        "piano",
+        "column",
+        "elevator doors or golden wall panels",
+        "lounge seating",
+        "wall artwork",
+        "blue patterned carpet",
+        "potted plants",
+        "elevator or door panels",
+        "sofa",
+        "bench or sofa",
+        "columns",
+        "framed wall artwork",
+        "sofas",
+        "glass coffee tables",
+        "table lamp",
+        "golden door or elevator panel",
+        "wall panels",
+        "blue patterned carpet",
+        "corridor area",
+        "door or elevator side",
+        "elevator area",
+        "elevator or doorway area",
+        "lobby corridor",
+        "lounge area",
+        "lounge corridor",
+        "lounge seating corner",
+        "piano area",
+        "right seating area"
+      ],
+      "descend_into": [
+        "object_v011_001_piano"
+      ],
+      "reasoning": "[stub] Deterministic lexical traversal over the saved captured semantic index.",
+      "ts": "2026-07-22T11:35:18.080471+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "object_v011_001_piano",
+      "node_name": "piano",
+      "view_id": "v011",
+      "found": true,
+      "confidence": "stub",
+      "bbox_2d": [
+        0.04,
+        0.18,
+        0.48,
+        0.86
+      ],
+      "matched_object": "piano",
+      "explanation": "[stub] Deterministic lexical fallback selected v011 with 1 token matches.",
+      "ts": "2026-07-22T11:35:18.432532+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": "v011",
+      "explanation": "[stub] Deterministic lexical fallback selected v011 with 1 token matches.",
+      "confidence": 0.2,
+      "bbox_3d": null,
+      "ts": "2026-07-22T11:35:18.434308+00:00"
+    }
+  ],
+  "result": {
+    "found": true,
+    "view_id": "v011",
+    "explanation": "[stub] Deterministic lexical fallback selected v011 with 1 token matches.",
+    "confidence": 0.2,
+    "bbox_3d": null,
+    "query": "find a place where i can play music",
+    "mode": "stub",
+    "semantic_index_mode": "manual",
+    "warnings": [
+      "Stub mode uses deterministic lexical matching over saved semantic descriptions.",
+      "This result is not live or cached-live model reasoning."
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "config_version": "semanticsplat.experiment_config.v1",
+  "week": "week3",
+  "run_id": "week3_stub_benchmark_v2_manual_gt",
+  "method": "semantic_splat",
+  "mode": "stub",
+  "supported_modes": ["stub", "cached_live", "live"],
+  "scene_root": "backend/data/scenes",
+  "scene_ids": ["ConferenceHall-capture-pilot", "Museume-capture", "Theater-capture", "outdoor-street-capture", "outdoor-drone-capture"],
+  "scenes": [
+    {
+      "scene_id": "ConferenceHall-capture-pilot",
+      "benchmark_scene_id": "ConferenceHall",
+      "path": "backend/data/scenes/ConferenceHall-capture-pilot",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/semantic_index/ConferenceHall-capture-pilot_semantic_index.json"
+    },
+    {
+      "scene_id": "Museume-capture",
+      "benchmark_scene_id": "Museume",
+      "path": "backend/data/scenes/Museume-capture",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/semantic_index/Museume-capture_semantic_index.json"
+    },
+    {
+      "scene_id": "Theater-capture",
+      "benchmark_scene_id": "Theater",
+      "path": "backend/data/scenes/Theater-capture",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/semantic_index/Theater-capture_semantic_index.json"
+    },
+    {
+      "scene_id": "outdoor-street-capture",
+      "benchmark_scene_id": "outdoor-street",
+      "path": "backend/data/scenes/outdoor-street-capture",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/semantic_index/outdoor-street-capture_semantic_index.json"
+    },
+    {
+      "scene_id": "outdoor-drone-capture",
+      "benchmark_scene_id": "outdoor-drone",
+      "path": "backend/data/scenes/outdoor-drone-capture",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/semantic_index/outdoor-drone-capture_semantic_index.json"
+    }
+  ],
+  "benchmark_path": "docs/benchmarks/benchmark_queries_v2.json",
+  "output_root": "outputs/week3",
+  "resume": true,
+  "query_limit": null,
+  "depth_sample_limit": 3,
+  "view_selection": {
+    "strategy": "existing",
+    "max_views": null,
+    "coverage_report_dir": "docs/validation/geometry"
+  },
+  "model": {
+    "temperature": 0.0,
+    "cache_dir": "outputs/week3/model_cache",
+    "provider_env": ["SEMANTICSPLAT_PROVIDER", "SEMANTICSPLAT_MODEL", "SEMANTICSPLAT_API_KEY"]
+  },
+  "notes": [
+    "Benchmark v2 uses manual ViewJSON semantic-index expectations, not independent dataset GT.",
+    "expected_zone_ids use manual zone references emitted as stable tree-native zone nodes after rebuild.",
+    "Base config leaves geometry_eval_allowed false; use configs/week3_benchmark_v2_bbox_gt.yaml for manual coarse box evaluation."
+  ]
+}

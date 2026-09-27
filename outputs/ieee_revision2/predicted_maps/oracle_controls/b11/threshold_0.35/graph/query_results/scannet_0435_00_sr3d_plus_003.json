@@ -1,0 +1,207 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0435_00",
+  "query_id": "scannet_0435_00_sr3d_plus_003",
+  "query": "the toilet that is between the desk and the bathtub",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "toilet",
+    "relation": "between",
+    "anchor": "desk",
+    "anchor_secondary": "bathtub"
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_008_toilet"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_008_toilet"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v004_008_toilet",
+    "object_v004_020_toilet_paper",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v004"
+  ],
+  "checked_object_ids": [
+    "12",
+    "31"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "toilet",
+    "selected_object_id": "12",
+    "ranked_object_ids": [
+      "12",
+      "31"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "12",
+        "label": "toilet",
+        "score": 1.0,
+        "relation_confidence": 0.395079,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "31",
+        "label": "toilet paper",
+        "score": 0.75,
+        "relation_confidence": 0.286827,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v004_008_toilet",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.924444,
+        -3.541761,
+        0.375487
+      ],
+      "size": [
+        0.77773,
+        0.441218,
+        0.774942
+      ],
+      "label": "toilet",
+      "object_id": "12",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "graph selected object 12.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 2,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "12",
+          "label": "toilet",
+          "relation_score": 1.0,
+          "relation_confidence": 0.395079,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "31",
+          "label": "toilet paper",
+          "relation_score": 1.0,
+          "relation_confidence": 0.286827,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 2
+        }
+      ]
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "between",
+      "anchor": "desk",
+      "anchor_secondary": "bathtub",
+      "relation_score": 1.0,
+      "relation_source": "bbox_3d",
+      "relation_confidence": 0.395079,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "matched": true,
+          "projection": 0.896393,
+          "perpendicular_distance": 0.620953,
+          "confidence": 0.395079,
+          "anchor_object_id": "4",
+          "secondary_anchor_object_id": "9"
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "4"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "9"
+        ],
+        "confidence": 1.0
+      },
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.002206208000000487,
+    "stage_runtime_seconds": {
+      "answer_query": 0.002206208000000487
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 3,
+    "checked_view_count": 1,
+    "checked_object_count": 2,
+    "context_size_chars": 364,
+    "prompt_size_chars": 415,
+    "estimated_input_tokens": 104,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

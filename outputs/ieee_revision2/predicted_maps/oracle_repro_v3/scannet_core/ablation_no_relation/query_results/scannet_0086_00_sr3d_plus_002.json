@@ -1,0 +1,170 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_ablation_no_relation",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0086_00",
+  "query_id": "scannet_0086_00_sr3d_plus_002",
+  "query": "select the toilet that is farthest from the mirror",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "toilet",
+    "relation": "farthest",
+    "anchor": "mirror",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v003_004_toilet"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v003_004_toilet"
+  ],
+  "selected_views": [
+    "v003"
+  ],
+  "checked_node_ids": [
+    "object_v003_003_toilet_seat_cover_dispenser",
+    "object_v003_004_toilet",
+    "object_v003_005_toilet",
+    "object_v003_011_toilet_paper_dispenser",
+    "object_v003_012_toilet_paper_dispenser",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v003"
+  ],
+  "checked_object_ids": [
+    "5",
+    "6",
+    "7",
+    "21",
+    "22"
+  ],
+  "search_variant": "ablation_no_relation",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "toilet",
+    "selected_object_id": "6",
+    "ranked_object_ids": [
+      "6",
+      "7",
+      "21",
+      "22",
+      "5"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "6",
+        "label": "toilet",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "7",
+        "label": "toilet",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "21",
+        "label": "toilet paper dispenser",
+        "score": 0.75,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 4,
+        "object_id": "22",
+        "label": "toilet paper dispenser",
+        "score": 0.75,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 5,
+        "object_id": "5",
+        "label": "toilet seat cover dispenser",
+        "score": 0.75,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v003_004_toilet",
+    "selected_view_id": "v003",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.62042,
+        -2.283043,
+        0.419396
+      ],
+      "size": [
+        0.657595,
+        0.470917,
+        0.813656
+      ],
+      "label": "toilet",
+      "object_id": "6",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "ablation_no_relation selected object 6.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0005514999999967074,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0005514999999967074
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 6,
+    "checked_view_count": 1,
+    "checked_object_count": 5,
+    "context_size_chars": 984,
+    "prompt_size_chars": 1034,
+    "estimated_input_tokens": 258,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

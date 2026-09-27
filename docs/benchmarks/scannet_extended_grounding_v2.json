@@ -1,0 +1,5652 @@
+{
+  "schema_version": "semanticsplat.benchmark_queries.v1",
+  "benchmark_id": "scannet_bbq_grounding_extended_v2",
+  "status": "ready_official_scannet_referit3d_gt",
+  "status_date": "2026-07-12",
+  "scene_scope": [
+    "scannet_0011_00",
+    "scannet_0030_00",
+    "scannet_0046_00",
+    "scannet_0086_00",
+    "scannet_0222_00",
+    "scannet_0378_00",
+    "scannet_0389_00",
+    "scannet_0435_00"
+  ],
+  "selection_protocol": "Deterministic stratification, three Nr3D and three unique Sr3D+ queries per scene. Nr3D covers spatial+attribute, spatial, and non-spatial language where available; Sr3D+ greedily diversifies official relation types. No result metric is used for selection.",
+  "source_alignment": {
+    "bbq_scannet_scene_subset": [
+      "scene0011_00",
+      "scene0030_00",
+      "scene0046_00",
+      "scene0086_00",
+      "scene0222_00",
+      "scene0378_00",
+      "scene0389_00",
+      "scene0435_00"
+    ],
+    "nr3d_correct_guess_count_over_full_subset": 699,
+    "sr3d_plus_unique_triplet_count_over_full_subset": 661,
+    "bbq_expected_nr3d_count": 699,
+    "bbq_expected_sr3d_plus_unique_triplet_count": 661
+  },
+  "query_count": 64,
+  "source_query_counts": {
+    "Nr3D": 24,
+    "Sr3D+": 24
+  },
+  "query_type_counts": {
+    "attribute": 2,
+    "relational": 40,
+    "simple_object": 6
+  },
+  "ground_truth_scope": "Target and anchor IDs come from official ReferIt3D Nr3D/Sr3D+ annotations. Expected boxes come from official ScanNet aggregation segments over the axis-aligned mesh. The semantic map also consumes these GT instances, so this is retrieval/grounding over an oracle GT object map, not semantic perception or predicted-box localization accuracy.",
+  "failure_label_contract": {
+    "wrong_object": "selected object_id differs from the verified target_id",
+    "wrong_relation": "selected target fails the annotated target-anchor relation",
+    "wrong_view": "selected representative view differs from the imported assignment",
+    "wrong_room_or_zone": "selected room or zone differs from applicable GT",
+    "missing_gt": "target, anchor, label, or box cannot be mapped",
+    "bad_bbox": "prediction box is missing, invalid, or below the declared IoU threshold",
+    "unavailable_prediction": "no executable canonical result was produced"
+  },
+  "benchmark_version": "official_referit3d_plus_functional_negative_v2",
+  "base_query_count": 48,
+  "extension_query_count": 16,
+  "extension_scope": {
+    "functional": 8,
+    "verified_negative": 8,
+    "oracle_map": true,
+    "perception_accuracy": false
+  },
+  "queries": [
+    {
+      "query_id": "scannet_0011_00_nr3d_001",
+      "scene_id": "scannet_0011_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0011_00",
+      "query": "This is the large conference table with many chairs.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_002_table"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "table"
+      ],
+      "expected_object_id": "2",
+      "expected_object_ids": [
+        "2"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.41852,
+          0.18819,
+          0.428737
+        ],
+        "size": [
+          1.192137,
+          3.637919,
+          0.858355
+        ],
+        "label": "table",
+        "object_id": "2",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.41852,
+            0.18819,
+            0.428737
+          ],
+          "size": [
+            1.192137,
+            3.637919,
+            0.858355
+          ],
+          "label": "table",
+          "object_id": "2",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "2180",
+      "source_instance_type": "table",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": true
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_002",
+      "scene_id": "scannet_0011_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0011_00",
+      "query": "The cabinets closest to the double doors.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_006_cabinet"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "cabinet"
+      ],
+      "expected_object_id": "28",
+      "expected_object_ids": [
+        "28"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          1.645381,
+          3.122083,
+          1.233355
+        ],
+        "size": [
+          0.723695,
+          1.058502,
+          2.428462
+        ],
+        "label": "cabinet",
+        "object_id": "28",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.645381,
+            3.122083,
+            1.233355
+          ],
+          "size": [
+            0.723695,
+            1.058502,
+            2.428462
+          ],
+          "label": "cabinet",
+          "object_id": "28",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "902",
+      "source_instance_type": "cabinet",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_003",
+      "scene_id": "scannet_0011_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0011_00",
+      "query": "the cabinet next to a blackboard",
+      "query_type": "simple_object",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_011_cabinet"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "cabinet"
+      ],
+      "expected_object_id": "20",
+      "expected_object_ids": [
+        "20"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          1.699543,
+          -2.606292,
+          1.56534
+        ],
+        "size": [
+          0.678415,
+          1.07315,
+          1.573044
+        ],
+        "label": "cabinet",
+        "object_id": "20",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.699543,
+            -2.606292,
+            1.56534
+          ],
+          "size": [
+            0.678415,
+            1.07315,
+            1.573044
+          ],
+          "label": "cabinet",
+          "object_id": "20",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "29043",
+      "source_instance_type": "cabinet",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_001",
+      "scene_id": "scannet_0011_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0011_00",
+      "query": "select the table that is closer to the kitchen cabinets",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_002_table"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "table"
+      ],
+      "expected_object_id": "2",
+      "expected_object_ids": [
+        "2"
+      ],
+      "expected_anchor_object_ids": [
+        "1"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          -0.41852,
+          0.18819,
+          0.428737
+        ],
+        "size": [
+          1.192137,
+          3.637919,
+          0.858355
+        ],
+        "label": "table",
+        "object_id": "2",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.41852,
+            0.18819,
+            0.428737
+          ],
+          "size": [
+            1.192137,
+            3.637919,
+            0.858355
+          ],
+          "label": "table",
+          "object_id": "2",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0011_00-table-2-2-17",
+      "source_instance_type": "table",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_002",
+      "scene_id": "scannet_0011_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0011_00",
+      "query": "select the trash can that is far from the kitchen cabinets",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_007_trash_can"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "otherfurniture"
+      ],
+      "expected_object_id": "15",
+      "expected_object_ids": [
+        "15"
+      ],
+      "expected_anchor_object_ids": [
+        "1"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          -1.467183,
+          -2.953428,
+          0.438021
+        ],
+        "size": [
+          0.400116,
+          0.406008,
+          0.873877
+        ],
+        "label": "otherfurniture",
+        "object_id": "15",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -1.467183,
+            -2.953428,
+            0.438021
+          ],
+          "size": [
+            0.400116,
+            0.406008,
+            0.873877
+          ],
+          "label": "otherfurniture",
+          "object_id": "15",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0011_00-trash_can-2-15-32",
+      "source_instance_type": "trash can",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_003",
+      "scene_id": "scannet_0011_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0011_00",
+      "query": "select the kitchen cabinets that are in the center of the kitchen counter and the doors",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_001_kitchen_cabinets"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "cabinet"
+      ],
+      "expected_object_id": "1",
+      "expected_object_ids": [
+        "1"
+      ],
+      "expected_anchor_object_ids": [
+        "25",
+        "30"
+      ],
+      "expected_relation": "between",
+      "expected_bbox_3d": {
+        "center": [
+          1.416231,
+          1.012605,
+          0.405766
+        ],
+        "size": [
+          0.18731,
+          3.206101,
+          0.837893
+        ],
+        "label": "cabinet",
+        "object_id": "1",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.416231,
+            1.012605,
+            0.405766
+          ],
+          "size": [
+            0.18731,
+            3.206101,
+            0.837893
+          ],
+          "label": "cabinet",
+          "object_id": "1",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0011_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0011_00-kitchen_cabinets-1-1",
+      "source_instance_type": "kitchen cabinets",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "between",
+        "reference_type": "between"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_001",
+      "scene_id": "scannet_0030_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0030_00",
+      "query": "The tall bookshelf that is closest to the door,",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_003_bookshelf"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "bookshelf"
+      ],
+      "expected_object_id": "17",
+      "expected_object_ids": [
+        "17"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -2.169142,
+          0.476985,
+          1.028226
+        ],
+        "size": [
+          0.559743,
+          1.088058,
+          2.024813
+        ],
+        "label": "bookshelf",
+        "object_id": "17",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -2.169142,
+            0.476985,
+            1.028226
+          ],
+          "size": [
+            0.559743,
+            1.088058,
+            2.024813
+          ],
+          "label": "bookshelf",
+          "object_id": "17",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "1577",
+      "source_instance_type": "bookshelf",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": true
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_002",
+      "scene_id": "scannet_0030_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0030_00",
+      "query": "The books on the middle shelf of the bookshelf.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_006_book"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "books"
+      ],
+      "expected_object_id": "24",
+      "expected_object_ids": [
+        "24"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -2.265185,
+          2.467721,
+          0.569601
+        ],
+        "size": [
+          0.270714,
+          0.873358,
+          0.368146
+        ],
+        "label": "books",
+        "object_id": "24",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -2.265185,
+            2.467721,
+            0.569601
+          ],
+          "size": [
+            0.270714,
+            0.873358,
+            0.368146
+          ],
+          "label": "books",
+          "object_id": "24",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "820",
+      "source_instance_type": "book",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_003",
+      "scene_id": "scannet_0030_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0030_00",
+      "query": "It is the window next to the bookshelves.",
+      "query_type": "simple_object",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_002_window"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "window"
+      ],
+      "expected_object_id": "27",
+      "expected_object_ids": [
+        "27"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -1.404876,
+          -3.00941,
+          1.696082
+        ],
+        "size": [
+          2.002844,
+          0.183229,
+          1.54582
+        ],
+        "label": "window",
+        "object_id": "27",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -1.404876,
+            -3.00941,
+            1.696082
+          ],
+          "size": [
+            2.002844,
+            0.183229,
+            1.54582
+          ],
+          "label": "window",
+          "object_id": "27",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "1905",
+      "source_instance_type": "window",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_001",
+      "scene_id": "scannet_0030_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0030_00",
+      "query": "the office chair that is close to the bag",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v005_002_office_chair"
+      ],
+      "expected_view_ids": [
+        "v005"
+      ],
+      "expected_object_labels": [
+        "chair"
+      ],
+      "expected_object_id": "2",
+      "expected_object_ids": [
+        "2"
+      ],
+      "expected_anchor_object_ids": [
+        "55"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          1.232784,
+          -0.656678,
+          0.383694
+        ],
+        "size": [
+          0.781395,
+          0.514724,
+          0.790053
+        ],
+        "label": "chair",
+        "object_id": "2",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.232784,
+            -0.656678,
+            0.383694
+          ],
+          "size": [
+            0.781395,
+            0.514724,
+            0.790053
+          ],
+          "label": "chair",
+          "object_id": "2",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0030_00-office_chair-3-2-0-1",
+      "source_instance_type": "office chair",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_002",
+      "scene_id": "scannet_0030_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0030_00",
+      "query": "select the bookshelf that is far away from the door",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_002_bookshelf"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "bookshelf"
+      ],
+      "expected_object_id": "19",
+      "expected_object_ids": [
+        "19"
+      ],
+      "expected_anchor_object_ids": [
+        "53"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          2.701441,
+          -2.640322,
+          0.53348
+        ],
+        "size": [
+          0.956828,
+          0.579669,
+          1.08941
+        ],
+        "label": "bookshelf",
+        "object_id": "19",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            2.701441,
+            -2.640322,
+            0.53348
+          ],
+          "size": [
+            0.956828,
+            0.579669,
+            1.08941
+          ],
+          "label": "bookshelf",
+          "object_id": "19",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0030_00-bookshelf-5-19-17-18-20-68",
+      "source_instance_type": "bookshelf",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_003",
+      "scene_id": "scannet_0030_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0030_00",
+      "query": "looking at the front of the armchair, select the office chair that is on the right side of it",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v006_001_office_chair"
+      ],
+      "expected_view_ids": [
+        "v006"
+      ],
+      "expected_object_labels": [
+        "chair"
+      ],
+      "expected_object_id": "0",
+      "expected_object_ids": [
+        "0"
+      ],
+      "expected_anchor_object_ids": [
+        "52"
+      ],
+      "expected_relation": "right",
+      "expected_bbox_3d": {
+        "center": [
+          1.845924,
+          0.34225,
+          0.458625
+        ],
+        "size": [
+          0.680743,
+          0.426044,
+          0.776433
+        ],
+        "label": "chair",
+        "object_id": "0",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.845924,
+            0.34225,
+            0.458625
+          ],
+          "size": [
+            0.680743,
+            0.426044,
+            0.776433
+          ],
+          "label": "chair",
+          "object_id": "0",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0030_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0030_00-office_chair-3-0-1-2",
+      "source_instance_type": "office chair",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "allocentric",
+        "reference_type": "right"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_001",
+      "scene_id": "scannet_0046_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0046_00",
+      "query": "Find the backpack that is near the foot of the bed and in front of the tall cabinet.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_013_backpack"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "52",
+      "expected_object_ids": [
+        "52"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          0.457317,
+          2.157809,
+          0.108891
+        ],
+        "size": [
+          0.359649,
+          0.501642,
+          0.274749
+        ],
+        "label": "otherprop",
+        "object_id": "52",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.457317,
+            2.157809,
+            0.108891
+          ],
+          "size": [
+            0.359649,
+            0.501642,
+            0.274749
+          ],
+          "label": "otherprop",
+          "object_id": "52",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "3211",
+      "source_instance_type": "backpack",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": true
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_002",
+      "scene_id": "scannet_0046_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0046_00",
+      "query": "The shoes furthest from the door and closest to the window.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_021_shoes"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "49",
+      "expected_object_ids": [
+        "49"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.684184,
+          0.757277,
+          0.039829
+        ],
+        "size": [
+          0.364192,
+          0.413781,
+          0.13737
+        ],
+        "label": "otherprop",
+        "object_id": "49",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.684184,
+            0.757277,
+            0.039829
+          ],
+          "size": [
+            0.364192,
+            0.413781,
+            0.13737
+          ],
+          "label": "otherprop",
+          "object_id": "49",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "185",
+      "source_instance_type": "shoes",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_003",
+      "scene_id": "scannet_0046_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0046_00",
+      "query": "The pair of shoes closer to the door.",
+      "query_type": "simple_object",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_020_shoes"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "48",
+      "expected_object_ids": [
+        "48"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.719374,
+          0.38696,
+          0.013479
+        ],
+        "size": [
+          0.35503,
+          0.548363,
+          0.097469
+        ],
+        "label": "otherprop",
+        "object_id": "48",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.719374,
+            0.38696,
+            0.013479
+          ],
+          "size": [
+            0.35503,
+            0.548363,
+            0.097469
+          ],
+          "label": "otherprop",
+          "object_id": "48",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "1894",
+      "source_instance_type": "shoes",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_001",
+      "scene_id": "scannet_0046_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0046_00",
+      "query": "find the backpack that is closer to the desk",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_011_backpack"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "18",
+      "expected_object_ids": [
+        "18"
+      ],
+      "expected_anchor_object_ids": [
+        "6"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          -0.534086,
+          2.056117,
+          0.165508
+        ],
+        "size": [
+          0.440535,
+          0.544184,
+          0.385934
+        ],
+        "label": "otherprop",
+        "object_id": "18",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.534086,
+            2.056117,
+            0.165508
+          ],
+          "size": [
+            0.440535,
+            0.544184,
+            0.385934
+          ],
+          "label": "otherprop",
+          "object_id": "18",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0046_00-backpack-3-18-50-52",
+      "source_instance_type": "backpack",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_002",
+      "scene_id": "scannet_0046_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0046_00",
+      "query": "choose the door that is far from the picture",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_006_door"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "door"
+      ],
+      "expected_object_id": "21",
+      "expected_object_ids": [
+        "21"
+      ],
+      "expected_anchor_object_ids": [
+        "0"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          -0.838422,
+          -2.424706,
+          0.99414
+        ],
+        "size": [
+          0.9284,
+          0.136649,
+          1.966921
+        ],
+        "label": "door",
+        "object_id": "21",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.838422,
+            -2.424706,
+            0.99414
+          ],
+          "size": [
+            0.9284,
+            0.136649,
+            1.966921
+          ],
+          "label": "door",
+          "object_id": "21",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0046_00-door-2-21-26",
+      "source_instance_type": "door",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_003",
+      "scene_id": "scannet_0046_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0046_00",
+      "query": "choose the picture that is in the center of the toilet paper and the tv",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_001_picture"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "picture"
+      ],
+      "expected_object_id": "0",
+      "expected_object_ids": [
+        "0"
+      ],
+      "expected_anchor_object_ids": [
+        "33",
+        "53"
+      ],
+      "expected_relation": "between",
+      "expected_bbox_3d": {
+        "center": [
+          1.34966,
+          1.194324,
+          1.381844
+        ],
+        "size": [
+          0.042992,
+          0.513438,
+          0.560759
+        ],
+        "label": "picture",
+        "object_id": "0",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.34966,
+            1.194324,
+            1.381844
+          ],
+          "size": [
+            0.042992,
+            0.513438,
+            0.560759
+          ],
+          "label": "picture",
+          "object_id": "0",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0046_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0046_00-picture-1-0",
+      "source_instance_type": "picture",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "between",
+        "reference_type": "between"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_001",
+      "scene_id": "scannet_0086_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0086_00",
+      "query": "The correct trash can is on the wall and to the right of a tan paper towel dispenser.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_004_trash_can"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "otherfurniture"
+      ],
+      "expected_object_id": "13",
+      "expected_object_ids": [
+        "13"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.97112,
+          2.00607,
+          0.885328
+        ],
+        "size": [
+          0.267638,
+          0.493352,
+          1.005567
+        ],
+        "label": "otherfurniture",
+        "object_id": "13",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.97112,
+            2.00607,
+            0.885328
+          ],
+          "size": [
+            0.267638,
+            0.493352,
+            1.005567
+          ],
+          "label": "otherfurniture",
+          "object_id": "13",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "1884",
+      "source_instance_type": "trash can",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": true,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_002",
+      "scene_id": "scannet_0086_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0086_00",
+      "query": "Choose the paper towel dispenser that is on top of the other dispenser.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_005_paper_towel_dispenser"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "17",
+      "expected_object_ids": [
+        "17"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.89287,
+          1.645606,
+          1.472031
+        ],
+        "size": [
+          0.287269,
+          0.325407,
+          0.378828
+        ],
+        "label": "otherprop",
+        "object_id": "17",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.89287,
+            1.645606,
+            1.472031
+          ],
+          "size": [
+            0.287269,
+            0.325407,
+            0.378828
+          ],
+          "label": "otherprop",
+          "object_id": "17",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "1531",
+      "source_instance_type": "paper towel dispenser",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_003",
+      "scene_id": "scannet_0086_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0086_00",
+      "query": "toilet in the larger stall.",
+      "query_type": "attribute",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_004_toilet"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "toilet"
+      ],
+      "expected_object_id": "6",
+      "expected_object_ids": [
+        "6"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.62042,
+          -2.283043,
+          0.419396
+        ],
+        "size": [
+          0.657595,
+          0.470917,
+          0.813656
+        ],
+        "label": "toilet",
+        "object_id": "6",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.62042,
+            -2.283043,
+            0.419396
+          ],
+          "size": [
+            0.657595,
+            0.470917,
+            0.813656
+          ],
+          "label": "toilet",
+          "object_id": "6",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "234",
+      "source_instance_type": "toilet",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": false,
+        "uses_shape_lang": true
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_001",
+      "scene_id": "scannet_0086_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0086_00",
+      "query": "the bathroom stall that is closer to the window",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_001_bathroom_stall"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "otherstructure"
+      ],
+      "expected_object_id": "1",
+      "expected_object_ids": [
+        "1"
+      ],
+      "expected_anchor_object_ids": [
+        "11"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          0.2307,
+          -1.891444,
+          1.006782
+        ],
+        "size": [
+          2.626795,
+          2.266155,
+          2.03634
+        ],
+        "label": "otherstructure",
+        "object_id": "1",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.2307,
+            -1.891444,
+            1.006782
+          ],
+          "size": [
+            2.626795,
+            2.266155,
+            2.03634
+          ],
+          "label": "otherstructure",
+          "object_id": "1",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0086_00-bathroom_stall-2-1-28",
+      "source_instance_type": "bathroom stall",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_002",
+      "scene_id": "scannet_0086_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0086_00",
+      "query": "select the toilet that is farthest from the mirror",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_004_toilet"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "toilet"
+      ],
+      "expected_object_id": "6",
+      "expected_object_ids": [
+        "6"
+      ],
+      "expected_anchor_object_ids": [
+        "0"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          -0.62042,
+          -2.283043,
+          0.419396
+        ],
+        "size": [
+          0.657595,
+          0.470917,
+          0.813656
+        ],
+        "label": "toilet",
+        "object_id": "6",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.62042,
+            -2.283043,
+            0.419396
+          ],
+          "size": [
+            0.657595,
+            0.470917,
+            0.813656
+          ],
+          "label": "toilet",
+          "object_id": "6",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0086_00-toilet-2-6-7",
+      "source_instance_type": "toilet",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_003",
+      "scene_id": "scannet_0086_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0086_00",
+      "query": "select the plant that is above the paper towel dispenser",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_002_plant"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "4",
+      "expected_object_ids": [
+        "4"
+      ],
+      "expected_anchor_object_ids": [
+        "18"
+      ],
+      "expected_relation": "above",
+      "expected_bbox_3d": {
+        "center": [
+          -0.839486,
+          1.655977,
+          1.647337
+        ],
+        "size": [
+          0.209298,
+          0.315886,
+          0.439683
+        ],
+        "label": "otherprop",
+        "object_id": "4",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.839486,
+            1.655977,
+            1.647337
+          ],
+          "size": [
+            0.209298,
+            0.315886,
+            0.439683
+          ],
+          "label": "otherprop",
+          "object_id": "4",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0086_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0086_00-plant-1-4",
+      "source_instance_type": "plant",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "vertical",
+        "reference_type": "above"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_001",
+      "scene_id": "scannet_0222_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0222_00",
+      "query": "The blue can that is between a gray can and the bunk beds.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v005_005_trash_can"
+      ],
+      "expected_view_ids": [
+        "v005"
+      ],
+      "expected_object_labels": [
+        "otherfurniture"
+      ],
+      "expected_object_id": "16",
+      "expected_object_ids": [
+        "16"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.522239,
+          -3.077993,
+          0.171325
+        ],
+        "size": [
+          0.434557,
+          0.42412,
+          0.404405
+        ],
+        "label": "otherfurniture",
+        "object_id": "16",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.522239,
+            -3.077993,
+            0.171325
+          ],
+          "size": [
+            0.434557,
+            0.42412,
+            0.404405
+          ],
+          "label": "otherfurniture",
+          "object_id": "16",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "507",
+      "source_instance_type": "trash can",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": true,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_002",
+      "scene_id": "scannet_0222_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0222_00",
+      "query": "The door with the handle on the right side, which is also the door you use to enter and exit the room.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v005_007_door"
+      ],
+      "expected_view_ids": [
+        "v005"
+      ],
+      "expected_object_labels": [
+        "door"
+      ],
+      "expected_object_id": "24",
+      "expected_object_ids": [
+        "24"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          0.921944,
+          -2.379053,
+          0.950434
+        ],
+        "size": [
+          0.263672,
+          0.876466,
+          1.993546
+        ],
+        "label": "door",
+        "object_id": "24",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.921944,
+            -2.379053,
+            0.950434
+          ],
+          "size": [
+            0.263672,
+            0.876466,
+            1.993546
+          ],
+          "label": "door",
+          "object_id": "24",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "1322",
+      "source_instance_type": "door",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_003",
+      "scene_id": "scannet_0222_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0222_00",
+      "query": "the garbage can, not the recycling bin",
+      "query_type": "simple_object",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v005_006_trash_can"
+      ],
+      "expected_view_ids": [
+        "v005"
+      ],
+      "expected_object_labels": [
+        "otherfurniture"
+      ],
+      "expected_object_id": "17",
+      "expected_object_ids": [
+        "17"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.222124,
+          -3.036958,
+          0.165467
+        ],
+        "size": [
+          0.302337,
+          0.39506,
+          0.385477
+        ],
+        "label": "otherfurniture",
+        "object_id": "17",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.222124,
+            -3.036958,
+            0.165467
+          ],
+          "size": [
+            0.302337,
+            0.39506,
+            0.385477
+          ],
+          "label": "otherfurniture",
+          "object_id": "17",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "3344",
+      "source_instance_type": "trash can",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_001",
+      "scene_id": "scannet_0222_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0222_00",
+      "query": "the bed that is close to the laundry hamper",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_001_bed"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "bed"
+      ],
+      "expected_object_id": "0",
+      "expected_object_ids": [
+        "0"
+      ],
+      "expected_anchor_object_ids": [
+        "15"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          0.866034,
+          1.465372,
+          0.465039
+        ],
+        "size": [
+          2.206152,
+          1.014044,
+          1.022375
+        ],
+        "label": "bed",
+        "object_id": "0",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.866034,
+            1.465372,
+            0.465039
+          ],
+          "size": [
+            2.206152,
+            1.014044,
+            1.022375
+          ],
+          "label": "bed",
+          "object_id": "0",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0222_00-bed-2-0-5",
+      "source_instance_type": "bed",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_002",
+      "scene_id": "scannet_0222_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0222_00",
+      "query": "select the door that is far from the dresser",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_002_door"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "door"
+      ],
+      "expected_object_id": "3",
+      "expected_object_ids": [
+        "3"
+      ],
+      "expected_anchor_object_ids": [
+        "22"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          -1.267136,
+          1.650074,
+          0.988698
+        ],
+        "size": [
+          0.151071,
+          0.861796,
+          2.019611
+        ],
+        "label": "door",
+        "object_id": "3",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -1.267136,
+            1.650074,
+            0.988698
+          ],
+          "size": [
+            0.151071,
+            0.861796,
+            2.019611
+          ],
+          "label": "door",
+          "object_id": "3",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0222_00-door-2-3-24",
+      "source_instance_type": "door",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_003",
+      "scene_id": "scannet_0222_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0222_00",
+      "query": "choose the chair that is in the center of the laundry hamper and the backpack",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_003_chair"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "chair"
+      ],
+      "expected_object_id": "7",
+      "expected_object_ids": [
+        "7"
+      ],
+      "expected_anchor_object_ids": [
+        "15",
+        "31"
+      ],
+      "expected_relation": "between",
+      "expected_bbox_3d": {
+        "center": [
+          0.429796,
+          -0.158952,
+          0.322323
+        ],
+        "size": [
+          0.745341,
+          0.679067,
+          0.797749
+        ],
+        "label": "chair",
+        "object_id": "7",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.429796,
+            -0.158952,
+            0.322323
+          ],
+          "size": [
+            0.745341,
+            0.679067,
+            0.797749
+          ],
+          "label": "chair",
+          "object_id": "7",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0222_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0222_00-chair-2-7-6",
+      "source_instance_type": "chair",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "between",
+        "reference_type": "between"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_001",
+      "scene_id": "scannet_0378_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0378_00",
+      "query": "The yellow shelf not the gray shelf.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_010_bookshelf"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "bookshelf"
+      ],
+      "expected_object_id": "38",
+      "expected_object_ids": [
+        "38"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -0.843934,
+          1.78721,
+          1.077914
+        ],
+        "size": [
+          1.106841,
+          0.510161,
+          1.89829
+        ],
+        "label": "bookshelf",
+        "object_id": "38",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.843934,
+            1.78721,
+            1.077914
+          ],
+          "size": [
+            1.106841,
+            0.510161,
+            1.89829
+          ],
+          "label": "bookshelf",
+          "object_id": "38",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "2062",
+      "source_instance_type": "bookshelf",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": true,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_002",
+      "scene_id": "scannet_0378_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0378_00",
+      "query": "The cup closest to the door.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_014_cup"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "31",
+      "expected_object_ids": [
+        "31"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          0.678191,
+          0.569057,
+          0.807683
+        ],
+        "size": [
+          0.130653,
+          0.107282,
+          0.085339
+        ],
+        "label": "otherprop",
+        "object_id": "31",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.678191,
+            0.569057,
+            0.807683
+          ],
+          "size": [
+            0.130653,
+            0.107282,
+            0.085339
+          ],
+          "label": "otherprop",
+          "object_id": "31",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "2696",
+      "source_instance_type": "cup",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_003",
+      "scene_id": "scannet_0378_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0378_00",
+      "query": "Choose the desk closes to the door.",
+      "query_type": "simple_object",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_001_desk"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "desk"
+      ],
+      "expected_object_id": "0",
+      "expected_object_ids": [
+        "0"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          0.780586,
+          0.436857,
+          0.419022
+        ],
+        "size": [
+          1.191895,
+          0.8844,
+          0.835146
+        ],
+        "label": "desk",
+        "object_id": "0",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.780586,
+            0.436857,
+            0.419022
+          ],
+          "size": [
+            1.191895,
+            0.8844,
+            0.835146
+          ],
+          "label": "desk",
+          "object_id": "0",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "486",
+      "source_instance_type": "desk",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_001",
+      "scene_id": "scannet_0378_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0378_00",
+      "query": "find the desk that is near the door",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_001_desk"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "desk"
+      ],
+      "expected_object_id": "0",
+      "expected_object_ids": [
+        "0"
+      ],
+      "expected_anchor_object_ids": [
+        "2"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          0.780586,
+          0.436857,
+          0.419022
+        ],
+        "size": [
+          1.191895,
+          0.8844,
+          0.835146
+        ],
+        "label": "desk",
+        "object_id": "0",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.780586,
+            0.436857,
+            0.419022
+          ],
+          "size": [
+            1.191895,
+            0.8844,
+            0.835146
+          ],
+          "label": "desk",
+          "object_id": "0",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0378_00-desk-3-0-35-44",
+      "source_instance_type": "desk",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_002",
+      "scene_id": "scannet_0378_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0378_00",
+      "query": "select the desk that is farthest from the door",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_002_desk"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "desk"
+      ],
+      "expected_object_id": "35",
+      "expected_object_ids": [
+        "35"
+      ],
+      "expected_anchor_object_ids": [
+        "2"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          -0.61329,
+          -1.445527,
+          0.433358
+        ],
+        "size": [
+          1.567723,
+          0.916705,
+          0.753073
+        ],
+        "label": "desk",
+        "object_id": "35",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.61329,
+            -1.445527,
+            0.433358
+          ],
+          "size": [
+            1.567723,
+            0.916705,
+            0.753073
+          ],
+          "label": "desk",
+          "object_id": "35",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0378_00-desk-3-35-0-44",
+      "source_instance_type": "desk",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_003",
+      "scene_id": "scannet_0378_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0378_00",
+      "query": "find the monitor that is between the door and the window",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_003_monitor"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "otherprop"
+      ],
+      "expected_object_id": "4",
+      "expected_object_ids": [
+        "4"
+      ],
+      "expected_anchor_object_ids": [
+        "2",
+        "22"
+      ],
+      "expected_relation": "between",
+      "expected_bbox_3d": {
+        "center": [
+          1.246827,
+          -0.624882,
+          1.097161
+        ],
+        "size": [
+          0.253414,
+          0.628136,
+          0.433518
+        ],
+        "label": "otherprop",
+        "object_id": "4",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.246827,
+            -0.624882,
+            1.097161
+          ],
+          "size": [
+            0.253414,
+            0.628136,
+            0.433518
+          ],
+          "label": "otherprop",
+          "object_id": "4",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0378_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0378_00-monitor-1-4",
+      "source_instance_type": "monitor",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "between",
+        "reference_type": "between"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_001",
+      "scene_id": "scannet_0389_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0389_00",
+      "query": "The white bag on the left.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_007_bag"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "bag"
+      ],
+      "expected_object_id": "23",
+      "expected_object_ids": [
+        "23"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -1.741122,
+          -2.196061,
+          0.127206
+        ],
+        "size": [
+          0.322148,
+          0.377036,
+          0.382783
+        ],
+        "label": "bag",
+        "object_id": "23",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -1.741122,
+            -2.196061,
+            0.127206
+          ],
+          "size": [
+            0.322148,
+            0.377036,
+            0.382783
+          ],
+          "label": "bag",
+          "object_id": "23",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "6322",
+      "source_instance_type": "bag",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": true,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_002",
+      "scene_id": "scannet_0389_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0389_00",
+      "query": "the chair closest to the TV",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_002_chair"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "chair"
+      ],
+      "expected_object_id": "2",
+      "expected_object_ids": [
+        "2"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          1.281545,
+          -0.789153,
+          0.389675
+        ],
+        "size": [
+          0.722472,
+          0.61722,
+          0.865605
+        ],
+        "label": "chair",
+        "object_id": "2",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.281545,
+            -0.789153,
+            0.389675
+          ],
+          "size": [
+            0.722472,
+            0.61722,
+            0.865605
+          ],
+          "label": "chair",
+          "object_id": "2",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "601",
+      "source_instance_type": "chair",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_003",
+      "scene_id": "scannet_0389_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0389_00",
+      "query": "white entry door with handle",
+      "query_type": "attribute",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_001_door"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "door"
+      ],
+      "expected_object_id": "7",
+      "expected_object_ids": [
+        "7"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          0.30731,
+          -2.908851,
+          1.103553
+        ],
+        "size": [
+          1.155055,
+          0.074341,
+          2.387925
+        ],
+        "label": "door",
+        "object_id": "7",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.30731,
+            -2.908851,
+            1.103553
+          ],
+          "size": [
+            1.155055,
+            0.074341,
+            2.387925
+          ],
+          "label": "door",
+          "object_id": "7",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "3399",
+      "source_instance_type": "door",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": true,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_001",
+      "scene_id": "scannet_0389_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0389_00",
+      "query": "choose the chair that is close to the cabinet",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_002_chair"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "chair"
+      ],
+      "expected_object_id": "2",
+      "expected_object_ids": [
+        "2"
+      ],
+      "expected_anchor_object_ids": [
+        "6"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          1.281545,
+          -0.789153,
+          0.389675
+        ],
+        "size": [
+          0.722472,
+          0.61722,
+          0.865605
+        ],
+        "label": "chair",
+        "object_id": "2",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.281545,
+            -0.789153,
+            0.389675
+          ],
+          "size": [
+            0.722472,
+            0.61722,
+            0.865605
+          ],
+          "label": "chair",
+          "object_id": "2",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0389_00-chair-2-2-3",
+      "source_instance_type": "chair",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_002",
+      "scene_id": "scannet_0389_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0389_00",
+      "query": "select the chair that is far from the cabinet",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_003_chair"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "chair"
+      ],
+      "expected_object_id": "3",
+      "expected_object_ids": [
+        "3"
+      ],
+      "expected_anchor_object_ids": [
+        "6"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          0.925381,
+          -1.697191,
+          0.348234
+        ],
+        "size": [
+          0.630442,
+          0.654168,
+          0.855054
+        ],
+        "label": "chair",
+        "object_id": "3",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.925381,
+            -1.697191,
+            0.348234
+          ],
+          "size": [
+            0.630442,
+            0.654168,
+            0.855054
+          ],
+          "label": "chair",
+          "object_id": "3",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0389_00-chair-2-3-2",
+      "source_instance_type": "chair",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_003",
+      "scene_id": "scannet_0389_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0389_00",
+      "query": "find the cabinet that is in the middle of the table and the trash can",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_005_cabinet"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "cabinet"
+      ],
+      "expected_object_id": "6",
+      "expected_object_ids": [
+        "6"
+      ],
+      "expected_anchor_object_ids": [
+        "8",
+        "28"
+      ],
+      "expected_relation": "between",
+      "expected_bbox_3d": {
+        "center": [
+          1.522415,
+          -0.104987,
+          0.525472
+        ],
+        "size": [
+          0.824888,
+          1.020055,
+          1.071079
+        ],
+        "label": "cabinet",
+        "object_id": "6",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.522415,
+            -0.104987,
+            0.525472
+          ],
+          "size": [
+            0.824888,
+            1.020055,
+            1.071079
+          ],
+          "label": "cabinet",
+          "object_id": "6",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0389_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0389_00-cabinet-1-6",
+      "source_instance_type": "cabinet",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "between",
+        "reference_type": "between"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_001",
+      "scene_id": "scannet_0435_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0435_00",
+      "query": "The lamp that is at the end of the room between the brown curtains, with a black mini fridge on the left and a brown chair on the right.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v002_006_lamp"
+      ],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "lamp"
+      ],
+      "expected_object_id": "50",
+      "expected_object_ids": [
+        "50"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          0.390407,
+          3.471768,
+          0.805968
+        ],
+        "size": [
+          0.468736,
+          0.381926,
+          1.551314
+        ],
+        "label": "lamp",
+        "object_id": "50",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.390407,
+            3.471768,
+            0.805968
+          ],
+          "size": [
+            0.468736,
+            0.381926,
+            1.551314
+          ],
+          "label": "lamp",
+          "object_id": "50",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "4296",
+      "source_instance_type": "lamp",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": true,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_002",
+      "scene_id": "scannet_0435_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0435_00",
+      "query": "the picture is above the desk.",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v001_004_picture"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "picture"
+      ],
+      "expected_object_id": "57",
+      "expected_object_ids": [
+        "57"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          -1.855254,
+          1.167377,
+          1.497604
+        ],
+        "size": [
+          0.087693,
+          0.71611,
+          0.936506
+        ],
+        "label": "picture",
+        "object_id": "57",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -1.855254,
+            1.167377,
+            1.497604
+          ],
+          "size": [
+            0.087693,
+            0.71611,
+            0.936506
+          ],
+          "label": "picture",
+          "object_id": "57",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "163",
+      "source_instance_type": "picture",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": true,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_003",
+      "scene_id": "scannet_0435_00",
+      "source_dataset": "Nr3D",
+      "dataset_scene_id": "scene0435_00",
+      "query": "The bed closer to the windows.",
+      "query_type": "simple_object",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_001_bed"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "bed"
+      ],
+      "expected_object_id": "11",
+      "expected_object_ids": [
+        "11"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_relation": null,
+      "expected_bbox_3d": {
+        "center": [
+          0.90386,
+          1.418613,
+          0.71616
+        ],
+        "size": [
+          2.136354,
+          1.767768,
+          1.558587
+        ],
+        "label": "bed",
+        "object_id": "11",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.90386,
+            1.418613,
+            0.71616
+          ],
+          "size": [
+            2.136354,
+            1.767768,
+            1.558587
+          ],
+          "label": "bed",
+          "object_id": "11",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/nr3d.csv",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "749",
+      "source_instance_type": "bed",
+      "language_features": {
+        "mentions_target_class": true,
+        "uses_object_lang": true,
+        "uses_spatial_lang": false,
+        "uses_color_lang": false,
+        "uses_shape_lang": false
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_001",
+      "scene_id": "scannet_0435_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0435_00",
+      "query": "find the bed that is closer to the bathroom vanity",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_007_bed"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "bed"
+      ],
+      "expected_object_id": "10",
+      "expected_object_ids": [
+        "10"
+      ],
+      "expected_anchor_object_ids": [
+        "8"
+      ],
+      "expected_relation": "closest",
+      "expected_bbox_3d": {
+        "center": [
+          0.911602,
+          -0.94072,
+          0.719087
+        ],
+        "size": [
+          2.129031,
+          1.809325,
+          1.547576
+        ],
+        "label": "bed",
+        "object_id": "10",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.911602,
+            -0.94072,
+            0.719087
+          ],
+          "size": [
+            2.129031,
+            1.809325,
+            1.547576
+          ],
+          "label": "bed",
+          "object_id": "10",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0435_00-bed-2-10-11",
+      "source_instance_type": "bed",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "closest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_002",
+      "scene_id": "scannet_0435_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0435_00",
+      "query": "select the bed that is farthest from the bathroom vanity",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v003_001_bed"
+      ],
+      "expected_view_ids": [
+        "v003"
+      ],
+      "expected_object_labels": [
+        "bed"
+      ],
+      "expected_object_id": "11",
+      "expected_object_ids": [
+        "11"
+      ],
+      "expected_anchor_object_ids": [
+        "8"
+      ],
+      "expected_relation": "farthest",
+      "expected_bbox_3d": {
+        "center": [
+          0.90386,
+          1.418613,
+          0.71616
+        ],
+        "size": [
+          2.136354,
+          1.767768,
+          1.558587
+        ],
+        "label": "bed",
+        "object_id": "11",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.90386,
+            1.418613,
+            0.71616
+          ],
+          "size": [
+            2.136354,
+            1.767768,
+            1.558587
+          ],
+          "label": "bed",
+          "object_id": "11",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0435_00-bed-2-11-10",
+      "source_instance_type": "bed",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "horizontal",
+        "reference_type": "farthest"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_003",
+      "scene_id": "scannet_0435_00",
+      "source_dataset": "Sr3D+",
+      "dataset_scene_id": "scene0435_00",
+      "query": "the toilet that is between the desk and the bathtub",
+      "query_type": "relational",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [
+        "object_v004_008_toilet"
+      ],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "toilet"
+      ],
+      "expected_object_id": "12",
+      "expected_object_ids": [
+        "12"
+      ],
+      "expected_anchor_object_ids": [
+        "4",
+        "9"
+      ],
+      "expected_relation": "between",
+      "expected_bbox_3d": {
+        "center": [
+          0.924444,
+          -3.541761,
+          0.375487
+        ],
+        "size": [
+          0.77773,
+          0.441218,
+          0.774942
+        ],
+        "label": "toilet",
+        "object_id": "12",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.924444,
+            -3.541761,
+            0.375487
+          ],
+          "size": [
+            0.77773,
+            0.441218,
+            0.774942
+          ],
+          "label": "toilet",
+          "object_id": "12",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "acceptance_rule": "found=true, selected object_id equals the official ReferIt3D target_id, and predicted 3D bbox is scored against the official ScanNet instance AABB",
+      "verification_status": "verified_official_scannet_referit3d_gt",
+      "verification_source": [
+        "data/scannet/annotations/sr3d/sr3d+.csv",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_boxes_3d.json",
+        "backend/data/scenes/scannet_0435_00/ground_truth/object_view_assignments.json"
+      ],
+      "source_annotation_id": "scene0435_00-toilet-1-12",
+      "source_instance_type": "toilet",
+      "language_features": {
+        "mentions_target_class": true,
+        "coarse_reference_type": "between",
+        "reference_type": "between"
+      },
+      "metrics_target": [
+        "Recall@1",
+        "ObjectIDHit",
+        "Acc@0.1",
+        "Acc@0.25",
+        "Acc@0.5"
+      ],
+      "failure_labels": [
+        "wrong_object",
+        "wrong_relation",
+        "wrong_view",
+        "bad_bbox",
+        "unavailable_prediction"
+      ],
+      "gt_3d_reliable": true
+    },
+    {
+      "query_id": "scannet_0011_00_functional_gt_001",
+      "scene_id": "scannet_0011_00",
+      "dataset_scene_id": "0011_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a place where someone can sit for the meeting.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v002",
+        "v003",
+        "v004"
+      ],
+      "expected_object_labels": [
+        "armchair",
+        "chair"
+      ],
+      "expected_object_id": "3",
+      "expected_object_ids": [
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          -3.289758,
+          2.13813,
+          0.400647
+        ],
+        "size": [
+          0.33948,
+          0.842274,
+          0.800877
+        ],
+        "label": "armchair",
+        "object_id": "3",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -3.289758,
+            2.13813,
+            0.400647
+          ],
+          "size": [
+            0.33948,
+            0.842274,
+            0.800877
+          ],
+          "label": "armchair",
+          "object_id": "3",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.181093,
+            -1.995474,
+            0.516643
+          ],
+          "size": [
+            0.684396,
+            0.741363,
+            0.986291
+          ],
+          "label": "chair",
+          "object_id": "4",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.031693,
+            -1.010406,
+            0.514499
+          ],
+          "size": [
+            0.516391,
+            0.539769,
+            0.995405
+          ],
+          "label": "chair",
+          "object_id": "5",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.19823,
+            -0.057979,
+            0.509417
+          ],
+          "size": [
+            0.563647,
+            0.571489,
+            1.002706
+          ],
+          "label": "chair",
+          "object_id": "6",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.195007,
+            0.775774,
+            0.494004
+          ],
+          "size": [
+            0.550577,
+            0.586553,
+            0.961823
+          ],
+          "label": "chair",
+          "object_id": "7",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.168488,
+            1.614209,
+            0.492828
+          ],
+          "size": [
+            0.593466,
+            0.701169,
+            0.977768
+          ],
+          "label": "chair",
+          "object_id": "8",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.297619,
+            1.942907,
+            0.510334
+          ],
+          "size": [
+            0.686814,
+            0.52452,
+            0.979167
+          ],
+          "label": "chair",
+          "object_id": "9",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.907568,
+            1.376307,
+            0.508347
+          ],
+          "size": [
+            0.486,
+            0.711115,
+            0.968082
+          ],
+          "label": "chair",
+          "object_id": "10",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -1.010131,
+            0.442634,
+            0.508759
+          ],
+          "size": [
+            0.660615,
+            0.56058,
+            0.965987
+          ],
+          "label": "chair",
+          "object_id": "11",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -1.022552,
+            -0.420751,
+            0.502586
+          ],
+          "size": [
+            0.541144,
+            0.658217,
+            0.998398
+          ],
+          "label": "chair",
+          "object_id": "12",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.999758,
+            -1.045237,
+            0.510464
+          ],
+          "size": [
+            0.432671,
+            0.509952,
+            0.98739
+          ],
+          "label": "chair",
+          "object_id": "13",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0011_00_negative_gt_001",
+      "scene_id": "scannet_0011_00",
+      "dataset_scene_id": "0011_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the bathtub.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    },
+    {
+      "query_id": "scannet_0030_00_functional_gt_001",
+      "scene_id": "scannet_0030_00",
+      "dataset_scene_id": "0030_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a seat suitable for working at a desk.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v002",
+        "v004",
+        "v005",
+        "v006"
+      ],
+      "expected_object_labels": [
+        "armchair",
+        "chair",
+        "office chair"
+      ],
+      "expected_object_id": "0",
+      "expected_object_ids": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "52"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          1.845924,
+          0.34225,
+          0.458625
+        ],
+        "size": [
+          0.680743,
+          0.426044,
+          0.776433
+        ],
+        "label": "office chair",
+        "object_id": "0",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.845924,
+            0.34225,
+            0.458625
+          ],
+          "size": [
+            0.680743,
+            0.426044,
+            0.776433
+          ],
+          "label": "office chair",
+          "object_id": "0",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.872276,
+            -0.023209,
+            0.440294
+          ],
+          "size": [
+            0.601504,
+            0.522433,
+            0.825387
+          ],
+          "label": "office chair",
+          "object_id": "1",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            1.232784,
+            -0.656678,
+            0.383694
+          ],
+          "size": [
+            0.781395,
+            0.514724,
+            0.790053
+          ],
+          "label": "office chair",
+          "object_id": "2",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -1.116414,
+            2.665083,
+            0.421527
+          ],
+          "size": [
+            0.736613,
+            0.70174,
+            0.767464
+          ],
+          "label": "chair",
+          "object_id": "3",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            1.255661,
+            0.428866,
+            0.411622
+          ],
+          "size": [
+            0.937508,
+            0.763516,
+            0.852187
+          ],
+          "label": "chair",
+          "object_id": "4",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.423823,
+            0.504568,
+            0.417306
+          ],
+          "size": [
+            0.582542,
+            0.491097,
+            0.758894
+          ],
+          "label": "chair",
+          "object_id": "5",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.104224,
+            2.480463,
+            0.358983
+          ],
+          "size": [
+            0.631509,
+            0.63464,
+            0.776311
+          ],
+          "label": "chair",
+          "object_id": "6",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            1.863922,
+            -1.416298,
+            0.445454
+          ],
+          "size": [
+            0.595372,
+            0.588819,
+            0.777844
+          ],
+          "label": "chair",
+          "object_id": "7",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -1.275592,
+            -0.863829,
+            0.563364
+          ],
+          "size": [
+            0.596335,
+            0.513505,
+            0.403312
+          ],
+          "label": "chair",
+          "object_id": "8",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.127109,
+            -0.903434,
+            0.557909
+          ],
+          "size": [
+            0.681061,
+            0.6959,
+            0.485739
+          ],
+          "label": "chair",
+          "object_id": "9",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.768656,
+            -1.314709,
+            0.592223
+          ],
+          "size": [
+            0.541021,
+            0.555986,
+            0.502245
+          ],
+          "label": "chair",
+          "object_id": "10",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.513137,
+            2.522765,
+            0.365447
+          ],
+          "size": [
+            0.493806,
+            0.770715,
+            0.811416
+          ],
+          "label": "chair",
+          "object_id": "11",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            1.278884,
+            1.136735,
+            0.550772
+          ],
+          "size": [
+            0.537384,
+            0.541556,
+            0.397992
+          ],
+          "label": "chair",
+          "object_id": "12",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            1.24946,
+            -1.30121,
+            0.457226
+          ],
+          "size": [
+            0.630207,
+            0.516632,
+            0.686127
+          ],
+          "label": "chair",
+          "object_id": "13",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            2.086201,
+            1.121762,
+            0.559688
+          ],
+          "size": [
+            0.232448,
+            0.35803,
+            0.509809
+          ],
+          "label": "chair",
+          "object_id": "14",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -1.121146,
+            0.667603,
+            0.566659
+          ],
+          "size": [
+            0.602465,
+            0.555734,
+            0.410722
+          ],
+          "label": "chair",
+          "object_id": "15",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            2.155387,
+            2.454429,
+            0.510007
+          ],
+          "size": [
+            1.133787,
+            1.023876,
+            1.01988
+          ],
+          "label": "armchair",
+          "object_id": "52",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0030_00_negative_gt_001",
+      "scene_id": "scannet_0030_00",
+      "dataset_scene_id": "0030_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the bed.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    },
+    {
+      "query_id": "scannet_0046_00_functional_gt_001",
+      "scene_id": "scannet_0046_00",
+      "dataset_scene_id": "0046_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a place to sleep.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v002"
+      ],
+      "expected_object_labels": [
+        "bed"
+      ],
+      "expected_object_id": "3",
+      "expected_object_ids": [
+        "3"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          0.670479,
+          0.766244,
+          0.485314
+        ],
+        "size": [
+          1.372029,
+          2.480972,
+          0.983994
+        ],
+        "label": "bed",
+        "object_id": "3",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.670479,
+            0.766244,
+            0.485314
+          ],
+          "size": [
+            1.372029,
+            2.480972,
+            0.983994
+          ],
+          "label": "bed",
+          "object_id": "3",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0046_00_negative_gt_001",
+      "scene_id": "scannet_0046_00",
+      "dataset_scene_id": "0046_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the refrigerator.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    },
+    {
+      "query_id": "scannet_0086_00_functional_gt_001",
+      "scene_id": "scannet_0086_00",
+      "dataset_scene_id": "0086_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a place to wash your hands.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "expected_object_labels": [
+        "sink"
+      ],
+      "expected_object_id": "19",
+      "expected_object_ids": [
+        "19",
+        "20"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          -0.642168,
+          0.530975,
+          0.699741
+        ],
+        "size": [
+          0.68423,
+          0.539195,
+          0.406933
+        ],
+        "label": "sink",
+        "object_id": "19",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            -0.642168,
+            0.530975,
+            0.699741
+          ],
+          "size": [
+            0.68423,
+            0.539195,
+            0.406933
+          ],
+          "label": "sink",
+          "object_id": "19",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.745608,
+            1.156593,
+            0.67086
+          ],
+          "size": [
+            0.464687,
+            0.592065,
+            0.498926
+          ],
+          "label": "sink",
+          "object_id": "20",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0086_00_negative_gt_001",
+      "scene_id": "scannet_0086_00",
+      "dataset_scene_id": "0086_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the bed.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    },
+    {
+      "query_id": "scannet_0222_00_functional_gt_001",
+      "scene_id": "scannet_0222_00",
+      "dataset_scene_id": "0222_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a place to sleep.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v001",
+        "v004"
+      ],
+      "expected_object_labels": [
+        "bed"
+      ],
+      "expected_object_id": "0",
+      "expected_object_ids": [
+        "0",
+        "5"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          0.866034,
+          1.465372,
+          0.465039
+        ],
+        "size": [
+          2.206152,
+          1.014044,
+          1.022375
+        ],
+        "label": "bed",
+        "object_id": "0",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.866034,
+            1.465372,
+            0.465039
+          ],
+          "size": [
+            2.206152,
+            1.014044,
+            1.022375
+          ],
+          "label": "bed",
+          "object_id": "0",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -1.13343,
+            -2.049098,
+            0.433174
+          ],
+          "size": [
+            1.170883,
+            2.302752,
+            0.950832
+          ],
+          "label": "bed",
+          "object_id": "5",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0222_00_negative_gt_001",
+      "scene_id": "scannet_0222_00",
+      "dataset_scene_id": "0222_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the bathtub.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    },
+    {
+      "query_id": "scannet_0378_00_functional_gt_001",
+      "scene_id": "scannet_0378_00",
+      "dataset_scene_id": "0378_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a seat at a workstation.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v001",
+        "v002",
+        "v003",
+        "v004"
+      ],
+      "expected_object_labels": [
+        "chair",
+        "office chair"
+      ],
+      "expected_object_id": "40",
+      "expected_object_ids": [
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          0.263343,
+          -0.560046,
+          0.420179
+        ],
+        "size": [
+          0.628886,
+          0.649015,
+          0.891307
+        ],
+        "label": "office chair",
+        "object_id": "40",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.263343,
+            -0.560046,
+            0.420179
+          ],
+          "size": [
+            0.628886,
+            0.649015,
+            0.891307
+          ],
+          "label": "office chair",
+          "object_id": "40",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -0.606552,
+            -1.026155,
+            0.440126
+          ],
+          "size": [
+            0.607565,
+            0.490874,
+            0.911557
+          ],
+          "label": "office chair",
+          "object_id": "41",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.669574,
+            0.91089,
+            0.456533
+          ],
+          "size": [
+            0.703641,
+            0.694685,
+            0.779223
+          ],
+          "label": "chair",
+          "object_id": "42",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            -1.271982,
+            0.376359,
+            0.390038
+          ],
+          "size": [
+            0.575699,
+            0.51089,
+            0.81844
+          ],
+          "label": "chair",
+          "object_id": "43",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0378_00_negative_gt_001",
+      "scene_id": "scannet_0378_00",
+      "dataset_scene_id": "0378_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the bed.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    },
+    {
+      "query_id": "scannet_0389_00_functional_gt_001",
+      "scene_id": "scannet_0389_00",
+      "dataset_scene_id": "0389_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a place to sit.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v004"
+      ],
+      "expected_object_labels": [
+        "chair"
+      ],
+      "expected_object_id": "2",
+      "expected_object_ids": [
+        "2",
+        "3"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          1.281545,
+          -0.789153,
+          0.389675
+        ],
+        "size": [
+          0.722472,
+          0.61722,
+          0.865605
+        ],
+        "label": "chair",
+        "object_id": "2",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            1.281545,
+            -0.789153,
+            0.389675
+          ],
+          "size": [
+            0.722472,
+            0.61722,
+            0.865605
+          ],
+          "label": "chair",
+          "object_id": "2",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.925381,
+            -1.697191,
+            0.348234
+          ],
+          "size": [
+            0.630442,
+            0.654168,
+            0.855054
+          ],
+          "label": "chair",
+          "object_id": "3",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0389_00_negative_gt_001",
+      "scene_id": "scannet_0389_00",
+      "dataset_scene_id": "0389_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the bathtub.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    },
+    {
+      "query_id": "scannet_0435_00_functional_gt_001",
+      "scene_id": "scannet_0435_00",
+      "dataset_scene_id": "0435_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_functional_extension_v1",
+      "query": "Find a place to sleep.",
+      "query_type": "functional",
+      "expected_output_type": "object_3d_bbox",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [
+        "v003",
+        "v004"
+      ],
+      "expected_object_labels": [
+        "bed"
+      ],
+      "expected_object_id": "10",
+      "expected_object_ids": [
+        "10",
+        "11"
+      ],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": {
+        "center": [
+          0.911602,
+          -0.94072,
+          0.719087
+        ],
+        "size": [
+          2.129031,
+          1.809325,
+          1.547576
+        ],
+        "label": "bed",
+        "object_id": "10",
+        "coordinate_frame": "scannet_axis_aligned_mesh"
+      },
+      "expected_bboxes_3d": [
+        {
+          "center": [
+            0.911602,
+            -0.94072,
+            0.719087
+          ],
+          "size": [
+            2.129031,
+            1.809325,
+            1.547576
+          ],
+          "label": "bed",
+          "object_id": "10",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        },
+        {
+          "center": [
+            0.90386,
+            1.418613,
+            0.71616
+          ],
+          "size": [
+            2.136354,
+            1.767768,
+            1.558587
+          ],
+          "label": "bed",
+          "object_id": "11",
+          "coordinate_frame": "scannet_axis_aligned_mesh"
+        }
+      ],
+      "verification_status": "verified_official_scannet_gt_functional_mapping",
+      "verification_source": "Official ScanNet instance labels and 3D boxes; functional mapping is declared by this benchmark protocol.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "Selected object ID must be one of the declared official ScanNet objects satisfying the functional category.",
+      "metrics_target": [
+        "Recall@1",
+        "Recall@3",
+        "Recall@5",
+        "MRR",
+        "Acc@0.25"
+      ],
+      "failure_labels": [
+        "wrong object",
+        "invalid/unavailable prediction",
+        "bad bbox"
+      ]
+    },
+    {
+      "query_id": "scannet_0435_00_negative_gt_001",
+      "scene_id": "scannet_0435_00",
+      "dataset_scene_id": "0435_00",
+      "source_dataset": "ScanNet-derived official GT",
+      "source_annotation_id": "semanticsplat_negative_extension_v1",
+      "query": "Find the refrigerator.",
+      "query_type": "negative",
+      "expected_output_type": "not_found",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "expected_object_id": null,
+      "expected_object_ids": [],
+      "expected_anchor_object_ids": [],
+      "expected_bbox_3d": null,
+      "expected_bboxes_3d": [],
+      "verification_status": "verified_official_scannet_gt_absence",
+      "negative_gt_verified": true,
+      "verification_source": "Absence checked against every official instance label imported for this ScanNet scene.",
+      "gt_3d_reliable": true,
+      "acceptance_rule": "found=false",
+      "metrics_target": [
+        "verified_negative_accuracy"
+      ],
+      "failure_labels": [
+        "false positive",
+        "invalid/unavailable prediction"
+      ]
+    }
+  ]
+}

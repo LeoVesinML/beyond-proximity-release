@@ -1,0 +1,123 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v007",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v007.png",
+  "depth_path": "depths/v007_depth.npy",
+  "pose_ref": "transforms.json#/frames/6/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Backstage corridor with a white cabinet or door, wall photos, a framed picture, and dark theater wall panels.",
+  "visible_regions": [
+    {
+      "label": "backstage corridor",
+      "description": "dark corridor or side room area",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "white cabinet area",
+      "description": "large white cabinet or door near the camera",
+      "approx_location": "right foreground",
+      "source": "manual"
+    },
+    {
+      "label": "photo wall area",
+      "description": "wall with small framed pictures and notices",
+      "approx_location": "left and center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "white cabinet or door",
+      "attributes": [
+        "large",
+        "close to camera"
+      ],
+      "approx_location": "right foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall photos",
+      "attributes": [
+        "small",
+        "multiple"
+      ],
+      "approx_location": "left and center walls",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "framed picture",
+      "attributes": [
+        "landscape or scene"
+      ],
+      "approx_location": "center wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "dark wall panels",
+      "attributes": [
+        "black or dark gray"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "white door",
+      "attributes": [
+        "distant",
+        "partly visible"
+      ],
+      "approx_location": "left rear",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "corridor floor",
+      "attributes": [
+        "light colored"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "white cabinet or door",
+      "description": "large white vertical object close to the camera",
+      "approx_location": "right foreground",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "framed picture wall",
+      "description": "wall with framed images in the backstage corridor",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for backstage corridor queries involving the cabinet, wall photos, and dark wall panels.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

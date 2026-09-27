@@ -1,0 +1,660 @@
+{
+  "schema_version": "beyond_proximity.ieee_public_scale_ann.v1",
+  "generated_at": "2026-09-02T13:48:37.192331+00:00",
+  "status": "complete",
+  "model_name": "BAAI/bge-small-en-v1.5",
+  "seed": 20260901,
+  "queries_per_size_requested": 500,
+  "collection_sizes": [
+    1000,
+    10000,
+    50000,
+    100000,
+    155535
+  ],
+  "data_manifest": {
+    "nr3d": {
+      "path": "C:\\GitProjects\\beyond-proximity\\external\\datasets\\scanrefer_public\\nr3d.csv",
+      "sha256": "5de4f1b47130803c88f7c57903e7b6df5473f1b903c32cf28d06fa9c25996a67",
+      "source_url": "https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view"
+    },
+    "sr3d_plus": {
+      "path": "C:\\GitProjects\\beyond-proximity\\external\\datasets\\scanrefer_public\\sr3d\\sr3d+.csv",
+      "sha256": "b6cd28ed18cbce716a3103198851d39a3dfb221d55eea66899d5f2c07a597d0d",
+      "source_url": "https://drive.google.com/drive/folders/1DS4uQq7fCmbJHeE-rEbO8G1-XatGEqNV"
+    },
+    "raw_rows": {
+      "nr3d": 41503,
+      "sr3d_plus": 114532
+    },
+    "deduplicated_records_available": 155535,
+    "deduplicated_records_indexed": 155535,
+    "scene_count": 1436,
+    "object_count": 16650,
+    "instance_type_count": 76
+  },
+  "protocol": {
+    "record": "one deduplicated ReferIt3D referring expression linked to a ScanNet scene and target object",
+    "query_leakage_control": "the query record itself is excluded; relevance requires another expression linked to the same scene/object",
+    "scope": "scene_scoped_dense_exact assumes the active ScanNet scene ID is supplied by external localization; it does not infer the scene from language",
+    "flat": "exact cosine search over all records in the measured collection",
+    "hierarchical": "exact cosine search restricted to the known-scene branch",
+    "ann": "USearch HNSW over the same normalized BGE vectors",
+    "top_k": 3,
+    "statistics": "Wilson intervals for proportions; paired 10,000-resample bootstrap differences"
+  },
+  "index_build": [
+    {
+      "collection_size": 1000,
+      "build_seconds": 0.012401,
+      "dimensions": 384,
+      "connectivity": 16,
+      "expansion_add": 128,
+      "expansion_search": 64
+    },
+    {
+      "collection_size": 10000,
+      "build_seconds": 0.272431,
+      "dimensions": 384,
+      "connectivity": 16,
+      "expansion_add": 128,
+      "expansion_search": 64
+    },
+    {
+      "collection_size": 50000,
+      "build_seconds": 4.636349,
+      "dimensions": 384,
+      "connectivity": 16,
+      "expansion_add": 128,
+      "expansion_search": 64
+    },
+    {
+      "collection_size": 100000,
+      "build_seconds": 8.403551,
+      "dimensions": 384,
+      "connectivity": 16,
+      "expansion_add": 128,
+      "expansion_search": 64
+    },
+    {
+      "collection_size": 155535,
+      "build_seconds": 13.349241,
+      "dimensions": 384,
+      "connectivity": 16,
+      "expansion_add": 128,
+      "expansion_search": 64
+    }
+  ],
+  "summaries": [
+    {
+      "method": "flat_dense_exact",
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "mrr": 0.212121,
+      "mean_latency_ms": 0.176651,
+      "median_latency_ms": 0.16105,
+      "mean_scored_records": 1000.0,
+      "mean_serialized_top3_tokens": 35.715909,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "collection_size": 1000
+    },
+    {
+      "method": "scene_scoped_dense_exact",
+      "query_count": 88,
+      "hit_at_1": 0.806818,
+      "hit_at_3": 1.0,
+      "mrr": 0.901515,
+      "mean_latency_ms": 0.021087,
+      "median_latency_ms": 0.0196,
+      "mean_scored_records": 4.431818,
+      "mean_serialized_top3_tokens": 28.329545,
+      "hit_at_1_wilson_95": {
+        "low": 0.712229,
+        "high": 0.87574
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.958173,
+        "high": 1.0
+      },
+      "collection_size": 1000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.647727,
+        "ci_95": {
+          "low": 0.545455,
+          "high": 0.75
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.727273,
+        "ci_95": {
+          "low": 0.636364,
+          "high": 0.818182
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": 0.689394,
+        "ci_95": {
+          "low": 0.609848,
+          "high": 0.767045
+        },
+        "samples": 10000,
+        "seed": 20261901
+      }
+    },
+    {
+      "method": "hnsw_dense",
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.261364,
+      "mrr": 0.206439,
+      "mean_latency_ms": 0.215053,
+      "median_latency_ms": 0.2069,
+      "mean_scored_records": null,
+      "mean_serialized_top3_tokens": 35.852273,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.180932,
+        "high": 0.361758
+      },
+      "collection_size": 1000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.011364,
+        "ci_95": {
+          "low": -0.034091,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": -0.005682,
+        "ci_95": {
+          "low": -0.017045,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.07,
+      "hit_at_3": 0.156,
+      "mrr": 0.109333,
+      "mean_latency_ms": 1.078471,
+      "median_latency_ms": 1.05255,
+      "mean_scored_records": 10000.0,
+      "mean_serialized_top3_tokens": 36.392,
+      "hit_at_1_wilson_95": {
+        "low": 0.05076,
+        "high": 0.095797
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.126831,
+        "high": 0.190415
+      },
+      "collection_size": 10000
+    },
+    {
+      "method": "scene_scoped_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.626,
+      "hit_at_3": 0.85,
+      "mrr": 0.723667,
+      "mean_latency_ms": 0.031211,
+      "median_latency_ms": 0.0289,
+      "mean_scored_records": 22.452,
+      "mean_serialized_top3_tokens": 36.992,
+      "hit_at_1_wilson_95": {
+        "low": 0.582779,
+        "high": 0.6673
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.816039,
+        "high": 0.878624
+      },
+      "collection_size": 10000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.556,
+        "ci_95": {
+          "low": 0.512,
+          "high": 0.598
+        },
+        "samples": 10000,
+        "seed": 20270901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.694,
+        "ci_95": {
+          "low": 0.654,
+          "high": 0.732
+        },
+        "samples": 10000,
+        "seed": 20270901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": 0.614333,
+        "ci_95": {
+          "low": 0.579,
+          "high": 0.648667
+        },
+        "samples": 10000,
+        "seed": 20270901
+      }
+    },
+    {
+      "method": "hnsw_dense",
+      "query_count": 500,
+      "hit_at_1": 0.07,
+      "hit_at_3": 0.154,
+      "mrr": 0.108667,
+      "mean_latency_ms": 0.402884,
+      "median_latency_ms": 0.38025,
+      "mean_scored_records": null,
+      "mean_serialized_top3_tokens": 36.404,
+      "hit_at_1_wilson_95": {
+        "low": 0.05076,
+        "high": 0.095797
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.125011,
+        "high": 0.188265
+      },
+      "collection_size": 10000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20270901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20270901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": -0.000667,
+        "ci_95": {
+          "low": -0.004,
+          "high": 0.002667
+        },
+        "samples": 10000,
+        "seed": 20270901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.108,
+      "hit_at_3": 0.204,
+      "mrr": 0.150667,
+      "mean_latency_ms": 3.965375,
+      "median_latency_ms": 3.9066,
+      "mean_scored_records": 50000.0,
+      "mean_serialized_top3_tokens": 35.668,
+      "hit_at_1_wilson_95": {
+        "low": 0.083723,
+        "high": 0.138255
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.170998,
+        "high": 0.241515
+      },
+      "collection_size": 50000
+    },
+    {
+      "method": "scene_scoped_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.622,
+      "hit_at_3": 0.846,
+      "mrr": 0.720667,
+      "mean_latency_ms": 0.033971,
+      "median_latency_ms": 0.0325,
+      "mean_scored_records": 91.802,
+      "mean_serialized_top3_tokens": 37.286,
+      "hit_at_1_wilson_95": {
+        "low": 0.57872,
+        "high": 0.663419
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.811735,
+        "high": 0.874989
+      },
+      "collection_size": 50000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.514,
+        "ci_95": {
+          "low": 0.47,
+          "high": 0.558
+        },
+        "samples": 10000,
+        "seed": 20310901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.642,
+        "ci_95": {
+          "low": 0.6,
+          "high": 0.684
+        },
+        "samples": 10000,
+        "seed": 20310901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": 0.57,
+        "ci_95": {
+          "low": 0.533667,
+          "high": 0.606333
+        },
+        "samples": 10000,
+        "seed": 20310901
+      }
+    },
+    {
+      "method": "hnsw_dense",
+      "query_count": 500,
+      "hit_at_1": 0.106,
+      "hit_at_3": 0.202,
+      "mrr": 0.149333,
+      "mean_latency_ms": 0.387808,
+      "median_latency_ms": 0.38125,
+      "mean_scored_records": null,
+      "mean_serialized_top3_tokens": 35.72,
+      "hit_at_1_wilson_95": {
+        "low": 0.081957,
+        "high": 0.136051
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.169141,
+        "high": 0.239403
+      },
+      "collection_size": 50000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20310901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.012,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20310901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": -0.001333,
+        "ci_95": {
+          "low": -0.005333,
+          "high": 0.003
+        },
+        "samples": 10000,
+        "seed": 20310901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.09,
+      "hit_at_3": 0.2,
+      "mrr": 0.137667,
+      "mean_latency_ms": 7.783284,
+      "median_latency_ms": 7.75745,
+      "mean_scored_records": 100000.0,
+      "mean_serialized_top3_tokens": 36.578,
+      "hit_at_1_wilson_95": {
+        "low": 0.067943,
+        "high": 0.118309
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.167285,
+        "high": 0.237289
+      },
+      "collection_size": 100000
+    },
+    {
+      "method": "scene_scoped_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.674,
+      "hit_at_3": 0.858,
+      "mrr": 0.756,
+      "mean_latency_ms": 0.04352,
+      "median_latency_ms": 0.0398,
+      "mean_scored_records": 176.116,
+      "mean_serialized_top3_tokens": 37.51,
+      "hit_at_1_wilson_95": {
+        "low": 0.631722,
+        "high": 0.713625
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.82467,
+        "high": 0.885871
+      },
+      "collection_size": 100000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.584,
+        "ci_95": {
+          "low": 0.54,
+          "high": 0.628
+        },
+        "samples": 10000,
+        "seed": 20360901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.658,
+        "ci_95": {
+          "low": 0.616,
+          "high": 0.7
+        },
+        "samples": 10000,
+        "seed": 20360901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": 0.618333,
+        "ci_95": {
+          "low": 0.581667,
+          "high": 0.655
+        },
+        "samples": 10000,
+        "seed": 20360901
+      }
+    },
+    {
+      "method": "hnsw_dense",
+      "query_count": 500,
+      "hit_at_1": 0.09,
+      "hit_at_3": 0.196,
+      "mrr": 0.136667,
+      "mean_latency_ms": 0.393037,
+      "median_latency_ms": 0.3871,
+      "mean_scored_records": null,
+      "mean_serialized_top3_tokens": 36.552,
+      "hit_at_1_wilson_95": {
+        "low": 0.067943,
+        "high": 0.118309
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.163578,
+        "high": 0.233057
+      },
+      "collection_size": 100000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": -0.01,
+          "high": 0.01
+        },
+        "samples": 10000,
+        "seed": 20360901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.004,
+        "ci_95": {
+          "low": -0.014,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20360901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": -0.001,
+        "ci_95": {
+          "low": -0.008,
+          "high": 0.005667
+        },
+        "samples": 10000,
+        "seed": 20360901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.138,
+      "hit_at_3": 0.242,
+      "mrr": 0.182333,
+      "mean_latency_ms": 12.329359,
+      "median_latency_ms": 12.2528,
+      "mean_scored_records": 155535.0,
+      "mean_serialized_top3_tokens": 36.944,
+      "hit_at_1_wilson_95": {
+        "low": 0.110518,
+        "high": 0.171002
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.206518,
+        "high": 0.281416
+      },
+      "collection_size": 155535
+    },
+    {
+      "method": "scene_scoped_dense_exact",
+      "query_count": 500,
+      "hit_at_1": 0.824,
+      "hit_at_3": 0.948,
+      "mrr": 0.878,
+      "mean_latency_ms": 0.0587,
+      "median_latency_ms": 0.0509,
+      "mean_scored_records": 283.634,
+      "mean_serialized_top3_tokens": 37.056,
+      "hit_at_1_wilson_95": {
+        "low": 0.788186,
+        "high": 0.854874
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.924899,
+        "high": 0.96427
+      },
+      "collection_size": 155535,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.686,
+        "ci_95": {
+          "low": 0.646,
+          "high": 0.726
+        },
+        "samples": 10000,
+        "seed": 20416436
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.706,
+        "ci_95": {
+          "low": 0.666,
+          "high": 0.746
+        },
+        "samples": 10000,
+        "seed": 20416436
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": 0.695667,
+        "ci_95": {
+          "low": 0.660333,
+          "high": 0.730667
+        },
+        "samples": 10000,
+        "seed": 20416436
+      }
+    },
+    {
+      "method": "hnsw_dense",
+      "query_count": 500,
+      "hit_at_1": 0.132,
+      "hit_at_3": 0.236,
+      "mrr": 0.176333,
+      "mean_latency_ms": 0.411117,
+      "median_latency_ms": 0.39825,
+      "mean_scored_records": null,
+      "mean_serialized_top3_tokens": 36.978,
+      "hit_at_1_wilson_95": {
+        "low": 0.105117,
+        "high": 0.164495
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.200881,
+        "high": 0.275144
+      },
+      "collection_size": 155535,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.006,
+        "ci_95": {
+          "low": -0.016,
+          "high": 0.002
+        },
+        "samples": 10000,
+        "seed": 20416436
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.006,
+        "ci_95": {
+          "low": -0.016,
+          "high": 0.004
+        },
+        "samples": 10000,
+        "seed": 20416436
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": -0.006,
+        "ci_95": {
+          "low": -0.013,
+          "high": 0.000333
+        },
+        "samples": 10000,
+        "seed": 20416436
+      }
+    }
+  ]
+}

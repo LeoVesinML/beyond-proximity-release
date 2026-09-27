@@ -1,0 +1,142 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v002",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v002.png",
+  "depth_path": "depths/v002_depth.npy",
+  "pose_ref": "transforms.json#/frames/1/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Close outdoor view of a light building wall with cobblestone ground, small basement windows, utility doors, vents, and wall-mounted fixtures.",
+  "visible_regions": [
+    {
+      "label": "service wall area",
+      "description": "plain building wall with utility details",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone walkway",
+      "description": "paved ground along the building wall",
+      "approx_location": "foreground",
+      "source": "manual"
+    },
+    {
+      "label": "basement window area",
+      "description": "low windows and vents near the ground",
+      "approx_location": "center and right",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "small basement windows",
+      "attributes": [
+        "round and rectangular",
+        "low"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "utility door",
+      "attributes": [
+        "white",
+        "small"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.04,
+        0.63,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          7.802187674414387,
+          12.065968701082115,
+          3.536890142413883
+        ],
+        "size": [
+          7.997653034151067,
+          16.336722778820825,
+          12.720709609597158
+        ],
+        "label": "utility door"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "wall vents",
+      "attributes": [
+        "round",
+        "small"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall-mounted lamps or cameras",
+      "attributes": [
+        "small",
+        "black"
+      ],
+      "approx_location": "right-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone ground",
+      "attributes": [
+        "outdoor paving"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "light stone facade",
+      "attributes": [
+        "plain",
+        "beige"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "white utility door",
+      "description": "small white door on the plain facade",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "low basement windows",
+      "description": "group of low wall openings near the ground",
+      "approx_location": "center and right",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for locating utility doors, basement windows, vents, and facade details.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

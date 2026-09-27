@@ -1,0 +1,162 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0086_00",
+  "query_id": "scannet_0086_00_nr3d_003",
+  "query": "toilet in the larger stall.",
+  "query_type": "attribute",
+  "structured_plan": {
+    "target": "toilet in larger stall",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v003_001_bathroom_stall"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v003_001_bathroom_stall"
+  ],
+  "selected_views": [
+    "v003"
+  ],
+  "checked_node_ids": [
+    "object_v002_005_doorframe",
+    "object_v003_001_bathroom_stall",
+    "object_v003_002_floor",
+    "object_v003_003_toilet_seat_cover_dispenser",
+    "object_v003_004_toilet",
+    "object_v003_005_toilet",
+    "object_v003_006_bathroom_stall_door",
+    "object_v003_007_window",
+    "object_v003_008_trash_can",
+    "object_v003_009_rail",
+    "object_v003_010_rail",
+    "object_v003_011_toilet_paper_dispenser",
+    "object_v003_012_toilet_paper_dispenser",
+    "object_v003_013_bathroom_stall",
+    "object_v003_014_bathroom_stall_door",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v002",
+    "v003"
+  ],
+  "checked_object_ids": [
+    "27",
+    "1",
+    "3",
+    "5",
+    "6",
+    "7",
+    "10",
+    "11",
+    "14",
+    "15",
+    "16",
+    "21",
+    "22",
+    "28",
+    "29"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bathroom stall",
+    "selected_object_id": "1",
+    "ranked_object_ids": [
+      "1",
+      "10",
+      "21"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "1",
+        "label": "bathroom stall",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "10",
+        "label": "bathroom stall door",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "21",
+        "label": "toilet paper dispenser",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v003_001_bathroom_stall",
+    "selected_view_id": "v003",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.2307,
+        -1.891444,
+        1.006782
+      ],
+      "size": [
+        2.626795,
+        2.266155,
+        2.03634
+      ],
+      "label": "bathroom stall",
+      "object_id": "1",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.25,
+    "explanation": "algorithm1_k3_m1 selected object 1.",
+    "relation_satisfied": null,
+    "relation_audit": {},
+    "search_score": 0.25,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.333333,
+      "text_overlap": 0.333333,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.25
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0035305409999999426,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0035305409999999426
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 16,
+    "checked_view_count": 2,
+    "checked_object_count": 15,
+    "context_size_chars": 2879,
+    "prompt_size_chars": 2906,
+    "estimated_input_tokens": 726,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,176 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v008",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v008.png",
+  "depth_path": "depths/v008_depth.npy",
+  "pose_ref": "transforms.json#/frames/7/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Building doorway view with greenish glass doors marked with number 8, metal handrails, steps or ramp, and beige exterior wall.",
+  "visible_regions": [
+    {
+      "label": "numbered entrance",
+      "description": "door entrance marked with number 8",
+      "approx_location": "center-right",
+      "source": "manual"
+    },
+    {
+      "label": "handrail area",
+      "description": "metal railing and steps or ramp in front of the door",
+      "approx_location": "foreground",
+      "source": "manual"
+    },
+    {
+      "label": "facade wall",
+      "description": "plain beige wall around the entrance",
+      "approx_location": "left and center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "glass entrance doors",
+      "attributes": [
+        "greenish",
+        "number 8"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": [
+        0.37,
+        0.04,
+        0.87,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -6.9149390530208485,
+          3.705228417185013,
+          2.7145721172408748
+        ],
+        "size": [
+          4.856567817427687,
+          7.862830640422026,
+          9.944781748990337
+        ],
+        "label": "glass entrance doors"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "building number 8",
+      "attributes": [
+        "white number",
+        "on door"
+      ],
+      "approx_location": "right door",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.04,
+        1.0,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -42.658917135268496,
+          -4.914144204313222,
+          -0.0643938246611091
+        ],
+        "size": [
+          75.48568435578287,
+          39.21690262645376,
+          11.9891553680578
+        ],
+        "label": "building number 8"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "metal handrails",
+      "attributes": [
+        "silver",
+        "ramp or stair railing"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -7.317973092022418,
+          5.41023469204957,
+          0.6582988061561643
+        ],
+        "size": [
+          7.745862353187245,
+          6.508783367685831,
+          13.776166860261235
+        ],
+        "label": "metal handrails"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "steps or ramp",
+      "attributes": [
+        "entrance access"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "black wall sign",
+      "attributes": [
+        "small",
+        "mounted"
+      ],
+      "approx_location": "center-right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "basement window",
+      "attributes": [
+        "small",
+        "low"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "entrance number 8",
+      "description": "door marked with the number 8, useful for navigation",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "metal handrails",
+      "description": "silver railing structure in front of the entrance",
+      "approx_location": "foreground",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for queries about entrance 8, handrails, steps, and door location.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

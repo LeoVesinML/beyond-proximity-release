@@ -1,0 +1,148 @@
+{
+  "query_id": "qv2_071",
+  "scene_id": "Theater",
+  "query": "Find the green exit sign above the doorway",
+  "query_type": "relational",
+  "expected_view_ids": [
+    "v004"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "a5327b1c266c72f17b9b50dc1dca61d03ae557b26e562760cf71a2a1c2259c32",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v0018",
+      "chosen_id": null,
+      "valid": false,
+      "input_tokens": 1413,
+      "output_tokens": 6,
+      "latency_ms": 3564.6479,
+      "correct": false,
+      "target_in_context": true
+    },
+    "all_records__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "a5327b1c266c72f17b9b50dc1dca61d03ae557b26e562760cf71a2a1c2259c32",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 1413,
+      "output_tokens": 5,
+      "latency_ms": 3499.3994,
+      "correct": false,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v008"
+      ],
+      "prompt_sha256": "fadad997149f5b32d124346ac14060659310dbc6cfa7c0b5b491826650027b77",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 205,
+      "output_tokens": 5,
+      "latency_ms": 847.1092,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v008"
+      ],
+      "prompt_sha256": "fadad997149f5b32d124346ac14060659310dbc6cfa7c0b5b491826650027b77",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 205,
+      "output_tokens": 5,
+      "latency_ms": 726.1158,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v008",
+        "v018"
+      ],
+      "prompt_sha256": "e2bc39ae8bb0fffc87ef901d3465eedb0e57dbefeed69d3b75e0bdf7e49b6a06",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 276,
+      "output_tokens": 5,
+      "latency_ms": 1074.24,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v008",
+        "v018"
+      ],
+      "prompt_sha256": "e2bc39ae8bb0fffc87ef901d3465eedb0e57dbefeed69d3b75e0bdf7e49b6a06",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 276,
+      "output_tokens": 5,
+      "latency_ms": 894.7275,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "dev",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

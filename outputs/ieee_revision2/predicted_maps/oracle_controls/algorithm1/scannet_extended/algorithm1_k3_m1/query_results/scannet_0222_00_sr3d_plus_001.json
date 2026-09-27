@@ -1,0 +1,211 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0222_00",
+  "query_id": "scannet_0222_00_sr3d_plus_001",
+  "query": "the bed that is close to the laundry hamper",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "bed",
+    "relation": "closest",
+    "anchor": "laundry hamper",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_001_bed"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_001_bed"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_bed",
+    "object_v001_002_wall",
+    "object_v001_003_chair",
+    "object_v002_002_laundry_hamper",
+    "object_v002_003_nightstand",
+    "object_v002_004_pillow",
+    "object_v002_007_wall",
+    "object_v002_008_wall",
+    "object_v002_009_wall",
+    "object_v002_010_clothes",
+    "object_v004_001_bed",
+    "object_v004_003_pillow",
+    "object_v004_004_mini_fridge",
+    "object_v004_005_wall",
+    "object_v005_001_chair",
+    "object_v005_003_shoes",
+    "object_v005_005_trash_can",
+    "object_v005_006_trash_can",
+    "object_v005_007_door",
+    "object_v005_008_doorframe",
+    "object_v005_011_mini_fridge",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v004",
+    "v005"
+  ],
+  "checked_object_ids": [
+    "0",
+    "1",
+    "7",
+    "15",
+    "18",
+    "20",
+    "35",
+    "36",
+    "37",
+    "40",
+    "5",
+    "19",
+    "21",
+    "26",
+    "6",
+    "11",
+    "16",
+    "17",
+    "24",
+    "25",
+    "33"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bed",
+    "selected_object_id": "0",
+    "ranked_object_ids": [
+      "0",
+      "5",
+      "1"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "0",
+        "label": "bed",
+        "score": 1.0,
+        "relation_confidence": 0.854073,
+        "relation_applied": true
+      },
+      {
+        "rank": 2,
+        "object_id": "5",
+        "label": "bed",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "1",
+        "label": "wall",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_001_bed",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.866034,
+        1.465372,
+        0.465039
+      ],
+      "size": [
+        2.206152,
+        1.014044,
+        1.022375
+      ],
+      "label": "bed",
+      "object_id": "0",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 0.",
+    "relation_satisfied": true,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "closest",
+      "anchor": "laundry hamper",
+      "anchor_secondary": null,
+      "relation_score": 1.0,
+      "relation_source": "relative_bbox_distance",
+      "relation_confidence": 0.854073,
+      "relation_applied": true,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "15",
+          "matched": true,
+          "normalized_distance": 1.16391
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "15"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_distance": 1.16391,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.00206954099999912,
+    "stage_runtime_seconds": {
+      "answer_query": 0.00206954099999912
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 22,
+    "checked_view_count": 4,
+    "checked_object_count": 21,
+    "context_size_chars": 3656,
+    "prompt_size_chars": 3699,
+    "estimated_input_tokens": 925,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

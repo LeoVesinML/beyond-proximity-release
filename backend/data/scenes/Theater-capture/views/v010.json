@@ -1,0 +1,184 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v010",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v010.png",
+  "depth_path": "depths/v010_depth.npy",
+  "pose_ref": "transforms.json#/frames/9/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Cozy theater lounge with sofas, red table, wall photos, bookcase, clock, and framed pictures.",
+  "visible_regions": [
+    {
+      "label": "lounge seating area",
+      "description": "comfortable seating area with sofa and chairs",
+      "approx_location": "center and right",
+      "source": "manual"
+    },
+    {
+      "label": "bookcase wall",
+      "description": "wall with bookshelves, photos, and a clock",
+      "approx_location": "back center",
+      "source": "manual"
+    },
+    {
+      "label": "red table area",
+      "description": "large red table in the foreground",
+      "approx_location": "foreground center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "sofa",
+      "attributes": [
+        "light colored",
+        "lounge seating"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.18,
+        0.96,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          -15.104501961286646,
+          14.434763101130752,
+          -12.392467992113886
+        ],
+        "size": [
+          23.462880519035462,
+          25.183868541267508,
+          5.636823603760041
+        ],
+        "label": "sofa"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "red table",
+      "attributes": [
+        "large",
+        "foreground"
+      ],
+      "approx_location": "foreground center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "bookcase",
+      "attributes": [
+        "wooden",
+        "books and objects"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall photos",
+      "attributes": [
+        "multiple",
+        "theater photos"
+      ],
+      "approx_location": "back wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "clock",
+      "attributes": [
+        "round",
+        "above bookcase"
+      ],
+      "approx_location": "upper back center",
+      "confidence": null,
+      "bbox_2d": [
+        0.3896,
+        0.1208,
+        0.6104,
+        0.2792
+      ],
+      "bbox_3d": {
+        "center": [
+          -29.83184067984058,
+          2.350103276445558,
+          -12.26208242086686
+        ],
+        "size": [
+          44.54017847963644,
+          2.219959293063922,
+          11.09887512001596
+        ],
+        "label": "clock"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "chairs",
+      "attributes": [
+        "multiple",
+        "lounge"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.14,
+        1.0,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -15.770102332044562,
+          15.755371262362285,
+          -9.03775923405155
+        ],
+        "size": [
+          26.077618951461282,
+          28.873487952099772,
+          13.55992417396053
+        ],
+        "label": "chairs"
+      },
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "bookcase with clock",
+      "description": "bookcase topped by a round clock, strong orientation landmark",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red table",
+      "description": "large red table in the lounge foreground",
+      "approx_location": "foreground center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "photo wall",
+      "description": "group of wall photos around the bookcase",
+      "approx_location": "back wall",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for lounge, bookcase, clock, wall photos, sofa, and red table queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

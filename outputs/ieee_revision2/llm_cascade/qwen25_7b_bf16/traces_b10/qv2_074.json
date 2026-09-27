@@ -1,0 +1,150 @@
+{
+  "query_id": "qv2_074",
+  "scene_id": "Theater",
+  "query": "Find the staircase through the doorway",
+  "query_type": "relational",
+  "expected_view_ids": [
+    "v001"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "b94cea4ae95003efe8ed11b6b02234d0656862505a5d3186e9038c061a96dcee",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v0014",
+      "chosen_id": null,
+      "valid": false,
+      "input_tokens": 1411,
+      "output_tokens": 6,
+      "latency_ms": 3666.0035,
+      "correct": false,
+      "target_in_context": true
+    },
+    "all_records__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "b94cea4ae95003efe8ed11b6b02234d0656862505a5d3186e9038c061a96dcee",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 1411,
+      "output_tokens": 5,
+      "latency_ms": 3406.7829,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v014",
+        "v015"
+      ],
+      "prompt_sha256": "dae26306663ec08c7f7d4380395a9d18a0426815ab899168887c4a9d12f9179e",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 263,
+      "output_tokens": 5,
+      "latency_ms": 1040.8535,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v014",
+        "v015"
+      ],
+      "prompt_sha256": "dae26306663ec08c7f7d4380395a9d18a0426815ab899168887c4a9d12f9179e",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 263,
+      "output_tokens": 5,
+      "latency_ms": 881.3632,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v014",
+        "v015"
+      ],
+      "prompt_sha256": "dae26306663ec08c7f7d4380395a9d18a0426815ab899168887c4a9d12f9179e",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 263,
+      "output_tokens": 5,
+      "latency_ms": 889.2173,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v014",
+        "v015"
+      ],
+      "prompt_sha256": "dae26306663ec08c7f7d4380395a9d18a0426815ab899168887c4a9d12f9179e",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 263,
+      "output_tokens": 5,
+      "latency_ms": 907.2618,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

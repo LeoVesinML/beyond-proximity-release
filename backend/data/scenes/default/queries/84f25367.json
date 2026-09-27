@@ -1,0 +1,107 @@
+{
+  "session_id": "84f25367",
+  "scene_id": "default",
+  "original_query": "where is the exit sign?",
+  "started_at": "2026-04-07T23:16:20.022957+00:00",
+  "finished_at": "2026-04-07T23:17:26.603292+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "output_type": "text_answer",
+        "relational_constraints": null,
+        "query_type": "object_finding",
+        "functional_constraints": "egress signage",
+        "attribute_constraints": {
+          "size": "small",
+          "color": "green"
+        },
+        "target": "exit sign",
+        "location_constraints": null
+      },
+      "prompt_excerpt": "Analyze query for exit sign (decomposition).",
+      "ts": "2026-04-07T23:17:16.166431+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Main Hall Zone",
+        "Stage Zone"
+      ],
+      "descend_into": [
+        "zone_main_hall",
+        "zone_stage"
+      ],
+      "reasoning": "Exit signage appears throughout circulation and stage-front areas; search both zones.",
+      "ts": "2026-04-07T23:17:16.196637+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_main_hall",
+      "node_name": "Main Hall Zone",
+      "children_count": 3,
+      "children_names": [
+        "Lobby Corridor",
+        "Reception And Entrance Doors",
+        "Main Ballroom Floor"
+      ],
+      "descend_into": [
+        "leaf_lobby",
+        "leaf_reception",
+        "leaf_ballroom"
+      ],
+      "reasoning": "Lobby, reception, and ballroom summaries mention exit signs or egress-related views.",
+      "ts": "2026-04-07T23:17:16.216269+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_stage",
+      "node_name": "Stage Zone",
+      "children_count": 1,
+      "children_names": [
+        "Projection Stage Front"
+      ],
+      "descend_into": [
+        "leaf_stage"
+      ],
+      "reasoning": "Stage leaf explicitly covers projection screen, podiums, and exit doorway views.",
+      "ts": "2026-04-07T23:17:16.235841+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_stage",
+      "node_name": "Projection Stage Front",
+      "view_id": "v019",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.4954,
+        0.3536,
+        0.5546,
+        0.3906
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Green EXIT sign centred above the central doorway; refined bbox from crop (CoT + Stage C2). Symmetrical sconces frame the door.",
+      "ts": "2026-04-07T23:17:26.580034+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": "v019",
+      "explanation": "The illuminated green EXIT sign is on the front-stage / egress corridor view v019 (Projection Stage Front), centred horizontally above the dark doorway, between two marble wall sconces. Many other views (lobby, ballroom, stage) also show exit signs; v019 is the clearest close-up for location.",
+      "confidence": 0.92,
+      "bbox_3d": null,
+      "ts": "2026-04-07T23:17:26.603292+00:00"
+    }
+  ],
+  "result": {
+    "confidence": 0.92,
+    "found": true,
+    "view_id": "v019",
+    "explanation": "The illuminated green EXIT sign is on the front-stage / egress corridor view v019 (Projection Stage Front), centred horizontally above the dark doorway, between two marble wall sconces. Many other views (lobby, ballroom, stage) also show exit signs; v019 is the clearest close-up for location.",
+    "bbox_3d": null,
+    "query": "where is the exit sign?"
+  }
+}

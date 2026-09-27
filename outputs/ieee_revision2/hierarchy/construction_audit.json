@@ -1,0 +1,171 @@
+{
+  "alpha": 3.5,
+  "repeats": {},
+  "scenes": {},
+  "file_reads_during_construction": {
+    "pose_only": {
+      "open_calls": {
+        "transforms.json": 5
+      },
+      "unique_files": {
+        "transforms.json": 5
+      }
+    },
+    "pose_semantic_merge": {
+      "open_calls": {
+        "transforms.json": 5,
+        "views/*.json (authored ViewJSON)": 97
+      },
+      "unique_files": {
+        "transforms.json": 5,
+        "views/*.json (authored ViewJSON)": 97
+      }
+    },
+    "raw_rgbd": {
+      "open_calls": {
+        "depths/* (depth arrays)": 291,
+        "images/* (RGB)": 97,
+        "library_or_model_files": 8,
+        "transforms.json": 5
+      },
+      "unique_files": {
+        "depths/* (depth arrays)": 97,
+        "images/* (RGB)": 97,
+        "library_or_model_files": 2,
+        "transforms.json": 5
+      }
+    }
+  },
+  "timing": [
+    {
+      "constructor": "pose_only",
+      "repeats": 20,
+      "median_total_s_5_scenes": 0.00078,
+      "min_total_s": 0.000732,
+      "max_total_s": 0.001926
+    },
+    {
+      "constructor": "pose_semantic_merge",
+      "repeats": 20,
+      "median_total_s_5_scenes": 0.006337,
+      "min_total_s": 0.005565,
+      "max_total_s": 0.023789
+    },
+    {
+      "constructor": "raw_rgbd",
+      "repeats": 3,
+      "median_total_s_5_scenes": 17.004845,
+      "min_total_s": 11.954907,
+      "max_total_s": 22.726622,
+      "excludes": "one-time CLIP model load 3.539 s",
+      "device": "cpu",
+      "torch_threads": 6
+    }
+  ],
+  "clip_model_load_s": 3.538744,
+  "saved_raw_run_construction_latency_s": 14.151063,
+  "raw_default_reproduces_saved_clusters": {
+    "ConferenceHall-capture-pilot": true,
+    "Museume-capture": true,
+    "Theater-capture": true,
+    "outdoor-street-capture": true,
+    "outdoor-drone-capture": true
+  },
+  "cluster_structure": {
+    "ConferenceHall-capture-pilot": {
+      "views": 20,
+      "pose_only_sizes": [
+        19,
+        1
+      ],
+      "pose_semantic_sizes": [
+        20
+      ],
+      "raw_rgbd_saved_sizes": [
+        11,
+        4,
+        2,
+        1,
+        1,
+        1
+      ],
+      "raw_rgbd_singletons": 3
+    },
+    "Museume-capture": {
+      "views": 20,
+      "pose_only_sizes": [
+        20
+      ],
+      "pose_semantic_sizes": [
+        20
+      ],
+      "raw_rgbd_saved_sizes": [
+        10,
+        4,
+        2,
+        2,
+        1,
+        1
+      ],
+      "raw_rgbd_singletons": 2
+    },
+    "Theater-capture": {
+      "views": 20,
+      "pose_only_sizes": [
+        20
+      ],
+      "pose_semantic_sizes": [
+        20
+      ],
+      "raw_rgbd_saved_sizes": [
+        7,
+        5,
+        4,
+        2,
+        1,
+        1
+      ],
+      "raw_rgbd_singletons": 2
+    },
+    "outdoor-street-capture": {
+      "views": 21,
+      "pose_only_sizes": [
+        10,
+        10,
+        1
+      ],
+      "pose_semantic_sizes": [
+        20,
+        1
+      ],
+      "raw_rgbd_saved_sizes": [
+        6,
+        4,
+        3,
+        3,
+        3,
+        1,
+        1
+      ],
+      "raw_rgbd_singletons": 2
+    },
+    "outdoor-drone-capture": {
+      "views": 16,
+      "pose_only_sizes": [
+        10,
+        4,
+        2
+      ],
+      "pose_semantic_sizes": [
+        10,
+        4,
+        2
+      ],
+      "raw_rgbd_saved_sizes": [
+        10,
+        6
+      ],
+      "raw_rgbd_singletons": 0
+    }
+  }
+}

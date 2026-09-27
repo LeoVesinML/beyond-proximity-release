@@ -1,0 +1,132 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v015",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v015.png",
+  "depth_path": "depths/v015_depth.npy",
+  "pose_ref": "transforms.json#/frames/14/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Theater entrance foyer with glass doors at the center, symmetrical staircases on both sides, red floor marker or carpet, and small seating areas.",
+  "visible_regions": [
+    {
+      "label": "entrance foyer",
+      "description": "main theater entry area with glass doors",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "left staircase",
+      "description": "stairs ascending on the left side",
+      "approx_location": "left side",
+      "source": "manual"
+    },
+    {
+      "label": "right staircase",
+      "description": "stairs ascending on the right side",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "glass entrance doors",
+      "attributes": [
+        "transparent",
+        "central"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "left staircase",
+      "attributes": [
+        "ascending",
+        "railing"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "right staircase",
+      "attributes": [
+        "ascending",
+        "railing"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red floor marker or carpet",
+      "attributes": [
+        "red",
+        "central"
+      ],
+      "approx_location": "floor center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "armchairs",
+      "attributes": [
+        "light colored",
+        "pair"
+      ],
+      "approx_location": "left and right near stairs",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall lamps",
+      "attributes": [
+        "decorative"
+      ],
+      "approx_location": "walls near staircases",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "glass entrance doors",
+      "description": "central doors marking the main entrance/exit",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "symmetrical staircases",
+      "description": "matching staircases on both sides of the foyer",
+      "approx_location": "left and right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red floor marker",
+      "description": "red carpet or marker in front of the doors",
+      "approx_location": "floor center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Very useful for entrance, stairs, foyer, and navigation queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

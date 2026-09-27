@@ -1,0 +1,176 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v013",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v013.png",
+  "depth_path": "depths/v013_depth.npy",
+  "pose_ref": "transforms.json#/frames/12/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Quiet theater corridor with pale green walls, closed white double doors, wall lamps, and a railing along the side.",
+  "visible_regions": [
+    {
+      "label": "upper corridor",
+      "description": "quiet corridor or balcony passage with pale walls",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "double door area",
+      "description": "closed white double doors along the wall",
+      "approx_location": "right-center",
+      "source": "manual"
+    },
+    {
+      "label": "railing side",
+      "description": "open side of the corridor with railing",
+      "approx_location": "left side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "white double doors",
+      "attributes": [
+        "closed",
+        "decorative"
+      ],
+      "approx_location": "right-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall lamps",
+      "attributes": [
+        "small",
+        "warm light"
+      ],
+      "approx_location": "left and right walls",
+      "confidence": null,
+      "bbox_2d": [
+        0.0,
+        0.04,
+        1.0,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -1.7289755077724376,
+          3.1568504919902645,
+          -20.053414799913067
+        ],
+        "size": [
+          18.325883844305075,
+          8.226858866120605,
+          7.307572794915167
+        ],
+        "label": "wall lamps"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "black railing",
+      "attributes": [
+        "metal",
+        "decorative"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": [
+        0.1544,
+        0.3704,
+        0.3656,
+        0.6696
+      ],
+      "bbox_3d": {
+        "center": [
+          -5.97884823382503,
+          3.7694460093342403,
+          -15.571573046677834
+        ],
+        "size": [
+          4.486564158778464,
+          3.1196206591469386,
+          2.489861408695644
+        ],
+        "label": "black railing"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "pale green walls",
+      "attributes": [
+        "smooth",
+        "corridor"
+      ],
+      "approx_location": "walls",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.08,
+        0.82,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -1.164975375891451,
+          3.6244580419711774,
+          -16.862314224708236
+        ],
+        "size": [
+          15.6016524336329,
+          9.955592895482457,
+          5.350949110556357
+        ],
+        "label": "pale green walls"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "tile floor",
+      "attributes": [
+        "light",
+        "corridor floor"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall sign or notice",
+      "attributes": [
+        "small"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "white double doors",
+      "description": "closed double doors along the corridor",
+      "approx_location": "right-center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "black railing",
+      "description": "decorative railing along one side of the corridor",
+      "approx_location": "left side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good for corridor, double doors, lamps, and railing navigation queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

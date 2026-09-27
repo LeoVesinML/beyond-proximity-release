@@ -1,0 +1,125 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v013",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v013.png",
+  "depth_path": "depths/v013_depth.npy",
+  "pose_ref": "transforms.json#/frames/12/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Covered outdoor underpass or building entrance passage with stone columns, tiled walls, ceiling lights, and cobblestone ground.",
+  "visible_regions": [
+    {
+      "label": "covered underpass",
+      "description": "sheltered passage under a building",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "stone column area",
+      "description": "large square columns supporting the passage",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "interior passage opening",
+      "description": "opening leading farther inside or through the underpass",
+      "approx_location": "back center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "stone columns",
+      "attributes": [
+        "large",
+        "square",
+        "supporting"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "covered ceiling",
+      "attributes": [
+        "flat",
+        "with lights"
+      ],
+      "approx_location": "top",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling lights",
+      "attributes": [
+        "rectangular",
+        "bright"
+      ],
+      "approx_location": "ceiling",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone ground",
+      "attributes": [
+        "outdoor paving"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "tiled walls",
+      "attributes": [
+        "beige",
+        "inside passage"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red wall edge",
+      "attributes": [
+        "building facade"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "stone column underpass",
+      "description": "covered passage with large square columns",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "ceiling lights",
+      "description": "bright rectangular lights inside the underpass",
+      "approx_location": "ceiling",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for underpass, columns, and covered passage queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

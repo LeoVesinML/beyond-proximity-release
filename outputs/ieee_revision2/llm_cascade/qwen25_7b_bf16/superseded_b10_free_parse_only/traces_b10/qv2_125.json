@@ -1,0 +1,75 @@
+{
+  "query_id": "qv2_125",
+  "scene_id": "outdoor-drone",
+  "query": "Find the bridge or long roadway",
+  "query_type": "simple_object",
+  "expected_view_ids": [
+    "v006"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016"
+      ],
+      "prompt_sha256": "8c55b38c6c56e8b87a95d9421f671a128e6322b1ff2951cabae900cf44231b8b",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 1113,
+      "output_tokens": 5,
+      "latency_ms": 2937.4919,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "25414ca04c22547fcbc5cce31b794b362bf39a0172ba7ebb9732f22ed0fc25bb",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 265,
+      "output_tokens": 5,
+      "latency_ms": 975.4371,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "25414ca04c22547fcbc5cce31b794b362bf39a0172ba7ebb9732f22ed0fc25bb",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 265,
+      "output_tokens": 5,
+      "latency_ms": 918.2852,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

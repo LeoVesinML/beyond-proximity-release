@@ -1,0 +1,171 @@
+{
+  "config_version": "semanticsplat.experiment_config.v1",
+  "week": "twinworld_2026",
+  "run_id": "replica_bbq_aligned_public_dataset_v2",
+  "method": "semantic_splat",
+  "mode": "stub",
+  "supported_modes": [
+    "stub"
+  ],
+  "dataset_status": "ready",
+  "dataset_status_note": "Official Replica v1 archive was downloaded, extracted, and imported for the BBQ-aligned subset using official semantic mesh GT boxes.",
+  "scene_root": "backend/data/scenes",
+  "scene_ids": [
+    "replica_room0",
+    "replica_room1",
+    "replica_room2",
+    "replica_office0",
+    "replica_office1",
+    "replica_office2",
+    "replica_office3",
+    "replica_office4"
+  ],
+  "scenes": [
+    {
+      "scene_id": "replica_room0",
+      "benchmark_scene_id": "replica_room0",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "room0",
+      "source_expected_path": "data/replica_official_raw/room_0",
+      "path": "backend/data/scenes/replica_room0",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_room0.json",
+      "raw_dataset_scene_id": "room_0"
+    },
+    {
+      "scene_id": "replica_room1",
+      "benchmark_scene_id": "replica_room1",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "room1",
+      "source_expected_path": "data/replica_official_raw/room_1",
+      "path": "backend/data/scenes/replica_room1",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_room1.json",
+      "raw_dataset_scene_id": "room_1"
+    },
+    {
+      "scene_id": "replica_room2",
+      "benchmark_scene_id": "replica_room2",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "room2",
+      "source_expected_path": "data/replica_official_raw/room_2",
+      "path": "backend/data/scenes/replica_room2",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_room2.json",
+      "raw_dataset_scene_id": "room_2"
+    },
+    {
+      "scene_id": "replica_office0",
+      "benchmark_scene_id": "replica_office0",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "office0",
+      "source_expected_path": "data/replica_official_raw/office_0",
+      "path": "backend/data/scenes/replica_office0",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_office0.json",
+      "raw_dataset_scene_id": "office_0"
+    },
+    {
+      "scene_id": "replica_office1",
+      "benchmark_scene_id": "replica_office1",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "office1",
+      "source_expected_path": "data/replica_official_raw/office_1",
+      "path": "backend/data/scenes/replica_office1",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_office1.json",
+      "raw_dataset_scene_id": "office_1"
+    },
+    {
+      "scene_id": "replica_office2",
+      "benchmark_scene_id": "replica_office2",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "office2",
+      "source_expected_path": "data/replica_official_raw/office_2",
+      "path": "backend/data/scenes/replica_office2",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_office2.json",
+      "raw_dataset_scene_id": "office_2"
+    },
+    {
+      "scene_id": "replica_office3",
+      "benchmark_scene_id": "replica_office3",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "office3",
+      "source_expected_path": "data/replica_official_raw/office_3",
+      "path": "backend/data/scenes/replica_office3",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_office3.json",
+      "raw_dataset_scene_id": "office_3"
+    },
+    {
+      "scene_id": "replica_office4",
+      "benchmark_scene_id": "replica_office4",
+      "source_dataset": "Replica",
+      "dataset_scene_id": "office4",
+      "source_expected_path": "data/replica_official_raw/office_4",
+      "path": "backend/data/scenes/replica_office4",
+      "status": "ready",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": true,
+      "validation_report": "docs/validation/public_datasets/replica_office4.json",
+      "raw_dataset_scene_id": "office_4"
+    }
+  ],
+  "benchmark_path": "docs/benchmarks/replica_scannet_pilot_queries.json",
+  "output_root": "outputs/public_datasets/replica_bbq_aligned_v1",
+  "resume": false,
+  "query_limit": null,
+  "depth_sample_limit": 3,
+  "view_selection": {
+    "strategy": "existing",
+    "max_views": null,
+    "coverage_report_dir": "docs/validation/public_datasets"
+  },
+  "model": {
+    "temperature": 0.0,
+    "cache_dir": "outputs/public_datasets/model_cache"
+  },
+  "metrics": {
+    "enabled_when_gt_available": [
+      "mAcc",
+      "mIoU",
+      "fmIoU",
+      "Recall@1",
+      "Acc@0.1",
+      "Acc@0.25",
+      "Acc@0.5"
+    ],
+    "quality_metrics_currently_allowed": true,
+    "enabled_now": [
+      "Recall@1",
+      "Acc@0.1",
+      "Acc@0.25",
+      "Acc@0.5"
+    ]
+  },
+  "notes": [
+    "Scene choices mirror the BBQ Replica subset: room0, room1, room2, office0, office1, office2, office3, office4.",
+    "Official Replica v1 data is available locally under data/replica_official_raw/ with raw scene names room_0, room_1, room_2, office_0, office_1, office_2, office_3, office_4.",
+    "Each backend replica_* scene contains an official_gt semantic index and ground_truth/object_boxes_3d.json derived from Replica habitat/info_semantic.json oriented boxes.",
+    "Object-grounding metrics Recall@1 and Acc@0.1/0.25/0.5 are allowed for queries with mapped expected_object_id and expected_bbox_3d.",
+    "Semantic segmentation metrics mAcc/mIoU/fmIoU still require a separate point/pixel segmentation evaluator; do not report those from object-box imports alone.",
+    "Replica benchmark v2 uses 56 GT-backed mixed-type queries generated by scripts/build_replica_official_queries.py."
+  ],
+  "benchmark_version": "replica_bbq_aligned_official_gt_pilot_v2",
+  "query_count_expected": 56
+}

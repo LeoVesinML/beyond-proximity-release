@@ -1,0 +1,192 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v009",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v009.png",
+  "depth_path": "depths/v009_depth.npy",
+  "pose_ref": "transforms.json#/frames/8/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial bay panorama with distant city, water, bridge or road lines, and a coastline stretching across the horizon.",
+  "visible_regions": [
+    {
+      "label": "bay water",
+      "description": "wide water surface in foreground",
+      "approx_location": "foreground and center",
+      "source": "manual"
+    },
+    {
+      "label": "distant city coastline",
+      "description": "urban shoreline across the bay",
+      "approx_location": "background",
+      "source": "manual"
+    },
+    {
+      "label": "linear transport corridor",
+      "description": "bridge, road, or waterfront line visible across water",
+      "approx_location": "center-left",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "bay water",
+      "attributes": [
+        "blue-green",
+        "wide"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          3.8451787061892766,
+          16.248100144415208,
+          -13.579160444807778
+        ],
+        "size": [
+          46.21452138872212,
+          26.95640041232032,
+          32.60397922346921
+        ],
+        "label": "bay water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant city",
+      "attributes": [
+        "urban",
+        "far"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -8.86930015813255,
+          9.506364123011624,
+          -17.957470106180917
+        ],
+        "size": [
+          13.484394203577773,
+          13.06940628812129,
+          29.865371803047047
+        ],
+        "label": "distant city"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "bridge or road lines",
+      "attributes": [
+        "thin",
+        "linear"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.42,
+        0.58,
+        0.96
+      ],
+      "bbox_3d": {
+        "center": [
+          0.5384140411822722,
+          18.238528293042144,
+          -20.51115075466896
+        ],
+        "size": [
+          18.72924648609522,
+          31.268543628908322,
+          34.86646617294896
+        ],
+        "label": "bridge or road lines"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "coastline",
+      "attributes": [
+        "long",
+        "curved"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "hills",
+      "attributes": [
+        "distant"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -8.86930015813255,
+          9.506364123011624,
+          -17.957470106180917
+        ],
+        "size": [
+          13.484394203577773,
+          13.06940628812129,
+          29.865371803047047
+        ],
+        "label": "hills"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "bright reflection",
+      "attributes": [
+        "water glare"
+      ],
+      "approx_location": "lower center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "distant city coastline",
+      "description": "long urban shoreline visible across the bay",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "linear bridge or road",
+      "description": "thin crossing/road line visible over the water",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for city shoreline and bridge/road orientation.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v004",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v004.png",
+  "depth_path": "depths/v004_depth.npy",
+  "pose_ref": "transforms.json#/frames/3/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Theater lobby or waiting area with red upholstered seating, black wall panels, notices, a doorway, and a green exit sign.",
+  "visible_regions": [
+    {
+      "label": "lobby seating area",
+      "description": "waiting area with red seats and black walls",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "notice wall",
+      "description": "wall with posters, papers, and information boards",
+      "approx_location": "center and right",
+      "source": "manual"
+    },
+    {
+      "label": "doorway area",
+      "description": "door or passage near the exit sign",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "red upholstered seats",
+      "attributes": [
+        "bright red",
+        "visitor seating"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": [
+        0.0,
+        0.14,
+        1.0,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -4.9140046240880295,
+          7.0256625325000766,
+          -15.395367985678202
+        ],
+        "size": [
+          32.86648912093971,
+          14.454115470549656,
+          38.152046929927984
+        ],
+        "label": "red upholstered seats"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "black wall panels",
+      "attributes": [
+        "dark",
+        "decorative or acoustic"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "notice papers",
+      "attributes": [
+        "white",
+        "posted"
+      ],
+      "approx_location": "center wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "green exit sign",
+      "attributes": [
+        "illuminated",
+        "above doorway"
+      ],
+      "approx_location": "upper right",
+      "confidence": null,
+      "bbox_2d": [
+        0.6344,
+        0.1208,
+        0.8456,
+        0.2792
+      ],
+      "bbox_3d": {
+        "center": [
+          -11.549188933662267,
+          0.9942783292921047,
+          -6.412477607243428
+        ],
+        "size": [
+          8.77737957909418,
+          1.9833426654227226,
+          17.91682300884358
+        ],
+        "label": "green exit sign"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "doorway",
+      "attributes": [
+        "dark opening",
+        "passage"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.08,
+        0.96,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -15.639831628930386,
+          11.29717287996858,
+          -12.92996190871637
+        ],
+        "size": [
+          25.982106044417247,
+          29.380244032601606,
+          22.42659473112312
+        ],
+        "label": "doorway"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "framed posters or pictures",
+      "attributes": [
+        "small",
+        "wall mounted"
+      ],
+      "approx_location": "center wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "red seating area",
+      "description": "bright red seats that identify this lobby corner",
+      "approx_location": "left and center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "green exit sign",
+      "description": "illuminated sign above the doorway",
+      "approx_location": "upper right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "notice wall",
+      "description": "wall section with multiple posted papers",
+      "approx_location": "center wall",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good for queries about lobby seating, exit sign, notice wall, and doorway.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

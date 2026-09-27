@@ -1,0 +1,155 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "replica_bbq_aligned_public_dataset_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "replica_office3",
+  "query_id": "replica_office3_simple_001",
+  "query": "Find the door",
+  "query_type": "simple_object",
+  "structured_plan": {
+    "target": "door",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_090_door"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_090_door"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_018_undefined",
+    "object_v001_028_cushion",
+    "object_v001_029_window",
+    "object_v001_033_wall",
+    "object_v001_037_lamp",
+    "object_v001_052_chair",
+    "object_v001_063_other_leaf",
+    "object_v001_068_other_leaf",
+    "object_v001_078_blinds",
+    "object_v001_088_cushion",
+    "object_v001_090_door",
+    "object_v001_093_cushion",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "93",
+    "83",
+    "82",
+    "34",
+    "29",
+    "16",
+    "48",
+    "45",
+    "39",
+    "54",
+    "56",
+    "61"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "door",
+    "selected_object_id": "56",
+    "ranked_object_ids": [
+      "56",
+      "16",
+      "29"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "56",
+        "label": "door",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "16",
+        "label": "chair",
+        "score": 0.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "29",
+        "label": "lamp",
+        "score": 0.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v001_090_door",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -1.242818,
+        -5.486359,
+        0.098538
+      ],
+      "size": [
+        0.628193915,
+        0.818203449,
+        2.573328018
+      ],
+      "label": "door",
+      "object_id": "56",
+      "coordinate_frame": "replica_habitat_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 56.",
+    "relation_satisfied": null,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.002347415999999214,
+    "stage_runtime_seconds": {
+      "answer_query": 0.002347415999999214
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 13,
+    "checked_view_count": 1,
+    "checked_object_count": 12,
+    "context_size_chars": 1171,
+    "prompt_size_chars": 1184,
+    "estimated_input_tokens": 296,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

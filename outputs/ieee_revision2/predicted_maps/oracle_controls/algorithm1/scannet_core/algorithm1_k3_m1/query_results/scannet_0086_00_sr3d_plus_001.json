@@ -1,0 +1,185 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0086_00",
+  "query_id": "scannet_0086_00_sr3d_plus_001",
+  "query": "the bathroom stall that is closer to the window",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "bathroom stall",
+    "relation": "closest",
+    "anchor": "window",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v003_001_bathroom_stall"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v003_001_bathroom_stall"
+  ],
+  "selected_views": [
+    "v003"
+  ],
+  "checked_node_ids": [
+    "object_v002_005_doorframe",
+    "object_v003_001_bathroom_stall",
+    "object_v003_002_floor",
+    "object_v003_005_toilet",
+    "object_v003_006_bathroom_stall_door",
+    "object_v003_012_toilet_paper_dispenser",
+    "object_v003_013_bathroom_stall",
+    "object_v003_014_bathroom_stall_door",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v002",
+    "v003"
+  ],
+  "checked_object_ids": [
+    "27",
+    "1",
+    "3",
+    "7",
+    "10",
+    "22",
+    "28",
+    "29"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bathroom stall",
+    "selected_object_id": "1",
+    "ranked_object_ids": [
+      "1",
+      "28",
+      "10"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "1",
+        "label": "bathroom stall",
+        "score": 1.0,
+        "relation_confidence": 0.775969,
+        "relation_applied": true
+      },
+      {
+        "rank": 2,
+        "object_id": "28",
+        "label": "bathroom stall",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "10",
+        "label": "bathroom stall door",
+        "score": 0.75,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v003_001_bathroom_stall",
+    "selected_view_id": "v003",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.2307,
+        -1.891444,
+        1.006782
+      ],
+      "size": [
+        2.626795,
+        2.266155,
+        2.03634
+      ],
+      "label": "bathroom stall",
+      "object_id": "1",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 1.",
+    "relation_satisfied": true,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [
+        "bathroom"
+      ],
+      "lexical_score": 1.0,
+      "relation": "closest",
+      "anchor": "window",
+      "anchor_secondary": null,
+      "relation_score": 1.0,
+      "relation_source": "relative_bbox_distance",
+      "relation_confidence": 0.775969,
+      "relation_applied": true,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "11",
+          "matched": true,
+          "normalized_distance": 0.714826
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "11"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_distance": 0.714826,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0036189999999987066,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0036189999999987066
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 9,
+    "checked_view_count": 2,
+    "checked_object_count": 8,
+    "context_size_chars": 1544,
+    "prompt_size_chars": 1591,
+    "estimated_input_tokens": 398,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

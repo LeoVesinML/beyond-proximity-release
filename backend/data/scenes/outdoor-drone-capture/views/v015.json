@@ -1,0 +1,165 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v015",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v015.png",
+  "depth_path": "depths/v015_depth.npy",
+  "pose_ref": "transforms.json#/frames/14/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Blurred aerial view across a bay toward a distant city, bridge or linear water crossing, and surrounding hills.",
+  "visible_regions": [
+    {
+      "label": "blurred bay",
+      "description": "wide water surface with motion blur",
+      "approx_location": "foreground",
+      "source": "manual"
+    },
+    {
+      "label": "distant urban shoreline",
+      "description": "city skyline across the water",
+      "approx_location": "background",
+      "source": "manual"
+    },
+    {
+      "label": "linear crossing area",
+      "description": "bridge or road-like line across the water",
+      "approx_location": "center-left",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "bay water",
+      "attributes": [
+        "blurred",
+        "blue-green"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          5.838581855164991,
+          4.994087260811115,
+          4.792860954697829
+        ],
+        "size": [
+          16.51495493750279,
+          11.876873265086335,
+          26.961793795012007
+        ],
+        "label": "bay water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant city",
+      "attributes": [
+        "far",
+        "urban"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          7.842699447129734,
+          4.417094101262509,
+          5.701755830084773
+        ],
+        "size": [
+          10.09374906274184,
+          9.125056381366344,
+          23.761407714044804
+        ],
+        "label": "distant city"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "bridge or roadway",
+      "attributes": [
+        "thin",
+        "linear",
+        "blurred"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "hills",
+      "attributes": [
+        "distant"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          7.842699447129734,
+          4.417094101262509,
+          5.701755830084773
+        ],
+        "size": [
+          10.09374906274184,
+          9.125056381366344,
+          23.761407714044804
+        ],
+        "label": "hills"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "bright water reflection",
+      "attributes": [
+        "blue-white"
+      ],
+      "approx_location": "lower center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "distant city shoreline",
+      "description": "urban horizon across the bay",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "bridge or roadway line",
+      "description": "long linear feature crossing/near the water",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Blurred image; use only as low-confidence orientation view.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

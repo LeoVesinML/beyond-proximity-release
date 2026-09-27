@@ -1,0 +1,176 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v003",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v003.png",
+  "depth_path": "depths/v003_depth.npy",
+  "pose_ref": "transforms.json#/frames/2/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial harbor view with a rocky peninsula or island, large waterfront building, cranes or industrial structures, sea water, and distant city.",
+  "visible_regions": [
+    {
+      "label": "harbor peninsula",
+      "description": "landmass extending into the water with buildings and structures",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "industrial waterfront",
+      "description": "shoreline with cranes or port-like structures",
+      "approx_location": "center-right",
+      "source": "manual"
+    },
+    {
+      "label": "open water",
+      "description": "sea area around the peninsula",
+      "approx_location": "foreground and left",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "large waterfront building",
+      "attributes": [
+        "rectangular",
+        "modern"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "rocky peninsula or island",
+      "attributes": [
+        "coastal",
+        "surrounded by water"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "cranes or port structures",
+      "attributes": [
+        "industrial",
+        "vertical"
+      ],
+      "approx_location": "right-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "sea water",
+      "attributes": [
+        "blue-green"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          6.344920732470317,
+          8.818174768153554,
+          -20.771854378344543
+        ],
+        "size": [
+          46.92331140583087,
+          17.56800739945956,
+          15.238940214534459
+        ],
+        "label": "sea water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant city",
+      "attributes": [
+        "far",
+        "urban"
+      ],
+      "approx_location": "right background",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.48,
+        0.96,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -14.789344532761687,
+          12.299319981503032,
+          -42.39461669079498
+        ],
+        "size": [
+          32.15204384286917,
+          23.54724924866342,
+          69.81114846573512
+        ],
+        "label": "distant city"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "hills",
+      "attributes": [
+        "distant",
+        "brown"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          7.063404684407517,
+          9.652170476736591,
+          -33.11822374928117
+        ],
+        "size": [
+          30.695420444756117,
+          18.22742559085754,
+          47.18267430394858
+        ],
+        "label": "hills"
+      },
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "large waterfront building",
+      "description": "prominent building on the coastal peninsula",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "port cranes",
+      "description": "industrial vertical structures near the waterfront",
+      "approx_location": "right-center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good for queries about harbor, waterfront building, peninsula, and cranes.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

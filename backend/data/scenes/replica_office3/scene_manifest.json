@@ -1,0 +1,35 @@
+{
+  "schema_version": "semanticsplat.scene_manifest.v1",
+  "scene_id": "replica_office3",
+  "dataset": "Replica",
+  "source_dataset": "Replica",
+  "source_scene_id": "office3",
+  "source_description": "Official Replica v1 semantic mesh imported from data/replica_official_raw/office_3",
+  "paths": {
+    "rgb": "images",
+    "depth": "depths",
+    "poses": "transforms.json",
+    "intrinsics": "transforms.json",
+    "semantic_index": "views",
+    "gt_object_boxes_3d": "ground_truth/object_boxes_3d.json",
+    "source_mesh": "data/replica_official_raw/office_3/habitat/mesh_semantic.ply"
+  },
+  "frame_count": 1,
+  "coordinate_frame": "replica_habitat_mesh",
+  "ground_truth": {
+    "zone_labels_available": false,
+    "object_labels_available": true,
+    "bbox_3d_available": true,
+    "source": "official Replica habitat/mesh_semantic.ply + info_semantic.json"
+  },
+  "evaluation_eligibility": {
+    "semantic_evaluation_allowed": true,
+    "three_d_localization_allowed": true,
+    "rgbd_visual_evaluation_allowed": false,
+    "reason": "Object labels and 3D boxes come from official Replica mesh GT; rendered RGB-D views are not available from this import."
+  },
+  "warnings": [
+    "Synthetic placeholder image/depth exists only to satisfy the current ViewJSON runner contract.",
+    "Do not report depth, visual, or rendered-view metrics from this placeholder frame."
+  ]
+}

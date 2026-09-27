@@ -1,0 +1,7280 @@
+{
+  "schema_version": "semanticsplat.grounding_metrics.v2",
+  "benchmark_id": "scannet_bbq_grounding_extended_v2",
+  "generated_at": "2026-09-27T18:55:08.508689+00:00",
+  "coverage": {
+    "benchmark_queries": 64,
+    "result_files": 64,
+    "canonical_results": 64,
+    "legacy_adapted_results": 0,
+    "schema_valid_results": 64
+  },
+  "metrics": {
+    "query_count": 64,
+    "bbox_eligible_count": 56,
+    "bbox_iou_3d": {
+      "value": 0.590986,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "mrr_exact_object_id": {
+      "value": 0.732192,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "negative_accuracy": {
+      "value": 1.0,
+      "numerator": 8,
+      "denominator": 8,
+      "status": "measured"
+    },
+    "efficiency": {
+      "runtime_seconds": {
+        "mean": 0.00287,
+        "total": 0.183669,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "checked_nodes": {
+        "mean": 1.5,
+        "total": 96.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "checked_views": {
+        "mean": 4.875,
+        "total": 312.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "checked_objects": {
+        "mean": 49.0,
+        "total": 3136.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "context_chars": {
+        "mean": 8414.625,
+        "total": 538536.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "estimated_tokens": {
+        "mean": 2114.984375,
+        "total": 135359.0,
+        "denominator": 64,
+        "status": "measured"
+      }
+    },
+    "recall_at_1_exact_object_id": {
+      "value": 0.625,
+      "numerator": 35,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "recall_at_3_exact_object_id": {
+      "value": 0.821429,
+      "numerator": 46,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "recall_at_5_exact_object_id": {
+      "value": 0.857143,
+      "numerator": 48,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "acc_at_0_1": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.1,
+      "status": "measured"
+    },
+    "bbox_acc_at_0_1": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.1,
+      "status": "measured"
+    },
+    "acc_at_0_25": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.25,
+      "status": "measured"
+    },
+    "bbox_acc_at_0_25": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.25,
+      "status": "measured"
+    },
+    "acc_at_0_5": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.5,
+      "status": "measured"
+    },
+    "bbox_acc_at_0_5": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.5,
+      "status": "measured"
+    },
+    "segmentation": {
+      "mAcc": {
+        "status": "N/A",
+        "value": null,
+        "reason": "Segmentation prediction and GT arrays/masks are not jointly available; object retrieval or oracle object IDs are not segmentation evidence.",
+        "query_count": 0
+      },
+      "mIoU": {
+        "status": "N/A",
+        "value": null,
+        "reason": "Segmentation prediction and GT arrays/masks are not jointly available; object retrieval or oracle object IDs are not segmentation evidence.",
+        "query_count": 0
+      },
+      "fmIoU": {
+        "status": "N/A",
+        "value": null,
+        "reason": "Segmentation prediction and GT arrays/masks are not jointly available; object retrieval or oracle object IDs are not segmentation evidence.",
+        "query_count": 0
+      }
+    }
+  },
+  "construction_cost": {
+    "status": "reported",
+    "scope": "one-time construction; excluded from per-query efficiency",
+    "run": {
+      "runtime_seconds": 0.003622,
+      "candidate_count": 392,
+      "scope": "one-time canonical candidate construction"
+    },
+    "per_query_records": [],
+    "record_count": 0
+  },
+  "strata": {
+    "scene": {
+      "scannet_0011_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.714494,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.785714,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001618,
+            "total": 0.012941,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.75,
+            "total": 14.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.0,
+            "total": 32.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 33.0,
+            "total": 264.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5653.0,
+            "total": 45224.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1425.625,
+            "total": 11405.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0030_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.428571,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.690476,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.005086,
+            "total": 0.04069,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 6.0,
+            "total": 48.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 90.0,
+            "total": 720.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 14943.0,
+            "total": 119544.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 3747.5,
+            "total": 29980.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0046_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.571429,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.642857,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.003925,
+            "total": 0.031397,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.0,
+            "total": 32.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 57.0,
+            "total": 456.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 10008.0,
+            "total": 80064.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2514.125,
+            "total": 20113.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0086_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.717255,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.732143,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002869,
+            "total": 0.022949,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.0,
+            "total": 24.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 30.0,
+            "total": 240.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5503.0,
+            "total": 44024.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1387.75,
+            "total": 11102.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0222_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.428571,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.673016,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001921,
+            "total": 0.015369,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.0,
+            "total": 8.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 5.0,
+            "total": 40.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 43.0,
+            "total": 344.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 7528.0,
+            "total": 60224.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1894.625,
+            "total": 15157.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0378_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.714286,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.785714,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002707,
+            "total": 0.021652,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 5.0,
+            "total": 40.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 45.0,
+            "total": 360.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 7703.0,
+            "total": 61624.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1934.375,
+            "total": 15475.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0389_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.724711,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.857143,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001149,
+            "total": 0.009191,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.75,
+            "total": 14.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 5.0,
+            "total": 40.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 30.0,
+            "total": 240.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5110.0,
+            "total": 40880.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1286.125,
+            "total": 10289.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 1.0,
+          "numerator": 7,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 1.0,
+          "numerator": 7,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0435_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.428571,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.690476,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.003685,
+            "total": 0.02948,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 7.0,
+            "total": 56.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 64.0,
+            "total": 512.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 10869.0,
+            "total": 86952.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2729.75,
+            "total": 21838.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 1.0,
+          "numerator": 7,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 1.0,
+          "numerator": 7,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    },
+    "source": {
+      "Nr3D": {
+        "query_count": 24,
+        "bbox_eligible_count": 24,
+        "bbox_iou_3d": {
+          "value": 0.378968,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.555671,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.003203,
+            "total": 0.076862,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.75,
+            "total": 42.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.875,
+            "total": 117.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 49.0,
+            "total": 1176.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 8414.625,
+            "total": 201951.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2116.166667,
+            "total": 50788.0,
+            "denominator": 24,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.666667,
+          "numerator": 16,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.75,
+          "numerator": 18,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "ScanNet-derived official GT": {
+        "query_count": 16,
+        "bbox_eligible_count": 8,
+        "bbox_iou_3d": {
+          "value": 0.5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.666667,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 8,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001191,
+            "total": 0.019054,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 0.5,
+            "total": 8.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.875,
+            "total": 78.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 49.0,
+            "total": 784.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 8414.625,
+            "total": 134634.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2109.625,
+            "total": 33754.0,
+            "denominator": 16,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.625,
+          "numerator": 5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.75,
+          "numerator": 6,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.75,
+          "numerator": 6,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "Sr3D+": {
+        "query_count": 24,
+        "bbox_eligible_count": 24,
+        "bbox_iou_3d": {
+          "value": 0.833333,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.930556,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.003656,
+            "total": 0.087753,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.916667,
+            "total": 46.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.875,
+            "total": 117.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 49.0,
+            "total": 1176.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 8414.625,
+            "total": 201951.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2117.375,
+            "total": 50817.0,
+            "denominator": 24,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.875,
+          "numerator": 21,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 1.0,
+          "numerator": 24,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 1.0,
+          "numerator": 24,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    },
+    "query_type": {
+      "attribute": {
+        "query_count": 2,
+        "bbox_eligible_count": 2,
+        "bbox_iou_3d": {
+          "value": 0.010393,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.3125,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.000857,
+            "total": 0.001714,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 2.0,
+            "total": 4.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.0,
+            "total": 8.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 30.0,
+            "total": 60.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5306.5,
+            "total": 10613.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1333.0,
+            "total": 2666.0,
+            "denominator": 2,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.5,
+          "numerator": 1,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.5,
+          "numerator": 1,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "functional": {
+        "query_count": 8,
+        "bbox_eligible_count": 8,
+        "bbox_iou_3d": {
+          "value": 0.5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.666667,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001262,
+            "total": 0.010094,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.0,
+            "total": 8.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.875,
+            "total": 39.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 49.0,
+            "total": 392.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 8414.625,
+            "total": 67317.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2111.25,
+            "total": 16890.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.625,
+          "numerator": 5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.75,
+          "numerator": 6,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.75,
+          "numerator": 6,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "negative": {
+        "query_count": 8,
+        "bbox_eligible_count": 0,
+        "bbox_iou_3d": {
+          "value": null,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "mrr_exact_object_id": {
+          "value": null,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 8,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.00112,
+            "total": 0.008959,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 0.0,
+            "total": 0.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.875,
+            "total": 39.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 49.0,
+            "total": 392.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 8414.625,
+            "total": 67317.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2108.0,
+            "total": 16864.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "acc_at_0_1": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.1,
+          "status": "N/A"
+        },
+        "bbox_acc_at_0_1": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.1,
+          "status": "N/A"
+        },
+        "acc_at_0_25": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.25,
+          "status": "N/A"
+        },
+        "bbox_acc_at_0_25": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.25,
+          "status": "N/A"
+        },
+        "acc_at_0_5": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.5,
+          "status": "N/A"
+        },
+        "bbox_acc_at_0_5": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.5,
+          "status": "N/A"
+        }
+      },
+      "relational": {
+        "query_count": 40,
+        "bbox_eligible_count": 40,
+        "bbox_iou_3d": {
+          "value": 0.651861,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.773611,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.003723,
+            "total": 0.148916,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.85,
+            "total": 74.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.875,
+            "total": 195.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 49.0,
+            "total": 1960.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 8414.625,
+            "total": 336585.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2117.75,
+            "total": 84710.0,
+            "denominator": 40,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.675,
+          "numerator": 27,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.85,
+          "numerator": 34,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.9,
+          "numerator": 36,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "simple_object": {
+        "query_count": 6,
+        "bbox_eligible_count": 6,
+        "bbox_iou_3d": {
+          "value": 0.5,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.683333,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002331,
+            "total": 0.013984,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.666667,
+            "total": 10.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 5.166667,
+            "total": 31.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 55.333333,
+            "total": 332.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 9450.666667,
+            "total": 56704.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2371.5,
+            "total": 14229.0,
+            "denominator": 6,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.833333,
+          "numerator": 5,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.833333,
+          "numerator": 5,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    },
+    "search_variant": {
+      "v3_flat_lexical": {
+        "query_count": 64,
+        "bbox_eligible_count": 56,
+        "bbox_iou_3d": {
+          "value": 0.590986,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.732192,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 8,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.00287,
+            "total": 0.183669,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 96.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.875,
+            "total": 312.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 49.0,
+            "total": 3136.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 8414.625,
+            "total": 538536.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 2114.984375,
+            "total": 135359.0,
+            "denominator": 64,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.625,
+          "numerator": 35,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.821429,
+          "numerator": 46,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 48,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    }
+  },
+  "failure_taxonomy": {
+    "wrong object": 15,
+    "wrong relation": 20,
+    "false positive": 0,
+    "invalid/unavailable prediction": 8,
+    "bad bbox": 8,
+    "missing GT": 0
+  },
+  "per_query": [
+    {
+      "query_id": "scannet_0011_00_nr3d_001",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "17",
+        "2",
+        "25",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011727910000001174,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1426.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.001459,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "0",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "28"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023042909999997363,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1424.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_003",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "20",
+        "28",
+        "1",
+        "0",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "20"
+      ],
+      "predicted_object_id": "20",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0009718750000011767,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1421.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_001",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "17",
+        "25",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0016096670000003144,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1427.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "15",
+        "32",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "15"
+      ],
+      "predicted_object_id": "15",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0017114580000008317,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1428.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_003",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "1",
+        "25",
+        "0",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "1"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0033529589999989895,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1435.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19",
+        "20",
+        "68",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004818417000000963,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3748.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_002",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19",
+        "20",
+        "68",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "24"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023247499999996535,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3748.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "26",
+        "27",
+        "58",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "27"
+      ],
+      "predicted_object_id": "26",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002794708000001478,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3746.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "expected_rank": 3,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "2",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "3"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004304709000001239,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3746.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_002",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "19",
+        "17",
+        "18",
+        "20",
+        "68",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "19"
+      ],
+      "predicted_object_id": "19",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.004252541999999693,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3748.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.017710917000000492,
+        "checked_nodes": 0.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3759.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_001",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.25,
+      "expected_rank": 4,
+      "ranked_object_ids": [
+        "18",
+        "3",
+        "50",
+        "52",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "52"
+      ],
+      "predicted_object_id": "18",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.010417042000000265,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2523.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_002",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.25,
+      "expected_rank": 4,
+      "ranked_object_ids": [
+        "21",
+        "26",
+        "48",
+        "49",
+        "24",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "49"
+      ],
+      "predicted_object_id": "21",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0030816250000000878,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2517.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_003",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "48",
+        "49",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "48"
+      ],
+      "predicted_object_id": "48",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.00560700000000125,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2511.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_001",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "18",
+        "50",
+        "52",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "18"
+      ],
+      "predicted_object_id": "18",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0034386249999993623,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2513.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_002",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "21",
+        "26",
+        "24",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "21"
+      ],
+      "predicted_object_id": "21",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.002699665999999823,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2513.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_003",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003567500000000834,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2520.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_001",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "13",
+        "14",
+        "2",
+        "24",
+        "25",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "13"
+      ],
+      "predicted_object_id": "13",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.006078083000000234,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1397.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_002",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "21",
+        "22",
+        "12",
+        "5",
+        "0",
+        "1",
+        "10",
+        "11"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.005162665999998595,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1394.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.020786,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.125,
+      "expected_rank": 8,
+      "ranked_object_ids": [
+        "1",
+        "10",
+        "21",
+        "22",
+        "28",
+        "29",
+        "5",
+        "6",
+        "7",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0009315420000000074,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1382.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_001",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "1",
+        "28",
+        "10",
+        "29",
+        "21",
+        "22",
+        "5",
+        "6",
+        "7",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "1"
+      ],
+      "predicted_object_id": "1",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0016927500000001316,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1388.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_002",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "6",
+        "7",
+        "21",
+        "22",
+        "5",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "6",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0016955410000001336,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1388.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.005941374999999027,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1390.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_001",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.1111111111111111,
+      "expected_rank": 9,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "16"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00383375000000008,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1896.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_002",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "24",
+        "3",
+        "25",
+        "4",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "24"
+      ],
+      "predicted_object_id": "24",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0018094579999985427,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1908.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_003",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.1,
+      "expected_rank": 10,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011197089999992471,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1892.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_001",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "5",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.002013083000001359,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1893.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_002",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "24",
+        "3",
+        "25",
+        "4",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": "24",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.001972874999999874,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1893.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_003",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "7",
+        "6",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "7"
+      ],
+      "predicted_object_id": "7",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0026546249999999105,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1901.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "38"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0013729159999993357,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1935.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "31",
+        "32",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "31"
+      ],
+      "predicted_object_id": "31",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002134749999999741,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1933.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_003",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "2",
+        "35",
+        "44",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0013586249999999467,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1934.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.007748750000001081,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1934.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "35"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0021162089999986478,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1937.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_003",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004557916999999634,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1940.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_001",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.072976,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "22",
+        "23",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "23"
+      ],
+      "predicted_object_id": "22",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0008294590000001989,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1284.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_002",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "3",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0014112920000002305,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1284.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_003",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "12",
+        "7",
+        "0",
+        "1",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "7"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0007829170000004382,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1284.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_001",
+      "scene_id": "scannet_0389_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "3",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0015241669999994656,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1289.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_002",
+      "scene_id": "scannet_0389_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "3",
+        "2",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": "3",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.001389875000000984,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1289.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_003",
+      "scene_id": "scannet_0389_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "6",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "6",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.001840624999999818,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1295.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_001",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "38",
+        "50",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "50"
+      ],
+      "predicted_object_id": "38",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0032236670000003187,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2751.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_002",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "28",
+        "57",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "57"
+      ],
+      "predicted_object_id": "28",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.01118829099999985,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2725.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "0",
+        "1",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "11"
+      ],
+      "predicted_object_id": "10",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0021323750000004082,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2725.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_001",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "0",
+        "1",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10"
+      ],
+      "predicted_object_id": "10",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.003103416000000081,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2730.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_002",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "11",
+        "10",
+        "0",
+        "1",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "11"
+      ],
+      "predicted_object_id": "11",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0030984579999984163,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2731.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "12",
+        "31",
+        "0",
+        "1",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "12"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0037554580000005444,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2730.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_functional_gt_001",
+      "scene_id": "scannet_0011_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "3",
+        "10",
+        "11",
+        "12",
+        "13",
+        "17",
+        "2",
+        "4",
+        "5",
+        "6"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "predicted_object_id": "3",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.001054875000001232,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1426.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_negative_gt_001",
+      "scene_id": "scannet_0011_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0007635419999996174,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1418.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_functional_gt_001",
+      "scene_id": "scannet_0030_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "52",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2",
+        "3",
+        "4",
+        "5",
+        "52",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "predicted_object_id": "52",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0023441250000004743,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3746.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_negative_gt_001",
+      "scene_id": "scannet_0030_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0021398750000010125,
+        "checked_nodes": 0.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3739.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_functional_gt_001",
+      "scene_id": "scannet_0046_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00135845800000034,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2508.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_negative_gt_001",
+      "scene_id": "scannet_0046_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0012269589999984731,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2508.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_functional_gt_001",
+      "scene_id": "scannet_0086_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "19",
+        "20"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0007830420000001226,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1384.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_negative_gt_001",
+      "scene_id": "scannet_0086_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0006637919999992192,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1379.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_functional_gt_001",
+      "scene_id": "scannet_0222_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0",
+        "5"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0010224579999995598,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1888.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_negative_gt_001",
+      "scene_id": "scannet_0222_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0009430000000012484,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1886.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_functional_gt_001",
+      "scene_id": "scannet_0378_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "40",
+        "41",
+        "42",
+        "43",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "predicted_object_id": "40",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0012570410000005694,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1933.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_negative_gt_001",
+      "scene_id": "scannet_0378_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0011062499999994202,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1929.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_functional_gt_001",
+      "scene_id": "scannet_0389_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "3",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2",
+        "3"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0007492499999983693,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1282.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_negative_gt_001",
+      "scene_id": "scannet_0389_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.000662958000001268,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1282.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_functional_gt_001",
+      "scene_id": "scannet_0435_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "expected_rank": 3,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10",
+        "11"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0015249580000009644,
+        "checked_nodes": 0.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2723.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_negative_gt_001",
+      "scene_id": "scannet_0435_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0014530420000014033,
+        "checked_nodes": 0.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2723.0
+      },
+      "construction_cost": null
+    }
+  ],
+  "failures": [
+    {
+      "query_id": "scannet_0011_00_nr3d_001",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "17",
+        "2",
+        "25",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011727910000001174,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1426.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.001459,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "0",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "28"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023042909999997363,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1424.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "15",
+        "32",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "15"
+      ],
+      "predicted_object_id": "15",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0017114580000008317,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1428.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_003",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0011_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "1",
+        "25",
+        "0",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "1"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0033529589999989895,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 33.0,
+        "context_chars": 5653.0,
+        "estimated_tokens": 1435.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19",
+        "20",
+        "68",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004818417000000963,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3748.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_002",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19",
+        "20",
+        "68",
+        "70",
+        "71",
+        "72",
+        "73",
+        "74"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "24"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023247499999996535,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3748.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "26",
+        "27",
+        "58",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "27"
+      ],
+      "predicted_object_id": "26",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002794708000001478,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3746.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "expected_rank": 3,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "2",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "3"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004304709000001239,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3746.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0030_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.017710917000000492,
+        "checked_nodes": 0.0,
+        "checked_views": 6.0,
+        "checked_objects": 90.0,
+        "context_chars": 14943.0,
+        "estimated_tokens": 3759.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_001",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.25,
+      "expected_rank": 4,
+      "ranked_object_ids": [
+        "18",
+        "3",
+        "50",
+        "52",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "52"
+      ],
+      "predicted_object_id": "18",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.010417042000000265,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2523.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_002",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.25,
+      "expected_rank": 4,
+      "ranked_object_ids": [
+        "21",
+        "26",
+        "48",
+        "49",
+        "24",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "49"
+      ],
+      "predicted_object_id": "21",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0030816250000000878,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2517.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_003",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003567500000000834,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2520.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_001",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "13",
+        "14",
+        "2",
+        "24",
+        "25",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "13"
+      ],
+      "predicted_object_id": "13",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.006078083000000234,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1397.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_002",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "21",
+        "22",
+        "12",
+        "5",
+        "0",
+        "1",
+        "10",
+        "11"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.005162665999998595,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1394.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.020786,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.125,
+      "expected_rank": 8,
+      "ranked_object_ids": [
+        "1",
+        "10",
+        "21",
+        "22",
+        "28",
+        "29",
+        "5",
+        "6",
+        "7",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0009315420000000074,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1382.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.005941374999999027,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1390.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_001",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.1111111111111111,
+      "expected_rank": 9,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "16"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00383375000000008,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1896.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_003",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.1,
+      "expected_rank": 10,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011197089999992471,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1892.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_002",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "24",
+        "3",
+        "25",
+        "4",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": "24",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.001972874999999874,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1893.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "38"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0013729159999993357,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1935.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "31",
+        "32",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "31"
+      ],
+      "predicted_object_id": "31",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002134749999999741,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1933.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.007748750000001081,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1934.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "35"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0021162089999986478,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1937.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_003",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0378_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004557916999999634,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 45.0,
+        "context_chars": 7703.0,
+        "estimated_tokens": 1940.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_001",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.072976,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "22",
+        "23",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "23"
+      ],
+      "predicted_object_id": "22",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0008294590000001989,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1284.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_003",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0389_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "12",
+        "7",
+        "0",
+        "1",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "7"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0007829170000004382,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 30.0,
+        "context_chars": 5110.0,
+        "estimated_tokens": 1284.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_001",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "38",
+        "50",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "50"
+      ],
+      "predicted_object_id": "38",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0032236670000003187,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2751.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_002",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "28",
+        "57",
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "57"
+      ],
+      "predicted_object_id": "28",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.01118829099999985,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2725.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "0",
+        "1",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "11"
+      ],
+      "predicted_object_id": "10",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0021323750000004082,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2725.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "12",
+        "31",
+        "0",
+        "1",
+        "10",
+        "11",
+        "13",
+        "14",
+        "15",
+        "16"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "12"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0037554580000005444,
+        "checked_nodes": 2.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2730.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_functional_gt_001",
+      "scene_id": "scannet_0046_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0046_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00135845800000034,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 57.0,
+        "context_chars": 10008.0,
+        "estimated_tokens": 2508.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_functional_gt_001",
+      "scene_id": "scannet_0086_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0086_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "19",
+        "20"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0007830420000001226,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 30.0,
+        "context_chars": 5503.0,
+        "estimated_tokens": 1384.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_functional_gt_001",
+      "scene_id": "scannet_0222_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0222_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0",
+        "5"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0010224579999995598,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 43.0,
+        "context_chars": 7528.0,
+        "estimated_tokens": 1888.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_functional_gt_001",
+      "scene_id": "scannet_0435_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "v3_flat_lexical",
+      "result_file": "scannet_0435_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "expected_rank": 3,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10",
+        "11"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0015249580000009644,
+        "checked_nodes": 0.0,
+        "checked_views": 7.0,
+        "checked_objects": 64.0,
+        "context_chars": 10869.0,
+        "estimated_tokens": 2723.0
+      },
+      "construction_cost": null
+    }
+  ],
+  "warnings": []
+}

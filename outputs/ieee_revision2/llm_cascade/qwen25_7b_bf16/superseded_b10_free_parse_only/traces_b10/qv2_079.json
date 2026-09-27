@@ -1,0 +1,79 @@
+{
+  "query_id": "qv2_079",
+  "scene_id": "Theater",
+  "query": "Find the black railing on the railing side",
+  "query_type": "multi_hop",
+  "expected_view_ids": [
+    "v013",
+    "v019"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "17b678c5e572e65867f9df924379448824ae52420942158406c4d301a437f40a",
+      "raw_output": "v013",
+      "chosen_id": "v013",
+      "valid": true,
+      "input_tokens": 1413,
+      "output_tokens": 5,
+      "latency_ms": 3730.8275,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v008",
+        "v014"
+      ],
+      "prompt_sha256": "13c53187b862bcdb824a98d2ab8cf0b8c2cb88a66c15c12de6987842bf6c43a7",
+      "raw_output": "v014",
+      "chosen_id": "v014",
+      "valid": true,
+      "input_tokens": 203,
+      "output_tokens": 5,
+      "latency_ms": 1040.1156,
+      "correct": false,
+      "target_in_context": false
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v014",
+        "v016",
+        "v017"
+      ],
+      "prompt_sha256": "91f960c8185b41811f30dc6fbe8f74bc5c5669134b231bfd05ed892db8481061",
+      "raw_output": "v016",
+      "chosen_id": "v016",
+      "valid": true,
+      "input_tokens": 274,
+      "output_tokens": 5,
+      "latency_ms": 956.6316,
+      "correct": false,
+      "target_in_context": false
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

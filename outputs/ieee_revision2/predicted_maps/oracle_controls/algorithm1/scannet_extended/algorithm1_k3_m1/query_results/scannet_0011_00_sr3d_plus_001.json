@@ -1,0 +1,183 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0011_00",
+  "query_id": "scannet_0011_00_sr3d_plus_001",
+  "query": "select the table that is closer to the kitchen cabinets",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "table",
+    "relation": "closest",
+    "anchor": "kitchen cabinets",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_002_table"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_002_table"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v003_001_floor",
+    "object_v003_004_chair",
+    "object_v003_005_chair",
+    "object_v003_006_wall",
+    "object_v003_007_trash_can",
+    "object_v004_002_table",
+    "object_v004_008_table",
+    "object_v004_009_tv",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v003",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "0",
+    "12",
+    "13",
+    "14",
+    "15",
+    "2",
+    "17",
+    "18"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "table",
+    "selected_object_id": "2",
+    "ranked_object_ids": [
+      "2",
+      "17",
+      "0"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "2",
+        "label": "table",
+        "score": 1.0,
+        "relation_confidence": 0.770557,
+        "relation_applied": true
+      },
+      {
+        "rank": 2,
+        "object_id": "17",
+        "label": "table",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "0",
+        "label": "floor",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v004_002_table",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.41852,
+        0.18819,
+        0.428737
+      ],
+      "size": [
+        1.192137,
+        3.637919,
+        0.858355
+      ],
+      "label": "table",
+      "object_id": "2",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 2.",
+    "relation_satisfied": true,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "closest",
+      "anchor": "kitchen cabinets",
+      "anchor_secondary": null,
+      "relation_score": 1.0,
+      "relation_source": "relative_bbox_distance",
+      "relation_confidence": 0.770557,
+      "relation_applied": true,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "1",
+          "matched": true,
+          "normalized_distance": 0.606071
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.375,
+        "score_margin": 0.625,
+        "candidate_count": 2,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "1"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_distance": 0.606071,
+      "relation_changed_ranking": true,
+      "pre_relation_rank": 2,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0012874580000001856,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0012874580000001856
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 9,
+    "checked_view_count": 2,
+    "checked_object_count": 8,
+    "context_size_chars": 1346,
+    "prompt_size_chars": 1401,
+    "estimated_input_tokens": 350,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v015",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v015.png",
+  "depth_path": "depths/v015_depth.npy",
+  "pose_ref": "transforms.json#/frames/14/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Blurry outdoor street view with trees, parked cars, roadway, and surrounding buildings.",
+  "visible_regions": [
+    {
+      "label": "street roadway",
+      "description": "open road or driveway with parked cars",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "tree-lined side",
+      "description": "green trees and vegetation beside the street",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "building side",
+      "description": "buildings along the street",
+      "approx_location": "background and right",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "parked car",
+      "attributes": [
+        "white",
+        "distant"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "trees",
+      "attributes": [
+        "green",
+        "street vegetation"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "roadway",
+      "attributes": [
+        "gray",
+        "outdoor street"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "building facades",
+      "attributes": [
+        "urban",
+        "distant"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "sidewalk or curb",
+      "attributes": [
+        "street edge"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "white parked car",
+      "description": "visible car in the street scene",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "tree-lined street",
+      "description": "green trees along the outdoor road",
+      "approx_location": "left and center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Image is blurred; use as low-confidence street orientation view.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

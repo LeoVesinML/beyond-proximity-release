@@ -1,0 +1,204 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0378_00",
+  "query_id": "scannet_0378_00_sr3d_plus_003",
+  "query": "find the monitor that is between the door and the window",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "monitor",
+    "relation": "between",
+    "anchor": "door",
+    "anchor_secondary": "window"
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_003_monitor"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_003_monitor"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_cabinet",
+    "object_v001_003_monitor",
+    "object_v001_004_trash_can",
+    "object_v001_005_papers",
+    "object_v001_006_printer",
+    "object_v001_008_desk",
+    "object_v004_001_desk",
+    "object_v004_014_cup",
+    "object_v005_003_wall",
+    "object_v005_004_clock",
+    "object_v005_005_cup",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v004",
+    "v005"
+  ],
+  "checked_object_ids": [
+    "1",
+    "4",
+    "5",
+    "33",
+    "34",
+    "44",
+    "0",
+    "31",
+    "23",
+    "24",
+    "32"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "monitor",
+    "selected_object_id": "4",
+    "ranked_object_ids": [
+      "4",
+      "0",
+      "1"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "4",
+        "label": "monitor",
+        "score": 1.0,
+        "relation_confidence": 0.621732,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "0",
+        "label": "desk",
+        "score": 0.0,
+        "relation_confidence": 0.617219,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "1",
+        "label": "cabinet",
+        "score": 0.0,
+        "relation_confidence": 0.352029,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_003_monitor",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        1.246827,
+        -0.624882,
+        1.097161
+      ],
+      "size": [
+        0.253414,
+        0.628136,
+        0.433518
+      ],
+      "label": "monitor",
+      "object_id": "4",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 4.",
+    "relation_satisfied": false,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "between",
+      "anchor": "door",
+      "anchor_secondary": "window",
+      "relation_score": 1.0,
+      "relation_source": "bbox_3d",
+      "relation_confidence": 0.621732,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "matched": true,
+          "projection": 0.588298,
+          "perpendicular_distance": 1.196084,
+          "confidence": 0.621732,
+          "anchor_object_id": "2",
+          "secondary_anchor_object_id": "22"
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "2"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "22"
+        ],
+        "confidence": 1.0
+      },
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.002201875000000797,
+    "stage_runtime_seconds": {
+      "answer_query": 0.002201875000000797
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 12,
+    "checked_view_count": 3,
+    "checked_object_count": 11,
+    "context_size_chars": 1926,
+    "prompt_size_chars": 1982,
+    "estimated_input_tokens": 496,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,152 @@
+{
+  "query_id": "qv2_006",
+  "scene_id": "ConferenceHall",
+  "query": "Find the black piano",
+  "query_type": "attribute",
+  "expected_view_ids": [
+    "v001",
+    "v003",
+    "v011"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "15698ced2969bf744b5bec09c99dd9cb07d1737ce595dd066f562f016c533fbe",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v0011",
+      "chosen_id": null,
+      "valid": false,
+      "input_tokens": 1397,
+      "output_tokens": 6,
+      "latency_ms": 3589.1947,
+      "correct": false,
+      "target_in_context": true
+    },
+    "all_records__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "15698ced2969bf744b5bec09c99dd9cb07d1737ce595dd066f562f016c533fbe",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 1397,
+      "output_tokens": 5,
+      "latency_ms": 3480.2158,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v011"
+      ],
+      "prompt_sha256": "9eec6ce284fe04bf5eb2f02a98a02aefa62a8e1edf0d71c6a286cf014bf4ac80",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v011",
+      "chosen_id": "v011",
+      "valid": true,
+      "input_tokens": 246,
+      "output_tokens": 5,
+      "latency_ms": 1011.7778,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v011"
+      ],
+      "prompt_sha256": "9eec6ce284fe04bf5eb2f02a98a02aefa62a8e1edf0d71c6a286cf014bf4ac80",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v011",
+      "chosen_id": "v011",
+      "valid": true,
+      "input_tokens": 246,
+      "output_tokens": 5,
+      "latency_ms": 829.4727,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v011"
+      ],
+      "prompt_sha256": "9eec6ce284fe04bf5eb2f02a98a02aefa62a8e1edf0d71c6a286cf014bf4ac80",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v011",
+      "chosen_id": "v011",
+      "valid": true,
+      "input_tokens": 246,
+      "output_tokens": 5,
+      "latency_ms": 824.5073,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v011"
+      ],
+      "prompt_sha256": "9eec6ce284fe04bf5eb2f02a98a02aefa62a8e1edf0d71c6a286cf014bf4ac80",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v011",
+      "chosen_id": "v011",
+      "valid": true,
+      "input_tokens": 246,
+      "output_tokens": 5,
+      "latency_ms": 834.7198,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "dev",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

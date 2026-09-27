@@ -1,0 +1,266 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0086_00",
+  "query_id": "scannet_0086_00_nr3d_001",
+  "query": "The correct trash can is on the wall and to the right of a tan paper towel dispenser.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "correct trash can on wall and",
+    "relation": "right",
+    "anchor": "tan paper towel dispenser",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_004_trash_can"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_004_trash_can"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_004_trash_can",
+    "object_v001_010_wall",
+    "object_v001_011_wall",
+    "object_v002_001_wall",
+    "object_v003_008_trash_can",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v003"
+  ],
+  "checked_object_ids": [
+    "13",
+    "24",
+    "25",
+    "2",
+    "14"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "trash can",
+    "selected_object_id": "13",
+    "ranked_object_ids": [
+      "13",
+      "14",
+      "2",
+      "24",
+      "25"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "13",
+        "label": "trash can",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "14",
+        "label": "trash can",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "2",
+        "label": "wall",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 4,
+        "object_id": "24",
+        "label": "wall",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 5,
+        "object_id": "25",
+        "label": "wall",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_004_trash_can",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.97112,
+        2.00607,
+        0.885328
+      ],
+      "size": [
+        0.267638,
+        0.493352,
+        1.005567
+      ],
+      "label": "trash can",
+      "object_id": "13",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.25,
+    "explanation": "graph selected object 13.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 5,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "13",
+          "label": "trash can",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "14",
+          "label": "trash can",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 2
+        },
+        {
+          "object_id": "2",
+          "label": "wall",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 3,
+          "post_relation_rank": 3
+        },
+        {
+          "object_id": "24",
+          "label": "wall",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 4,
+          "post_relation_rank": 4
+        },
+        {
+          "object_id": "25",
+          "label": "wall",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 5,
+          "post_relation_rank": 5
+        }
+      ]
+    },
+    "search_score": 0.25,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.333333,
+      "text_overlap": 0.333333,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.25,
+      "relation": "right",
+      "anchor": "tan paper towel dispenser",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "17",
+          "matched": null,
+          "reason": "viewpoint_axis_unavailable",
+          "confidence": 0.0
+        },
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "18",
+          "matched": null,
+          "reason": "viewpoint_axis_unavailable",
+          "confidence": 0.0
+        }
+      ],
+      "anchor_evidence": {
+        "status": "ambiguous",
+        "reason": null,
+        "top_score": 0.5625,
+        "second_score": 0.5625,
+        "score_margin": 0.0,
+        "candidate_count": 6,
+        "selected_count": 2,
+        "selected_object_ids": [
+          "17",
+          "18"
+        ],
+        "confidence": 0.5
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 0.25,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0017867920000007587,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0017867920000007587
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 6,
+    "checked_view_count": 3,
+    "checked_object_count": 5,
+    "context_size_chars": 859,
+    "prompt_size_chars": 944,
+    "estimated_input_tokens": 236,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

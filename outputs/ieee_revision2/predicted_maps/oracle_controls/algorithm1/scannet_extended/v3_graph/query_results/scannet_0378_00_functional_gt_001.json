@@ -1,0 +1,164 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_v3_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0378_00",
+  "query_id": "scannet_0378_00_functional_gt_001",
+  "query": "Find a seat at a workstation.",
+  "query_type": "functional",
+  "structured_plan": {
+    "target": "seat at workstation",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_007_office_chair"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_007_office_chair"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_007_office_chair",
+    "object_v002_004_office_chair",
+    "object_v003_012_chair",
+    "object_v004_016_chair",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v003",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "40",
+    "41",
+    "43",
+    "42"
+  ],
+  "search_variant": "v3_graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "office chair",
+    "selected_object_id": "40",
+    "ranked_object_ids": [
+      "40",
+      "41",
+      "42",
+      "43"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "40",
+        "label": "office chair",
+        "score": 0.041666666666666664,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "41",
+        "label": "office chair",
+        "score": 0.041666666666666664,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "42",
+        "label": "chair",
+        "score": 0.041666666666666664,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 4,
+        "object_id": "43",
+        "label": "chair",
+        "score": 0.041666666666666664,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v001_007_office_chair",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.263343,
+        -0.560046,
+        0.420179
+      ],
+      "size": [
+        0.628886,
+        0.649015,
+        0.891307
+      ],
+      "label": "office chair",
+      "object_id": "40",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.041666666666666664,
+    "explanation": "v3_graph selected object 40.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.041666666666666664,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.0,
+      "text_overlap": 0.0,
+      "synonym_affordance_overlap": 0.166667,
+      "affordance_keys": [
+        "seat"
+      ],
+      "lexical_score": 0.041667,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0007846669999995726,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0007846669999995726
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 5,
+    "checked_view_count": 4,
+    "checked_object_count": 4,
+    "context_size_chars": 704,
+    "prompt_size_chars": 733,
+    "estimated_input_tokens": 183,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

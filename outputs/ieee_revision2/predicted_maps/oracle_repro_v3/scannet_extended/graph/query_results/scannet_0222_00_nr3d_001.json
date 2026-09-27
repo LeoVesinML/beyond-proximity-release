@@ -1,0 +1,102 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "unavailable",
+  "availability_reason": "object_not_found",
+  "scene_id": "scannet_0222_00",
+  "query_id": "scannet_0222_00_nr3d_001",
+  "query": "The blue can that is between a gray can and the bunk beds.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "blue can",
+    "relation": "between",
+    "anchor": "gray can",
+    "anchor_secondary": "bunk beds"
+  },
+  "visited_nodes": [],
+  "traversal_path": [],
+  "selected_views": [],
+  "checked_node_ids": [
+    "object_v001_001_bed",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "0"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": false,
+    "matched_object": null,
+    "selected_object_id": null,
+    "ranked_object_ids": [
+      "0"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "0",
+        "label": "bed",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": null,
+    "selected_view_id": null,
+    "bbox_2d": null,
+    "bbox_3d": null,
+    "bbox_availability_status": "not_applicable",
+    "bbox_unavailable_reason": "object_not_found",
+    "camera_pose": null,
+    "confidence": 0.0,
+    "explanation": "graph produced status=no_match.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 1,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "0",
+          "label": "bed",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        }
+      ]
+    },
+    "search_score": null,
+    "score_details": {}
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.014622917000000069,
+    "stage_runtime_seconds": {
+      "answer_query": 0.014622917000000069
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 0,
+    "checked_node_count": 2,
+    "checked_view_count": 1,
+    "checked_object_count": 1,
+    "context_size_chars": 155,
+    "prompt_size_chars": 213,
+    "estimated_input_tokens": 53,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

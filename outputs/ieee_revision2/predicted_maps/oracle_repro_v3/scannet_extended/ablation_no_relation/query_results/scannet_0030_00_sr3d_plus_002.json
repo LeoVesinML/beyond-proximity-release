@@ -1,0 +1,172 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_ablation_no_relation",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0030_00",
+  "query_id": "scannet_0030_00_sr3d_plus_002",
+  "query": "select the bookshelf that is far away from the door",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "bookshelf",
+    "relation": "farthest",
+    "anchor": "door",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v002_003_bookshelf"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v002_003_bookshelf"
+  ],
+  "selected_views": [
+    "v002"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_bookshelf",
+    "object_v002_003_bookshelf",
+    "object_v002_004_bookshelf",
+    "object_v002_016_bookshelf",
+    "object_v004_002_bookshelf",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "18",
+    "17",
+    "20",
+    "68",
+    "19"
+  ],
+  "search_variant": "ablation_no_relation",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bookshelf",
+    "selected_object_id": "17",
+    "ranked_object_ids": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "68"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "17",
+        "label": "bookshelf",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "18",
+        "label": "bookshelf",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "19",
+        "label": "bookshelf",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 4,
+        "object_id": "20",
+        "label": "bookshelf",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 5,
+        "object_id": "68",
+        "label": "bookshelf",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v002_003_bookshelf",
+    "selected_view_id": "v002",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -2.169142,
+        0.476985,
+        1.028226
+      ],
+      "size": [
+        0.559743,
+        1.088058,
+        2.024813
+      ],
+      "label": "bookshelf",
+      "object_id": "17",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "ablation_no_relation selected object 17.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.001466167000003793,
+    "stage_runtime_seconds": {
+      "answer_query": 0.001466167000003793
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 6,
+    "checked_view_count": 3,
+    "checked_object_count": 5,
+    "context_size_chars": 853,
+    "prompt_size_chars": 904,
+    "estimated_input_tokens": 226,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,159 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v006",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v006.png",
+  "depth_path": "depths/v006_depth.npy",
+  "pose_ref": "transforms.json#/frames/5/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Close view of a beige building facade with windows, barred lower window, air-conditioning units, and turquoise structural pipes or supports.",
+  "visible_regions": [
+    {
+      "label": "facade detail area",
+      "description": "building wall with windows and utilities",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "barred window area",
+      "description": "low window protected by bars",
+      "approx_location": "lower center",
+      "source": "manual"
+    },
+    {
+      "label": "turquoise pipe area",
+      "description": "blue-green pipes or supports on the facade",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "building windows",
+      "attributes": [
+        "rectangular",
+        "multiple"
+      ],
+      "approx_location": "upper center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "barred window",
+      "attributes": [
+        "metal bars",
+        "low"
+      ],
+      "approx_location": "lower center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.38,
+        0.78,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -4.804325496500618,
+          -0.9156437176700003,
+          -8.96012915037242
+        ],
+        "size": [
+          11.829101003325446,
+          4.190981736613232,
+          9.111333186097236
+        ],
+        "label": "barred window"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "air-conditioning units",
+      "attributes": [
+        "wall-mounted",
+        "white"
+      ],
+      "approx_location": "left and lower left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "turquoise pipes or supports",
+      "attributes": [
+        "blue-green",
+        "vertical and diagonal"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "beige stone wall",
+      "attributes": [
+        "facade"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small utility panels",
+      "attributes": [
+        "dark",
+        "wall-mounted"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.27,
+        0.08,
+        0.73,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -2.355396532830479,
+          -1.4488457181323107,
+          -7.391625962774738
+        ],
+        "size": [
+          5.294043063662386,
+          5.478403991014073,
+          5.760783297084526
+        ],
+        "label": "small utility panels"
+      },
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "turquoise facade supports",
+      "description": "blue-green pipes/supports that make this facade section distinctive",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "barred lower window",
+      "description": "low barred window below the main windows",
+      "approx_location": "lower center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for facade utility, windows, AC units, and turquoise support queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

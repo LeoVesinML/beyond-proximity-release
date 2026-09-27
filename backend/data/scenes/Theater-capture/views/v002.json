@@ -1,0 +1,161 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v002",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v002.png",
+  "depth_path": "depths/v002_depth.npy",
+  "pose_ref": "transforms.json#/frames/1/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Theater stage or performance area with a black curtain or backdrop, a small white podium or desk, a lectern-like stand, and a red foreground object.",
+  "visible_regions": [
+    {
+      "label": "stage area",
+      "description": "dark performance area with black backdrop or curtain",
+      "approx_location": "center and background",
+      "source": "manual"
+    },
+    {
+      "label": "front stage edge",
+      "description": "foreground area in front of the backdrop",
+      "approx_location": "lower center",
+      "source": "manual"
+    },
+    {
+      "label": "side equipment area",
+      "description": "area with a small stand or notice board",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "black stage curtain",
+      "attributes": [
+        "large",
+        "dark",
+        "backdrop"
+      ],
+      "approx_location": "center background",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.44,
+        0.78,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -1.3942456119612618,
+          3.9898088107476486,
+          -5.267389637541302
+        ],
+        "size": [
+          14.956883858289668,
+          12.41904873301856,
+          8.644194641823317
+        ],
+        "label": "black stage curtain"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "white podium or desk",
+      "attributes": [
+        "small",
+        "rectangular"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "lectern or music stand",
+      "attributes": [
+        "thin",
+        "white"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "notice board or sign",
+      "attributes": [
+        "blue",
+        "mounted"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red foreground object",
+      "attributes": [
+        "blurred",
+        "close to camera"
+      ],
+      "approx_location": "left foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "stage floor",
+      "attributes": [
+        "open",
+        "performance space"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          1.9360824495052,
+          5.455457746041655,
+          -6.131660791210343
+        ],
+        "size": [
+          23.080446519705927,
+          15.610666178820251,
+          10.513651918879555
+        ],
+        "label": "stage floor"
+      },
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "black stage curtain",
+      "description": "large dark backdrop that defines the theater stage",
+      "approx_location": "center background",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "white podium",
+      "description": "small bright podium/desk on the stage",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Image is partly blurry, but useful for stage, curtain, podium, and performance-area queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

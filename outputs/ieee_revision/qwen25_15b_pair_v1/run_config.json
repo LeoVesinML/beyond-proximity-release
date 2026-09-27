@@ -1,0 +1,24 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_run_config.v1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_cache": "huggingface_default_cache",
+  "benchmark": {
+    "path": "docs/benchmarks/benchmark_queries_v2.json",
+    "sha256": "54d1b87f4b0d142cd4e6975954b03e8a88a1a9b63be2b78c39798d8ec5284a12"
+  },
+  "scene_root": "backend/data/scenes",
+  "methods": [
+    "flat_instruction",
+    "graph_instruction"
+  ],
+  "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+  "seed": 20260724,
+  "decision_tokens_per_candidate": 1,
+  "threads": 12,
+  "environment": {
+    "python": "3.13.13",
+    "transformers": "5.14.1",
+    "torch": "2.13.0+cpu",
+    "hf_home": null
+  }
+}

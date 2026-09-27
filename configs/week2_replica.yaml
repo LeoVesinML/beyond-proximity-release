@@ -1,0 +1,73 @@
+{
+  "config_version": "semanticsplat.experiment_config.v1",
+  "week": "week2",
+  "run_id": "week2_stub_five_scene_validation_v1",
+  "method": "semantic_splat",
+  "mode": "stub",
+  "supported_modes": ["stub", "cached_live", "live"],
+  "scene_root": "backend/data/scenes",
+  "scene_ids": ["ConferenceHall", "Museume", "outdoor-drone", "outdoor-street", "Theater"],
+  "scenes": [
+    {
+      "scene_id": "ConferenceHall",
+      "path": "backend/data/scenes/ConferenceHall",
+      "semantic_eval_allowed": false,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/geometry/ConferenceHall_geometry.json",
+      "view_selection_report": "docs/validation/geometry/ConferenceHall_view_selection.json"
+    },
+    {
+      "scene_id": "Museume",
+      "path": "backend/data/scenes/Museume",
+      "semantic_eval_allowed": false,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/geometry/Museume_geometry.json",
+      "view_selection_report": "docs/validation/geometry/Museume_view_selection.json"
+    },
+    {
+      "scene_id": "outdoor-drone",
+      "path": "backend/data/scenes/outdoor-drone",
+      "semantic_eval_allowed": false,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/geometry/outdoor-drone_geometry.json",
+      "view_selection_report": "docs/validation/geometry/outdoor-drone_view_selection.json"
+    },
+    {
+      "scene_id": "outdoor-street",
+      "path": "backend/data/scenes/outdoor-street",
+      "semantic_eval_allowed": false,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/geometry/outdoor-street_geometry.json",
+      "view_selection_report": "docs/validation/geometry/outdoor-street_view_selection.json"
+    },
+    {
+      "scene_id": "Theater",
+      "path": "backend/data/scenes/Theater",
+      "semantic_eval_allowed": false,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/geometry/Theater_geometry.json",
+      "view_selection_report": "docs/validation/geometry/Theater_view_selection.json"
+    }
+  ],
+  "benchmark_path": "docs/benchmarks/benchmark_queries_v1.json",
+  "output_root": "outputs/week2",
+  "resume": true,
+  "query_limit": 50,
+  "depth_sample_limit": 3,
+  "view_selection": {
+    "strategy": "existing",
+    "max_views": null,
+    "coverage_report_dir": "docs/validation/geometry"
+  },
+  "model": {
+    "temperature": 0.0,
+    "cache_dir": "outputs/week2/model_cache",
+    "provider_env": ["SEMANTICSPLAT_PROVIDER", "SEMANTICSPLAT_MODEL", "SEMANTICSPLAT_API_KEY"]
+  },
+  "notes": [
+    "JSON-compatible YAML avoids an additional parser dependency.",
+    "All five canonical scenes are included and checked against their validation reports.",
+    "Scenes with semantic_eval_allowed=false are logged and skipped without synthetic views.",
+    "Stub mode is deterministic and must not be reported as live reasoning."
+  ]
+}

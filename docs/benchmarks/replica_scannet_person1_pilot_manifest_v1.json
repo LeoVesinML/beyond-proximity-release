@@ -1,0 +1,28 @@
+{
+  "schema_version": "semanticsplat.public_dataset_pilot_manifest.v1",
+  "benchmark_id": "replica_room0_scannet_0011_person1_pilot_v1",
+  "status": "ready_generated_locally_after_dataset_terms_acceptance",
+  "scene_scope": [
+    "replica_room0",
+    "scannet_0011_00"
+  ],
+  "query_count": 20,
+  "source_query_counts": {
+    "Replica": 7,
+    "Nr3D": 7,
+    "Sr3D+": 6
+  },
+  "generated_query_path": "docs/benchmarks/replica_scannet_room0_scene0011_pilot_v1.json",
+  "generated_query_file_tracked": false,
+  "builder": "scripts/build_replica_scannet_pilot.py",
+  "build_command": "python -B scripts/build_replica_scannet_pilot.py",
+  "selection_protocol": "All seven frozen Replica room0 queries plus thirteen deterministically selected official ReferIt3D queries for scene0011_00; selection does not inspect results.",
+  "gt_contract": [
+    "expected_object_id",
+    "expected_bbox_3d",
+    "expected_view_ids",
+    "expected_node_ids",
+    "verification_status"
+  ],
+  "distribution_note": "The full generated query file contains licensed ScanNet-derived GT and remains local. The builder, aggregate manifest, validation evidence, and metrics are tracked."
+}

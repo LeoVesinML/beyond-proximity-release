@@ -1,0 +1,41 @@
+{
+  "session_id": "1053fe1d",
+  "scene_id": "default",
+  "original_query": "find the collumn",
+  "started_at": "2026-06-28T09:53:49.849451+00:00",
+  "finished_at": "2026-06-28T09:53:50.708697+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "find",
+        "location_constraints": null,
+        "query_type": "object_finding",
+        "output_type": "3d_bbox"
+      },
+      "prompt_excerpt": "Analyze this query for a 3D scene search system.\nQuery: 'find the collumn'\n\nExtract:\n- target: the primary object or subject being sought\n- location_constraints: explicit spatial scope mentioned in the query (or null)\n- attribute_constraints: color, size, material, style, etc. (object or null)\n- rel",
+      "ts": "2026-06-28T09:53:49.875328+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_lobby_reception"
+      ],
+      "reasoning": "At 'Conference Hall' (root). Zone summary: Full venue: lobby reception wing and main ballroom with stage, service, and exits. Descending into 'Lobby & reception' — summary 'Circulation, lounges, foyer, bar, vestibule, and reception desk before the main ballroom doors.' matches query constraints. Siblings not taken: Ballroom.",
+      "ts": "2026-06-28T09:53:50.350724+00:00"
+    },
+    {
+      "step_type": "error",
+      "message": "[WinError 5] Access is denied: 'C:\\\\GitProjects\\\\beyond-proximity\\\\backend\\\\data\\\\scenes\\\\default\\\\queries\\\\1053fe1d.tmp' -> 'C:\\\\GitProjects\\\\beyond-proximity\\\\backend\\\\data\\\\scenes\\\\default\\\\queries\\\\1053fe1d.json'",
+      "ts": "2026-06-28T09:53:50.708710+00:00"
+    }
+  ],
+  "result": null
+}

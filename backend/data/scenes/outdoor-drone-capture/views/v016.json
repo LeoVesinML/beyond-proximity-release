@@ -1,0 +1,148 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v016",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v016.png",
+  "depth_path": "depths/v016_depth.npy",
+  "pose_ref": "transforms.json#/frames/15/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Blurred open-water aerial view with distant shoreline, bright glare, and faint landforms on the horizon.",
+  "visible_regions": [
+    {
+      "label": "open water",
+      "description": "large water surface with blur and glare",
+      "approx_location": "foreground and center",
+      "source": "manual"
+    },
+    {
+      "label": "distant shoreline",
+      "description": "faint land and city shapes on the horizon",
+      "approx_location": "background",
+      "source": "manual"
+    },
+    {
+      "label": "glare area",
+      "description": "bright overexposed region on the right",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "open water",
+      "attributes": [
+        "blurred",
+        "blue-green"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          29.130203989669166,
+          6.821736627343239,
+          13.42730501988316
+        ],
+        "size": [
+          49.93465614273871,
+          19.641302947728423,
+          20.93316481891965
+        ],
+        "label": "open water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant shoreline",
+      "attributes": [
+        "faint",
+        "far"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "bright glare",
+      "attributes": [
+        "overexposed",
+        "white"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.18,
+        0.96,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          36.03678303214762,
+          1.4162389595997027,
+          7.439169568924523
+        ],
+        "size": [
+          29.516452407812494,
+          16.6907131006421,
+          18.871279721629186
+        ],
+        "label": "bright glare"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant hills",
+      "attributes": [
+        "faint"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small dark landform",
+      "attributes": [
+        "faint",
+        "near horizon"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "bright glare over water",
+      "description": "large bright patch on the right side",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "distant shoreline",
+      "description": "thin far land line visible across the water",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Low-detail blurred water view; annotation should be reviewed before semantic execution.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

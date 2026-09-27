@@ -1,0 +1,158 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v012",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v012.png",
+  "depth_path": "depths/v012_depth.npy",
+  "pose_ref": "transforms.json#/frames/11/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Theater lounge corner with a large framed painting or mirror, small tables, chairs, wall lamps, and a staircase visible on the right.",
+  "visible_regions": [
+    {
+      "label": "lounge corner",
+      "description": "seating and table corner beneath the large frame",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "stair area",
+      "description": "staircase or steps leading upward",
+      "approx_location": "right side",
+      "source": "manual"
+    },
+    {
+      "label": "wall art area",
+      "description": "large framed picture or mirror mounted on the wall",
+      "approx_location": "center-left",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "large framed painting or mirror",
+      "attributes": [
+        "large",
+        "wall-mounted"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small tables",
+      "attributes": [
+        "round",
+        "white cloth or light top"
+      ],
+      "approx_location": "lower center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "chairs",
+      "attributes": [
+        "lounge seating"
+      ],
+      "approx_location": "lower center and left",
+      "confidence": null,
+      "bbox_2d": [
+        0.0,
+        0.38,
+        0.53,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -21.013833597816436,
+          26.396807910656737,
+          18.22890611119167
+        ],
+        "size": [
+          58.27420776079458,
+          43.067046021035274,
+          46.84192719971216
+        ],
+        "label": "chairs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "wall lamps",
+      "attributes": [
+        "decorative",
+        "two"
+      ],
+      "approx_location": "left and right of frame",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "staircase",
+      "attributes": [
+        "steps",
+        "ascending"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.14,
+        1.0,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          9.227270628932164,
+          9.716007688327872,
+          -4.301621525190417
+        ],
+        "size": [
+          20.280753814232874,
+          16.54085160731847,
+          23.097878308438403
+        ],
+        "label": "staircase"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "curtains or wall panels",
+      "attributes": [
+        "light colored"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "large framed painting or mirror",
+      "description": "dominant wall feature in this lounge corner",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "staircase",
+      "description": "stairs visible on the right side of the room",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for locating the lounge corner, wall frame, tables, and staircase.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

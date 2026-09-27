@@ -1,0 +1,244 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_trace.v1",
+  "created_at": "2026-09-02T18:04:48.113800+00:00",
+  "query_id": "qv2_038",
+  "scene_id": "Museume",
+  "query": "Find the black metal mesh partitions",
+  "method": "graph_instruction",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "calls": [
+    {
+      "phase": "hierarchy_traversal",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the black metal mesh partitions\nCandidate C0: entrance and information Entrance lobby, stair, information counter, and visitor information views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C1: red-panel exhibition gallery Red panels, wall labels, exhibition corridor, historical photographs, and display-wall views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C2: Reichenstein and media station Reichenstein exhibit wall, information panel, media station, and adjacent window-side views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C3: ruin and label gallery Stone ruin, label rail, dark niche, and surrounding exhibit views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C4: visitor seating and workshop Workshop corner, bench, chairs, and visitor seating views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C5: window and mesh side Window-side gallery views with mesh partitions, seating, and side displays.\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C0: entrance and information Entrance lobby, stair, information counter, and visitor information views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C1: red-panel exhibition gallery Red panels, wall labels, exhibition corridor, historical photographs, and display-wall views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C2: Reichenstein and media station Reichenstein exhibit wall, information panel, media station, and adjacent window-side views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C3: ruin and label gallery Stone ruin, label rail, dark niche, and surrounding exhibit views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C4: visitor seating and workshop Workshop corner, bench, chairs, and visitor seating views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C5: window and mesh side Window-side gallery views with mesh partitions, seating, and side displays.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C0,C5",
+      "candidate_scores": [
+        {
+          "alias": "C0",
+          "candidate_id": "manual_zone_museume_entrance_information",
+          "relevance_probability": 0.01610305,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "manual_zone_museume_window_mesh_side",
+          "relevance_probability": 0.01187458,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "manual_zone_museume_ruin_label_gallery",
+          "relevance_probability": 0.00211004,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "manual_zone_museume_visitor_seating_workshop",
+          "relevance_probability": 0.00167346,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "manual_zone_museume_reichenstein_media",
+          "relevance_probability": 0.00032834,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "manual_zone_museume_red_panel_gallery",
+          "relevance_probability": 0.00013286,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "manual_zone_museume_entrance_information",
+        "C1": "manual_zone_museume_red_panel_gallery",
+        "C2": "manual_zone_museume_reichenstein_media",
+        "C3": "manual_zone_museume_ruin_label_gallery",
+        "C4": "manual_zone_museume_visitor_seating_workshop",
+        "C5": "manual_zone_museume_window_mesh_side"
+      },
+      "ranked_ids": [
+        "manual_zone_museume_entrance_information",
+        "manual_zone_museume_window_mesh_side"
+      ],
+      "input_tokens": 425,
+      "output_tokens": 6,
+      "total_tokens": 431,
+      "latency_ms": 4860.5002,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    },
+    {
+      "phase": "view_grounding",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the black metal mesh partitions\nCandidate C0: v001: Museum entrance or lobby area with an information counter, green digital information screens, stairs, display items, and a glass doorway.; entrance lobby; stair area; information counter area; information counter; green information screens; stairs; glass entrance door; display it\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C1: v002: Museum lobby or education area with glass doors to the outside, storage shelves, chairs, a table with materials, and colorful wall panels.; window entrance area; education or workshop corner; storage shelf area; glass doors; storage shelves; small drawers cabinet; chairs; table w\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C2: v006: Gallery corridor with a large red exhibition panel, printed historical images, a window wall, and dark metal mesh partitions.; red information panel area; window side; mesh partition gallery; red exhibition panel; historical photographs; tall windows; metal mesh partitions; gray \nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C3: v008: Gallery room with tall windows, black metal mesh partitions, red information panels, white chairs, and display screens or cases.; window gallery area; seating and panel area; mesh partition corridor; tall windows; white chairs; red exhibition panel; black mesh partitions; display\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C4: v009: Exhibition corridor with red and white information panels, a white chair, dark wall panels, metal mesh, and a yellow floor marker.; information panel corridor; seating corner; mesh partition area; red exhibition panel; white information panel; white chair; metal mesh partition; y\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C5: v011: Gallery corridor with a large white illustrated panel, black mesh partitions, display cases or railings, and a dark doorway area.; illustrated panel area; mesh corridor; dark doorway area; illustrated white panel; metal mesh partitions; display railing; dark doorway or opening; s\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C6: v017: Reichenstein exhibit wall with large information panel, small artifact display shelf, tall windows, and black metal mesh partition.; Reichenstein information area; window side; mesh partition side; Reichenstein information panel; artifact shelf; tall windows; black mesh partition\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C7: v019: Reichenstein exhibit panel near tall windows, with a small artifact display shelf and printed explanation boards.; Reichenstein panel area; window side; Reichenstein information panel; artifact shelf; tall windows; printed diagram; small caption labels; gray concrete wall; Reiche\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the black metal mesh partitions\nCandidate C8: v020: Small media or seating corner with a monitor on a table, two chairs, wall text, a tall window, and a metal ladder or rack.; media station area; window side; ladder or rack side; monitor; chairs; table; tall window; metal ladder or rack; red information sign; media monitor; tall w\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C0: v001: Museum entrance or lobby area with an information counter, green digital information screens, stairs, display items, and a glass doorway.; entrance lobby; stair area; information counter area; information counter; green information screens; stairs; glass entrance door; display it\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C1: v002: Museum lobby or education area with glass doors to the outside, storage shelves, chairs, a table with materials, and colorful wall panels.; window entrance area; education or workshop corner; storage shelf area; glass doors; storage shelves; small drawers cabinet; chairs; table w\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C2: v006: Gallery corridor with a large red exhibition panel, printed historical images, a window wall, and dark metal mesh partitions.; red information panel area; window side; mesh partition gallery; red exhibition panel; historical photographs; tall windows; metal mesh partitions; gray \nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C3: v008: Gallery room with tall windows, black metal mesh partitions, red information panels, white chairs, and display screens or cases.; window gallery area; seating and panel area; mesh partition corridor; tall windows; white chairs; red exhibition panel; black mesh partitions; display\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C4: v009: Exhibition corridor with red and white information panels, a white chair, dark wall panels, metal mesh, and a yellow floor marker.; information panel corridor; seating corner; mesh partition area; red exhibition panel; white information panel; white chair; metal mesh partition; y\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C5: v011: Gallery corridor with a large white illustrated panel, black mesh partitions, display cases or railings, and a dark doorway area.; illustrated panel area; mesh corridor; dark doorway area; illustrated white panel; metal mesh partitions; display railing; dark doorway or opening; s\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C6: v017: Reichenstein exhibit wall with large information panel, small artifact display shelf, tall windows, and black metal mesh partition.; Reichenstein information area; window side; mesh partition side; Reichenstein information panel; artifact shelf; tall windows; black mesh partition\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C7: v019: Reichenstein exhibit panel near tall windows, with a small artifact display shelf and printed explanation boards.; Reichenstein panel area; window side; Reichenstein information panel; artifact shelf; tall windows; printed diagram; small caption labels; gray concrete wall; Reiche\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the black metal mesh partitions\nCandidate C8: v020: Small media or seating corner with a monitor on a table, two chairs, wall text, a tall window, and a metal ladder or rack.; media station area; window side; ladder or rack side; monitor; chairs; table; tall window; metal ladder or rack; red information sign; media monitor; tall w\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C3,C6,C5",
+      "candidate_scores": [
+        {
+          "alias": "C3",
+          "candidate_id": "v008",
+          "relevance_probability": 0.99989152,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C6",
+          "candidate_id": "v017",
+          "relevance_probability": 0.99942136,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "v011",
+          "relevance_probability": 0.99916947,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "v009",
+          "relevance_probability": 0.98324674,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "v006",
+          "relevance_probability": 0.95382851,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "v001",
+          "relevance_probability": 0.01986188,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C7",
+          "candidate_id": "v019",
+          "relevance_probability": 0.01014117,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C8",
+          "candidate_id": "v020",
+          "relevance_probability": 0.00480667,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "v002",
+          "relevance_probability": 0.00432292,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "v001",
+        "C1": "v002",
+        "C2": "v006",
+        "C3": "v008",
+        "C4": "v009",
+        "C5": "v011",
+        "C6": "v017",
+        "C7": "v019",
+        "C8": "v020"
+      },
+      "ranked_ids": [
+        "v008",
+        "v017",
+        "v011"
+      ],
+      "input_tokens": 1004,
+      "output_tokens": 9,
+      "total_tokens": 1013,
+      "latency_ms": 9843.5016,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    }
+  ],
+  "result": {
+    "ranked_view_ids": [
+      "v008",
+      "v017",
+      "v011"
+    ],
+    "selected_view_id": "v008",
+    "found": true,
+    "selected_zone_ids": [
+      "manual_zone_museume_entrance_information",
+      "manual_zone_museume_window_mesh_side"
+    ],
+    "candidate_view_ids": [
+      "v001",
+      "v002",
+      "v006",
+      "v008",
+      "v009",
+      "v011",
+      "v017",
+      "v019",
+      "v020"
+    ],
+    "views_checked": 9,
+    "response_valid": true,
+    "accounting": {
+      "model_call_count": 2,
+      "input_tokens": 1429,
+      "output_tokens": 15,
+      "total_tokens": 1444,
+      "latency_ms": 14704.0018
+    },
+    "quality": {
+      "eligible": true,
+      "expected_view_ids": [
+        "v003",
+        "v006",
+        "v007",
+        "v011",
+        "v015",
+        "v016",
+        "v018"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": true,
+      "reciprocal_rank": 0.3333333333333333
+    }
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v010",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v010.png",
+  "depth_path": "depths/v010_depth.npy",
+  "pose_ref": "transforms.json#/frames/9/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial view looking across open water toward a distant coastal city and bright sun glare over the sea.",
+  "visible_regions": [
+    {
+      "label": "open water",
+      "description": "large water area dominating the scene",
+      "approx_location": "foreground and center",
+      "source": "manual"
+    },
+    {
+      "label": "distant city shoreline",
+      "description": "urban skyline across the bay",
+      "approx_location": "center background",
+      "source": "manual"
+    },
+    {
+      "label": "sun glare area",
+      "description": "bright overexposed reflection on the water/sky",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "open sea or bay water",
+      "attributes": [
+        "blue-green",
+        "wide"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "distant city skyline",
+      "attributes": [
+        "urban",
+        "far"
+      ],
+      "approx_location": "center background",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.44,
+        0.78,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -11.879717709338593,
+          7.396945948910489,
+          -1.9825749516311735
+        ],
+        "size": [
+          13.089061456202598,
+          10.06198679975237,
+          19.898432003623647
+        ],
+        "label": "distant city skyline"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "sun glare",
+      "attributes": [
+        "bright",
+        "overexposed"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "distant hills",
+      "attributes": [
+        "low",
+        "behind city"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "shoreline",
+      "attributes": [
+        "thin",
+        "far"
+      ],
+      "approx_location": "center background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "distant city skyline",
+      "description": "urban silhouette across the bay",
+      "approx_location": "center background",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "sun glare over water",
+      "description": "bright glare patch on the right side of the view",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good for open-water orientation toward distant city; glare reduces detail.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "semanticsplat.hierarchy_construction_config.v1",
+  "benchmark_path": "docs/benchmarks/benchmark_queries_v2.json",
+  "manual_zone_reference_path": "docs/benchmarks/manual_zone_gt_v2.json",
+  "agent_decisions_path": "docs/experiments/hierarchy_construction/cursor_agent_mcp_v1/agent_hierarchy_decisions.json",
+  "scene_root": "backend/data/scenes",
+  "scene_ids": [
+    "ConferenceHall-capture-pilot",
+    "Museume-capture",
+    "Theater-capture",
+    "outdoor-street-capture",
+    "outdoor-drone-capture"
+  ],
+  "benchmark_scene_map": {
+    "ConferenceHall-capture-pilot": "ConferenceHall",
+    "Museume-capture": "Museume",
+    "Theater-capture": "Theater",
+    "outdoor-street-capture": "outdoor-street",
+    "outdoor-drone-capture": "outdoor-drone"
+  },
+  "variants": [
+    "manual_reference",
+    "pose_only",
+    "pose_semantic_merge",
+    "cursor_agent_mcp"
+  ],
+  "spatial_scale_factor": 3.5,
+  "query_policy": {
+    "branch_keep_ratio": 0.5,
+    "fallback_child_limit": 3,
+    "use_affordance": false
+  },
+  "agent_policy": {
+    "surface": "Cursor Agent",
+    "ui_model_label": "Cursor Grok 4.5 High Fast",
+    "mcp_server": "semantic-splat",
+    "geometry_assisted": true,
+    "manual_zone_reference_visible_to_agent": false,
+    "provider_token_count": null,
+    "provider_token_status": "unavailable_not_exposed_by_cursor_agent_ui"
+  },
+  "seed": 20260724
+}

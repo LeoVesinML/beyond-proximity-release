@@ -1,0 +1,148 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v001",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v001.png",
+  "depth_path": "depths/v001_depth.npy",
+  "pose_ref": "transforms.json#/frames/0/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Backstage or service corridor with a doorway leading to stairs, a wall map or information board, and a photo collage on the wall.",
+  "visible_regions": [
+    {
+      "label": "backstage corridor",
+      "description": "narrow theater service corridor with gray walls",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "stair doorway area",
+      "description": "open doorway leading to a staircase or lower passage",
+      "approx_location": "center-left",
+      "source": "manual"
+    },
+    {
+      "label": "photo display wall",
+      "description": "wall section with multiple theater photos or posters",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "wall map or information board",
+      "attributes": [
+        "rectangular",
+        "mounted on wall"
+      ],
+      "approx_location": "left wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "open doorway",
+      "attributes": [
+        "dark",
+        "leading to stairs"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "staircase",
+      "attributes": [
+        "visible through doorway"
+      ],
+      "approx_location": "center-left background",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.63,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -28.60156021161191,
+          -2.0552690167755587,
+          -3.520506425895822
+        ],
+        "size": [
+          34.08010059642069,
+          7.576583930890708,
+          12.048418698633702
+        ],
+        "label": "staircase"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "photo collage",
+      "attributes": [
+        "multiple framed photos",
+        "theater images"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "gray corridor walls",
+      "attributes": [
+        "plain",
+        "service area"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "floor threshold",
+      "attributes": [
+        "corridor transition"
+      ],
+      "approx_location": "center floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "photo collage wall",
+      "description": "group of framed theater photos useful for orientation",
+      "approx_location": "right wall",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "stair doorway",
+      "description": "doorway leading to a stair passage",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "wall information board",
+      "description": "rectangular map or notice board on the left wall",
+      "approx_location": "left wall",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for locating the backstage corridor, stair doorway, and theater photo wall.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

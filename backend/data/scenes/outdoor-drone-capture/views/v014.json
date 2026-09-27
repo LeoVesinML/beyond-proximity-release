@@ -1,0 +1,193 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v014",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v014.png",
+  "depth_path": "depths/v014_depth.npy",
+  "pose_ref": "transforms.json#/frames/13/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial view of the fortress island in a bay, with distant city skyline, hills, and open water surrounding the island.",
+  "visible_regions": [
+    {
+      "label": "fortress island",
+      "description": "small island with white building complex",
+      "approx_location": "center-left",
+      "source": "manual"
+    },
+    {
+      "label": "bay water",
+      "description": "open water surrounding the island",
+      "approx_location": "foreground and center",
+      "source": "manual"
+    },
+    {
+      "label": "distant city and hills",
+      "description": "urban skyline and hills across the water",
+      "approx_location": "background",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "fortress island",
+      "attributes": [
+        "small",
+        "white buildings"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.14,
+        0.63,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -19.38441809021616,
+          -2.381440417997716,
+          -6.764084667722571
+        ],
+        "size": [
+          5.680143676405336,
+          14.258620081963421,
+          18.738091322056846
+        ],
+        "label": "fortress island"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "tower or lighthouse",
+      "attributes": [
+        "vertical",
+        "on island"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.18,
+        0.58,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          -20.09370062591418,
+          -2.1465154630517844,
+          -7.401421683222962
+        ],
+        "size": [
+          6.828482920713352,
+          12.928028983260333,
+          16.188616175033975
+        ],
+        "label": "tower or lighthouse"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "open bay water",
+      "attributes": [
+        "green-blue"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "distant city skyline",
+      "attributes": [
+        "far",
+        "urban"
+      ],
+      "approx_location": "right background",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.44,
+        1.0,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -19.711755988308802,
+          2.9396929979806377,
+          3.146900657492547
+        ],
+        "size": [
+          14.841186702092713,
+          11.199014805658589,
+          16.05684015598623
+        ],
+        "label": "distant city skyline"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "hills",
+      "attributes": [
+        "distant",
+        "brown-gray"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -24.747513822017787,
+          1.9095392705048664,
+          -3.7423148314675796
+        ],
+        "size": [
+          15.097170641980927,
+          9.862284318065393,
+          25.556948948189156
+        ],
+        "label": "hills"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "coastline",
+      "attributes": [
+        "thin",
+        "far"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "fortress island",
+      "description": "small island with white buildings in the bay",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "distant city skyline",
+      "description": "urban skyline behind the island",
+      "approx_location": "right background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for island-city relationship and bay orientation.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

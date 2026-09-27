@@ -1,0 +1,45 @@
+{
+  "schema_version": "semanticsplat.scene_manifest.v1",
+  "scene_id": "outdoor-street-capture",
+  "dataset": "pilot_manual_capture",
+  "source_description": "Manual captured RGB-D pilot scene with manual semantic index and manual coarse benchmark GT boxes.",
+  "paths": {
+    "gaussian_splat": null,
+    "rgb": "images",
+    "depth": "depths",
+    "poses": "transforms.json",
+    "intrinsics": "transforms.json",
+    "semantic_index": "views",
+    "bbox_gt": "ground_truth/manual_bbox_gt_v2.json"
+  },
+  "frame_count": 21,
+  "coordinate_frame": "camera_to_world",
+  "intrinsics": {
+    "width": 2340,
+    "height": 1170,
+    "fx": 1013.2497224277932,
+    "fy": 1013.2497224277932,
+    "cx": 1170.0,
+    "cy": 585.0
+  },
+  "depth_validation": {
+    "status": "reliable",
+    "unit": "meters",
+    "scale_to_meters": 1.0,
+    "checked_frame_count": 21,
+    "constant_frame_count": 0,
+    "invalid_value_fraction": null,
+    "reason": "Captured depth maps are finite and non-constant under validator checks."
+  },
+  "ground_truth": {
+    "zone_labels_available": true,
+    "object_labels_available": true,
+    "bbox_3d_available": true,
+    "source": "docs/benchmarks/manual_bbox_gt_v2.json",
+    "source_type": "manual_coarse_benchmark_gt_not_official_dataset_gt"
+  },
+  "warnings": [
+    "Manual benchmark GT boxes are coarse visual reference boxes, not pixel-perfect masks.",
+    "Manual benchmark GT boxes are not official Replica, ScanNet, or dataset-native annotations."
+  ]
+}

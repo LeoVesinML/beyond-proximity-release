@@ -1,0 +1,135 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v004",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v004.png",
+  "depth_path": "depths/v004_depth.npy",
+  "pose_ref": "transforms.json#/frames/3/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Reception or service counter area with a long dark counter, table lamp, flower vase, corridor space, and red wall panels.",
+  "visible_regions": [
+    {
+      "label": "reception area",
+      "description": "front desk or service counter zone",
+      "approx_location": "center and left side",
+      "source": "manual"
+    },
+    {
+      "label": "red wall corridor",
+      "description": "corridor area with dark red wall panels",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "reception counter",
+      "attributes": [
+        "long",
+        "dark",
+        "curved or rectangular"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.18,
+        0.58,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          36.55542665495843,
+          15.008768724073187,
+          10.870646469663269
+        ],
+        "size": [
+          57.45117361229304,
+          35.23872480323991,
+          54.9962336562225
+        ],
+        "label": "reception counter"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "table lamp",
+      "attributes": [
+        "warm light"
+      ],
+      "approx_location": "left side on counter",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "flower vase",
+      "attributes": [
+        "decorative"
+      ],
+      "approx_location": "on the counter",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red wall panels",
+      "attributes": [
+        "dark red",
+        "decorative"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling lights",
+      "attributes": [
+        "recessed"
+      ],
+      "approx_location": "ceiling",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "reception counter",
+      "description": "large counter that can serve as the main orientation anchor",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red wall panels",
+      "description": "distinct red wall area useful for distinguishing this corridor section",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good for queries about reception desk, counter, red wall, and service area.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

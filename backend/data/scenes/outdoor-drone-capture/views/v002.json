@@ -1,0 +1,194 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v002",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v002.png",
+  "depth_path": "depths/v002_depth.npy",
+  "pose_ref": "transforms.json#/frames/1/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial bay panorama with a waterfront area, modern buildings, water, distant city skyline, hills, and harbor infrastructure.",
+  "visible_regions": [
+    {
+      "label": "waterfront district",
+      "description": "built-up shoreline with large buildings and harbor edges",
+      "approx_location": "center-right",
+      "source": "manual"
+    },
+    {
+      "label": "bay water",
+      "description": "wide water area in the foreground",
+      "approx_location": "center and foreground",
+      "source": "manual"
+    },
+    {
+      "label": "distant city and hills",
+      "description": "urban skyline and hills across the bay",
+      "approx_location": "background",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "large waterfront buildings",
+      "attributes": [
+        "modern",
+        "near shore"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "harbor edge or pier",
+      "attributes": [
+        "linear",
+        "along water"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": [
+        0.42,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -31.302850135852907,
+          11.3535841585811,
+          -31.143812493379976
+        ],
+        "size": [
+          42.6725243936325,
+          20.945467545167986,
+          58.3311396443782
+        ],
+        "label": "harbor edge or pier"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "bay water",
+      "attributes": [
+        "blue-green",
+        "wide"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -27.974469568755705,
+          13.119591935784685,
+          -23.01315698059976
+        ],
+        "size": [
+          46.35815966386945,
+          25.295220885622097,
+          44.46086695476349
+        ],
+        "label": "bay water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant city skyline",
+      "attributes": [
+        "urban",
+        "far"
+      ],
+      "approx_location": "right background",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.44,
+        1.0,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -39.982993175789716,
+          12.548614130731918,
+          -7.499763816771675
+        ],
+        "size": [
+          65.02623240218446,
+          24.046764185076665,
+          18.437943497555228
+        ],
+        "label": "distant city skyline"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "hills",
+      "attributes": [
+        "mountainous",
+        "distant"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -16.456786609574632,
+          8.621126853061138,
+          -15.660362508192396
+        ],
+        "size": [
+          20.914360246207814,
+          15.480552934128063,
+          27.364239674003038
+        ],
+        "label": "hills"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "small island or shoreline point",
+      "attributes": [
+        "rocky",
+        "near water"
+      ],
+      "approx_location": "left-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "waterfront building cluster",
+      "description": "large building group on the shoreline",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "distant city skyline",
+      "description": "urban skyline across the bay",
+      "approx_location": "right background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for locating waterfront buildings, harbor edge, city skyline, and bay direction.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

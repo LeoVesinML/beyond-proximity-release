@@ -1,0 +1,263 @@
+{
+  "schema_version": "beyond_proximity.ieee_llm_cascade.b10.v1",
+  "generated_at": "2026-09-27T19:56:10.706716+00:00",
+  "experiment": "b10",
+  "model": {
+    "model_id": "Qwen/Qwen2.5-7B-Instruct",
+    "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+    "local_path": "<local-scratch>/qwen25_7b_local",
+    "dtype": "bfloat16",
+    "device": "mps",
+    "load_seconds": 9.287,
+    "generation_config": {
+      "max_length": 20,
+      "max_new_tokens": null,
+      "min_length": 0,
+      "min_new_tokens": null,
+      "early_stopping": false,
+      "max_time": null,
+      "stop_strings": null,
+      "do_sample": false,
+      "num_beams": 1,
+      "use_cache": true,
+      "cache_implementation": null,
+      "cache_config": null,
+      "return_legacy_cache": null,
+      "prefill_chunk_size": null,
+      "temperature": 1.0,
+      "top_k": 50,
+      "top_p": 1.0,
+      "min_p": null,
+      "typical_p": 1.0,
+      "epsilon_cutoff": 0.0,
+      "eta_cutoff": 0.0,
+      "repetition_penalty": 1.0,
+      "encoder_repetition_penalty": 1.0,
+      "length_penalty": 1.0,
+      "no_repeat_ngram_size": 0,
+      "bad_words_ids": null,
+      "renormalize_logits": false,
+      "forced_bos_token_id": null,
+      "forced_eos_token_id": null,
+      "remove_invalid_values": false,
+      "exponential_decay_length_penalty": null,
+      "suppress_tokens": null,
+      "begin_suppress_tokens": null,
+      "sequence_bias": null,
+      "token_healing": false,
+      "guidance_scale": null,
+      "watermarking_config": null,
+      "num_return_sequences": 1,
+      "output_attentions": false,
+      "output_hidden_states": false,
+      "output_scores": false,
+      "output_logits": null,
+      "return_dict_in_generate": false,
+      "pad_token_id": null,
+      "bos_token_id": 151643,
+      "eos_token_id": 151645,
+      "encoder_no_repeat_ngram_size": 0,
+      "decoder_start_token_id": null,
+      "is_assistant": false,
+      "num_assistant_tokens": 20,
+      "num_assistant_tokens_schedule": "constant",
+      "assistant_confidence_threshold": 0.4,
+      "prompt_lookup_num_tokens": null,
+      "max_matching_ngram_size": null,
+      "assistant_early_exit": null,
+      "assistant_lookbehind": 10,
+      "target_lookbehind": 10,
+      "disable_compile": false,
+      "low_memory": null,
+      "penalty_alpha": null,
+      "dola_layers": null,
+      "diversity_penalty": 0.0,
+      "num_beam_groups": 1,
+      "constraints": null,
+      "force_words_ids": null,
+      "_from_model_config": true,
+      "transformers_version": "4.57.6"
+    },
+    "yes_token_id": 9454,
+    "no_token_id": 2753
+  },
+  "bge": {
+    "onnx_dir": "/Users/leo/beyond-proximity-week6-person2/.cache/fastembed/models--qdrant--bge-small-en-v1.5-onnx-q/snapshots/52398278842ec682c6f32300af41344b1c0b0bb2",
+    "onnx_sha256": "51f1bd0addd6e859e42c2c8021a5e5461385bb676a649f4b269aa445449f2431",
+    "verification": {
+      "test_queries": 75,
+      "budget_3_ranked_list_mismatches": [],
+      "budget_unlimited_ranked_list_order_mismatches": [
+        "qv2_040"
+      ],
+      "budget_unlimited_candidate_set_mismatches": [],
+      "flat_bge_test_hit_at_1_recomputed": 0.666667,
+      "flat_bge_test_hit_at_3_recomputed": 0.96,
+      "flat_bge_test_hit_at_1_saved": 0.666667,
+      "flat_bge_test_hit_at_3_saved": 0.96,
+      "saved_final_config": {
+        "selection_mode": "adaptive_mass",
+        "branch_score_mode": "node_text",
+        "branch_mass_threshold": 0.5,
+        "score_temperature": 0.1,
+        "max_branches": 5,
+        "fallback_child_limit": 2,
+        "candidate_budget": 6,
+        "safety_shortlist_size": 1,
+        "confidence_margin_delta": 0.0,
+        "minimum_leaf_score": null,
+        "fallback_to_flat": false,
+        "boundary_epsilon": 0.0
+      },
+      "saved_operating_label": "budget_3"
+    }
+  },
+  "alg1_config": {
+    "selection_mode": "adaptive_mass",
+    "branch_score_mode": "node_text",
+    "branch_mass_threshold": 0.5,
+    "score_temperature": 0.1,
+    "max_branches": 5,
+    "fallback_child_limit": 2,
+    "candidate_budget": 6,
+    "safety_shortlist_size": 1,
+    "confidence_margin_delta": 0.0,
+    "minimum_leaf_score": null,
+    "fallback_to_flat": false,
+    "boundary_epsilon": 0.0
+  },
+  "environment": {
+    "python": "3.9.6",
+    "torch": "2.7.1",
+    "transformers": "4.57.6",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "conditions": [
+    "all_records",
+    "alg1_bge_top3",
+    "flat_bge_top3"
+  ],
+  "query_ids_run": 125,
+  "elapsed_seconds": 684.378,
+  "results": {
+    "test75": {
+      "query_count": 75,
+      "all_records": {
+        "answer_accuracy": 0.586667,
+        "valid_rate": 0.866667,
+        "target_in_context": 1.0,
+        "mean_records_in_context": 19.4,
+        "mean_input_tokens": 1343.133,
+        "median_latency_ms": 3484.445,
+        "mean_latency_ms": 3567.697
+      },
+      "alg1_bge_top3": {
+        "answer_accuracy": 0.72,
+        "valid_rate": 0.973333,
+        "target_in_context": 0.96,
+        "mean_records_in_context": 2.947,
+        "mean_input_tokens": 261.773,
+        "median_latency_ms": 953.754,
+        "mean_latency_ms": 966.654
+      },
+      "flat_bge_top3": {
+        "answer_accuracy": 0.706667,
+        "valid_rate": 0.96,
+        "target_in_context": 0.96,
+        "mean_records_in_context": 3.0,
+        "mean_input_tokens": 266.213,
+        "median_latency_ms": 925.362,
+        "mean_latency_ms": 940.035
+      },
+      "paired_bootstrap_accuracy": {
+        "alg1_bge_top3 - all_records": {
+          "estimate": 0.133333,
+          "ci_95": {
+            "low": 0.026667,
+            "high": 0.24
+          },
+          "samples": 10000,
+          "seed": 20260901
+        },
+        "alg1_bge_top3 - flat_bge_top3": {
+          "estimate": 0.013333,
+          "ci_95": {
+            "low": -0.026667,
+            "high": 0.066667
+          },
+          "samples": 10000,
+          "seed": 20260901
+        },
+        "flat_bge_top3 - all_records": {
+          "estimate": 0.12,
+          "ci_95": {
+            "low": 0.026667,
+            "high": 0.213333
+          },
+          "samples": 10000,
+          "seed": 20260901
+        }
+      }
+    },
+    "all125": {
+      "query_count": 125,
+      "all_records": {
+        "answer_accuracy": 0.584,
+        "valid_rate": 0.888,
+        "target_in_context": 1.0,
+        "mean_records_in_context": 19.4,
+        "mean_input_tokens": 1343.08,
+        "median_latency_ms": 3484.445,
+        "mean_latency_ms": 3557.125
+      },
+      "alg1_bge_top3": {
+        "answer_accuracy": 0.744,
+        "valid_rate": 0.976,
+        "target_in_context": 0.92,
+        "mean_records_in_context": 2.936,
+        "mean_input_tokens": 261.024,
+        "median_latency_ms": 948.584,
+        "mean_latency_ms": 962.69
+      },
+      "flat_bge_top3": {
+        "answer_accuracy": 0.72,
+        "valid_rate": 0.968,
+        "target_in_context": 0.928,
+        "mean_records_in_context": 3.0,
+        "mean_input_tokens": 266.096,
+        "median_latency_ms": 928.091,
+        "mean_latency_ms": 941.835
+      },
+      "paired_bootstrap_accuracy": {
+        "alg1_bge_top3 - all_records": {
+          "estimate": 0.16,
+          "ci_95": {
+            "low": 0.072,
+            "high": 0.248
+          },
+          "samples": 10000,
+          "seed": 20260901
+        },
+        "alg1_bge_top3 - flat_bge_top3": {
+          "estimate": 0.024,
+          "ci_95": {
+            "low": -0.016,
+            "high": 0.064
+          },
+          "samples": 10000,
+          "seed": 20260901
+        },
+        "flat_bge_top3 - all_records": {
+          "estimate": 0.136,
+          "ci_95": {
+            "low": 0.056,
+            "high": 0.216
+          },
+          "samples": 10000,
+          "seed": 20260901
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v020",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v020.png",
+  "depth_path": "depths/v020_depth.npy",
+  "pose_ref": "transforms.json#/frames/19/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Building courtyard facade with outdoor stairs, beige stone wall, rows of windows, low basement windows, and paved walkway.",
+  "visible_regions": [
+    {
+      "label": "courtyard facade",
+      "description": "open courtyard side of the building",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "stair area",
+      "description": "wide outdoor stairs leading upward",
+      "approx_location": "left side",
+      "source": "manual"
+    },
+    {
+      "label": "basement window area",
+      "description": "low windows along the bottom of the facade",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "outdoor stairs",
+      "attributes": [
+        "wide",
+        "multi-step"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "beige building facade",
+      "attributes": [
+        "stone",
+        "long"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.04,
+        1.0,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          30.1991562103622,
+          4.822305154051858,
+          1.8743425708237575
+        ],
+        "size": [
+          47.51036713377825,
+          21.11877487765476,
+          26.027476554222766
+        ],
+        "label": "beige building facade"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "rows of windows",
+      "attributes": [
+        "rectangular",
+        "upper"
+      ],
+      "approx_location": "right facade",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "low basement windows",
+      "attributes": [
+        "small",
+        "near ground"
+      ],
+      "approx_location": "right lower facade",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "paved walkway",
+      "attributes": [
+        "outdoor",
+        "cobblestone"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          3.3010315517240967,
+          11.838836009665295,
+          18.868580207055874
+        ],
+        "size": [
+          16.0983213031394,
+          14.883186571085812,
+          28.578993843604984
+        ],
+        "label": "paved walkway"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "wall-mounted lamps",
+      "attributes": [
+        "small",
+        "round"
+      ],
+      "approx_location": "right facade",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "wide stairs",
+      "description": "large staircase at the courtyard edge",
+      "approx_location": "left side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "long beige facade",
+      "description": "building facade with repeated windows and basement openings",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good overview similar to v001; useful for courtyard, stairs, and facade queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

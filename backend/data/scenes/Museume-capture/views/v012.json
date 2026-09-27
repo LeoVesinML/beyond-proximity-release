@@ -1,0 +1,150 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v012",
+  "scene_id": "Museume-capture",
+  "image_path": "images/v012.png",
+  "depth_path": "depths/v012_depth.npy",
+  "pose_ref": "transforms.json#/frames/11/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Reconstructed workshop or kitchen-like museum exhibit with red and tan walls, old stove or oven, table, tools, containers, and wall labels.",
+  "visible_regions": [
+    {
+      "label": "workshop reconstruction",
+      "description": "room-like reconstruction with tools and old appliances",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "red wall area",
+      "description": "red wall section with labels and mounted items",
+      "approx_location": "right and back",
+      "source": "manual"
+    },
+    {
+      "label": "tan wall area",
+      "description": "textured tan wall with fixtures",
+      "approx_location": "left side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "old stove or oven",
+      "attributes": [
+        "historic",
+        "metal"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "work table",
+      "attributes": [
+        "wooden or metal",
+        "small"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "sink or basin",
+      "attributes": [
+        "metal",
+        "utility"
+      ],
+      "approx_location": "left-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "tools and containers",
+      "attributes": [
+        "historic",
+        "small"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall labels",
+      "attributes": [
+        "small",
+        "museum captions"
+      ],
+      "approx_location": "back wall",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.04,
+        0.87,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          44.30423434515588,
+          0.8871575178638142,
+          -4.463128839682465
+        ],
+        "size": [
+          7.593712155229795,
+          11.813741063294461,
+          17.57324165651173
+        ],
+        "label": "wall labels"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "red wall",
+      "attributes": [
+        "bright",
+        "wood-like"
+      ],
+      "approx_location": "right and back",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "old stove or oven",
+      "description": "historic appliance that anchors the reconstructed room",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red wall",
+      "description": "large red wall defining the exhibit area",
+      "approx_location": "right and back",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "work table",
+      "description": "central table with tools in the reconstruction",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for queries about workshop/kitchen reconstruction, stove, table, and tools.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

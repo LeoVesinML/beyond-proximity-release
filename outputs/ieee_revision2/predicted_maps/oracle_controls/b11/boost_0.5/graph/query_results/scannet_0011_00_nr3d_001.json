@@ -1,0 +1,148 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0011_00",
+  "query_id": "scannet_0011_00_nr3d_001",
+  "query": "This is the large conference table with many chairs.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "this large conference table with many chairs",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_008_table"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_008_table"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v004_002_table",
+    "object_v004_008_table",
+    "object_v004_013_kitchen_counter",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v004"
+  ],
+  "checked_object_ids": [
+    "2",
+    "17",
+    "25"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "table",
+    "selected_object_id": "17",
+    "ranked_object_ids": [
+      "17",
+      "2",
+      "25"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "17",
+        "label": "table",
+        "score": 0.125,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "2",
+        "label": "table",
+        "score": 0.125,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "25",
+        "label": "kitchen counter",
+        "score": 0.125,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v004_008_table",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.449621,
+        -2.95396,
+        0.440978
+      ],
+      "size": [
+        1.669378,
+        0.40858,
+        0.845284
+      ],
+      "label": "table",
+      "object_id": "17",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.125,
+    "explanation": "graph selected object 17.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.125,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.166667,
+      "text_overlap": 0.166667,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.125,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0006934580000006463,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0006934580000006463
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 4,
+    "checked_view_count": 1,
+    "checked_object_count": 3,
+    "context_size_chars": 526,
+    "prompt_size_chars": 578,
+    "estimated_input_tokens": 144,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

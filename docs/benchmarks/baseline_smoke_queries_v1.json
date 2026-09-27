@@ -1,0 +1,26 @@
+{
+  "schema_version": "semanticsplat.benchmark_queries.v1",
+  "benchmark_id": "external_baseline_smoke_v1",
+  "status": "native_execution_smoke_without_independent_gt",
+  "scene_scope": ["langsplat-sofa"],
+  "query_count": 1,
+  "query_type_counts": {"simple_object": 1},
+  "ground_truth_scope": "No independent GT is asserted; this query validates native pretrained LangSplat execution only.",
+  "queries": [
+    {
+      "query_id": "ls001",
+      "scene_id": "langsplat-sofa",
+      "query": "Find the sofa",
+      "query_type": "simple_object",
+      "expected_output_type": "2d_location",
+      "expected_zone_ids": [],
+      "expected_node_ids": [],
+      "expected_view_ids": [],
+      "expected_object_labels": [],
+      "acceptance_rule": "Native execution produces a finite relevancy score and peak pixel.",
+      "notes": "Official LangSplat pretrained sofa scene; smoke-only, not an accuracy benchmark.",
+      "verification_status": "missing_gt",
+      "verification_source": []
+    }
+  ]
+}

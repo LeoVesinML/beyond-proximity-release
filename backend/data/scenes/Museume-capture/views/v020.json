@@ -1,0 +1,151 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v020",
+  "scene_id": "Museume-capture",
+  "image_path": "images/v020.png",
+  "depth_path": "depths/v020_depth.npy",
+  "pose_ref": "transforms.json#/frames/19/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Small media or seating corner with a monitor on a table, two chairs, wall text, a tall window, and a metal ladder or rack.",
+  "visible_regions": [
+    {
+      "label": "media station area",
+      "description": "small area with monitor and chairs",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "window side",
+      "description": "tall window beside the media station",
+      "approx_location": "right side",
+      "source": "manual"
+    },
+    {
+      "label": "ladder or rack side",
+      "description": "metal structure near the left wall",
+      "approx_location": "left side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "monitor",
+      "attributes": [
+        "screen",
+        "on table"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "chairs",
+      "attributes": [
+        "two",
+        "dark",
+        "visitor seating"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.14,
+        0.78,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          13.864011189774606,
+          2.1910098213530222,
+          19.227961828288883
+        ],
+        "size": [
+          33.409052801353056,
+          23.031183932710324,
+          23.510715793508385
+        ],
+        "label": "chairs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "table",
+      "attributes": [
+        "small",
+        "media station"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "tall window",
+      "attributes": [
+        "large",
+        "outside view"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "metal ladder or rack",
+      "attributes": [
+        "vertical",
+        "gray"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red information sign",
+      "attributes": [
+        "small",
+        "wall mounted"
+      ],
+      "approx_location": "back wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "media monitor",
+      "description": "screen on table that defines the media station",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "tall window",
+      "description": "window next to the media station",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "metal ladder or rack",
+      "description": "vertical metal structure beside the station",
+      "approx_location": "left side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for queries about the media station, monitor, chairs, and window.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "session_id": "17b5555d",
+  "scene_id": "default",
+  "original_query": "Find ta musical instrument",
+  "started_at": "2026-06-12T19:43:14.486222+00:00",
+  "finished_at": "2026-06-12T19:43:18.058673+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "Find",
+        "location_constraints": null,
+        "query_type": "object_finding",
+        "output_type": "3d_bbox"
+      },
+      "prompt_excerpt": "Analyze this query for a 3D scene search system.\nQuery: 'Find ta musical instrument'\n\nExtract:\n- target: the primary object or subject being sought\n- location_constraints: explicit spatial scope mentioned in the query (or null)\n- attribute_constraints: color, size, material, style, etc. (object or n",
+      "ts": "2026-06-12T19:43:14.489583+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_ballroom"
+      ],
+      "reasoning": "At 'Conference Hall' (root). Zone summary: Full venue: lobby reception wing and main ballroom with stage, service, and exits. Descending into 'Ballroom' — summary 'Grand event hall with banquet tables, projection screen, stage wall, service corner, and egress.' matches query constraints. Siblings not taken: Lobby & reception.",
+      "ts": "2026-06-12T19:43:14.862025+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_ballroom",
+      "node_name": "Ballroom",
+      "children_count": 3,
+      "children_names": [
+        "Ballroom — floor & sides",
+        "Ballroom — stage & screen",
+        "Ballroom — exit passage"
+      ],
+      "descend_into": [
+        "leaf_ballroom_main_floor"
+      ],
+      "reasoning": "At 'Ballroom' (zone). Zone summary: Grand event hall with banquet tables, projection screen, stage wall, service corner, and egress. Descending into 'Ballroom — floor & sides' — summary 'Entrance through double doors, side wall with AV, service prep corner, main banquet tables, and ceiling chandelier view.' matches query constraints. Siblings not taken: Ballroom — stage & screen, Ballroom — exit passage.",
+      "ts": "2026-06-12T19:43:15.217226+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v012",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "View through open double doors into a bright ballroom with round banquet tables, chandeliers, projection screen, and a green exit sign above a distant doorway.",
+      "ts": "2026-06-12T19:43:15.573265+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v013",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Ballroom side wall with marble panels, glowing vertical sconces, green exit sign upper left above a passage, AV projector on a draped stand in the foreground, and banquet tables along the far wall.",
+      "ts": "2026-06-12T19:43:15.927872+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v014",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Service corner with stainless prep table, purple orchids, stacked plates, blue storage crate on rolling cart, and geometric textured wall paneling.",
+      "ts": "2026-06-12T19:43:16.280707+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v015",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Wide ballroom filled with round white-clothed tables and covered chairs, crystal chandeliers, willow mural on the left wall, projection screen at the far end, green exit sign above a rear doorway.",
+      "ts": "2026-06-12T19:43:16.637519+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v016",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Upward view of a coffered ballroom ceiling with two large rectangular crystal chandeliers, linear diffusers, willow mural on the left wall, and a small green exit sign above a distant central doorway.",
+      "ts": "2026-06-12T19:43:16.995249+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_stage_front",
+      "node_name": "Ballroom — stage & screen",
+      "view_id": "v017",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Conference hall facing a lowered projection screen with marble panels; green exit sign above a left doorway, ornate sconces flanking the stage wall, podium left and lectern right on patterned carpet.",
+      "ts": "2026-06-12T19:43:17.348999+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_stage_front",
+      "node_name": "Ballroom — stage & screen",
+      "view_id": "v018",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Large lowered projector screen on marble-trimmed wall; glowing vertical sconce left of screen and green EXIT sign above a doorway at the far left edge.",
+      "ts": "2026-06-12T19:43:17.706450+00:00"
+    },
+    {
+      "step_type": "not_found",
+      "view_id": null,
+      "explanation": "No match in traversed views.",
+      "confidence": 0.0,
+      "bbox_3d": null,
+      "ts": "2026-06-12T19:43:18.058713+00:00"
+    }
+  ],
+  "result": {
+    "found": false,
+    "view_id": null,
+    "explanation": "No match in traversed views.",
+    "confidence": 0.0,
+    "bbox_3d": null,
+    "query": "Find ta musical instrument"
+  }
+}

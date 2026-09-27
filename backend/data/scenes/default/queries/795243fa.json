@@ -1,0 +1,175 @@
+{
+  "session_id": "795243fa",
+  "scene_id": "default",
+  "original_query": "take me to the projector",
+  "started_at": "2026-04-08T01:41:18.908743+00:00",
+  "finished_at": "2026-04-08T01:42:54.796184+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "projector",
+        "location_constraints": null,
+        "attribute_constraints": null,
+        "relational_constraints": null,
+        "functional_constraints": null,
+        "query_type": "object_finding",
+        "output_type": "3d_bbox"
+      },
+      "prompt_excerpt": "Extract target projector for navigation; object_finding -> 3d_bbox.",
+      "ts": "2026-04-08T01:41:39.268757+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_ballroom"
+      ],
+      "reasoning": "Projectors and projection screens are in the main event hall; lobby summaries do not mention AV equipment.",
+      "ts": "2026-04-08T01:41:44.230108+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_ballroom",
+      "node_name": "Ballroom",
+      "children_count": 3,
+      "children_names": [
+        "Ballroom - floor & sides",
+        "Ballroom - stage & screen",
+        "Ballroom - exit passage"
+      ],
+      "descend_into": [
+        "leaf_ballroom_main_floor",
+        "leaf_ballroom_stage_front"
+      ],
+      "reasoning": "AV projector and projection screen appear at the presentation end and side AV wall; egress leaf is only doorways.",
+      "ts": "2026-04-08T01:41:50.287299+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_ballroom",
+      "node_name": "Ballroom",
+      "children_count": 2,
+      "children_names": [
+        "Ballroom - floor & sides",
+        "Ballroom - stage & screen"
+      ],
+      "descend_into": [
+        "leaf_ballroom_main_floor"
+      ],
+      "reasoning": "Enter main floor leaf first for ordered view checks (v012-v016).",
+      "ts": "2026-04-08T01:42:04.095611+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom - floor & sides",
+      "view_id": "v012",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Only distant projection screen through doors; no projector unit visible.",
+      "ts": "2026-04-08T01:42:54.645867+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom - floor & sides",
+      "view_id": "v014",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Service prep corner; no AV projector.",
+      "ts": "2026-04-08T01:42:54.679317+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom - floor & sides",
+      "view_id": "v015",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Wide floor view toward screen; projector device not visible.",
+      "ts": "2026-04-08T01:42:54.697986+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom - floor & sides",
+      "view_id": "v016",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Ceiling-up view; no projector in frame.",
+      "ts": "2026-04-08T01:42:54.729358+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_stage_front",
+      "node_name": "Ballroom - stage & screen",
+      "view_id": "v017",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Stage wall shows projection screen; ceiling projector not resolved.",
+      "ts": "2026-04-08T01:42:54.746204+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_stage_front",
+      "node_name": "Ballroom - stage & screen",
+      "view_id": "v018",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Large projection screen; portable/ceiling projector body not visible.",
+      "ts": "2026-04-08T01:42:54.762915+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom - floor & sides",
+      "view_id": "v013",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.2724,
+        0.284,
+        0.4236,
+        0.401
+      ],
+      "matched_object": "AV projector",
+      "explanation": "Refined bbox: black AV projector on draped stand, left foreground along marble side wall.",
+      "ts": "2026-04-08T01:42:54.780642+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": "v013",
+      "explanation": "Found AV projector on a draped stand at the ballroom side wall - best view: v013. Stage views show the screen only; 3D unprojection unavailable (invalid depth).",
+      "confidence": 0.93,
+      "bbox_3d": null,
+      "ts": "2026-04-08T01:42:54.796184+00:00"
+    }
+  ],
+  "result": {
+    "query": "take me to the projector",
+    "found": true,
+    "view_id": "v013",
+    "bbox_3d": null,
+    "confidence": 0.93,
+    "explanation": "Found AV projector on a draped stand at the ballroom side wall - best view: v013. Stage views show the screen only; 3D unprojection unavailable (invalid depth)."
+  }
+}

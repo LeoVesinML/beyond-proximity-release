@@ -1,0 +1,158 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v018",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v018.png",
+  "depth_path": "depths/v018_depth.npy",
+  "pose_ref": "transforms.json#/frames/17/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Pale corridor with green walls, a dark doorway or opening at the end, white side doors, and simple wall lamps.",
+  "visible_regions": [
+    {
+      "label": "pale corridor",
+      "description": "quiet corridor with green walls and light floor",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "dark doorway area",
+      "description": "dark rectangular opening at the far end",
+      "approx_location": "back center",
+      "source": "manual"
+    },
+    {
+      "label": "side door area",
+      "description": "white doors along the corridor sides",
+      "approx_location": "left and right",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "dark doorway",
+      "attributes": [
+        "black",
+        "far end"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "white side doors",
+      "attributes": [
+        "closed",
+        "simple"
+      ],
+      "approx_location": "left and right sides",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall lamps",
+      "attributes": [
+        "small",
+        "warm"
+      ],
+      "approx_location": "walls",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.04,
+        0.87,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -19.307217830914965,
+          0.976306242317952,
+          -25.02130244587257
+        ],
+        "size": [
+          9.588274794516037,
+          15.452138548799553,
+          22.854508361827513
+        ],
+        "label": "wall lamps"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "pale green walls",
+      "attributes": [
+        "corridor"
+      ],
+      "approx_location": "left and right",
+      "confidence": null,
+      "bbox_2d": [
+        0.05,
+        0.08,
+        0.95,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -18.579645694245773,
+          0.3299991628804353,
+          -25.297224812919637
+        ],
+        "size": [
+          8.133130521177653,
+          13.383739222031743,
+          26.521105300469085
+        ],
+        "label": "pale green walls"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "tile floor",
+      "attributes": [
+        "light colored"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red floor marker",
+      "attributes": [
+        "small",
+        "near camera"
+      ],
+      "approx_location": "floor foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "dark doorway",
+      "description": "dark opening at the end of the corridor",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "white side doors",
+      "description": "closed doors along the corridor",
+      "approx_location": "left and right",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for corridor and dark doorway navigation queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

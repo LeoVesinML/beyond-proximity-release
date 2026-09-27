@@ -1,0 +1,308 @@
+{
+  "session_id": "4069e2f2",
+  "scene_id": "default",
+  "original_query": "find all exit signs",
+  "started_at": "2026-04-07T23:18:48.936967+00:00",
+  "finished_at": "2026-04-07T23:19:10.938919+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "output_type": "count",
+        "relational_constraints": null,
+        "query_type": "aggregation",
+        "functional_constraints": "enumerate all visible egress signs in the scene",
+        "attribute_constraints": null,
+        "target": "exit sign",
+        "location_constraints": null
+      },
+      "prompt_excerpt": "find all exit signs — aggregation over scene views.",
+      "ts": "2026-04-07T23:18:59.301044+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Main Hall Zone",
+        "Stage Zone"
+      ],
+      "descend_into": [
+        "zone_main_hall",
+        "zone_stage"
+      ],
+      "reasoning": "Exit signs appear in both main circulation and stage-front zones; enumerate all branches.",
+      "ts": "2026-04-07T23:18:59.325738+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_main_hall",
+      "node_name": "Main Hall Zone",
+      "children_count": 3,
+      "children_names": [
+        "Lobby Corridor",
+        "Reception And Entrance Doors",
+        "Main Ballroom Floor"
+      ],
+      "descend_into": [
+        "leaf_lobby",
+        "leaf_reception",
+        "leaf_ballroom"
+      ],
+      "reasoning": "All three leaves cover views where summaries or JSON list exit signage.",
+      "ts": "2026-04-07T23:18:59.343517+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_stage",
+      "node_name": "Stage Zone",
+      "children_count": 1,
+      "children_names": [
+        "Projection Stage Front"
+      ],
+      "descend_into": [
+        "leaf_stage"
+      ],
+      "reasoning": "Stage leaf holds screen-front and egress doorway views with exit signs.",
+      "ts": "2026-04-07T23:18:59.364305+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby",
+      "node_name": "Lobby Corridor",
+      "view_id": "v001",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.41,
+        0.6,
+        0.45,
+        0.64
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; distant corridor end.",
+      "ts": "2026-04-07T23:19:10.652597+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby",
+      "node_name": "Lobby Corridor",
+      "view_id": "v002",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.6,
+        0.05,
+        0.67,
+        0.12
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; red/white sign on right pillar.",
+      "ts": "2026-04-07T23:19:10.673164+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby",
+      "node_name": "Lobby Corridor",
+      "view_id": "v006",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.37,
+        0.95,
+        0.42,
+        0.97
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; fire exit sign — red vertical, right edge.",
+      "ts": "2026-04-07T23:19:10.695413+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby",
+      "node_name": "Lobby Corridor",
+      "view_id": "v008",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.43,
+        0.0,
+        0.46,
+        0.06
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; primary green sign on pillar (also second sign bbox 0.72,0.23,0.74,0.26).",
+      "ts": "2026-04-07T23:19:10.715680+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_reception",
+      "node_name": "Reception And Entrance Doors",
+      "view_id": "v009",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.09,
+        0.16,
+        0.11,
+        0.22
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; distant left above passage.",
+      "ts": "2026-04-07T23:19:10.739816+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_reception",
+      "node_name": "Reception And Entrance Doors",
+      "view_id": "v011",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.664,
+        0.332,
+        0.679,
+        0.353
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; above back corridor door.",
+      "ts": "2026-04-07T23:19:10.755743+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v012",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.45,
+        0.35,
+        0.47,
+        0.38
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; far end above doorway.",
+      "ts": "2026-04-07T23:19:10.775511+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v013",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.13,
+        0.21,
+        0.17,
+        0.26
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; upper left above passage.",
+      "ts": "2026-04-07T23:19:10.799117+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v015",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.44,
+        0.39,
+        0.47,
+        0.41
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; rear wall left of screen.",
+      "ts": "2026-04-07T23:19:10.820801+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v016",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.49,
+        0.95,
+        0.52,
+        0.97
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; small, above far doorway (ceiling view).",
+      "ts": "2026-04-07T23:19:10.838673+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_stage",
+      "node_name": "Projection Stage Front",
+      "view_id": "v017",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.15,
+        0.35,
+        0.18,
+        0.38
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; above left egress door.",
+      "ts": "2026-04-07T23:19:10.873520+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_stage",
+      "node_name": "Projection Stage Front",
+      "view_id": "v018",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.0,
+        0.75,
+        0.03,
+        0.79
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; far left above door.",
+      "ts": "2026-04-07T23:19:10.889130+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_stage",
+      "node_name": "Projection Stage Front",
+      "view_id": "v019",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.49,
+        0.41,
+        0.56,
+        0.46
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Confirmed in view analysis; centred above central doorway — clearest.",
+      "ts": "2026-04-07T23:19:10.917153+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": null,
+      "explanation": "Enumerated 14 exit-sign instances across 13 views (v008 contains two distinct signs). Lobby corridor: v001, v002, v006 (fire-exit variant), v008×2. Reception/bar: v009, v011. Ballroom: v012, v013, v015, v016. Stage front: v017, v018, v019. Views v003–v005, v007, v010, v014 have no exit-sign object in stored analysis.",
+      "confidence": 0.9,
+      "bbox_3d": null,
+      "ts": "2026-04-07T23:19:10.938919+00:00"
+    }
+  ],
+  "result": {
+    "query": "find all exit signs",
+    "found": true,
+    "view_id": null,
+    "bbox_3d": null,
+    "confidence": 0.9,
+    "explanation": "Enumerated 14 exit-sign instances across 13 views (v008 contains two distinct signs). Lobby corridor: v001, v002, v006 (fire-exit variant), v008×2. Reception/bar: v009, v011. Ballroom: v012, v013, v015, v016. Stage front: v017, v018, v019. Views v003–v005, v007, v010, v014 have no exit-sign object in stored analysis."
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_v3_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0086_00",
+  "query_id": "scannet_0086_00_nr3d_003",
+  "query": "toilet in the larger stall.",
+  "query_type": "attribute",
+  "structured_plan": {
+    "target": "toilet in larger stall",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v003_001_bathroom_stall"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v003_001_bathroom_stall"
+  ],
+  "selected_views": [
+    "v003"
+  ],
+  "checked_node_ids": [
+    "object_v003_001_bathroom_stall",
+    "object_v003_003_toilet_seat_cover_dispenser",
+    "object_v003_004_toilet",
+    "object_v003_005_toilet",
+    "object_v003_006_bathroom_stall_door",
+    "object_v003_011_toilet_paper_dispenser",
+    "object_v003_012_toilet_paper_dispenser",
+    "object_v003_013_bathroom_stall",
+    "object_v003_014_bathroom_stall_door",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v003"
+  ],
+  "checked_object_ids": [
+    "1",
+    "5",
+    "6",
+    "7",
+    "10",
+    "21",
+    "22",
+    "28",
+    "29"
+  ],
+  "search_variant": "v3_graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bathroom stall",
+    "selected_object_id": "1",
+    "ranked_object_ids": [
+      "1",
+      "10",
+      "21",
+      "22",
+      "28",
+      "29",
+      "5",
+      "6",
+      "7"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "1",
+        "label": "bathroom stall",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "10",
+        "label": "bathroom stall door",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "21",
+        "label": "toilet paper dispenser",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 4,
+        "object_id": "22",
+        "label": "toilet paper dispenser",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 5,
+        "object_id": "28",
+        "label": "bathroom stall",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 6,
+        "object_id": "29",
+        "label": "bathroom stall door",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 7,
+        "object_id": "5",
+        "label": "toilet seat cover dispenser",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 8,
+        "object_id": "6",
+        "label": "toilet",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 9,
+        "object_id": "7",
+        "label": "toilet",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v003_001_bathroom_stall",
+    "selected_view_id": "v003",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.2307,
+        -1.891444,
+        1.006782
+      ],
+      "size": [
+        2.626795,
+        2.266155,
+        2.03634
+      ],
+      "label": "bathroom stall",
+      "object_id": "1",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.25,
+    "explanation": "v3_graph selected object 1.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.25,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.333333,
+      "text_overlap": 0.333333,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.25,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0006300830000007807,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0006300830000007807
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 10,
+    "checked_view_count": 1,
+    "checked_object_count": 9,
+    "context_size_chars": 1805,
+    "prompt_size_chars": 1832,
+    "estimated_input_tokens": 458,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

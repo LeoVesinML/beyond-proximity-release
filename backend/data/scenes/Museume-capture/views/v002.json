@@ -1,0 +1,162 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v002",
+  "scene_id": "Museume-capture",
+  "image_path": "images/v002.png",
+  "depth_path": "depths/v002_depth.npy",
+  "pose_ref": "transforms.json#/frames/1/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Museum lobby or education area with glass doors to the outside, storage shelves, chairs, a table with materials, and colorful wall panels.",
+  "visible_regions": [
+    {
+      "label": "window entrance area",
+      "description": "glass doors and windows facing outside",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "education or workshop corner",
+      "description": "area with table, shelves, chairs, and materials",
+      "approx_location": "right side",
+      "source": "manual"
+    },
+    {
+      "label": "storage shelf area",
+      "description": "shelving and small cabinet near the glass doors",
+      "approx_location": "center-left",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "glass doors",
+      "attributes": [
+        "large",
+        "transparent",
+        "outdoor view"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.04,
+        0.78,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -0.02259463326791966,
+          2.0901545167095534,
+          26.063009153686934
+        ],
+        "size": [
+          44.267063835499854,
+          35.48928579776595,
+          26.535788034509007
+        ],
+        "label": "glass doors"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "storage shelves",
+      "attributes": [
+        "white",
+        "open"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small drawers cabinet",
+      "attributes": [
+        "wooden",
+        "many drawers"
+      ],
+      "approx_location": "left-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "chairs",
+      "attributes": [
+        "green",
+        "visitor seating"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.14,
+        1.0,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          7.764528095956445,
+          5.168064268322535,
+          16.853992750840415
+        ],
+        "size": [
+          17.803529534079768,
+          22.720317032017242,
+          24.87636849264284
+        ],
+        "label": "chairs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "table with materials",
+      "attributes": [
+        "white",
+        "small objects"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "colorful wall panels",
+      "attributes": [
+        "red",
+        "green",
+        "blue"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "glass doors",
+      "description": "large transparent doors with outdoor view, useful for orientation",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "colorful wall panels",
+      "description": "bright colored panels on the right wall",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for locating the lobby side with glass doors, shelves, and workshop table.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

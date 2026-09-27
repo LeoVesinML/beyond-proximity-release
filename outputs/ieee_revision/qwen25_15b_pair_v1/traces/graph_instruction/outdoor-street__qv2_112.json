@@ -1,0 +1,230 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_trace.v1",
+  "created_at": "2026-09-02T18:52:36.514074+00:00",
+  "query_id": "qv2_112",
+  "scene_id": "outdoor-street",
+  "query": "Find a building entrance area",
+  "method": "graph_instruction",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "calls": [
+    {
+      "phase": "hierarchy_traversal",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find a building entrance area\nCandidate C0: courtyard stairs and service facade Courtyard, stair entrance, service wall, emergency doors, and basement-window side views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C1: covered passage and graffiti wall Covered passage, graffiti wall, underpass, alley, red wall side, and bright opening views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C2: facade entrances and glass-block wall Glass-block entrance, numbered entrance, facade details, utility panels, and service entry views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C3: red facade and side alley Red facade, side alley, barred doorway/window, and distant opening views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C4: street walkway and roadway Street walkway, cobblestone ground, roadway, sidewalk, and street-corner views.\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C0: courtyard stairs and service facade Courtyard, stair entrance, service wall, emergency doors, and basement-window side views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C1: covered passage and graffiti wall Covered passage, graffiti wall, underpass, alley, red wall side, and bright opening views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C2: facade entrances and glass-block wall Glass-block entrance, numbered entrance, facade details, utility panels, and service entry views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C3: red facade and side alley Red facade, side alley, barred doorway/window, and distant opening views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C4: street walkway and roadway Street walkway, cobblestone ground, roadway, sidewalk, and street-corner views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C0,C3",
+      "candidate_scores": [
+        {
+          "alias": "C0",
+          "candidate_id": "manual_zone_outdoor_street_courtyard_stair_service",
+          "relevance_probability": 0.99960083,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "manual_zone_outdoor_street_red_facade_alley",
+          "relevance_probability": 0.99939251,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "manual_zone_outdoor_street_facade_entrance_glassblock",
+          "relevance_probability": 0.99928266,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "manual_zone_outdoor_street_walkway_road",
+          "relevance_probability": 0.99621105,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "manual_zone_outdoor_street_covered_passage_graffiti",
+          "relevance_probability": 0.98212427,
+          "generated_decision": "Yes"
+        }
+      ],
+      "alias_map": {
+        "C0": "manual_zone_outdoor_street_courtyard_stair_service",
+        "C1": "manual_zone_outdoor_street_covered_passage_graffiti",
+        "C2": "manual_zone_outdoor_street_facade_entrance_glassblock",
+        "C3": "manual_zone_outdoor_street_red_facade_alley",
+        "C4": "manual_zone_outdoor_street_walkway_road"
+      },
+      "ranked_ids": [
+        "manual_zone_outdoor_street_courtyard_stair_service",
+        "manual_zone_outdoor_street_red_facade_alley"
+      ],
+      "input_tokens": 370,
+      "output_tokens": 5,
+      "total_tokens": 375,
+      "latency_ms": 4300.7159,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    },
+    {
+      "phase": "view_grounding",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find a building entrance area\nCandidate C0: v001: Outdoor building courtyard with a wide stairway, beige stone facade, rows of windows, and a paved walkway between tall buildings.; building courtyard; stair entrance area; window facade side; wide outdoor stairs; beige building facade; rows of windows; paved walkway; tall buildin\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C1: v002: Close outdoor view of a light building wall with cobblestone ground, small basement windows, utility doors, vents, and wall-mounted fixtures.; service wall area; cobblestone walkway; basement window area; small basement windows; utility door; wall vents; wall-mounted lamps or cam\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C2: v012: Narrow alley between a red building wall and a brick or stone wall, with windows at the far end and cobblestone ground.; narrow alley; red wall side; brick wall side; red building wall; brick or stone wall; narrow cobblestone path; far windows; small wall fixtures; drain or groun\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C3: v014: Street-side building corner with a red facade, sidewalk, metal handrail, and view toward another building across the street.; street corner; red facade side; street view; red building facade; sidewalk or pavement; metal handrail; neighboring building; window openings; street curb\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C4: v016: Very blurred covered passage or building interior-exterior transition with dark walls, a light doorway, and red building wall outside.; blurred passage; light opening; red exterior side; dark passage walls; bright doorway opening; red exterior wall; floor surface; ceiling light o\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C5: v017: Narrow outdoor alley beside a beige building wall, with cobblestone path and a distant opening toward another building.; narrow side alley; beige wall side; distant opening; beige building wall; cobblestone path; wall windows; distant building; red wall edge; drain or ground seam\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C6: v018: Red building facade with barred windows or doors, blue vertical pipes, and cobblestone pavement.; red facade area; barred doorway/window area; paved sidewalk; red building facade; barred windows or doors; blue vertical pipes; small upper window; cobblestone pavement; yellow-black\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C7: v020: Building courtyard facade with outdoor stairs, beige stone wall, rows of windows, low basement windows, and paved walkway.; courtyard facade; stair area; basement window area; outdoor stairs; beige building facade; rows of windows; low basement windows; paved walkway; wall-mounte\nRelevant? Answer exactly Yes or No.",
+        "Query: Find a building entrance area\nCandidate C8: v021: Courtyard service facade with white emergency doors, beige tiled wall, blue-framed windows, glass-block column, planted bed, and cobblestone ground.; emergency door area; planted courtyard edge; window facade side; cobblestone courtyard; service facade wall; white emergency doors\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C0: v001: Outdoor building courtyard with a wide stairway, beige stone facade, rows of windows, and a paved walkway between tall buildings.; building courtyard; stair entrance area; window facade side; wide outdoor stairs; beige building facade; rows of windows; paved walkway; tall buildin\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C1: v002: Close outdoor view of a light building wall with cobblestone ground, small basement windows, utility doors, vents, and wall-mounted fixtures.; service wall area; cobblestone walkway; basement window area; small basement windows; utility door; wall vents; wall-mounted lamps or cam\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C2: v012: Narrow alley between a red building wall and a brick or stone wall, with windows at the far end and cobblestone ground.; narrow alley; red wall side; brick wall side; red building wall; brick or stone wall; narrow cobblestone path; far windows; small wall fixtures; drain or groun\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C3: v014: Street-side building corner with a red facade, sidewalk, metal handrail, and view toward another building across the street.; street corner; red facade side; street view; red building facade; sidewalk or pavement; metal handrail; neighboring building; window openings; street curb\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C4: v016: Very blurred covered passage or building interior-exterior transition with dark walls, a light doorway, and red building wall outside.; blurred passage; light opening; red exterior side; dark passage walls; bright doorway opening; red exterior wall; floor surface; ceiling light o\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C5: v017: Narrow outdoor alley beside a beige building wall, with cobblestone path and a distant opening toward another building.; narrow side alley; beige wall side; distant opening; beige building wall; cobblestone path; wall windows; distant building; red wall edge; drain or ground seam\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C6: v018: Red building facade with barred windows or doors, blue vertical pipes, and cobblestone pavement.; red facade area; barred doorway/window area; paved sidewalk; red building facade; barred windows or doors; blue vertical pipes; small upper window; cobblestone pavement; yellow-black\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C7: v020: Building courtyard facade with outdoor stairs, beige stone wall, rows of windows, low basement windows, and paved walkway.; courtyard facade; stair area; basement window area; outdoor stairs; beige building facade; rows of windows; low basement windows; paved walkway; wall-mounte\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find a building entrance area\nCandidate C8: v021: Courtyard service facade with white emergency doors, beige tiled wall, blue-framed windows, glass-block column, planted bed, and cobblestone ground.; emergency door area; planted courtyard edge; window facade side; cobblestone courtyard; service facade wall; white emergency doors\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C0,C7,C3",
+      "candidate_scores": [
+        {
+          "alias": "C0",
+          "candidate_id": "v001",
+          "relevance_probability": 0.99983859,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C7",
+          "candidate_id": "v020",
+          "relevance_probability": 0.99564552,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "v014",
+          "relevance_probability": 0.99534333,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C8",
+          "candidate_id": "v021",
+          "relevance_probability": 0.97129977,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "v002",
+          "relevance_probability": 0.75979114,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "v016",
+          "relevance_probability": 0.69744629,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C6",
+          "candidate_id": "v018",
+          "relevance_probability": 0.61132759,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "v012",
+          "relevance_probability": 0.53414458,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "v017",
+          "relevance_probability": 0.29072988,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "v001",
+        "C1": "v002",
+        "C2": "v012",
+        "C3": "v014",
+        "C4": "v016",
+        "C5": "v017",
+        "C6": "v018",
+        "C7": "v020",
+        "C8": "v021"
+      },
+      "ranked_ids": [
+        "v001",
+        "v020",
+        "v014"
+      ],
+      "input_tokens": 1017,
+      "output_tokens": 9,
+      "total_tokens": 1026,
+      "latency_ms": 9416.6224,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    }
+  ],
+  "result": {
+    "ranked_view_ids": [
+      "v001",
+      "v020",
+      "v014"
+    ],
+    "selected_view_id": "v001",
+    "found": true,
+    "selected_zone_ids": [
+      "manual_zone_outdoor_street_courtyard_stair_service",
+      "manual_zone_outdoor_street_red_facade_alley"
+    ],
+    "candidate_view_ids": [
+      "v001",
+      "v002",
+      "v012",
+      "v014",
+      "v016",
+      "v017",
+      "v018",
+      "v020",
+      "v021"
+    ],
+    "views_checked": 9,
+    "response_valid": true,
+    "accounting": {
+      "model_call_count": 2,
+      "input_tokens": 1387,
+      "output_tokens": 14,
+      "total_tokens": 1401,
+      "latency_ms": 13717.3383
+    },
+    "quality": {
+      "eligible": true,
+      "expected_view_ids": [
+        "v005",
+        "v008"
+      ],
+      "hit_at_1": false,
+      "hit_at_3": false,
+      "reciprocal_rank": 0.0
+    }
+  }
+}

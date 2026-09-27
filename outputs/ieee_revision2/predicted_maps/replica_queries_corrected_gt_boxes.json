@@ -1,0 +1,4413 @@
+{
+ "note": "Replica pilot queries with expected boxes replaced by the world AABB of the official oriented box (R*abb+t). Local derived file; same queries/IDs as docs/benchmarks/replica_scannet_pilot_queries.json.",
+ "queries": [
+  {
+   "query_id": "replica_room0_simple_001",
+   "scene_id": "replica_room0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room0",
+   "query": "Find the cabinet",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "cabinet"
+   ],
+   "expected_object_id": "2",
+   "expected_object_ids": [
+    "2"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.924906143883806,
+     0.09458909478800484,
+     -1.5266522889461909
+    ],
+    "max": [
+     -0.2387142062781615,
+     2.127876017579698,
+     -0.8310105490317836
+    ],
+    "object_id": "2",
+    "label": "cabinet",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.924906143883806,
+      0.09458909478800484,
+      -1.5266522889461909
+     ],
+     "max": [
+      -0.2387142062781615,
+      2.127876017579698,
+      -0.8310105490317836
+     ],
+     "object_id": "2",
+     "label": "cabinet",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room0_simple_002",
+   "scene_id": "replica_room0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room0",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "36",
+   "expected_object_ids": [
+    "36"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.7326278315372537,
+     -1.122659551610688,
+     -1.5020850889103472
+    ],
+    "max": [
+     0.3181907617579891,
+     -1.069387343444605,
+     0.6811770186727426
+    ],
+    "object_id": "36",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.7326278315372537,
+      -1.122659551610688,
+      -1.5020850889103472
+     ],
+     "max": [
+      0.3181907617579891,
+      -1.069387343444605,
+      0.6811770186727426
+     ],
+     "object_id": "36",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room0_attribute_001",
+   "scene_id": "replica_room0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room0",
+   "query": "Find the official Replica vase object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "vase"
+   ],
+   "expected_object_id": "45",
+   "expected_object_ids": [
+    "45"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.7488880096666394,
+     1.6901283333617902,
+     -0.8393761051167381
+    ],
+    "max": [
+     -0.4818824380374264,
+     1.9459689649386547,
+     -0.3336926316363722
+    ],
+    "object_id": "45",
+    "label": "vase",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.7488880096666394,
+      1.6901283333617902,
+      -0.8393761051167381
+     ],
+     "max": [
+      -0.4818824380374264,
+      1.9459689649386547,
+      -0.3336926316363722
+     ],
+     "object_id": "45",
+     "label": "vase",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room0_relational_001",
+   "scene_id": "replica_room0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room0",
+   "query": "Find the rug near Replica object 63",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "rug"
+   ],
+   "expected_object_id": "60",
+   "expected_object_ids": [
+    "60"
+   ],
+   "expected_anchor_object_ids": [
+    "63"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     1.6084071591831852,
+     -0.4836171920661392,
+     -1.5121132136166577
+    ],
+    "max": [
+     5.8019623728284175,
+     2.4647984433670977,
+     -1.4387642927928745
+    ],
+    "object_id": "60",
+    "label": "rug",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.6084071591831852,
+      -0.4836171920661392,
+      -1.5121132136166577
+     ],
+     "max": [
+      5.8019623728284175,
+      2.4647984433670977,
+      -1.4387642927928745
+     ],
+     "object_id": "60",
+     "label": "rug",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room0_multi_hop_001",
+   "scene_id": "replica_room0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room0",
+   "query": "First inspect the scene objects, then find the picture",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "picture"
+   ],
+   "expected_object_id": "63",
+   "expected_object_ids": [
+    "63"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     2.739154553065123,
+     -1.1321396813896811,
+     -0.5615359039951782
+    ],
+    "max": [
+     4.598675095302476,
+     -1.073507034130541,
+     0.7145899608291068
+    ],
+    "object_id": "63",
+    "label": "picture",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      2.739154553065123,
+      -1.1321396813896811,
+      -0.5615359039951782
+     ],
+     "max": [
+      4.598675095302476,
+      -1.073507034130541,
+      0.7145899608291068
+     ],
+     "object_id": "63",
+     "label": "picture",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room0_functional_001",
+   "scene_id": "replica_room0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room0",
+   "query": "Find a place to sit on the chair",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "chair"
+   ],
+   "expected_object_id": "73",
+   "expected_object_ids": [
+    "73",
+    "74"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     5.229236299900003,
+     1.057284079638303,
+     -1.4834895685880276
+    ],
+    "max": [
+     6.166738375058639,
+     1.9391456725921148,
+     -0.38946383302708
+    ],
+    "object_id": "73",
+    "label": "chair",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      5.229236299900003,
+      1.057284079638303,
+      -1.4834895685880276
+     ],
+     "max": [
+      6.166738375058639,
+      1.9391456725921148,
+      -0.38946383302708
+     ],
+     "object_id": "73",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      5.229102536758821,
+      0.06977427525172389,
+      -1.4871381544781888
+     ],
+     "max": [
+      6.1640035018224415,
+      0.9516404123147472,
+      -0.3994264649943737
+     ],
+     "object_id": "74",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room0_negative_001",
+   "scene_id": "replica_room0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room0",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_room0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  },
+  {
+   "query_id": "replica_room1_simple_001",
+   "scene_id": "replica_room1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room1",
+   "query": "Find the cabinet",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "cabinet"
+   ],
+   "expected_object_id": "36",
+   "expected_object_ids": [
+    "36"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -4.903432291821351,
+     -2.26087047524463,
+     -1.3974080637923405
+    ],
+    "max": [
+     -3.8520154825035484,
+     -0.7973741708141563,
+     -0.5540467467600159
+    ],
+    "object_id": "36",
+    "label": "cabinet",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -4.903432291821351,
+      -2.26087047524463,
+      -1.3974080637923405
+     ],
+     "max": [
+      -3.8520154825035484,
+      -0.7973741708141563,
+      -0.5540467467600159
+     ],
+     "object_id": "36",
+     "label": "cabinet",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room1_simple_002",
+   "scene_id": "replica_room1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room1",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "6",
+   "expected_object_ids": [
+    "6"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -5.307588627387051,
+     -0.040798641548714695,
+     -1.3871224625579817
+    ],
+    "max": [
+     -4.342818550457486,
+     0.5709259416924055,
+     0.8138420758448657
+    ],
+    "object_id": "6",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -5.307588627387051,
+      -0.040798641548714695,
+      -1.3871224625579817
+     ],
+     "max": [
+      -4.342818550457486,
+      0.5709259416924055,
+      0.8138420758448657
+     ],
+     "object_id": "6",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room1_attribute_001",
+   "scene_id": "replica_room1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room1",
+   "query": "Find the official Replica vase object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "vase"
+   ],
+   "expected_object_id": "51",
+   "expected_object_ids": [
+    "51"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -4.308218385041045,
+     -2.0271972807641703,
+     -0.5704282192363915
+    ],
+    "max": [
+     -4.0340378218923565,
+     -1.7636247225718074,
+     -0.17633876543885124
+    ],
+    "object_id": "51",
+    "label": "vase",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -4.308218385041045,
+      -2.0271972807641703,
+      -0.5704282192363915
+     ],
+     "max": [
+      -4.0340378218923565,
+      -1.7636247225718074,
+      -0.17633876543885124
+     ],
+     "object_id": "51",
+     "label": "vase",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room1_relational_001",
+   "scene_id": "replica_room1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room1",
+   "query": "Find the rug near Replica object 32",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "rug"
+   ],
+   "expected_object_id": "20",
+   "expected_object_ids": [
+    "20"
+   ],
+   "expected_anchor_object_ids": [
+    "32"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     -3.3439065712718725,
+     -1.7273231580421526,
+     -1.3961993046238022
+    ],
+    "max": [
+     0.8309763931867797,
+     2.2012758076679377,
+     -1.2402353217957343
+    ],
+    "object_id": "20",
+    "label": "rug",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -3.3439065712718725,
+      -1.7273231580421526,
+      -1.3961993046238022
+     ],
+     "max": [
+      0.8309763931867797,
+      2.2012758076679377,
+      -1.2402353217957343
+     ],
+     "object_id": "20",
+     "label": "rug",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room1_multi_hop_001",
+   "scene_id": "replica_room1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room1",
+   "query": "First inspect the scene objects, then find the bed",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "bed"
+   ],
+   "expected_object_id": "32",
+   "expected_object_ids": [
+    "32"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -3.202325098376203,
+     -1.1438510998035045,
+     -1.3483325658393046
+    ],
+    "max": [
+     0.21439394669136438,
+     2.377275200786018,
+     -0.06449448453869153
+    ],
+    "object_id": "32",
+    "label": "bed",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -3.202325098376203,
+      -1.1438510998035045,
+      -1.3483325658393046
+     ],
+     "max": [
+      0.21439394669136438,
+      2.377275200786018,
+      -0.06449448453869153
+     ],
+     "object_id": "32",
+     "label": "bed",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room1_functional_001",
+   "scene_id": "replica_room1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room1",
+   "query": "Find a place to sit on the bed",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "bed"
+   ],
+   "expected_object_id": "32",
+   "expected_object_ids": [
+    "32"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -3.202325098376203,
+     -1.1438510998035045,
+     -1.3483325658393046
+    ],
+    "max": [
+     0.21439394669136438,
+     2.377275200786018,
+     -0.06449448453869153
+    ],
+    "object_id": "32",
+    "label": "bed",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -3.202325098376203,
+      -1.1438510998035045,
+      -1.3483325658393046
+     ],
+     "max": [
+      0.21439394669136438,
+      2.377275200786018,
+      -0.06449448453869153
+     ],
+     "object_id": "32",
+     "label": "bed",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room1_negative_001",
+   "scene_id": "replica_room1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room1",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_room1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  },
+  {
+   "query_id": "replica_room2_simple_001",
+   "scene_id": "replica_room2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room2",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "54",
+   "expected_object_ids": [
+    "54"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.7344516683970722,
+     -2.3337151826638527,
+     -2.1816268808823516
+    ],
+    "max": [
+     0.638677934327046,
+     -2.028444393645758,
+     0.14495517468455607
+    ],
+    "object_id": "54",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.7344516683970722,
+      -2.3337151826638527,
+      -2.1816268808823516
+     ],
+     "max": [
+      0.638677934327046,
+      -2.028444393645758,
+      0.14495517468455607
+     ],
+     "object_id": "54",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room2_simple_002",
+   "scene_id": "replica_room2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room2",
+   "query": "Find the vase",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "vase"
+   ],
+   "expected_object_id": "46",
+   "expected_object_ids": [
+    "46",
+    "40",
+    "14",
+    "17",
+    "27"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.12707151899382207,
+     -0.04241001888371017,
+     -0.8283779332881723
+    ],
+    "max": [
+     0.09100883955887318,
+     0.21645929044730414,
+     -0.48186122518372815
+    ],
+    "object_id": "46",
+    "label": "vase",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.12707151899382207,
+      -0.04241001888371017,
+      -0.8283779332881723
+     ],
+     "max": [
+      0.09100883955887318,
+      0.21645929044730414,
+      -0.48186122518372815
+     ],
+     "object_id": "46",
+     "label": "vase",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.397843666405082,
+      -0.3088734328312673,
+      -1.6221976039841957
+     ],
+     "max": [
+      -0.042078658976420324,
+      0.01504348357947995,
+      -1.2747675791154605
+     ],
+     "object_id": "40",
+     "label": "vase",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      3.030520272461412,
+      -1.1130752811072053,
+      -1.8276058645933115
+     ],
+     "max": [
+      3.4288268057583715,
+      -0.7415902376207012,
+      -1.5308608587382293
+     ],
+     "object_id": "14",
+     "label": "vase",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.32398901710913836,
+      -0.5719850768249033,
+      -0.8382178129144486
+     ],
+     "max": [
+      0.03325718723285596,
+      -0.2838520009891707,
+      -0.267001201758415
+     ],
+     "object_id": "17",
+     "label": "vase",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.2777533181322796,
+      0.01157831457452723,
+      -0.8400964033430104
+     ],
+     "max": [
+      0.20868971172959228,
+      0.4201204996363091,
+      -0.2716210757372698
+     ],
+     "object_id": "27",
+     "label": "vase",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room2_attribute_001",
+   "scene_id": "replica_room2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room2",
+   "query": "Find the official Replica rug object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "rug"
+   ],
+   "expected_object_id": "1",
+   "expected_object_ids": [
+    "1"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     1.0808949456732397,
+     -2.362888312285664,
+     -2.7600131522376103
+    ],
+    "max": [
+     4.506723522724805,
+     0.5977313243135314,
+     -2.237638757552852
+    ],
+    "object_id": "1",
+    "label": "rug",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.0808949456732397,
+      -2.362888312285664,
+      -2.7600131522376103
+     ],
+     "max": [
+      4.506723522724805,
+      0.5977313243135314,
+      -2.237638757552852
+     ],
+     "object_id": "1",
+     "label": "rug",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room2_relational_001",
+   "scene_id": "replica_room2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room2",
+   "query": "Find the table near Replica object 26",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "table"
+   ],
+   "expected_object_id": "5",
+   "expected_object_ids": [
+    "5"
+   ],
+   "expected_anchor_object_ids": [
+    "26"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     1.5813398914088392,
+     -1.8746844547333428,
+     -2.696922519883807
+    ],
+    "max": [
+     4.082378915736857,
+     0.04343510091182248,
+     -1.5360275955565348
+    ],
+    "object_id": "5",
+    "label": "table",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.5813398914088392,
+      -1.8746844547333428,
+      -2.696922519883807
+     ],
+     "max": [
+      4.082378915736857,
+      0.04343510091182248,
+      -1.5360275955565348
+     ],
+     "object_id": "5",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room2_multi_hop_001",
+   "scene_id": "replica_room2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room2",
+   "query": "First inspect the scene objects, then find the bottle",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "bottle"
+   ],
+   "expected_object_id": "26",
+   "expected_object_ids": [
+    "26"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.2424450708702542,
+     0.1555209735318878,
+     -1.6083741047411604
+    ],
+    "max": [
+     -0.025074682339213488,
+     0.33221087787233666,
+     -1.4366294915676452
+    ],
+    "object_id": "26",
+    "label": "bottle",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.2424450708702542,
+      0.1555209735318878,
+      -1.6083741047411604
+     ],
+     "max": [
+      -0.025074682339213488,
+      0.33221087787233666,
+      -1.4366294915676452
+     ],
+     "object_id": "26",
+     "label": "bottle",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room2_functional_001",
+   "scene_id": "replica_room2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room2",
+   "query": "Find a place to sit on the chair",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "chair"
+   ],
+   "expected_object_id": "48",
+   "expected_object_ids": [
+    "48",
+    "12",
+    "11",
+    "9",
+    "13",
+    "7",
+    "3",
+    "6"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     3.5254506311480056,
+     -1.5193022939125562,
+     -2.7329381357087694
+    ],
+    "max": [
+     4.478204768489237,
+     -0.838147894700934,
+     -1.6426523199254026
+    ],
+    "object_id": "48",
+    "label": "chair",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      3.5254506311480056,
+      -1.5193022939125562,
+      -2.7329381357087694
+     ],
+     "max": [
+      4.478204768489237,
+      -0.838147894700934,
+      -1.6426523199254026
+     ],
+     "object_id": "48",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.8015229721389998,
+      -1.7388831139493262,
+      -2.4937770712028287
+     ],
+     "max": [
+      2.7546036039503425,
+      -0.8200331674676152,
+      -1.372118524066485
+     ],
+     "object_id": "12",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.984043502598146,
+      -0.7569729847092911,
+      -2.4713110374556924
+     ],
+     "max": [
+      2.7760856964911347,
+      0.06122973352265842,
+      -1.3753334760004061
+     ],
+     "object_id": "11",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.2158183331683186,
+      -1.0162313991190632,
+      -2.383042605375206
+     ],
+     "max": [
+      2.2028327556676057,
+      -0.3042175901906973,
+      -1.2763998480552037
+     ],
+     "object_id": "9",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      2.4384267075948878,
+      -1.7933049716612675,
+      -2.5613947108410144
+     ],
+     "max": [
+      3.1942838489170753,
+      -1.0071838724775501,
+      -1.4739031264987175
+     ],
+     "object_id": "13",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      3.0420937352560284,
+      -0.9828106711905423,
+      -2.6413987318315995
+     ],
+     "max": [
+      3.8859630859731102,
+      -0.13248471726212008,
+      -1.5391512953388289
+     ],
+     "object_id": "7",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      2.952143699882081,
+      -1.874345845421915,
+      -2.642209575448547
+     ],
+     "max": [
+      3.751372371652467,
+      -1.0826938660641932,
+      -1.5458047209491124
+     ],
+     "object_id": "3",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      2.54815470652968,
+      -0.8404819230361374,
+      -2.5446258220624496
+     ],
+     "max": [
+      3.2776645919442973,
+      -0.05290974462719556,
+      -1.4592355894325708
+     ],
+     "object_id": "6",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_room2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_room2_negative_001",
+   "scene_id": "replica_room2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "room2",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_room2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  },
+  {
+   "query_id": "replica_office0_simple_001",
+   "scene_id": "replica_office0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office0",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "16",
+   "expected_object_ids": [
+    "16"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     0.8603140156910564,
+     1.543343845637869,
+     -1.1373920931875308
+    ],
+    "max": [
+     1.8491897751545858,
+     1.9485136822298013,
+     1.5820806665846656
+    ],
+    "object_id": "16",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      0.8603140156910564,
+      1.543343845637869,
+      -1.1373920931875308
+     ],
+     "max": [
+      1.8491897751545858,
+      1.9485136822298013,
+      1.5820806665846656
+     ],
+     "object_id": "16",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office0_simple_002",
+   "scene_id": "replica_office0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office0",
+   "query": "Find the rug",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "rug"
+   ],
+   "expected_object_id": "5",
+   "expected_object_ids": [
+    "5"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -1.9707430971659206,
+     -3.2366319859462234,
+     -1.1600791721701684
+    ],
+    "max": [
+     2.4042199318180932,
+     1.4627013826469717,
+     -0.9889595574657791
+    ],
+    "object_id": "5",
+    "label": "rug",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -1.9707430971659206,
+      -3.2366319859462234,
+      -1.1600791721701684
+     ],
+     "max": [
+      2.4042199318180932,
+      1.4627013826469717,
+      -0.9889595574657791
+     ],
+     "object_id": "5",
+     "label": "rug",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office0_attribute_001",
+   "scene_id": "replica_office0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office0",
+   "query": "Find the official Replica table object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "table"
+   ],
+   "expected_object_id": "58",
+   "expected_object_ids": [
+    "58",
+    "12"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.7483159971438856,
+     -0.9800366152446612,
+     -1.1353330835788134
+    ],
+    "max": [
+     0.46724254153212363,
+     0.402731858422329,
+     -0.5057418110267834
+    ],
+    "object_id": "58",
+    "label": "table",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.7483159971438856,
+      -0.9800366152446612,
+      -1.1353330835788134
+     ],
+     "max": [
+      0.46724254153212363,
+      0.402731858422329,
+      -0.5057418110267834
+     ],
+     "object_id": "58",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.543121646915807,
+      -0.7875329524551107,
+      -1.1390682485519719
+     ],
+     "max": [
+      2.1754135480176706,
+      -0.15839720721839987,
+      -0.5299468886454406
+     ],
+     "object_id": "12",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office0_relational_001",
+   "scene_id": "replica_office0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office0",
+   "query": "Find the tv screen near Replica object 64",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "tv-screen"
+   ],
+   "expected_object_id": "66",
+   "expected_object_ids": [
+    "66"
+   ],
+   "expected_anchor_object_ids": [
+    "64"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     1.8606778998465319,
+     -1.7852791514922086,
+     -0.46037936350620645
+    ],
+    "max": [
+     2.298254361845366,
+     0.7857930943290296,
+     0.6741617205441799
+    ],
+    "object_id": "66",
+    "label": "tv-screen",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.8606778998465319,
+      -1.7852791514922086,
+      -0.46037936350620645
+     ],
+     "max": [
+      2.298254361845366,
+      0.7857930943290296,
+      0.6741617205441799
+     ],
+     "object_id": "66",
+     "label": "tv-screen",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office0_multi_hop_001",
+   "scene_id": "replica_office0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office0",
+   "query": "First inspect the scene objects, then find the tablet",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "tablet"
+   ],
+   "expected_object_id": "64",
+   "expected_object_ids": [
+    "64"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.5835216297276422,
+     -0.8588940078774007,
+     -0.518034484168609
+    ],
+    "max": [
+     -0.3584422817011107,
+     -0.6109761196297306,
+     -0.4492633346312746
+    ],
+    "object_id": "64",
+    "label": "tablet",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.5835216297276422,
+      -0.8588940078774007,
+      -0.518034484168609
+     ],
+     "max": [
+      -0.3584422817011107,
+      -0.6109761196297306,
+      -0.4492633346312746
+     ],
+     "object_id": "64",
+     "label": "tablet",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office0_functional_001",
+   "scene_id": "replica_office0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office0",
+   "query": "Find a place to sit on the chair",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "chair"
+   ],
+   "expected_object_id": "61",
+   "expected_object_ids": [
+    "61",
+    "4"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.031707810720877416,
+     -0.14403775846993058,
+     -1.1329534252257558
+    ],
+    "max": [
+     0.7826951914202092,
+     0.6218627681817934,
+     -0.37607458302002056
+    ],
+    "object_id": "61",
+    "label": "chair",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.031707810720877416,
+      -0.14403775846993058,
+      -1.1329534252257558
+     ],
+     "max": [
+      0.7826951914202092,
+      0.6218627681817934,
+      -0.37607458302002056
+     ],
+     "object_id": "61",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      0.04571291774371537,
+      -0.8747464942944255,
+      -1.134860021408984
+     ],
+     "max": [
+      0.7781479982683251,
+      -0.17870009601727682,
+      -0.370794275411986
+     ],
+     "object_id": "4",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office0_negative_001",
+   "scene_id": "replica_office0",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office0",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_office0/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  },
+  {
+   "query_id": "replica_office1_simple_001",
+   "scene_id": "replica_office1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office1",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "34",
+   "expected_object_ids": [
+    "34"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     2.155808075691693,
+     0.7718814570358736,
+     -1.0308481102203289
+    ],
+    "max": [
+     2.942991447777615,
+     1.7498431949359303,
+     1.4375358354848535
+    ],
+    "object_id": "34",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      2.155808075691693,
+      0.7718814570358736,
+      -1.0308481102203289
+     ],
+     "max": [
+      2.942991447777615,
+      1.7498431949359303,
+      1.4375358354848535
+     ],
+     "object_id": "34",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office1_simple_002",
+   "scene_id": "replica_office1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office1",
+   "query": "Find the table",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "table"
+   ],
+   "expected_object_id": "42",
+   "expected_object_ids": [
+    "42"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     0.23194945372635078,
+     -0.8129191996371524,
+     -1.043980282511743
+    ],
+    "max": [
+     0.8675962148323892,
+     -0.11559043194358394,
+     -0.4270046475584192
+    ],
+    "object_id": "42",
+    "label": "table",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      0.23194945372635078,
+      -0.8129191996371524,
+      -1.043980282511743
+     ],
+     "max": [
+      0.8675962148323892,
+      -0.11559043194358394,
+      -0.4270046475584192
+     ],
+     "object_id": "42",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office1_attribute_001",
+   "scene_id": "replica_office1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office1",
+   "query": "Find the official Replica bottle object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "bottle"
+   ],
+   "expected_object_id": "18",
+   "expected_object_ids": [
+    "18"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     1.1869552092309004,
+     1.7940186918685277,
+     -0.18493876479298837
+    ],
+    "max": [
+     1.239100038473079,
+     1.8389787516038822,
+     -0.06595058080765263
+    ],
+    "object_id": "18",
+    "label": "bottle",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.1869552092309004,
+      1.7940186918685277,
+      -0.18493876479298837
+     ],
+     "max": [
+      1.239100038473079,
+      1.8389787516038822,
+      -0.06595058080765263
+     ],
+     "object_id": "18",
+     "label": "bottle",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office1_relational_001",
+   "scene_id": "replica_office1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office1",
+   "query": "Find the desk near Replica object 29",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "desk"
+   ],
+   "expected_object_id": "5",
+   "expected_object_ids": [
+    "5"
+   ],
+   "expected_anchor_object_ids": [
+    "29"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     0.1816828716985495,
+     1.3086209890506646,
+     -1.0380812904521202
+    ],
+    "max": [
+     1.4396374410416437,
+     2.534127046401497,
+     -0.19751967006490845
+    ],
+    "object_id": "5",
+    "label": "desk",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      0.1816828716985495,
+      1.3086209890506646,
+      -1.0380812904521202
+     ],
+     "max": [
+      1.4396374410416437,
+      2.534127046401497,
+      -0.19751967006490845
+     ],
+     "object_id": "5",
+     "label": "desk",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office1_multi_hop_001",
+   "scene_id": "replica_office1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office1",
+   "query": "First inspect the scene objects, then find the monitor",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "monitor"
+   ],
+   "expected_object_id": "29",
+   "expected_object_ids": [
+    "29"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     0.4623639971239153,
+     1.8123152306610721,
+     -0.09978516646981916
+    ],
+    "max": [
+     1.2360219237885604,
+     2.0199717104418395,
+     0.4483922357030172
+    ],
+    "object_id": "29",
+    "label": "monitor",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      0.4623639971239153,
+      1.8123152306610721,
+      -0.09978516646981916
+     ],
+     "max": [
+      1.2360219237885604,
+      2.0199717104418395,
+      0.4483922357030172
+     ],
+     "object_id": "29",
+     "label": "monitor",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office1_functional_001",
+   "scene_id": "replica_office1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office1",
+   "query": "Find a place to sit on the chair",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "chair"
+   ],
+   "expected_object_id": "40",
+   "expected_object_ids": [
+    "40"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     0.881952124962355,
+     -0.29745738604618527,
+     -1.042197903064916
+    ],
+    "max": [
+     1.9412538407376496,
+     0.7742201803769496,
+     -0.10879537678941205
+    ],
+    "object_id": "40",
+    "label": "chair",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      0.881952124962355,
+      -0.29745738604618527,
+      -1.042197903064916
+     ],
+     "max": [
+      1.9412538407376496,
+      0.7742201803769496,
+      -0.10879537678941205
+     ],
+     "object_id": "40",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office1_negative_001",
+   "scene_id": "replica_office1",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office1",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_office1/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  },
+  {
+   "query_id": "replica_office2_simple_001",
+   "scene_id": "replica_office2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office2",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "4",
+   "expected_object_ids": [
+    "4"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     2.607842313835416,
+     2.7538238408380713,
+     -1.2044166667447511
+    ],
+    "max": [
+     3.1050688462673035,
+     3.7053090684065384,
+     1.486605202608772
+    ],
+    "object_id": "4",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      2.607842313835416,
+      2.7538238408380713,
+      -1.2044166667447511
+     ],
+     "max": [
+      3.1050688462673035,
+      3.7053090684065384,
+      1.486605202608772
+     ],
+     "object_id": "4",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office2_simple_002",
+   "scene_id": "replica_office2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office2",
+   "query": "Find the table",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "table"
+   ],
+   "expected_object_id": "38",
+   "expected_object_ids": [
+    "38",
+    "43",
+    "75"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     1.0022371605665452,
+     0.11868747956998486,
+     -1.2076821565994755
+    ],
+    "max": [
+     1.510821053643649,
+     0.6173377952877992,
+     -0.705939975455646
+    ],
+    "object_id": "38",
+    "label": "table",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.0022371605665452,
+      0.11868747956998486,
+      -1.2076821565994755
+     ],
+     "max": [
+      1.510821053643649,
+      0.6173377952877992,
+      -0.705939975455646
+     ],
+     "object_id": "38",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -1.6407140584349538,
+      -0.8113787855579261,
+      -1.2079459226053906
+     ],
+     "max": [
+      -0.022500311445042383,
+      0.7975890345730112,
+      -0.704436108501748
+     ],
+     "object_id": "43",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.825783992353075,
+      1.709517836037353,
+      -1.2181970601986531
+     ],
+     "max": [
+      1.32701907851239,
+      3.461249986810231,
+      -0.41753484408546154
+     ],
+     "object_id": "75",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office2_attribute_001",
+   "scene_id": "replica_office2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office2",
+   "query": "Find the official Replica bottle object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "bottle"
+   ],
+   "expected_object_id": "89",
+   "expected_object_ids": [
+    "89",
+    "76"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     1.2977320216304202,
+     0.13947174373271706,
+     -0.7159194023405676
+    ],
+    "max": [
+     1.410374547801673,
+     0.23464199317879664,
+     -0.5471278902208956
+    ],
+    "object_id": "89",
+    "label": "bottle",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.2977320216304202,
+      0.13947174373271706,
+      -0.7159194023405676
+     ],
+     "max": [
+      1.410374547801673,
+      0.23464199317879664,
+      -0.5471278902208956
+     ],
+     "object_id": "89",
+     "label": "bottle",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.3272951551621186,
+      0.21973397832014602,
+      -0.7156175532925454
+     ],
+     "max": [
+      1.4438742600259415,
+      0.3392510507369175,
+      -0.5770094324780364
+     ],
+     "object_id": "76",
+     "label": "bottle",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office2_relational_001",
+   "scene_id": "replica_office2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office2",
+   "query": "Find the tv screen near Replica object 28",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "tv-screen"
+   ],
+   "expected_object_id": "8",
+   "expected_object_ids": [
+    "8"
+   ],
+   "expected_anchor_object_ids": [
+    "28"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     -2.479298483106059,
+     0.7852311636998971,
+     -0.45269348378568164
+    ],
+    "max": [
+     -1.3073601158748547,
+     3.145948521710113,
+     0.6504701514023429
+    ],
+    "object_id": "8",
+    "label": "tv-screen",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -2.479298483106059,
+      0.7852311636998971,
+      -0.45269348378568164
+     ],
+     "max": [
+      -1.3073601158748547,
+      3.145948521710113,
+      0.6504701514023429
+     ],
+     "object_id": "8",
+     "label": "tv-screen",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office2_multi_hop_001",
+   "scene_id": "replica_office2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office2",
+   "query": "First inspect the scene objects, then find the tablet",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "tablet"
+   ],
+   "expected_object_id": "28",
+   "expected_object_ids": [
+    "28"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     0.35185074159120416,
+     2.544465871032045,
+     -0.4669343910825171
+    ],
+    "max": [
+     0.6128721336495717,
+     2.844839273729613,
+     -0.3922389852005764
+    ],
+    "object_id": "28",
+    "label": "tablet",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      0.35185074159120416,
+      2.544465871032045,
+      -0.4669343910825171
+     ],
+     "max": [
+      0.6128721336495717,
+      2.844839273729613,
+      -0.3922389852005764
+     ],
+     "object_id": "28",
+     "label": "tablet",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office2_functional_001",
+   "scene_id": "replica_office2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office2",
+   "query": "Find a place to sit on the chair",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "chair"
+   ],
+   "expected_object_id": "93",
+   "expected_object_ids": [
+    "93",
+    "90",
+    "80",
+    "32",
+    "41"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.24918537313756697,
+     1.8086387639287091,
+     -1.212074575357195
+    ],
+    "max": [
+     0.49817395251847635,
+     2.543574255587426,
+     -0.16527949277421283
+    ],
+    "object_id": "93",
+    "label": "chair",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.24918537313756697,
+      1.8086387639287091,
+      -1.212074575357195
+     ],
+     "max": [
+      0.49817395251847635,
+      2.543574255587426,
+      -0.16527949277421283
+     ],
+     "object_id": "93",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.7509585035412408,
+      4.204769522214566,
+      -1.21827148806617
+     ],
+     "max": [
+      0.1985706329004341,
+      5.275184000542517,
+      -0.2958251531167725
+     ],
+     "object_id": "90",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      0.566865285477898,
+      1.8523335796615958,
+      -1.2129693737651908
+     ],
+     "max": [
+      1.3549850278302076,
+      2.632548694955853,
+      -0.22678493186641743
+     ],
+     "object_id": "80",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      0.029641585661206196,
+      2.6059840114569273,
+      -1.2170311418535265
+     ],
+     "max": [
+      0.7939365900416113,
+      3.3935512673195625,
+      -0.19973775212789505
+     ],
+     "object_id": "32",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.906139166282711,
+      2.4220459942663513,
+      -1.2168110599860251
+     ],
+     "max": [
+      -0.16958581882816198,
+      3.1170062668629153,
+      -0.2102516326287658
+     ],
+     "object_id": "41",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office2_negative_001",
+   "scene_id": "replica_office2",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office2",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_office2/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  },
+  {
+   "query_id": "replica_office3_simple_001",
+   "scene_id": "replica_office3",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office3",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "56",
+   "expected_object_ids": [
+    "56"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -1.37736735739061,
+     -5.952386625722963,
+     -1.1632685162794656
+    ],
+    "max": [
+     -0.7186890844622849,
+     -5.100268503449012,
+     1.4144768451947218
+    ],
+    "object_id": "56",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -1.37736735739061,
+      -5.952386625722963,
+      -1.1632685162794656
+     ],
+     "max": [
+      -0.7186890844622849,
+      -5.100268503449012,
+      1.4144768451947218
+     ],
+     "object_id": "56",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office3/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office3_simple_002",
+   "scene_id": "replica_office3",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office3",
+   "query": "Find the table",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "table"
+   ],
+   "expected_object_id": "20",
+   "expected_object_ids": [
+    "20",
+    "15",
+    "51"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -2.360682281706112,
+     -3.310111277983238,
+     -0.6764112979907387
+    ],
+    "max": [
+     -2.317330417695254,
+     -3.255019552511199,
+     -0.47869674575277266
+    ],
+    "object_id": "20",
+    "label": "table",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -2.360682281706112,
+      -3.310111277983238,
+      -0.6764112979907387
+     ],
+     "max": [
+      -2.317330417695254,
+      -3.255019552511199,
+      -0.47869674575277266
+     ],
+     "object_id": "20",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.3218434536754093,
+      -1.0768231552380045,
+      -1.2129173936792808
+     ],
+     "max": [
+      1.3956486919623363,
+      0.6458281015465682,
+      -0.7538992091782584
+     ],
+     "object_id": "15",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -3.1835732371618386,
+      -3.986341304353204,
+      -1.1915567289232463
+     ],
+     "max": [
+      -0.6959366562446097,
+      -1.6554215389329672,
+      -0.4115180542235116
+     ],
+     "object_id": "51",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office3/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office3_attribute_001",
+   "scene_id": "replica_office3",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office3",
+   "query": "Find the official Replica bottle object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "bottle"
+   ],
+   "expected_object_id": "94",
+   "expected_object_ids": [
+    "94",
+    "92"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -1.8062955919941883,
+     -2.6875248453802327,
+     -0.43650016076006587
+    ],
+    "max": [
+     -1.7152293941584247,
+     -2.6192648504779643,
+     -0.29941070601669023
+    ],
+    "object_id": "94",
+    "label": "bottle",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -1.8062955919941883,
+      -2.6875248453802327,
+      -0.43650016076006587
+     ],
+     "max": [
+      -1.7152293941584247,
+      -2.6192648504779643,
+      -0.29941070601669023
+     ],
+     "object_id": "94",
+     "label": "bottle",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -1.7623339485044651,
+      -2.769075370804707,
+      -0.42819089123648263
+     ],
+     "max": [
+      -1.6467326971031255,
+      -2.6482270006663002,
+      -0.2642315680623304
+     ],
+     "object_id": "92",
+     "label": "bottle",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office3/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office3_relational_001",
+   "scene_id": "replica_office3",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office3",
+   "query": "Find the tablet near Replica object 101",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "tablet"
+   ],
+   "expected_object_id": "30",
+   "expected_object_ids": [
+    "30",
+    "26"
+   ],
+   "expected_anchor_object_ids": [
+    "101"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     -2.194337808233449,
+     -3.0219194267038514,
+     -0.4340875931626496
+    ],
+    "max": [
+     -1.9129194621478125,
+     -2.761321475157693,
+     -0.36381939645138206
+    ],
+    "object_id": "30",
+    "label": "tablet",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -2.194337808233449,
+      -3.0219194267038514,
+      -0.4340875931626496
+     ],
+     "max": [
+      -1.9129194621478125,
+      -2.761321475157693,
+      -0.36381939645138206
+     ],
+     "object_id": "30",
+     "label": "tablet",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      0.30609159131530694,
+      -0.8068977338148632,
+      -0.7601254266656395
+     ],
+     "max": [
+      0.6094225636646826,
+      -0.5202979696457307,
+      -0.6807488779140534
+     ],
+     "object_id": "26",
+     "label": "tablet",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office3/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office3_multi_hop_001",
+   "scene_id": "replica_office3",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office3",
+   "query": "First inspect the scene objects, then find the clock",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "clock"
+   ],
+   "expected_object_id": "101",
+   "expected_object_ids": [
+    "101"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     1.4387875715806728,
+     1.7407270432321047,
+     0.9387495370601274
+    ],
+    "max": [
+     1.7051309392086678,
+     1.9597316281017025,
+     1.2614475825363365
+    ],
+    "object_id": "101",
+    "label": "clock",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.4387875715806728,
+      1.7407270432321047,
+      0.9387495370601274
+     ],
+     "max": [
+      1.7051309392086678,
+      1.9597316281017025,
+      1.2614475825363365
+     ],
+     "object_id": "101",
+     "label": "clock",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office3/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office3_functional_001",
+   "scene_id": "replica_office3",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office3",
+   "query": "Find a place to sit on the chair",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "chair"
+   ],
+   "expected_object_id": "100",
+   "expected_object_ids": [
+    "100",
+    "98",
+    "9",
+    "27",
+    "25",
+    "16",
+    "10",
+    "37",
+    "72",
+    "76"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -1.3643219171476464,
+     -3.6972663464878512,
+     -1.1858698426136869
+    ],
+    "max": [
+     -0.46708013645818103,
+     -2.776536851406193,
+     -0.1384141360760137
+    ],
+    "object_id": "100",
+    "label": "chair",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -1.3643219171476464,
+      -3.6972663464878512,
+      -1.1858698426136869
+     ],
+     "max": [
+      -0.46708013645818103,
+      -2.776536851406193,
+      -0.1384141360760137
+     ],
+     "object_id": "100",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -2.3253801554970916,
+      -2.7413319999838266,
+      -1.1909875542249666
+     ],
+     "max": [
+      -1.3625291444471197,
+      -1.7972772709428395,
+      -0.15394046531716615
+     ],
+     "object_id": "98",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -2.9162215258473214,
+      -3.4783723376264657,
+      -1.1866946409623351
+     ],
+     "max": [
+      -2.033196310057173,
+      -2.58370917611495,
+      -0.1636597337312387
+     ],
+     "object_id": "9",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -2.9447277445828712,
+      -2.3803712767014678,
+      -1.1882547201817357
+     ],
+     "max": [
+      -2.2153598360313165,
+      -1.6466201914735838,
+      -0.155246155480269
+     ],
+     "object_id": "27",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -1.6303730568223422,
+      -0.7893815134371278,
+      -1.012047008931125
+     ],
+     "max": [
+      -0.7315986929965499,
+      0.09850975147427792,
+      -0.2847792311800262
+     ],
+     "object_id": "25",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -1.704554332227106,
+      -4.1223977440638855,
+      -1.1833528586016435
+     ],
+     "max": [
+      -0.9534082013674617,
+      -3.317725963444484,
+      -0.1414840943629427
+     ],
+     "object_id": "16",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -3.4667518893752396,
+      -2.7737346195785433,
+      -1.1870881039013437
+     ],
+     "max": [
+      -2.62579574037562,
+      -1.9945312398044932,
+      -0.18567138762670515
+     ],
+     "object_id": "10",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -2.5579968970510856,
+      -3.234632220526075,
+      -0.6690092442757457
+     ],
+     "max": [
+      -2.4187277115631867,
+      -3.104348369273579,
+      -0.5964511968010823
+     ],
+     "object_id": "37",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -1.8225408180185922,
+      -3.0834232434937054,
+      -1.189475314731001
+     ],
+     "max": [
+      -0.9330764903549341,
+      -2.2308820869539163,
+      -0.14388241851736627
+     ],
+     "object_id": "72",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -2.442777233844497,
+      -3.7242974600428957,
+      -1.1878076774371649
+     ],
+     "max": [
+      -1.690908640785834,
+      -2.9659053743061152,
+      -0.14447929113947527
+     ],
+     "object_id": "76",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office3/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office3_negative_001",
+   "scene_id": "replica_office3",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office3",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_office3/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  },
+  {
+   "query_id": "replica_office4_simple_001",
+   "scene_id": "replica_office4",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office4",
+   "query": "Find the door",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "door"
+   ],
+   "expected_object_id": "60",
+   "expected_object_ids": [
+    "60"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     3.6483812300828813,
+     4.000869895956692,
+     -1.200257784911261
+    ],
+    "max": [
+     4.692702331391765,
+     4.212369371934641,
+     1.4690880029806817
+    ],
+    "object_id": "60",
+    "label": "door",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      3.6483812300828813,
+      4.000869895956692,
+      -1.200257784911261
+     ],
+     "max": [
+      4.692702331391765,
+      4.212369371934641,
+      1.4690880029806817
+     ],
+     "object_id": "60",
+     "label": "door",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office4/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office4_simple_002",
+   "scene_id": "replica_office4",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office4",
+   "query": "Find the table",
+   "query_type": "simple_object",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "table"
+   ],
+   "expected_object_id": "49",
+   "expected_object_ids": [
+    "49"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.6782113066174963,
+     1.8805338198029686,
+     -1.1863638480811933
+    ],
+    "max": [
+     -0.05621096067377469,
+     2.4621193490641184,
+     -0.7287504697845569
+    ],
+    "object_id": "49",
+    "label": "table",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.6782113066174963,
+      1.8805338198029686,
+      -1.1863638480811933
+     ],
+     "max": [
+      -0.05621096067377469,
+      2.4621193490641184,
+      -0.7287504697845569
+     ],
+     "object_id": "49",
+     "label": "table",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office4/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office4_attribute_001",
+   "scene_id": "replica_office4",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office4",
+   "query": "Find the official Replica tv screen object",
+   "query_type": "attribute",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "tv-screen"
+   ],
+   "expected_object_id": "4",
+   "expected_object_ids": [
+    "4"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     1.116577542001475,
+     -2.1755779742385513,
+     -0.43195110938789943
+    ],
+    "max": [
+     3.6091975874669515,
+     -1.6833077367027263,
+     0.6786985818631198
+    ],
+    "object_id": "4",
+    "label": "tv-screen",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      1.116577542001475,
+      -2.1755779742385513,
+      -0.43195110938789943
+     ],
+     "max": [
+      3.6091975874669515,
+      -1.6833077367027263,
+      0.6786985818631198
+     ],
+     "object_id": "4",
+     "label": "tv-screen",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office4/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office4_relational_001",
+   "scene_id": "replica_office4",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office4",
+   "query": "Find the clock near Replica object 5",
+   "query_type": "relational",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "clock"
+   ],
+   "expected_object_id": "34",
+   "expected_object_ids": [
+    "34"
+   ],
+   "expected_anchor_object_ids": [
+    "5"
+   ],
+   "expected_bbox_3d": {
+    "min": [
+     2.207885752357,
+     -2.017272715246482,
+     0.912238843155716
+    ],
+    "max": [
+     2.5193089717245347,
+     -1.9629098414023765,
+     1.2038416169532224
+    ],
+    "object_id": "34",
+    "label": "clock",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      2.207885752357,
+      -2.017272715246482,
+      0.912238843155716
+     ],
+     "max": [
+      2.5193089717245347,
+      -1.9629098414023765,
+      1.2038416169532224
+     ],
+     "object_id": "34",
+     "label": "clock",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office4/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office4_multi_hop_001",
+   "scene_id": "replica_office4",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office4",
+   "query": "First inspect the scene objects, then find the camera",
+   "query_type": "multi_hop",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "camera"
+   ],
+   "expected_object_id": "5",
+   "expected_object_ids": [
+    "5"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     2.282543876003254,
+     -1.9901356972875646,
+     0.4757580773610637
+    ],
+    "max": [
+     2.429336301097938,
+     -1.8126352362566949,
+     0.5983655983163578
+    ],
+    "object_id": "5",
+    "label": "camera",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      2.282543876003254,
+      -1.9901356972875646,
+      0.4757580773610637
+     ],
+     "max": [
+      2.429336301097938,
+      -1.8126352362566949,
+      0.5983655983163578
+     ],
+     "object_id": "5",
+     "label": "camera",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office4/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office4_functional_001",
+   "scene_id": "replica_office4",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office4",
+   "query": "Find a place to sit on the chair",
+   "query_type": "functional",
+   "expected_output_type": "object_3d_bbox",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [
+    "v001"
+   ],
+   "expected_object_labels": [
+    "chair"
+   ],
+   "expected_object_id": "69",
+   "expected_object_ids": [
+    "69",
+    "15",
+    "12",
+    "2",
+    "13",
+    "3",
+    "17",
+    "19",
+    "20",
+    "31"
+   ],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": {
+    "min": [
+     -0.9172053883344058,
+     2.3994613646348073,
+     -1.20302357359266
+    ],
+    "max": [
+     0.33392887081106803,
+     3.6314965406593327,
+     -0.2898391059254432
+    ],
+    "object_id": "69",
+    "label": "chair",
+    "coordinate_frame": "replica_mesh_world_obb_aabb"
+   },
+   "expected_bboxes_3d": [
+    {
+     "min": [
+      -0.9172053883344058,
+      2.3994613646348073,
+      -1.20302357359266
+     ],
+     "max": [
+      0.33392887081106803,
+      3.6314965406593327,
+      -0.2898391059254432
+     ],
+     "object_id": "69",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      2.3986675226840344,
+      -0.13984459704428384,
+      -1.1886311746120666
+     ],
+     "max": [
+      3.10512148773215,
+      0.5526850987276811,
+      -0.14363817548679286
+     ],
+     "object_id": "15",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.296166835697971,
+      -1.8165030324251372,
+      -1.1697115817203345
+     ],
+     "max": [
+      2.040005344221109,
+      -1.0466858233000804,
+      -0.12713907205784492
+     ],
+     "object_id": "12",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      2.382690684826818,
+      -1.0749480355118297,
+      -1.1739028759187278
+     ],
+     "max": [
+      3.334059023899109,
+      -0.13266622356780083,
+      -0.1303529491932789
+     ],
+     "object_id": "2",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      -0.481232451488372,
+      -2.243454371382439,
+      -1.1700510900860446
+     ],
+     "max": [
+      0.71858629007827,
+      -1.0352569437132866,
+      -0.251113392637156
+     ],
+     "object_id": "13",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      2.490485293416726,
+      -1.789905790501574,
+      -1.17096657794069
+     ],
+     "max": [
+      3.332811343442596,
+      -0.9454624166340792,
+      -0.12669357076095158
+     ],
+     "object_id": "3",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.2505047580699284,
+      -1.003407488742441,
+      -1.1751377131860932
+     ],
+     "max": [
+      1.9637612680989023,
+      -0.27200691984044106,
+      -0.250391798981585
+     ],
+     "object_id": "17",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.137110741230526,
+      -0.3246375652438113,
+      -1.1792333681404874
+     ],
+     "max": [
+      1.9379165730192485,
+      0.46565956744337855,
+      -0.22812307841434767
+     ],
+     "object_id": "19",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.073400199474426,
+      0.40339730906260035,
+      -1.1865017820917165
+     ],
+     "max": [
+      1.9227925092293578,
+      1.2090448009412351,
+      -0.19044440463006826
+     ],
+     "object_id": "20",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    },
+    {
+     "min": [
+      1.7062497788241653,
+      1.1152690665725562,
+      -1.1868470205550972
+     ],
+     "max": [
+      2.444700606398591,
+      1.8909924292635274,
+      -0.1616618487381066
+     ],
+     "object_id": "31",
+     "label": "chair",
+     "coordinate_frame": "replica_mesh_world_obb_aabb"
+    }
+   ],
+   "acceptance_rule": "found=true and selected object ID is one acceptable official Replica GT object; Acc@k uses max IoU against expected_bboxes_3d",
+   "verification_status": "verified_official_replica_gt",
+   "verification_source": [
+    "backend/data/scenes/replica_office4/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "Recall@1",
+    "ObjectIDHit",
+    "Acc@0.1",
+    "Acc@0.25",
+    "Acc@0.5"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "bad_bbox",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": true
+  },
+  {
+   "query_id": "replica_office4_negative_001",
+   "scene_id": "replica_office4",
+   "source_dataset": "Replica",
+   "dataset_scene_id": "office4",
+   "query": "Find the fire hydrant",
+   "query_type": "negative",
+   "expected_output_type": "not_found",
+   "expected_zone_ids": [],
+   "expected_node_ids": [],
+   "expected_view_ids": [],
+   "expected_object_labels": [],
+   "expected_object_id": null,
+   "expected_object_ids": [],
+   "expected_anchor_object_ids": [],
+   "expected_bbox_3d": null,
+   "expected_bboxes_3d": [],
+   "acceptance_rule": "found=false because the queried object label is absent from official Replica GT for this scene",
+   "verification_status": "verified_official_replica_gt_absence",
+   "verification_source": [
+    "backend/data/scenes/replica_office4/ground_truth/object_boxes_3d.json"
+   ],
+   "metrics_target": [
+    "not_found_correctness"
+   ],
+   "failure_labels": [
+    "wrong_object",
+    "unavailable_prediction"
+   ],
+   "gt_3d_reliable": false
+  }
+ ]
+}

@@ -1,0 +1,73 @@
+{
+  "session_id": "auto_4e7474ea_g",
+  "scene_id": "default",
+  "original_query": "where is the projection screen in the ballroom",
+  "source": "benchmark_auto_graph",
+  "started_at": "2026-06-11T19:11:46.769716+00:00",
+  "finished_at": "2026-06-11T19:11:46.770295+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "screen",
+        "location_constraints": "ballroom",
+        "query_type": "object_finding",
+        "output_type": "3d_bbox",
+        "source": "graph_auto"
+      },
+      "prompt_excerpt": "Decompose query for semantic tree navigation: where is the projection screen in the ballroom",
+      "reasoning": "Parsed query 'where is the projection screen in the ballroom'. Target keywords and room constraints extracted; navigating semantic tree instead of scanning all views.",
+      "ts": "2026-06-11T19:11:46.769716+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_ballroom"
+      ],
+      "reasoning": "At 'Conference Hall' (root). Zone summary: Full venue: lobby reception wing and main ballroom with stage, service, and exits. Descending into 'Ballroom' — summary 'Grand event hall with banquet tables, projection screen, stage wall, service corner, and egress.' matches query room/object constraints. Siblings not taken: Lobby & reception.",
+      "ts": "2026-06-11T19:11:46.769725+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_ballroom",
+      "node_name": "Ballroom",
+      "children_count": 3,
+      "children_names": [
+        "Ballroom — floor & sides",
+        "Ballroom — stage & screen",
+        "Ballroom — exit passage"
+      ],
+      "descend_into": [
+        "leaf_ballroom_stage_front"
+      ],
+      "reasoning": "At 'Ballroom' (zone). Zone summary: Grand event hall with banquet tables, projection screen, stage wall, service corner, and egress. Descending into 'Ballroom — stage & screen' — summary 'Presentation end of the hall facing lowered projection screen, podium, and marble-trimmed stage wall.' matches query room/object constraints. Siblings not taken: Ballroom — floor & sides, Ballroom — exit passage.",
+      "ts": "2026-06-11T19:11:46.769729+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_stage_front",
+      "node_name": "Ballroom — stage & screen",
+      "view_id": "v017",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": "screen",
+      "explanation": "Conference hall facing a lowered projection screen with marble panels; green exit sign above a left doorway, ornate sconces flanking the stage wall, podium left and lectern right on patterned carpet.",
+      "reasoning": "Confirm object in view v017 within leaf 'Ballroom — stage & screen'. Match — correct zone for query.",
+      "ts": "2026-06-11T19:11:46.769791+00:00"
+    }
+  ],
+  "result": {
+    "found": true,
+    "view_id": "v017",
+    "mode": "graph_auto",
+    "explanation": "Conference hall facing a lowered projection screen with marble panels; green exit sign above a left doorway, ornate sconces flanking the stage wall, podium left and lectern right on patterned carpet."
+  }
+}

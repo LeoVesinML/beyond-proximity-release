@@ -1,0 +1,222 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_trace.v1",
+  "created_at": "2026-09-02T14:10:22.182311+00:00",
+  "query_id": "qv2_005",
+  "scene_id": "ConferenceHall",
+  "query": "Find the round tables",
+  "method": "graph_instruction",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "calls": [
+    {
+      "phase": "hierarchy_traversal",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the round tables\nCandidate C0: conference and banquet hall Main event hall views with round tables, chairs, piano-side hall context, and banquet seating.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C1: elevator and doorway access Elevator, doorway, and golden door-panel access views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C2: exit and wayfinding Exit sign, doorway, and wayfinding views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C3: lounge seating and corridor Lounge, corridor, art-wall, sofa, piano, and transition views around the captured hall.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C4: reception and service counter Reception counter, service counter, red-wall lobby, and adjacent counter views.\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C0: conference and banquet hall Main event hall views with round tables, chairs, piano-side hall context, and banquet seating.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C1: elevator and doorway access Elevator, doorway, and golden door-panel access views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C2: exit and wayfinding Exit sign, doorway, and wayfinding views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C3: lounge seating and corridor Lounge, corridor, art-wall, sofa, piano, and transition views around the captured hall.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C4: reception and service counter Reception counter, service counter, red-wall lobby, and adjacent counter views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C0,C4",
+      "candidate_scores": [
+        {
+          "alias": "C0",
+          "candidate_id": "manual_zone_conferencehall_banquet_hall",
+          "relevance_probability": 0.99529451,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "manual_zone_conferencehall_reception_service",
+          "relevance_probability": 0.00030628,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "manual_zone_conferencehall_lounge_corridor",
+          "relevance_probability": 0.0002744,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "manual_zone_conferencehall_exit_wayfinding",
+          "relevance_probability": 4.514e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "manual_zone_conferencehall_elevator_access",
+          "relevance_probability": 2.687e-05,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "manual_zone_conferencehall_banquet_hall",
+        "C1": "manual_zone_conferencehall_elevator_access",
+        "C2": "manual_zone_conferencehall_exit_wayfinding",
+        "C3": "manual_zone_conferencehall_lounge_corridor",
+        "C4": "manual_zone_conferencehall_reception_service"
+      },
+      "ranked_ids": [
+        "manual_zone_conferencehall_banquet_hall",
+        "manual_zone_conferencehall_reception_service"
+      ],
+      "input_tokens": 345,
+      "output_tokens": 5,
+      "total_tokens": 350,
+      "latency_ms": 4563.5587,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    },
+    {
+      "phase": "view_grounding",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the round tables\nCandidate C0: v001: Conference main hall with chairs, piano, tables, pictures, doors, lights and columns; conference hall area; sofas; chairs; column; piano; light; picture; piano\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C1: v004: Reception or service counter area with a long dark counter, table lamp, flower vase, corridor space, and red wall panels.; reception area; red wall corridor; reception counter; table lamp; flower vase; red wall panels; blue patterned carpet; ceiling lights; reception counter; red\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C2: v005: Banquet or conference room with round tables covered by white tablecloths, chairs, panel walls, and a large bright ceiling light feature.; banquet seating area; front wall area; round tables; chairs; wall panels; ceiling light feature; blue patterned carpet; banquet table cluster\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C3: v006: Banquet room from another angle with round white tables, covered chairs, beige walls, wall lamps, doorway area, and a ceiling light feature.; banquet seating area; doorway area; round tables; covered chairs; wall lamps; doorway; blue patterned carpet; ceiling light feature; doorw\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C4: v008: Lobby reception area with a long dark counter, chandelier lights, framed wall artwork, red wall panels, and a wide carpeted floor.; reception lobby; counter area; red wall area; reception counter; chandeliers; framed painting; red wall panels; blue patterned carpet; flower vase; \nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C5: v013: Lobby area with large columns, elevator doors, reception or service counter, lounge seating, wall artwork, and blue patterned carpet.; elevator lobby; service counter area; lounge seating area; columns; elevator doors; service counter; lounge chairs; wall artwork; blue patterned \nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C6: v017: Banquet room side view with round tables, white covered chairs, beige wall panels, a blue service cart or object, and floral decoration.; banquet seating side; service or wall area; round tables; covered chairs; blue service cart or box; floral decoration; beige wall panels; ceil\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the round tables\nCandidate C7: v018: Banquet room view with multiple round white tables, covered chairs, doorway area, wall panels, wall lamp, and blue patterned carpet.; banquet seating area; far doorway area; round tables; covered chairs; wall lamp; far doorway; beige wall panels; blue patterned carpet; far doorwa\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C0: v001: Conference main hall with chairs, piano, tables, pictures, doors, lights and columns; conference hall area; sofas; chairs; column; piano; light; picture; piano\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C1: v004: Reception or service counter area with a long dark counter, table lamp, flower vase, corridor space, and red wall panels.; reception area; red wall corridor; reception counter; table lamp; flower vase; red wall panels; blue patterned carpet; ceiling lights; reception counter; red\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C2: v005: Banquet or conference room with round tables covered by white tablecloths, chairs, panel walls, and a large bright ceiling light feature.; banquet seating area; front wall area; round tables; chairs; wall panels; ceiling light feature; blue patterned carpet; banquet table cluster\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C3: v006: Banquet room from another angle with round white tables, covered chairs, beige walls, wall lamps, doorway area, and a ceiling light feature.; banquet seating area; doorway area; round tables; covered chairs; wall lamps; doorway; blue patterned carpet; ceiling light feature; doorw\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C4: v008: Lobby reception area with a long dark counter, chandelier lights, framed wall artwork, red wall panels, and a wide carpeted floor.; reception lobby; counter area; red wall area; reception counter; chandeliers; framed painting; red wall panels; blue patterned carpet; flower vase; \nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C5: v013: Lobby area with large columns, elevator doors, reception or service counter, lounge seating, wall artwork, and blue patterned carpet.; elevator lobby; service counter area; lounge seating area; columns; elevator doors; service counter; lounge chairs; wall artwork; blue patterned \nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C6: v017: Banquet room side view with round tables, white covered chairs, beige wall panels, a blue service cart or object, and floral decoration.; banquet seating side; service or wall area; round tables; covered chairs; blue service cart or box; floral decoration; beige wall panels; ceil\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the round tables\nCandidate C7: v018: Banquet room view with multiple round white tables, covered chairs, doorway area, wall panels, wall lamp, and blue patterned carpet.; banquet seating area; far doorway area; round tables; covered chairs; wall lamp; far doorway; beige wall panels; blue patterned carpet; far doorwa\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C6,C7,C2",
+      "candidate_scores": [
+        {
+          "alias": "C6",
+          "candidate_id": "v017",
+          "relevance_probability": 0.99981731,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C7",
+          "candidate_id": "v018",
+          "relevance_probability": 0.99979907,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "v005",
+          "relevance_probability": 0.99759054,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "v006",
+          "relevance_probability": 0.99359387,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "v001",
+          "relevance_probability": 0.91035843,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "v013",
+          "relevance_probability": 0.01730053,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "v008",
+          "relevance_probability": 0.00090998,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "v004",
+          "relevance_probability": 0.00070547,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "v001",
+        "C1": "v004",
+        "C2": "v005",
+        "C3": "v006",
+        "C4": "v008",
+        "C5": "v013",
+        "C6": "v017",
+        "C7": "v018"
+      },
+      "ranked_ids": [
+        "v017",
+        "v018",
+        "v005"
+      ],
+      "input_tokens": 885,
+      "output_tokens": 8,
+      "total_tokens": 893,
+      "latency_ms": 8927.4941,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    }
+  ],
+  "result": {
+    "ranked_view_ids": [
+      "v017",
+      "v018",
+      "v005"
+    ],
+    "selected_view_id": "v017",
+    "found": true,
+    "selected_zone_ids": [
+      "manual_zone_conferencehall_banquet_hall",
+      "manual_zone_conferencehall_reception_service"
+    ],
+    "candidate_view_ids": [
+      "v001",
+      "v004",
+      "v005",
+      "v006",
+      "v008",
+      "v013",
+      "v017",
+      "v018"
+    ],
+    "views_checked": 8,
+    "response_valid": true,
+    "accounting": {
+      "model_call_count": 2,
+      "input_tokens": 1230,
+      "output_tokens": 13,
+      "total_tokens": 1243,
+      "latency_ms": 13491.0528
+    },
+    "quality": {
+      "eligible": true,
+      "expected_view_ids": [
+        "v005",
+        "v006",
+        "v017",
+        "v018"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0
+    }
+  }
+}

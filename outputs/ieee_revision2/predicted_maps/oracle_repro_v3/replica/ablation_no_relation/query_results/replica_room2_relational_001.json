@@ -1,0 +1,126 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "replica_bbq_aligned_public_dataset_v2_ablation_no_relation",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "replica_room2",
+  "query_id": "replica_room2_relational_001",
+  "query": "Find the table near Replica object 26",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "table",
+    "relation": "near",
+    "anchor": "replica 26",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_045_table"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_045_table"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_045_table",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "5"
+  ],
+  "search_variant": "ablation_no_relation",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "table",
+    "selected_object_id": "5",
+    "ranked_object_ids": [
+      "5"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "5",
+        "label": "table",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v001_045_table",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        2.944898,
+        -1.399116,
+        -1.645391
+      ],
+      "size": [
+        2.208613,
+        1.595757,
+        0.777048
+      ],
+      "label": "table",
+      "object_id": "5",
+      "coordinate_frame": "replica_habitat_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "ablation_no_relation selected object 5.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0029590420000005224,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0029590420000005224
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 2,
+    "checked_view_count": 1,
+    "checked_object_count": 1,
+    "context_size_chars": 95,
+    "prompt_size_chars": 132,
+    "estimated_input_tokens": 33,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

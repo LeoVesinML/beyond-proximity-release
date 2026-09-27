@@ -1,0 +1,138 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_ablation_no_relation",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0222_00",
+  "query_id": "scannet_0222_00_sr3d_plus_001",
+  "query": "the bed that is close to the laundry hamper",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "bed",
+    "relation": "closest",
+    "anchor": "laundry hamper",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_001_bed"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_001_bed"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_bed",
+    "object_v004_001_bed",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "0",
+    "5"
+  ],
+  "search_variant": "ablation_no_relation",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bed",
+    "selected_object_id": "0",
+    "ranked_object_ids": [
+      "0",
+      "5"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "0",
+        "label": "bed",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "5",
+        "label": "bed",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v001_001_bed",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.866034,
+        1.465372,
+        0.465039
+      ],
+      "size": [
+        2.206152,
+        1.014044,
+        1.022375
+      ],
+      "label": "bed",
+      "object_id": "0",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "ablation_no_relation selected object 0.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0006723750000006135,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0006723750000006135
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 3,
+    "checked_view_count": 2,
+    "checked_object_count": 2,
+    "context_size_chars": 312,
+    "prompt_size_chars": 355,
+    "estimated_input_tokens": 89,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,123 @@
+{
+  "session_id": "d809b008",
+  "scene_id": "default",
+  "original_query": "where is the exit sign",
+  "started_at": "2026-04-07T21:42:20.878838+00:00",
+  "finished_at": "2026-04-07T21:43:21.440193+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "exit sign (green illuminated exit sign)",
+        "location_constraints": null,
+        "attribute_constraints": {
+          "color": "green",
+          "state": "illuminated"
+        },
+        "relational_constraints": null,
+        "functional_constraints": "emergency egress signage",
+        "query_type": "object_finding",
+        "output_type": "3d_bbox"
+      },
+      "prompt_excerpt": "Query: where is the exit sign — target: green illuminated exit sign",
+      "ts": "2026-04-07T21:42:35.828433+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Main Hall Zone",
+        "Stage Zone"
+      ],
+      "descend_into": [
+        "zone_main_hall",
+        "zone_stage"
+      ],
+      "reasoning": "Exit signs appear in both ballroom wall (v013) and stage-front zone (v018, v019) per keyword pre-scan.",
+      "ts": "2026-04-07T21:42:49.084447+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_main_hall",
+      "node_name": "Main Hall Zone",
+      "children_count": 3,
+      "children_names": [
+        "Lobby Corridor",
+        "Reception And Entrance Doors",
+        "Main Ballroom Floor"
+      ],
+      "descend_into": [
+        "leaf_ballroom"
+      ],
+      "reasoning": "Keyword scan found exit sign in v013 which is in leaf_ballroom; lobby and reception summaries do not mention exit signs.",
+      "ts": "2026-04-07T21:42:56.822310+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom",
+      "node_name": "Main Ballroom Floor",
+      "view_id": "v013",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.12,
+        0.22,
+        0.22,
+        0.28
+      ],
+      "matched_object": "exit sign (green, above doorway)",
+      "explanation": "exit sign object explicitly labelled in v013 view JSON, above doorway on ballroom wall, confidence 0.88.",
+      "ts": "2026-04-07T21:43:09.348849+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_stage",
+      "node_name": "Stage Zone",
+      "children_count": 1,
+      "children_names": [
+        "Projection Stage Front"
+      ],
+      "descend_into": [
+        "leaf_stage"
+      ],
+      "reasoning": "Stage zone contains only leaf_stage; keyword scan confirms exit sign in v018 and v019.",
+      "ts": "2026-04-07T21:43:09.379772+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_stage",
+      "node_name": "Projection Stage Front",
+      "view_id": "v019",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.42,
+        0.18,
+        0.52,
+        0.25
+      ],
+      "matched_object": "exit sign (green, above door, centre-frame)",
+      "explanation": "Closest and most prominent exit sign in scene — above exit doorway at stage back, confidence 0.90.",
+      "ts": "2026-04-07T21:43:21.419190+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": "v019",
+      "explanation": "Exit sign found in 3 views. Best match: v019 (leaf_stage, Stage Zone) — green exit sign above centre doorway, confidence 0.90. Also visible in v013 (leaf_ballroom) and v018 (leaf_stage).",
+      "confidence": 0.9,
+      "bbox_3d": null,
+      "ts": "2026-04-07T21:43:21.440193+00:00"
+    }
+  ],
+  "result": {
+    "query": "where is the exit sign",
+    "found": true,
+    "view_id": "v019",
+    "bbox_3d": null,
+    "camera_pose": null,
+    "confidence": 0.9,
+    "explanation": "Exit sign found in 3 views. Best match: v019 (leaf_stage, Stage Zone) — green exit sign above centre doorway, confidence 0.90. Also visible in v013 (leaf_ballroom) and v018 (leaf_stage)."
+  }
+}

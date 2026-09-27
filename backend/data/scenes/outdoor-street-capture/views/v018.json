@@ -1,0 +1,159 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v018",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v018.png",
+  "depth_path": "depths/v018_depth.npy",
+  "pose_ref": "transforms.json#/frames/17/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Red building facade with barred windows or doors, blue vertical pipes, and cobblestone pavement.",
+  "visible_regions": [
+    {
+      "label": "red facade area",
+      "description": "bright red exterior wall with barred openings",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "barred doorway/window area",
+      "description": "metal-barred openings along the red wall",
+      "approx_location": "center and right",
+      "source": "manual"
+    },
+    {
+      "label": "paved sidewalk",
+      "description": "cobblestone ground in front of the facade",
+      "approx_location": "foreground",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "red building facade",
+      "attributes": [
+        "bright red",
+        "street wall"
+      ],
+      "approx_location": "center and background",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.44,
+        1.0,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -58.97522012746641,
+          24.278340438394785,
+          28.263110044950846
+        ],
+        "size": [
+          69.77315104342846,
+          21.803218115386656,
+          43.46516951921246
+        ],
+        "label": "red building facade"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "barred windows or doors",
+      "attributes": [
+        "metal bars",
+        "multiple"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "blue vertical pipes",
+      "attributes": [
+        "blue",
+        "utility pipes"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small upper window",
+      "attributes": [
+        "rectangular",
+        "barred"
+      ],
+      "approx_location": "upper center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone pavement",
+      "attributes": [
+        "outdoor ground"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -27.32002533450503,
+          16.070564470962623,
+          37.90859829141303
+        ],
+        "size": [
+          9.52375575613926,
+          5.895695342577952,
+          15.468633590505199
+        ],
+        "label": "cobblestone pavement"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "yellow-black facade detail",
+      "attributes": [
+        "colored section",
+        "left side"
+      ],
+      "approx_location": "left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "red barred facade",
+      "description": "bright red wall with barred openings",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "blue vertical pipes",
+      "description": "blue pipes running down the red facade",
+      "approx_location": "center and right",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Strong view for red facade, barred windows, blue pipes, and exterior wall queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

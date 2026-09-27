@@ -1,0 +1,258 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0030_00",
+  "query_id": "scannet_0030_00_nr3d_001",
+  "query": "The tall bookshelf that is closest to the door,",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "tall bookshelf",
+    "relation": "closest",
+    "anchor": "door",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v002_003_bookshelf"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v002_003_bookshelf"
+  ],
+  "selected_views": [
+    "v002"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_bookshelf",
+    "object_v002_003_bookshelf",
+    "object_v002_004_bookshelf",
+    "object_v002_016_bookshelf",
+    "object_v004_002_bookshelf",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "18",
+    "17",
+    "20",
+    "68",
+    "19"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bookshelf",
+    "selected_object_id": "17",
+    "ranked_object_ids": [
+      "17",
+      "18",
+      "19",
+      "20",
+      "68"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "17",
+        "label": "bookshelf",
+        "score": 0.375,
+        "relation_confidence": 0.546017,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "18",
+        "label": "bookshelf",
+        "score": 0.375,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "19",
+        "label": "bookshelf",
+        "score": 0.375,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 4,
+        "object_id": "20",
+        "label": "bookshelf",
+        "score": 0.375,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 5,
+        "object_id": "68",
+        "label": "bookshelf",
+        "score": 0.375,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v002_003_bookshelf",
+    "selected_view_id": "v002",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -2.169142,
+        0.476985,
+        1.028226
+      ],
+      "size": [
+        0.559743,
+        1.088058,
+        2.024813
+      ],
+      "label": "bookshelf",
+      "object_id": "17",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.375,
+    "explanation": "graph selected object 17.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 5,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "17",
+          "label": "bookshelf",
+          "relation_score": 1.0,
+          "relation_confidence": 0.546017,
+          "relation_applied": false,
+          "relation_source": "relative_bbox_distance",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "18",
+          "label": "bookshelf",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 2
+        },
+        {
+          "object_id": "19",
+          "label": "bookshelf",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 3,
+          "post_relation_rank": 3
+        },
+        {
+          "object_id": "20",
+          "label": "bookshelf",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 4,
+          "post_relation_rank": 4
+        },
+        {
+          "object_id": "68",
+          "label": "bookshelf",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 5,
+          "post_relation_rank": 5
+        }
+      ]
+    },
+    "search_score": 0.375,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.5,
+      "text_overlap": 0.5,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.375,
+      "relation": "closest",
+      "anchor": "door",
+      "anchor_secondary": null,
+      "relation_score": 1.0,
+      "relation_source": "relative_bbox_distance",
+      "relation_confidence": 0.546017,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "53",
+          "matched": true,
+          "normalized_distance": 0.424847
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.2,
+        "score_margin": 0.8,
+        "candidate_count": 2,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "53"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 0.375,
+      "relation_distance": 0.424847,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.002191999999997307,
+    "stage_runtime_seconds": {
+      "answer_query": 0.002191999999997307
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 6,
+    "checked_view_count": 3,
+    "checked_object_count": 5,
+    "context_size_chars": 853,
+    "prompt_size_chars": 900,
+    "estimated_input_tokens": 225,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

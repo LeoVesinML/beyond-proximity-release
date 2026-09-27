@@ -1,0 +1,29 @@
+{
+  "schema_version": "semanticsplat.raw_rgbd_hierarchy_run_config.v1",
+  "model": "openai/clip-vit-base-patch32",
+  "seed": 20260724,
+  "image_batch_size": 8,
+  "text_batch_size": 32,
+  "threads": 12,
+  "source_policy": {
+    "allowed": [
+      "transforms.json",
+      "images/*",
+      "depths/*"
+    ],
+    "forbidden_during_construction": [
+      "views/*.json",
+      "tree/*.json",
+      "manual_zone_gt_v2.json"
+    ],
+    "manual_viewjson_files_read": 0,
+    "manual_zone_files_read": 0
+  },
+  "feature_weights": {
+    "clip": 1.0,
+    "pose": 0.5,
+    "depth": 0.2
+  },
+  "cluster_count_selection": "maximum silhouette over k=2..min(8,floor(n/3))",
+  "manual_reference_loaded_after_raw_hierarchy_write": true
+}

@@ -1,0 +1,39 @@
+{
+  "config_version": "semanticsplat.experiment_config.v1",
+  "week": "week3",
+  "run_id": "phase_b_semantic_smoke_v1",
+  "method": "semantic_splat",
+  "mode": "stub",
+  "supported_modes": ["stub"],
+  "scene_root": "backend/data/scenes",
+  "scene_ids": ["ConferenceHall-capture-pilot"],
+  "scenes": [
+    {
+      "scene_id": "ConferenceHall-capture-pilot",
+      "benchmark_scene_id": "ConferenceHall",
+      "path": "backend/data/scenes/ConferenceHall-capture-pilot",
+      "semantic_eval_allowed": true,
+      "geometry_eval_allowed": false,
+      "validation_report": "docs/validation/semantic_index/ConferenceHall-capture-pilot_semantic_index.json"
+    }
+  ],
+  "benchmark_path": "docs/benchmarks/benchmark_queries_v1.json",
+  "output_root": "outputs/week3",
+  "resume": true,
+  "query_limit": 5,
+  "depth_sample_limit": 3,
+  "view_selection": {
+    "strategy": "existing",
+    "max_views": null
+  },
+  "model": {
+    "temperature": 0.0,
+    "cache_dir": "outputs/week3/model_cache"
+  },
+  "notes": [
+    "Phase B smoke only; this is not the final Week 3 semantic gate.",
+    "Stub mode tests deterministic semantic-index loading and retrieval, not live model reasoning.",
+    "Benchmark records lack independent semantic GT, so no accuracy claim is permitted.",
+    "Geometry evaluation remains disabled."
+  ]
+}

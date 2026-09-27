@@ -1,0 +1,611 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_graph_fallback",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0086_00",
+  "query_id": "scannet_0086_00_sr3d_plus_003",
+  "query": "select the plant that is above the paper towel dispenser",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "plant",
+    "relation": "above",
+    "anchor": "paper towel dispenser",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_002_plant"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_002_plant"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_mirror",
+    "object_v001_002_plant",
+    "object_v001_003_soap_dispenser",
+    "object_v001_004_trash_can",
+    "object_v001_005_paper_towel_dispenser",
+    "object_v001_006_paper_towel_dispenser",
+    "object_v001_007_sink",
+    "object_v001_008_sink",
+    "object_v001_009_bottle",
+    "object_v001_010_wall",
+    "object_v001_011_wall",
+    "object_v002_001_wall",
+    "object_v002_002_door",
+    "object_v002_003_door",
+    "object_v002_004_doorframe",
+    "object_v002_005_doorframe",
+    "object_v003_001_bathroom_stall",
+    "object_v003_002_floor",
+    "object_v003_003_toilet_seat_cover_dispenser",
+    "object_v003_004_toilet",
+    "object_v003_005_toilet",
+    "object_v003_006_bathroom_stall_door",
+    "object_v003_007_window",
+    "object_v003_008_trash_can",
+    "object_v003_009_rail",
+    "object_v003_010_rail",
+    "object_v003_011_toilet_paper_dispenser",
+    "object_v003_012_toilet_paper_dispenser",
+    "object_v003_013_bathroom_stall",
+    "object_v003_014_bathroom_stall_door",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v003"
+  ],
+  "checked_object_ids": [
+    "0",
+    "4",
+    "12",
+    "13",
+    "17",
+    "18",
+    "19",
+    "20",
+    "23",
+    "24",
+    "25",
+    "2",
+    "8",
+    "9",
+    "26",
+    "27",
+    "1",
+    "3",
+    "5",
+    "6",
+    "7",
+    "10",
+    "11",
+    "14",
+    "15",
+    "16",
+    "21",
+    "22",
+    "28",
+    "29"
+  ],
+  "search_variant": "graph_fallback",
+  "fallback_used": true,
+  "fallback_reason": "relation_unresolved",
+  "result": {
+    "found": true,
+    "matched_object": "plant",
+    "selected_object_id": "4",
+    "ranked_object_ids": [
+      "4",
+      "0",
+      "1",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "4",
+        "label": "plant",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "0",
+        "label": "mirror",
+        "score": 0.0,
+        "relation_confidence": 0.5,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "1",
+        "label": "bathroom stall",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 4,
+        "object_id": "10",
+        "label": "bathroom stall door",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 5,
+        "object_id": "11",
+        "label": "window",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 6,
+        "object_id": "12",
+        "label": "soap dispenser",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 7,
+        "object_id": "13",
+        "label": "trash can",
+        "score": 0.0,
+        "relation_confidence": 0.390257,
+        "relation_applied": false
+      },
+      {
+        "rank": 8,
+        "object_id": "14",
+        "label": "trash can",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 9,
+        "object_id": "15",
+        "label": "rail",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 10,
+        "object_id": "16",
+        "label": "rail",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_002_plant",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.839486,
+        1.655977,
+        1.647337
+      ],
+      "size": [
+        0.209298,
+        0.315886,
+        0.439683
+      ],
+      "label": "plant",
+      "object_id": "4",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "graph_fallback selected object 4.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 30,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "4",
+          "label": "plant",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "0",
+          "label": "mirror",
+          "relation_score": 1.0,
+          "relation_confidence": 0.5,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 2
+        },
+        {
+          "object_id": "1",
+          "label": "bathroom stall",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 3,
+          "post_relation_rank": 3
+        },
+        {
+          "object_id": "10",
+          "label": "bathroom stall door",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 4,
+          "post_relation_rank": 4
+        },
+        {
+          "object_id": "11",
+          "label": "window",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 5,
+          "post_relation_rank": 5
+        },
+        {
+          "object_id": "12",
+          "label": "soap dispenser",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 6,
+          "post_relation_rank": 6
+        },
+        {
+          "object_id": "13",
+          "label": "trash can",
+          "relation_score": 1.0,
+          "relation_confidence": 0.390257,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 7,
+          "post_relation_rank": 7
+        },
+        {
+          "object_id": "14",
+          "label": "trash can",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 8,
+          "post_relation_rank": 8
+        },
+        {
+          "object_id": "15",
+          "label": "rail",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 9,
+          "post_relation_rank": 9
+        },
+        {
+          "object_id": "16",
+          "label": "rail",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 10,
+          "post_relation_rank": 10
+        },
+        {
+          "object_id": "17",
+          "label": "paper towel dispenser",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 11,
+          "post_relation_rank": 11
+        },
+        {
+          "object_id": "18",
+          "label": "paper towel dispenser",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 12,
+          "post_relation_rank": 12
+        },
+        {
+          "object_id": "19",
+          "label": "sink",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 13,
+          "post_relation_rank": 13
+        },
+        {
+          "object_id": "2",
+          "label": "wall",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 14,
+          "post_relation_rank": 14
+        },
+        {
+          "object_id": "20",
+          "label": "sink",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 15,
+          "post_relation_rank": 15
+        },
+        {
+          "object_id": "21",
+          "label": "toilet paper dispenser",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 16,
+          "post_relation_rank": 16
+        },
+        {
+          "object_id": "22",
+          "label": "toilet paper dispenser",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 17,
+          "post_relation_rank": 17
+        },
+        {
+          "object_id": "23",
+          "label": "bottle",
+          "relation_score": 1.0,
+          "relation_confidence": 0.5,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 18,
+          "post_relation_rank": 18
+        },
+        {
+          "object_id": "24",
+          "label": "wall",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 19,
+          "post_relation_rank": 19
+        },
+        {
+          "object_id": "25",
+          "label": "wall",
+          "relation_score": 1.0,
+          "relation_confidence": 0.5,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 20,
+          "post_relation_rank": 20
+        },
+        {
+          "object_id": "26",
+          "label": "doorframe",
+          "relation_score": 1.0,
+          "relation_confidence": 0.5,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 21,
+          "post_relation_rank": 21
+        },
+        {
+          "object_id": "27",
+          "label": "doorframe",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 22,
+          "post_relation_rank": 22
+        },
+        {
+          "object_id": "28",
+          "label": "bathroom stall",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 23,
+          "post_relation_rank": 23
+        },
+        {
+          "object_id": "29",
+          "label": "bathroom stall door",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 24,
+          "post_relation_rank": 24
+        },
+        {
+          "object_id": "3",
+          "label": "floor",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 25,
+          "post_relation_rank": 25
+        },
+        {
+          "object_id": "5",
+          "label": "toilet seat cover dispenser",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 26,
+          "post_relation_rank": 26
+        },
+        {
+          "object_id": "6",
+          "label": "toilet",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 27,
+          "post_relation_rank": 27
+        },
+        {
+          "object_id": "7",
+          "label": "toilet",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 28,
+          "post_relation_rank": 28
+        },
+        {
+          "object_id": "8",
+          "label": "door",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 29,
+          "post_relation_rank": 29
+        },
+        {
+          "object_id": "9",
+          "label": "door",
+          "relation_score": 1.0,
+          "relation_confidence": 0.115629,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 30,
+          "post_relation_rank": 30
+        }
+      ]
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "above",
+      "anchor": "paper towel dispenser",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "17",
+          "matched": false,
+          "margin": -0.021694,
+          "confidence": 0.0
+        },
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "18",
+          "matched": false,
+          "margin": -0.021451,
+          "confidence": 0.0
+        }
+      ],
+      "anchor_evidence": {
+        "status": "ambiguous",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 1.0,
+        "score_margin": 0.0,
+        "candidate_count": 6,
+        "selected_count": 2,
+        "selected_object_ids": [
+          "17",
+          "18"
+        ],
+        "confidence": 0.5
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0062789169999999395,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0062789169999999395
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 31,
+    "checked_view_count": 3,
+    "checked_object_count": 30,
+    "context_size_chars": 5503,
+    "prompt_size_chars": 5559,
+    "estimated_input_tokens": 1390,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

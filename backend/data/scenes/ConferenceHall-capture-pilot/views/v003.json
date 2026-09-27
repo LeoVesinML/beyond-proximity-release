@@ -1,0 +1,168 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v003",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v003.png",
+  "depth_path": "depths/v003_depth.npy",
+  "pose_ref": "transforms.json#/frames/2/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Hotel lobby corridor with large columns, lounge seating in the background, a piano or dark console object, elevator doors, and blue patterned carpet.",
+  "visible_regions": [
+    {
+      "label": "lobby corridor",
+      "description": "open corridor-like lobby area",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "elevator area",
+      "description": "area around the golden elevator doors",
+      "approx_location": "right side",
+      "source": "manual"
+    },
+    {
+      "label": "lounge area",
+      "description": "seating zone visible in the background",
+      "approx_location": "left rear side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "columns",
+      "attributes": [
+        "large",
+        "multiple",
+        "marble-like"
+      ],
+      "approx_location": "center and left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "elevator doors",
+      "attributes": [
+        "golden",
+        "double doors"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.04,
+        1.0,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -9.02943444358403,
+          6.918489838298105,
+          9.586943502475489
+        ],
+        "size": [
+          16.60035226455652,
+          18.288756709012397,
+          30.228989158183133
+        ],
+        "label": "elevator doors"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "piano",
+      "attributes": [
+        "black",
+        "large",
+        "near wall"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": [
+        0.42,
+        0.42,
+        0.82,
+        0.96
+      ],
+      "bbox_3d": {
+        "center": [
+          -25.15067071146268,
+          13.791026959396183,
+          19.260853473249433
+        ],
+        "size": [
+          47.69751904312524,
+          23.859282294609915,
+          56.95979618266797
+        ],
+        "label": "piano"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "sofa",
+      "attributes": [
+        "cream",
+        "background"
+      ],
+      "approx_location": "left rear side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall picture",
+      "attributes": [
+        "framed"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "elevator doors",
+      "description": "golden elevator doors useful as a navigation target",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "black piano",
+      "description": "large dark object near the wall useful for orientation",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "marble columns",
+      "description": "large columns dividing the lobby space",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for queries about elevator, piano, columns, and lobby corridor.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

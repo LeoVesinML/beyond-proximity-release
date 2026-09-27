@@ -1,0 +1,132 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v007",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v007.png",
+  "depth_path": "depths/v007_depth.npy",
+  "pose_ref": "transforms.json#/frames/6/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial view over open water with a rocky island or hill, distant coastline, and mountains under a bright sky.",
+  "visible_regions": [
+    {
+      "label": "open bay",
+      "description": "large water body in the foreground",
+      "approx_location": "center and foreground",
+      "source": "manual"
+    },
+    {
+      "label": "rocky island or hill",
+      "description": "small elevated landform surrounded by water",
+      "approx_location": "center-right",
+      "source": "manual"
+    },
+    {
+      "label": "distant coast and mountains",
+      "description": "shoreline and hills on the horizon",
+      "approx_location": "background",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "rocky island or hill",
+      "attributes": [
+        "brown",
+        "low",
+        "surrounded by water"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "open water",
+      "attributes": [
+        "blue-green",
+        "wide"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          10.982545937762655,
+          5.237873133898838,
+          -0.47874859746799103
+        ],
+        "size": [
+          16.825435621532527,
+          12.568964131315914,
+          27.968910815184366
+        ],
+        "label": "open water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant coastline",
+      "attributes": [
+        "far",
+        "thin"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "mountains",
+      "attributes": [
+        "distant",
+        "brown-gray"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "sky",
+      "attributes": [
+        "bright",
+        "clear"
+      ],
+      "approx_location": "upper area",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "rocky island or hill",
+      "description": "distinct landform in the bay",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "distant mountain ridge",
+      "description": "mountainous horizon behind the bay",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for broad water/landform orientation queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

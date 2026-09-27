@@ -1,0 +1,249 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_trace.v1",
+  "created_at": "2026-09-02T18:50:44.479565+00:00",
+  "query_id": "qv2_109",
+  "scene_id": "outdoor-street",
+  "query": "Find the covered walkway in the covered passage",
+  "method": "graph_instruction",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "calls": [
+    {
+      "phase": "hierarchy_traversal",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the covered walkway in the covered passage\nCandidate C0: courtyard stairs and service facade Courtyard, stair entrance, service wall, emergency doors, and basement-window side views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C1: covered passage and graffiti wall Covered passage, graffiti wall, underpass, alley, red wall side, and bright opening views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C2: facade entrances and glass-block wall Glass-block entrance, numbered entrance, facade details, utility panels, and service entry views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C3: red facade and side alley Red facade, side alley, barred doorway/window, and distant opening views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C4: street walkway and roadway Street walkway, cobblestone ground, roadway, sidewalk, and street-corner views.\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C0: courtyard stairs and service facade Courtyard, stair entrance, service wall, emergency doors, and basement-window side views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C1: covered passage and graffiti wall Covered passage, graffiti wall, underpass, alley, red wall side, and bright opening views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C2: facade entrances and glass-block wall Glass-block entrance, numbered entrance, facade details, utility panels, and service entry views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C3: red facade and side alley Red facade, side alley, barred doorway/window, and distant opening views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C4: street walkway and roadway Street walkway, cobblestone ground, roadway, sidewalk, and street-corner views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C4,C1",
+      "candidate_scores": [
+        {
+          "alias": "C4",
+          "candidate_id": "manual_zone_outdoor_street_walkway_road",
+          "relevance_probability": 0.92706048,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "manual_zone_outdoor_street_covered_passage_graffiti",
+          "relevance_probability": 0.6670621,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "manual_zone_outdoor_street_red_facade_alley",
+          "relevance_probability": 0.0094573,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "manual_zone_outdoor_street_courtyard_stair_service",
+          "relevance_probability": 0.00630734,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "manual_zone_outdoor_street_facade_entrance_glassblock",
+          "relevance_probability": 0.000235,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "manual_zone_outdoor_street_courtyard_stair_service",
+        "C1": "manual_zone_outdoor_street_covered_passage_graffiti",
+        "C2": "manual_zone_outdoor_street_facade_entrance_glassblock",
+        "C3": "manual_zone_outdoor_street_red_facade_alley",
+        "C4": "manual_zone_outdoor_street_walkway_road"
+      },
+      "ranked_ids": [
+        "manual_zone_outdoor_street_walkway_road",
+        "manual_zone_outdoor_street_covered_passage_graffiti"
+      ],
+      "input_tokens": 390,
+      "output_tokens": 5,
+      "total_tokens": 395,
+      "latency_ms": 4457.0616,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    },
+    {
+      "phase": "view_grounding",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the covered walkway in the covered passage\nCandidate C0: v003: Covered service passage or wall corner with graffiti, red-and-blue traffic signs, tiled walls, and a paved open area.; graffiti wall area; covered passage; open paved area; graffiti; traffic signs; tiled wall; overhead structure; paved ground; glass-block or grid wall; graffiti w\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C1: v004: Blurred covered passage leading out to a red brick building or courtyard, with tiled walls and a bright outdoor opening.; covered passage; bright courtyard opening; brick building view; covered walkway; tiled wall; bright outdoor opening; red brick building; paved floor; bright p\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C2: v010: Building corner with a rounded metal facade, red and yellow wall section, checkerboard pattern, windows, and cobblestone pavement.; rounded facade corner; red-yellow facade section; street walkway; rounded metal facade; red wall section; yellow and blue checker pattern; windows; \nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C3: v011: Outdoor service corner with a beige building wall, cobblestone ground, a small recessed door or utility panel, and grass growing along the base.; service corner; cobblestone ground; wall base vegetation; small utility door or panel; beige stone wall; cobblestone pavement; grass a\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C4: v012: Narrow alley between a red building wall and a brick or stone wall, with windows at the far end and cobblestone ground.; narrow alley; red wall side; brick wall side; red building wall; brick or stone wall; narrow cobblestone path; far windows; small wall fixtures; drain or groun\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C5: v013: Covered outdoor underpass or building entrance passage with stone columns, tiled walls, ceiling lights, and cobblestone ground.; covered underpass; stone column area; interior passage opening; stone columns; covered ceiling; ceiling lights; cobblestone ground; tiled walls; red wa\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C6: v014: Street-side building corner with a red facade, sidewalk, metal handrail, and view toward another building across the street.; street corner; red facade side; street view; red building facade; sidewalk or pavement; metal handrail; neighboring building; window openings; street curb\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C7: v015: Blurry outdoor street view with trees, parked cars, roadway, and surrounding buildings.; street roadway; tree-lined side; building side; parked car; trees; roadway; building facades; sidewalk or curb; white parked car; tree-lined street\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C8: v016: Very blurred covered passage or building interior-exterior transition with dark walls, a light doorway, and red building wall outside.; blurred passage; light opening; red exterior side; dark passage walls; bright doorway opening; red exterior wall; floor surface; ceiling light o\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C9: v017: Narrow outdoor alley beside a beige building wall, with cobblestone path and a distant opening toward another building.; narrow side alley; beige wall side; distant opening; beige building wall; cobblestone path; wall windows; distant building; red wall edge; drain or ground seam\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the covered walkway in the covered passage\nCandidate C10: v018: Red building facade with barred windows or doors, blue vertical pipes, and cobblestone pavement.; red facade area; barred doorway/window area; paved sidewalk; red building facade; barred windows or doors; blue vertical pipes; small upper window; cobblestone pavement; yellow-black\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C0: v003: Covered service passage or wall corner with graffiti, red-and-blue traffic signs, tiled walls, and a paved open area.; graffiti wall area; covered passage; open paved area; graffiti; traffic signs; tiled wall; overhead structure; paved ground; glass-block or grid wall; graffiti w\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C1: v004: Blurred covered passage leading out to a red brick building or courtyard, with tiled walls and a bright outdoor opening.; covered passage; bright courtyard opening; brick building view; covered walkway; tiled wall; bright outdoor opening; red brick building; paved floor; bright p\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C2: v010: Building corner with a rounded metal facade, red and yellow wall section, checkerboard pattern, windows, and cobblestone pavement.; rounded facade corner; red-yellow facade section; street walkway; rounded metal facade; red wall section; yellow and blue checker pattern; windows; \nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C3: v011: Outdoor service corner with a beige building wall, cobblestone ground, a small recessed door or utility panel, and grass growing along the base.; service corner; cobblestone ground; wall base vegetation; small utility door or panel; beige stone wall; cobblestone pavement; grass a\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C4: v012: Narrow alley between a red building wall and a brick or stone wall, with windows at the far end and cobblestone ground.; narrow alley; red wall side; brick wall side; red building wall; brick or stone wall; narrow cobblestone path; far windows; small wall fixtures; drain or groun\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C5: v013: Covered outdoor underpass or building entrance passage with stone columns, tiled walls, ceiling lights, and cobblestone ground.; covered underpass; stone column area; interior passage opening; stone columns; covered ceiling; ceiling lights; cobblestone ground; tiled walls; red wa\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C6: v014: Street-side building corner with a red facade, sidewalk, metal handrail, and view toward another building across the street.; street corner; red facade side; street view; red building facade; sidewalk or pavement; metal handrail; neighboring building; window openings; street curb\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C7: v015: Blurry outdoor street view with trees, parked cars, roadway, and surrounding buildings.; street roadway; tree-lined side; building side; parked car; trees; roadway; building facades; sidewalk or curb; white parked car; tree-lined street\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C8: v016: Very blurred covered passage or building interior-exterior transition with dark walls, a light doorway, and red building wall outside.; blurred passage; light opening; red exterior side; dark passage walls; bright doorway opening; red exterior wall; floor surface; ceiling light o\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C9: v017: Narrow outdoor alley beside a beige building wall, with cobblestone path and a distant opening toward another building.; narrow side alley; beige wall side; distant opening; beige building wall; cobblestone path; wall windows; distant building; red wall edge; drain or ground seam\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the covered walkway in the covered passage\nCandidate C10: v018: Red building facade with barred windows or doors, blue vertical pipes, and cobblestone pavement.; red facade area; barred doorway/window area; paved sidewalk; red building facade; barred windows or doors; blue vertical pipes; small upper window; cobblestone pavement; yellow-black\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C1,C5,C0",
+      "candidate_scores": [
+        {
+          "alias": "C1",
+          "candidate_id": "v004",
+          "relevance_probability": 0.92728955,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "v013",
+          "relevance_probability": 0.83410305,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "v003",
+          "relevance_probability": 0.63235462,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "v010",
+          "relevance_probability": 0.38404009,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C6",
+          "candidate_id": "v014",
+          "relevance_probability": 0.2141844,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C7",
+          "candidate_id": "v015",
+          "relevance_probability": 0.09563217,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C8",
+          "candidate_id": "v016",
+          "relevance_probability": 0.0829718,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "v011",
+          "relevance_probability": 0.08238679,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C10",
+          "candidate_id": "v018",
+          "relevance_probability": 0.06724506,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "v012",
+          "relevance_probability": 0.05578093,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C9",
+          "candidate_id": "v017",
+          "relevance_probability": 0.01592115,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "v003",
+        "C1": "v004",
+        "C2": "v010",
+        "C3": "v011",
+        "C4": "v012",
+        "C5": "v013",
+        "C6": "v014",
+        "C7": "v015",
+        "C8": "v016",
+        "C9": "v017",
+        "C10": "v018"
+      },
+      "ranked_ids": [
+        "v004",
+        "v013",
+        "v003"
+      ],
+      "input_tokens": 1281,
+      "output_tokens": 11,
+      "total_tokens": 1292,
+      "latency_ms": 11719.7047,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    }
+  ],
+  "result": {
+    "ranked_view_ids": [
+      "v004",
+      "v013",
+      "v003"
+    ],
+    "selected_view_id": "v004",
+    "found": true,
+    "selected_zone_ids": [
+      "manual_zone_outdoor_street_walkway_road",
+      "manual_zone_outdoor_street_covered_passage_graffiti"
+    ],
+    "candidate_view_ids": [
+      "v003",
+      "v004",
+      "v010",
+      "v011",
+      "v012",
+      "v013",
+      "v014",
+      "v015",
+      "v016",
+      "v017",
+      "v018"
+    ],
+    "views_checked": 11,
+    "response_valid": true,
+    "accounting": {
+      "model_call_count": 2,
+      "input_tokens": 1671,
+      "output_tokens": 16,
+      "total_tokens": 1687,
+      "latency_ms": 16176.7663
+    },
+    "quality": {
+      "eligible": true,
+      "expected_view_ids": [
+        "v004"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0
+    }
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "session_id": "d0a8168f",
+  "scene_id": "default",
+  "original_query": "Find the piano",
+  "started_at": "2026-07-22T11:20:42.621222+00:00",
+  "finished_at": "2026-07-22T11:20:43.338534+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "piano",
+        "location_constraints": null,
+        "query_type": "object_finding",
+        "output_type": "3d_bbox"
+      },
+      "prompt_excerpt": "Analyze this query for a 3D scene search system.\nQuery: 'Find the piano'\n\nExtract:\n- target: the primary object or subject being sought\n- location_constraints: explicit spatial scope mentioned in the query (or null)\n- attribute_constraints: color, size, material, style, etc. (object or null)\n- relat",
+      "ts": "2026-07-22T11:20:42.637011+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_lobby_reception"
+      ],
+      "reasoning": "At 'Conference Hall' (root). Zone summary: Full venue: lobby reception wing and main ballroom with stage, service, and exits. Descending into 'Lobby & reception' — summary 'Circulation, lounges, foyer, bar, vestibule, and reception desk before the main ballroom doors.' matches query constraints. Siblings not taken: Ballroom.",
+      "ts": "2026-07-22T11:20:42.971307+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_lobby_reception",
+      "node_name": "Lobby & reception",
+      "children_count": 3,
+      "children_names": [
+        "Corridor & lounge wing",
+        "Foyer & pre-function lounge",
+        "Bar, vestibule & reception"
+      ],
+      "descend_into": [
+        "leaf_lobby_foyer_prefunction"
+      ],
+      "reasoning": "At 'Lobby & reception' (zone). Zone summary: Circulation, lounges, foyer, bar, vestibule, and reception desk before the main ballroom doors. Descending into 'Foyer & pre-function lounge' — summary 'Grand piano foyer, double doors, and pre-function lounge with artwork and egress signage.' matches query constraints. Siblings not taken: Corridor & lounge wing, Bar, vestibule & reception.",
+      "ts": "2026-07-22T11:20:42.983424+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby",
+      "node_name": "Lobby Corridor",
+      "view_id": "v006",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Wide foyer with marble pillars receding left, black grand piano against a textured wall, and pale double doors on the right; blue patterned carpet fills the floor.",
+      "ts": "2026-07-22T11:20:42.996630+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby",
+      "node_name": "Lobby Corridor",
+      "view_id": "v007",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.39,
+        0.37,
+        0.63,
+        0.63
+      ],
+      "matched_object": "grand piano",
+      "explanation": "Hall with marble pillars on the left, black grand piano centre-right, cream double doors on the right wall, and blue wave-pattern carpet.",
+      "ts": "2026-07-22T11:20:43.009448+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby",
+      "node_name": "Lobby Corridor",
+      "view_id": "v008",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Pre-function lounge with large left wall painting, central cocktail table, right-side sofa cluster, chandeliers, and green exit signs on pillars and distant doorway.",
+      "ts": "2026-07-22T11:20:43.022033+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": "v007",
+      "explanation": "Hall with marble pillars on the left, black grand piano centre-right, cream double doors on the right wall, and blue wave-pattern carpet.",
+      "confidence": 0.9,
+      "bbox_3d": null,
+      "ts": "2026-07-22T11:20:43.338576+00:00"
+    }
+  ],
+  "result": {
+    "found": true,
+    "view_id": "v007",
+    "explanation": "Hall with marble pillars on the left, black grand piano centre-right, cream double doors on the right wall, and blue wave-pattern carpet.",
+    "confidence": 0.9,
+    "bbox_3d": null,
+    "query": "Find the piano"
+  }
+}

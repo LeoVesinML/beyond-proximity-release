@@ -1,0 +1,160 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v003",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v003.png",
+  "depth_path": "depths/v003_depth.npy",
+  "pose_ref": "transforms.json#/frames/2/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Covered service passage or wall corner with graffiti, red-and-blue traffic signs, tiled walls, and a paved open area.",
+  "visible_regions": [
+    {
+      "label": "graffiti wall area",
+      "description": "wall section covered with graffiti and signs",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "covered passage",
+      "description": "sheltered outdoor passage under a building overhang",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "open paved area",
+      "description": "flat pavement in front of the wall",
+      "approx_location": "foreground",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "graffiti",
+      "attributes": [
+        "pink and black",
+        "wall text"
+      ],
+      "approx_location": "left wall",
+      "confidence": null,
+      "bbox_2d": [
+        0.04,
+        0.08,
+        0.48,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          14.672068034636563,
+          -7.879469678726302,
+          4.524915775155522
+        ],
+        "size": [
+          21.437597969227184,
+          22.663359247248643,
+          14.825831371613127
+        ],
+        "label": "graffiti"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "traffic signs",
+      "attributes": [
+        "red and blue",
+        "no parking or restriction signs"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.18,
+        0.58,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          7.227062169050239,
+          -2.8797682176078756,
+          -1.2473540696354872
+        ],
+        "size": [
+          9.016811851440899,
+          7.3474764481277,
+          8.286065240197487
+        ],
+        "label": "traffic signs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "tiled wall",
+      "attributes": [
+        "yellow-beige",
+        "rectangular tiles"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "overhead structure",
+      "attributes": [
+        "building overhang",
+        "covered"
+      ],
+      "approx_location": "top",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "paved ground",
+      "attributes": [
+        "flat",
+        "outdoor"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "glass-block or grid wall",
+      "attributes": [
+        "translucent",
+        "right side"
+      ],
+      "approx_location": "right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "graffiti wall",
+      "description": "bright graffiti and signs make this wall section distinctive",
+      "approx_location": "left and center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red-blue traffic signs",
+      "description": "two circular traffic signs on the wall",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Strong landmark view for graffiti, traffic signs, and covered passage queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

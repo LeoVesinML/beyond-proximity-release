@@ -1,0 +1,161 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "replica_bbq_aligned_public_dataset_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "replica_room0",
+  "query_id": "replica_room0_functional_001",
+  "query": "Find a place to sit on the chair",
+  "query_type": "functional",
+  "structured_plan": {
+    "target": "place to sit on chair",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_089_chair"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_089_chair"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_049_sofa",
+    "object_v001_089_chair",
+    "object_v001_090_chair",
+    "object_v001_091_sofa",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "9",
+    "73",
+    "74",
+    "77"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "chair",
+    "selected_object_id": "73",
+    "ranked_object_ids": [
+      "73",
+      "74",
+      "77",
+      "9"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "73",
+        "label": "chair",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "74",
+        "label": "chair",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "77",
+        "label": "sofa",
+        "score": 0.03571428571428571,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 4,
+        "object_id": "9",
+        "label": "sofa",
+        "score": 0.03571428571428571,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v001_089_chair",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        5.758645,
+        1.225453,
+        -0.961753
+      ],
+      "size": [
+        0.895084,
+        0.837362,
+        1.088278
+      ],
+      "label": "chair",
+      "object_id": "73",
+      "coordinate_frame": "replica_habitat_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.25,
+    "explanation": "graph selected object 73.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.25,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.333333,
+      "text_overlap": 0.333333,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [
+        "sit"
+      ],
+      "lexical_score": 0.25,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.001258541000000002,
+    "stage_runtime_seconds": {
+      "answer_query": 0.001258541000000002
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 5,
+    "checked_view_count": 1,
+    "checked_object_count": 4,
+    "context_size_chars": 381,
+    "prompt_size_chars": 413,
+    "estimated_input_tokens": 103,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

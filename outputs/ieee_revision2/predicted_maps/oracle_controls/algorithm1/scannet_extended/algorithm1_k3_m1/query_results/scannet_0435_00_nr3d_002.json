@@ -1,0 +1,202 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0435_00",
+  "query_id": "scannet_0435_00_nr3d_002",
+  "query": "the picture is above the desk.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "picture",
+    "relation": "above",
+    "anchor": "desk",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v006_001_picture"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v006_001_picture"
+  ],
+  "selected_views": [
+    "v006"
+  ],
+  "checked_node_ids": [
+    "object_v001_003_ceiling",
+    "object_v001_004_picture",
+    "object_v004_004_floor",
+    "object_v004_008_toilet",
+    "object_v004_017_wall",
+    "object_v004_019_towel",
+    "object_v004_020_toilet_paper",
+    "object_v004_021_trash_can",
+    "object_v004_022_shower_curtain",
+    "object_v005_005_wall",
+    "object_v005_006_cabinet",
+    "object_v005_007_tv",
+    "object_v006_001_picture",
+    "object_v006_002_ceiling",
+    "object_v007_001_wall",
+    "object_v007_003_trash_can",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v004",
+    "v005",
+    "v006",
+    "v007"
+  ],
+  "checked_object_ids": [
+    "56",
+    "57",
+    "6",
+    "12",
+    "26",
+    "30",
+    "31",
+    "32",
+    "33",
+    "19",
+    "61",
+    "62",
+    "28",
+    "29",
+    "1",
+    "58"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "picture",
+    "selected_object_id": "28",
+    "ranked_object_ids": [
+      "28",
+      "57",
+      "1"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "28",
+        "label": "picture",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "57",
+        "label": "picture",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "1",
+        "label": "wall",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v006_001_picture",
+    "selected_view_id": "v006",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        1.286566,
+        -3.449981,
+        1.493432
+      ],
+      "size": [
+        0.034492,
+        0.424369,
+        0.51761
+      ],
+      "label": "picture",
+      "object_id": "28",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 28.",
+    "relation_satisfied": false,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "above",
+      "anchor": "desk",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "4",
+          "matched": false,
+          "margin": -4.720929,
+          "confidence": 0.0
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "4"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.004593915999999254,
+    "stage_runtime_seconds": {
+      "answer_query": 0.004593915999999254
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 17,
+    "checked_view_count": 5,
+    "checked_object_count": 16,
+    "context_size_chars": 2754,
+    "prompt_size_chars": 2784,
+    "estimated_input_tokens": 696,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

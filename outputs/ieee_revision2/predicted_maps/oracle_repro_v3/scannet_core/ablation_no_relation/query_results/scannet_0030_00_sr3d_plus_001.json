@@ -1,0 +1,242 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_ablation_no_relation",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0030_00",
+  "query_id": "scannet_0030_00_sr3d_plus_001",
+  "query": "the office chair that is close to the bag",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "office chair",
+    "relation": "closest",
+    "anchor": "bag",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v006_001_office_chair"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v006_001_office_chair"
+  ],
+  "selected_views": [
+    "v006"
+  ],
+  "checked_node_ids": [
+    "object_v002_001_chair",
+    "object_v002_002_chair",
+    "object_v004_001_chair",
+    "object_v005_001_office_chair",
+    "object_v005_002_office_chair",
+    "object_v005_003_chair",
+    "object_v005_004_chair",
+    "object_v005_005_chair",
+    "object_v005_006_chair",
+    "object_v005_007_chair",
+    "object_v005_008_chair",
+    "object_v006_001_office_chair",
+    "object_v006_002_chair",
+    "object_v006_003_chair",
+    "object_v006_004_chair",
+    "object_v006_005_chair",
+    "object_v006_009_armchair",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v002",
+    "v004",
+    "v005",
+    "v006"
+  ],
+  "checked_object_ids": [
+    "3",
+    "15",
+    "7",
+    "1",
+    "2",
+    "4",
+    "5",
+    "8",
+    "9",
+    "10",
+    "13",
+    "0",
+    "6",
+    "11",
+    "12",
+    "14",
+    "52"
+  ],
+  "search_variant": "ablation_no_relation",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "office chair",
+    "selected_object_id": "0",
+    "ranked_object_ids": [
+      "0",
+      "1",
+      "2",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "3"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "0",
+        "label": "office chair",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "1",
+        "label": "office chair",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "2",
+        "label": "office chair",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 4,
+        "object_id": "10",
+        "label": "chair",
+        "score": 0.375,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 5,
+        "object_id": "11",
+        "label": "chair",
+        "score": 0.375,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 6,
+        "object_id": "12",
+        "label": "chair",
+        "score": 0.375,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 7,
+        "object_id": "13",
+        "label": "chair",
+        "score": 0.375,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 8,
+        "object_id": "14",
+        "label": "chair",
+        "score": 0.375,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 9,
+        "object_id": "15",
+        "label": "chair",
+        "score": 0.375,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 10,
+        "object_id": "3",
+        "label": "chair",
+        "score": 0.375,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v006_001_office_chair",
+    "selected_view_id": "v006",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        1.845924,
+        0.34225,
+        0.458625
+      ],
+      "size": [
+        0.680743,
+        0.426044,
+        0.776433
+      ],
+      "label": "office chair",
+      "object_id": "0",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "ablation_no_relation selected object 0.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.002039541999998562,
+    "stage_runtime_seconds": {
+      "answer_query": 0.002039541999998562
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 18,
+    "checked_view_count": 4,
+    "checked_object_count": 17,
+    "context_size_chars": 2864,
+    "prompt_size_chars": 2905,
+    "estimated_input_tokens": 726,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,76 @@
+{
+  "query_id": "qv2_140",
+  "scene_id": "outdoor-drone",
+  "query": "Find the marina or harbor cluster in the marina area",
+  "query_type": "multi_hop",
+  "expected_view_ids": [
+    "v004",
+    "v011"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016"
+      ],
+      "prompt_sha256": "714b91b4b77713d0896b7c35b9c49dea5d070b20512eb0470536660b019971f1",
+      "raw_output": "v011",
+      "chosen_id": "v011",
+      "valid": true,
+      "input_tokens": 1119,
+      "output_tokens": 5,
+      "latency_ms": 3105.6972,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v003",
+        "v004",
+        "v011"
+      ],
+      "prompt_sha256": "fce4374961bdbbc78444557bb9a264ea38baf9cfb3753899fb17ae9a24ebd8aa",
+      "raw_output": "v011",
+      "chosen_id": "v011",
+      "valid": true,
+      "input_tokens": 277,
+      "output_tokens": 5,
+      "latency_ms": 1023.1955,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v003",
+        "v004",
+        "v011"
+      ],
+      "prompt_sha256": "fce4374961bdbbc78444557bb9a264ea38baf9cfb3753899fb17ae9a24ebd8aa",
+      "raw_output": "v011",
+      "chosen_id": "v011",
+      "valid": true,
+      "input_tokens": 277,
+      "output_tokens": 5,
+      "latency_ms": 892.7035,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

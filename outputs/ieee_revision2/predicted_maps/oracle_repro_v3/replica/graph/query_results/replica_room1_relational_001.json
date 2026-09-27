@@ -1,0 +1,160 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "replica_bbq_aligned_public_dataset_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "replica_room1",
+  "query_id": "replica_room1_relational_001",
+  "query": "Find the rug near Replica object 32",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "rug",
+    "relation": "near",
+    "anchor": "replica 32",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_041_rug"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_041_rug"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_041_rug",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "20"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "rug",
+    "selected_object_id": "20",
+    "ranked_object_ids": [
+      "20"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "20",
+        "label": "rug",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_041_rug",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.982946,
+        0.815856,
+        -1.319376
+      ],
+      "size": [
+        3.297989,
+        2.655334,
+        0.140457
+      ],
+      "label": "rug",
+      "object_id": "20",
+      "coordinate_frame": "replica_habitat_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "graph selected object 20.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 1,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "20",
+          "label": "rug",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        }
+      ]
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "near",
+      "anchor": "replica 32",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [],
+      "anchor_evidence": {
+        "status": "rejected",
+        "reason": "low_anchor_confidence",
+        "top_score": 0.2,
+        "second_score": 0.1,
+        "score_margin": 0.1,
+        "candidate_count": 54,
+        "confidence": 0.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0012512919999999594,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0012512919999999594
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 2,
+    "checked_view_count": 1,
+    "checked_object_count": 1,
+    "context_size_chars": 94,
+    "prompt_size_chars": 129,
+    "estimated_input_tokens": 32,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

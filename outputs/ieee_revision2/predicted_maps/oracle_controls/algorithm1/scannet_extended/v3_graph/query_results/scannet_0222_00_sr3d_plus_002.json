@@ -1,0 +1,235 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_v3_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0222_00",
+  "query_id": "scannet_0222_00_sr3d_plus_002",
+  "query": "select the door that is far from the dresser",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "door",
+    "relation": "farthest",
+    "anchor": "dresser",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v005_007_door"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v005_007_door"
+  ],
+  "selected_views": [
+    "v005"
+  ],
+  "checked_node_ids": [
+    "object_v003_002_door",
+    "object_v003_003_doorframe",
+    "object_v005_007_door",
+    "object_v005_008_doorframe",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v003",
+    "v005"
+  ],
+  "checked_object_ids": [
+    "3",
+    "4",
+    "24",
+    "25"
+  ],
+  "search_variant": "v3_graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "door",
+    "selected_object_id": "24",
+    "ranked_object_ids": [
+      "24",
+      "3",
+      "25",
+      "4"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "24",
+        "label": "door",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "3",
+        "label": "door",
+        "score": 1.0,
+        "relation_confidence": 0.641934,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "25",
+        "label": "doorframe",
+        "score": 0.2,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 4,
+        "object_id": "4",
+        "label": "doorframe",
+        "score": 0.2,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v005_007_door",
+    "selected_view_id": "v005",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.921944,
+        -2.379053,
+        0.950434
+      ],
+      "size": [
+        0.263672,
+        0.876466,
+        1.993546
+      ],
+      "label": "door",
+      "object_id": "24",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "v3_graph selected object 24.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 4,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "24",
+          "label": "door",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "3",
+          "label": "door",
+          "relation_score": 1.0,
+          "relation_confidence": 0.641934,
+          "relation_applied": false,
+          "relation_source": "relative_bbox_distance",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 2
+        },
+        {
+          "object_id": "25",
+          "label": "doorframe",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 3,
+          "post_relation_rank": 3
+        },
+        {
+          "object_id": "4",
+          "label": "doorframe",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 4,
+          "post_relation_rank": 4
+        }
+      ]
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "farthest",
+      "anchor": "dresser",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "bbox_3d",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "22",
+          "matched": true,
+          "normalized_distance": 2.309085
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "22"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0013401250000004694,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0013401250000004694
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 5,
+    "checked_view_count": 2,
+    "checked_object_count": 4,
+    "context_size_chars": 692,
+    "prompt_size_chars": 736,
+    "estimated_input_tokens": 184,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

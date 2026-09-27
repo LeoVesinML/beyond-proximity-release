@@ -1,0 +1,125 @@
+{
+  "session_id": "8552670e",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "original_query": "find a collumn",
+  "started_at": "2026-07-22T11:34:47.698187+00:00",
+  "finished_at": "2026-07-22T11:34:48.850449+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "column columns pillar pillars",
+        "query_type": "object_finding",
+        "parser": "deterministic_tokenizer_v1"
+      },
+      "prompt_excerpt": "Analyze this query for a 3D scene search system.\nQuery: 'find a collumn'\n\nExtract:\n- target: the primary object or subject being sought\n- location_constraints: explicit spatial scope mentioned in the query (or null)\n- attribute_constraints: color, size, material, style, etc. (object or null)\n- relat",
+      "ts": "2026-07-22T11:34:47.793319+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root",
+      "node_name": "ConferenceHall-capture-pilot",
+      "children_count": 5,
+      "children_names": [
+        "conference and banquet hall",
+        "elevator and doorway access",
+        "exit and wayfinding",
+        "lounge seating and corridor",
+        "reception and service counter"
+      ],
+      "descend_into": [
+        "manual_zone_conferencehall_banquet_hall"
+      ],
+      "reasoning": "[stub] Deterministic lexical traversal over the saved captured semantic index.",
+      "ts": "2026-07-22T11:34:48.144773+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "manual_zone_conferencehall_banquet_hall",
+      "node_name": "conference and banquet hall",
+      "children_count": 36,
+      "children_names": [
+        "piano",
+        "banquet table cluster",
+        "large ceiling light feature",
+        "blue service cart or box",
+        "geometric wall panels",
+        "far doorway",
+        "round table cluster",
+        "sofas",
+        "chairs",
+        "column",
+        "piano",
+        "light",
+        "picture",
+        "round tables",
+        "chairs",
+        "wall panels",
+        "ceiling light feature",
+        "blue patterned carpet",
+        "round tables",
+        "covered chairs",
+        "blue service cart or box",
+        "floral decoration",
+        "beige wall panels",
+        "ceiling lights",
+        "round tables",
+        "covered chairs",
+        "wall lamp",
+        "far doorway",
+        "beige wall panels",
+        "blue patterned carpet",
+        "banquet seating area",
+        "banquet seating side",
+        "conference hall area",
+        "far doorway area",
+        "front wall area",
+        "service or wall area"
+      ],
+      "descend_into": [
+        "object_v001_003_column"
+      ],
+      "reasoning": "[stub] Deterministic lexical traversal over the saved captured semantic index.",
+      "ts": "2026-07-22T11:34:48.496907+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "object_v001_003_column",
+      "node_name": "column",
+      "view_id": "v001",
+      "found": true,
+      "confidence": "stub",
+      "bbox_2d": [
+        0.05,
+        0.42,
+        0.95,
+        0.96
+      ],
+      "matched_object": "column",
+      "explanation": "[stub] Deterministic lexical fallback selected v001 with 2 token matches.",
+      "ts": "2026-07-22T11:34:48.848802+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": "v001",
+      "explanation": "[stub] Deterministic lexical fallback selected v001 with 2 token matches.",
+      "confidence": 0.5,
+      "bbox_3d": null,
+      "ts": "2026-07-22T11:34:48.850460+00:00"
+    }
+  ],
+  "result": {
+    "found": true,
+    "view_id": "v001",
+    "explanation": "[stub] Deterministic lexical fallback selected v001 with 2 token matches.",
+    "confidence": 0.5,
+    "bbox_3d": null,
+    "query": "find a collumn",
+    "mode": "stub",
+    "semantic_index_mode": "manual",
+    "warnings": [
+      "Stub mode uses deterministic lexical matching over saved semantic descriptions.",
+      "This result is not live or cached-live model reasoning."
+    ]
+  }
+}

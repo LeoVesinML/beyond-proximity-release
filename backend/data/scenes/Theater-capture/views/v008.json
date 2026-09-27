@@ -1,0 +1,96 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v008",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v008.png",
+  "depth_path": "depths/v008_depth.npy",
+  "pose_ref": "transforms.json#/frames/7/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Close corridor view with a dark wall, red emergency sign or button, and part of a white door or cabinet.",
+  "visible_regions": [
+    {
+      "label": "dark wall section",
+      "description": "plain dark wall panel in a service corridor",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "door edge area",
+      "description": "white vertical door or cabinet edge",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "red emergency sign or button",
+      "attributes": [
+        "small",
+        "red",
+        "wall-mounted"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "dark wall panel",
+      "attributes": [
+        "large",
+        "plain"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "white door or cabinet edge",
+      "attributes": [
+        "vertical",
+        "white"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "floor edge",
+      "attributes": [
+        "service corridor"
+      ],
+      "approx_location": "lower area",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "red emergency sign",
+      "description": "small red sign/button on the dark wall",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "white door edge",
+      "description": "white vertical edge beside the dark wall",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Sparse close-up view; useful mainly for red emergency marker and nearby door/wall location.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

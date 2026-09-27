@@ -1,0 +1,148 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v019",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v019.png",
+  "depth_path": "depths/v019_depth.npy",
+  "pose_ref": "transforms.json#/frames/18/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Building service entrance with glass-block wall, green slanted dumpster or container, vented metal panel, and cobblestone ground.",
+  "visible_regions": [
+    {
+      "label": "service entrance area",
+      "description": "outdoor utility entrance with container and vent panel",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "glass-block wall",
+      "description": "translucent wall section beside the service area",
+      "approx_location": "center-right",
+      "source": "manual"
+    },
+    {
+      "label": "container area",
+      "description": "green slanted dumpster or utility container in front of the wall",
+      "approx_location": "center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "green dumpster or container",
+      "attributes": [
+        "slanted",
+        "utility"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "glass-block wall",
+      "attributes": [
+        "translucent",
+        "vertical"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": [
+        0.37,
+        0.04,
+        0.87,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -32.12351575824781,
+          19.269627457690405,
+          26.59045042864182
+        ],
+        "size": [
+          28.245527525427168,
+          29.198746058173953,
+          31.275968746804274
+        ],
+        "label": "glass-block wall"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "metal vent panel",
+      "attributes": [
+        "gray",
+        "louvered"
+      ],
+      "approx_location": "upper center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "purple or red facade wall",
+      "attributes": [
+        "colored",
+        "left/right"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone ground",
+      "attributes": [
+        "outdoor paving"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small door or service opening",
+      "attributes": [
+        "partly visible"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "green utility container",
+      "description": "slanted green container in front of the service wall",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "glass-block service wall",
+      "description": "translucent block wall beside the container",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "metal vent panel",
+      "description": "large louvered vent above the service area",
+      "approx_location": "upper center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for service entrance, green container, vent, and glass-block wall queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

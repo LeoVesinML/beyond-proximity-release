@@ -1,0 +1,188 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0435_00",
+  "query_id": "scannet_0435_00_nr3d_003",
+  "query": "The bed closer to the windows.",
+  "query_type": "simple_object",
+  "structured_plan": {
+    "target": "bed",
+    "relation": "closest",
+    "anchor": "windows",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_007_bed"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_007_bed"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v002_002_sofa_chair",
+    "object_v002_003_wall",
+    "object_v002_004_backpack",
+    "object_v002_005_clothing",
+    "object_v002_006_lamp",
+    "object_v002_007_curtain",
+    "object_v003_001_bed",
+    "object_v003_002_lamp",
+    "object_v003_003_nightstand",
+    "object_v003_004_pillow",
+    "object_v003_005_pillow",
+    "object_v003_006_pillow",
+    "object_v003_007_pillow",
+    "object_v003_008_pillow",
+    "object_v003_009_pillow",
+    "object_v004_007_bed",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v002",
+    "v003",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "7",
+    "37",
+    "48",
+    "49",
+    "50",
+    "51",
+    "11",
+    "38",
+    "39",
+    "40",
+    "41",
+    "44",
+    "45",
+    "46",
+    "47",
+    "10"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "bed",
+    "selected_object_id": "10",
+    "ranked_object_ids": [
+      "10",
+      "11",
+      "37"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "10",
+        "label": "bed",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "11",
+        "label": "bed",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "37",
+        "label": "wall",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v004_007_bed",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.911602,
+        -0.94072,
+        0.719087
+      ],
+      "size": [
+        2.129031,
+        1.809325,
+        1.547576
+      ],
+      "label": "bed",
+      "object_id": "10",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 10.",
+    "relation_satisfied": false,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "closest",
+      "anchor": "windows",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [],
+      "anchor_evidence": {
+        "status": "rejected",
+        "reason": "low_anchor_confidence",
+        "top_score": 0.0,
+        "second_score": 0.0,
+        "score_margin": 0.0,
+        "candidate_count": 0,
+        "confidence": 0.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0023119999999998697,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0023119999999998697
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 17,
+    "checked_view_count": 3,
+    "checked_object_count": 16,
+    "context_size_chars": 2691,
+    "prompt_size_chars": 2721,
+    "estimated_input_tokens": 680,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

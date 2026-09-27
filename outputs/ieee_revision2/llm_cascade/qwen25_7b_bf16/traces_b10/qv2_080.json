@@ -1,0 +1,153 @@
+{
+  "query_id": "qv2_080",
+  "scene_id": "Theater",
+  "query": "Find the corridor passage in the backstage corridor",
+  "query_type": "multi_hop",
+  "expected_view_ids": [
+    "v001",
+    "v003",
+    "v006",
+    "v007"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "e011b1c2af8bf2653074005400879a13f47d512f812048e35f3358f04c48bfec",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v017",
+      "chosen_id": "v017",
+      "valid": true,
+      "input_tokens": 1413,
+      "output_tokens": 5,
+      "latency_ms": 3588.8278,
+      "correct": false,
+      "target_in_context": true
+    },
+    "all_records__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "e011b1c2af8bf2653074005400879a13f47d512f812048e35f3358f04c48bfec",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v017",
+      "chosen_id": "v017",
+      "valid": true,
+      "input_tokens": 1413,
+      "output_tokens": 5,
+      "latency_ms": 3438.1327,
+      "correct": false,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v006"
+      ],
+      "prompt_sha256": "92d92e5152015af78f55768d0bdbf6c3e530cd760a805559b83eee49c0ecab7a",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 259,
+      "output_tokens": 5,
+      "latency_ms": 1033.2283,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v006"
+      ],
+      "prompt_sha256": "92d92e5152015af78f55768d0bdbf6c3e530cd760a805559b83eee49c0ecab7a",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 259,
+      "output_tokens": 5,
+      "latency_ms": 916.9003,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v006"
+      ],
+      "prompt_sha256": "92d92e5152015af78f55768d0bdbf6c3e530cd760a805559b83eee49c0ecab7a",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 259,
+      "output_tokens": 5,
+      "latency_ms": 933.7176,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v003",
+        "v006"
+      ],
+      "prompt_sha256": "92d92e5152015af78f55768d0bdbf6c3e530cd760a805559b83eee49c0ecab7a",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v001",
+      "chosen_id": "v001",
+      "valid": true,
+      "input_tokens": 259,
+      "output_tokens": 5,
+      "latency_ms": 937.7623,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

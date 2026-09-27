@@ -1,0 +1,209 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_trace.v1",
+  "created_at": "2026-09-02T18:02:32.415439+00:00",
+  "query_id": "qv2_034",
+  "scene_id": "Museume",
+  "query": "Find the stone ruin",
+  "method": "graph_instruction",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "calls": [
+    {
+      "phase": "hierarchy_traversal",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the stone ruin\nCandidate C0: entrance and information Entrance lobby, stair, information counter, and visitor information views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C1: red-panel exhibition gallery Red panels, wall labels, exhibition corridor, historical photographs, and display-wall views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C2: Reichenstein and media station Reichenstein exhibit wall, information panel, media station, and adjacent window-side views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C3: ruin and label gallery Stone ruin, label rail, dark niche, and surrounding exhibit views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C4: visitor seating and workshop Workshop corner, bench, chairs, and visitor seating views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C5: window and mesh side Window-side gallery views with mesh partitions, seating, and side displays.\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C0: entrance and information Entrance lobby, stair, information counter, and visitor information views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C1: red-panel exhibition gallery Red panels, wall labels, exhibition corridor, historical photographs, and display-wall views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C2: Reichenstein and media station Reichenstein exhibit wall, information panel, media station, and adjacent window-side views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C3: ruin and label gallery Stone ruin, label rail, dark niche, and surrounding exhibit views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C4: visitor seating and workshop Workshop corner, bench, chairs, and visitor seating views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C5: window and mesh side Window-side gallery views with mesh partitions, seating, and side displays.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C3,C0",
+      "candidate_scores": [
+        {
+          "alias": "C3",
+          "candidate_id": "manual_zone_museume_ruin_label_gallery",
+          "relevance_probability": 0.95351321,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "manual_zone_museume_entrance_information",
+          "relevance_probability": 0.18980895,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "manual_zone_museume_reichenstein_media",
+          "relevance_probability": 0.00374969,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "manual_zone_museume_visitor_seating_workshop",
+          "relevance_probability": 0.00021592,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "manual_zone_museume_red_panel_gallery",
+          "relevance_probability": 4.694e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "manual_zone_museume_window_mesh_side",
+          "relevance_probability": 2.815e-05,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "manual_zone_museume_entrance_information",
+        "C1": "manual_zone_museume_red_panel_gallery",
+        "C2": "manual_zone_museume_reichenstein_media",
+        "C3": "manual_zone_museume_ruin_label_gallery",
+        "C4": "manual_zone_museume_visitor_seating_workshop",
+        "C5": "manual_zone_museume_window_mesh_side"
+      },
+      "ranked_ids": [
+        "manual_zone_museume_ruin_label_gallery",
+        "manual_zone_museume_entrance_information"
+      ],
+      "input_tokens": 413,
+      "output_tokens": 6,
+      "total_tokens": 419,
+      "latency_ms": 5087.3993,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    },
+    {
+      "phase": "view_grounding",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find the stone ruin\nCandidate C0: v001: Museum entrance or lobby area with an information counter, green digital information screens, stairs, display items, and a glass doorway.; entrance lobby; stair area; information counter area; information counter; green information screens; stairs; glass entrance door; display it\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C1: v002: Museum lobby or education area with glass doors to the outside, storage shelves, chairs, a table with materials, and colorful wall panels.; window entrance area; education or workshop corner; storage shelf area; glass doors; storage shelves; small drawers cabinet; chairs; table w\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C2: v004: Archaeological exhibition area with a large rough stone wall or ruin fragment, glass or metal barriers, and a row of information labels.; ruin display area; label rail area; gallery walkway; stone wall ruin; information labels; protective barrier; red exhibition panel; metal mesh\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C3: v005: Museum gallery view with a stone ruin exhibit, a freestanding information stand, red exhibition panels, and metal mesh barriers.; stone ruin exhibit; information stand area; red panel gallery wall; stone ruin; information stand; red exhibition panels; metal mesh barriers; display\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C4: v010: Close view of archaeological stone remains with rough stone walls and dark openings or niches.; stone remains display; dark niche area; stone wall remains; dark openings; stone blocks; exhibit backing wall; protective display edge; dark stone openings; rough stone wall\nRelevant? Answer exactly Yes or No.",
+        "Query: Find the stone ruin\nCandidate C5: v015: Long gallery corridor with stone ruin on the left, large historical image panels on the wall, mesh partitions, and a red panel in the distance.; long exhibition corridor; stone ruin side; historical panel wall; stone ruin; historical image panels; red exhibition panel; metal mesh\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C0: v001: Museum entrance or lobby area with an information counter, green digital information screens, stairs, display items, and a glass doorway.; entrance lobby; stair area; information counter area; information counter; green information screens; stairs; glass entrance door; display it\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C1: v002: Museum lobby or education area with glass doors to the outside, storage shelves, chairs, a table with materials, and colorful wall panels.; window entrance area; education or workshop corner; storage shelf area; glass doors; storage shelves; small drawers cabinet; chairs; table w\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C2: v004: Archaeological exhibition area with a large rough stone wall or ruin fragment, glass or metal barriers, and a row of information labels.; ruin display area; label rail area; gallery walkway; stone wall ruin; information labels; protective barrier; red exhibition panel; metal mesh\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C3: v005: Museum gallery view with a stone ruin exhibit, a freestanding information stand, red exhibition panels, and metal mesh barriers.; stone ruin exhibit; information stand area; red panel gallery wall; stone ruin; information stand; red exhibition panels; metal mesh barriers; display\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C4: v010: Close view of archaeological stone remains with rough stone walls and dark openings or niches.; stone remains display; dark niche area; stone wall remains; dark openings; stone blocks; exhibit backing wall; protective display edge; dark stone openings; rough stone wall\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find the stone ruin\nCandidate C5: v015: Long gallery corridor with stone ruin on the left, large historical image panels on the wall, mesh partitions, and a red panel in the distance.; long exhibition corridor; stone ruin side; historical panel wall; stone ruin; historical image panels; red exhibition panel; metal mesh\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C3,C2,C4",
+      "candidate_scores": [
+        {
+          "alias": "C3",
+          "candidate_id": "v005",
+          "relevance_probability": 0.9999007,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "v004",
+          "relevance_probability": 0.99944347,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "v010",
+          "relevance_probability": 0.9975822,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "v015",
+          "relevance_probability": 0.98794496,
+          "generated_decision": "Yes"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "v001",
+          "relevance_probability": 0.14181679,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "v002",
+          "relevance_probability": 0.00471563,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "v001",
+        "C1": "v002",
+        "C2": "v004",
+        "C3": "v005",
+        "C4": "v010",
+        "C5": "v015"
+      },
+      "ranked_ids": [
+        "v005",
+        "v004",
+        "v010"
+      ],
+      "input_tokens": 651,
+      "output_tokens": 6,
+      "total_tokens": 657,
+      "latency_ms": 6538.1371,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    }
+  ],
+  "result": {
+    "ranked_view_ids": [
+      "v005",
+      "v004",
+      "v010"
+    ],
+    "selected_view_id": "v005",
+    "found": true,
+    "selected_zone_ids": [
+      "manual_zone_museume_ruin_label_gallery",
+      "manual_zone_museume_entrance_information"
+    ],
+    "candidate_view_ids": [
+      "v001",
+      "v002",
+      "v004",
+      "v005",
+      "v010",
+      "v015"
+    ],
+    "views_checked": 6,
+    "response_valid": true,
+    "accounting": {
+      "model_call_count": 2,
+      "input_tokens": 1064,
+      "output_tokens": 12,
+      "total_tokens": 1076,
+      "latency_ms": 11625.5364
+    },
+    "quality": {
+      "eligible": true,
+      "expected_view_ids": [
+        "v005",
+        "v015"
+      ],
+      "hit_at_1": true,
+      "hit_at_3": true,
+      "reciprocal_rank": 1.0
+    }
+  }
+}

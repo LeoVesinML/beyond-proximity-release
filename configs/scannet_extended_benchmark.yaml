@@ -1,0 +1,42 @@
+{
+  "config_version": "semanticsplat.experiment_config.v1",
+  "run_id": "scannet_extended_grounding_v2",
+  "method": "semantic_splat",
+  "mode": "stub",
+  "supported_modes": [
+    "stub"
+  ],
+  "dataset_status": "ready",
+  "dataset_status_note": "Official eight-scene ScanNet oracle-map protocol with 48 ReferIt3D queries plus eight functional and eight verified-absence queries.",
+  "scene_ids": [
+    "scannet_0011_00",
+    "scannet_0030_00",
+    "scannet_0046_00",
+    "scannet_0086_00",
+    "scannet_0222_00",
+    "scannet_0378_00",
+    "scannet_0389_00",
+    "scannet_0435_00"
+  ],
+  "benchmark_path": "docs/benchmarks/scannet_extended_grounding_v2.json",
+  "benchmark_version": "official_referit3d_plus_functional_negative_v2",
+  "query_count_expected": 64,
+  "metrics": {
+    "enabled_now": [
+      "Recall@1",
+      "Recall@3",
+      "Recall@5",
+      "MRR",
+      "verified_negative_accuracy",
+      "Acc@0.1",
+      "Acc@0.25",
+      "Acc@0.5"
+    ]
+  },
+  "notes": [
+    "The original 48 queries remain unchanged.",
+    "Functional answers are mapped to declared official ScanNet object categories and boxes.",
+    "Negative labels are verified absent from every imported official instance label in the corresponding scene.",
+    "This is retrieval over an oracle GT object map, not semantic-perception accuracy."
+  ]
+}

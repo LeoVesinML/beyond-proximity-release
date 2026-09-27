@@ -1,0 +1,184 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v006",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v006.png",
+  "depth_path": "depths/v006_depth.npy",
+  "pose_ref": "transforms.json#/frames/5/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Blurred aerial view over a bay with a bridge or long linear structure, distant city, coastline, and water.",
+  "visible_regions": [
+    {
+      "label": "bay water",
+      "description": "wide water body with motion blur",
+      "approx_location": "center and foreground",
+      "source": "manual"
+    },
+    {
+      "label": "bridge or linear crossing",
+      "description": "long line crossing the water or shoreline",
+      "approx_location": "center-left",
+      "source": "manual"
+    },
+    {
+      "label": "distant urban coast",
+      "description": "far city and shoreline",
+      "approx_location": "background",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "bridge or long roadway",
+      "attributes": [
+        "thin",
+        "linear",
+        "blurred"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.58,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          20.347047535741858,
+          6.2407262546352325,
+          -20.67080431376256
+        ],
+        "size": [
+          14.30201545309106,
+          11.399233620865562,
+          15.192161081252836
+        ],
+        "label": "bridge or long roadway"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "bay water",
+      "attributes": [
+        "blue",
+        "blurred"
+      ],
+      "approx_location": "foreground and center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.44,
+        0.78,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          13.828999119060404,
+          6.797189741506374,
+          -13.965939745810884
+        ],
+        "size": [
+          24.203616701901698,
+          14.133701423349688,
+          22.64645149269816
+        ],
+        "label": "bay water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant city",
+      "attributes": [
+        "far",
+        "urban"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.48,
+        0.82,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          12.591821395295016,
+          7.517589771059693,
+          -15.297040528567711
+        ],
+        "size": [
+          29.812467733984743,
+          13.952960653714483,
+          25.93968865164253
+        ],
+        "label": "distant city"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "coastline",
+      "attributes": [
+        "faint",
+        "curved"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "bright glare",
+      "attributes": [
+        "white",
+        "overexposed"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.18,
+        0.96,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          9.959552685571609,
+          2.0548631331637215,
+          -11.392369554833136
+        ],
+        "size": [
+          13.335546854211913,
+          13.735301577048158,
+          11.709045001072663
+        ],
+        "label": "bright glare"
+      },
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "long bridge or roadway",
+      "description": "linear structure across the water, useful despite blur",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "distant city coastline",
+      "description": "city shoreline on the far side of the bay",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Blurred/overexposed image; semantic labels should be reviewed before use.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

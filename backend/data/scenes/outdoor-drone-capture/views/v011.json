@@ -1,0 +1,175 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v011",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v011.png",
+  "depth_path": "depths/v011_depth.npy",
+  "pose_ref": "transforms.json#/frames/10/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial waterfront panorama with dense coastal city, marina or harbor area, open water, and distant hills.",
+  "visible_regions": [
+    {
+      "label": "coastal urban waterfront",
+      "description": "dense city buildings along water",
+      "approx_location": "center and right",
+      "source": "manual"
+    },
+    {
+      "label": "harbor or marina",
+      "description": "clustered waterfront structures near the shoreline",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "open bay water",
+      "description": "water surface in the foreground",
+      "approx_location": "foreground",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "city buildings",
+      "attributes": [
+        "dense",
+        "coastal"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": [
+        0.42,
+        0.18,
+        0.82,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          -15.677026228556416,
+          13.317360588770484,
+          3.837820998098791
+        ],
+        "size": [
+          29.25794192411818,
+          22.098850776391316,
+          15.73733822732468
+        ],
+        "label": "city buildings"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "marina or harbor cluster",
+      "attributes": [
+        "small structures",
+        "waterfront"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.27,
+        0.48,
+        0.73,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -10.99746947752886,
+          14.312627556971378,
+          0.34117525840924134
+        ],
+        "size": [
+          16.326547930854396,
+          16.069935906659055,
+          14.65205137508566
+        ],
+        "label": "marina or harbor cluster"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "open water",
+      "attributes": [
+        "blue-green"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          -13.274652844299654,
+          12.512781006014894,
+          -2.01297062622187
+        ],
+        "size": [
+          27.24967099127431,
+          15.408625712663465,
+          25.3470185851798
+        ],
+        "label": "open water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "shoreline",
+      "attributes": [
+        "curved",
+        "urban edge"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "distant hills",
+      "attributes": [
+        "background"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "roads or bridge lines",
+      "attributes": [
+        "thin",
+        "linear"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "coastal city waterfront",
+      "description": "dense urban waterfront area",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "marina cluster",
+      "description": "cluster of harbor/boat-like structures near the shore",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for city, waterfront, marina, and bay queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

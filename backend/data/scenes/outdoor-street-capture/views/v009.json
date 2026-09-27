@@ -1,0 +1,141 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v009",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v009.png",
+  "depth_path": "depths/v009_depth.npy",
+  "pose_ref": "transforms.json#/frames/8/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Outdoor facade with a small planted area, glass-block corner, beige wall, and cobblestone walkway.",
+  "visible_regions": [
+    {
+      "label": "planted facade corner",
+      "description": "small landscaped area against the building wall",
+      "approx_location": "center-left",
+      "source": "manual"
+    },
+    {
+      "label": "glass-block corner",
+      "description": "vertical glass-block wall section",
+      "approx_location": "left-center",
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone walkway",
+      "description": "paved outdoor path",
+      "approx_location": "foreground",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "planted area",
+      "attributes": [
+        "green plants",
+        "small landscaped bed"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "glass-block wall",
+      "attributes": [
+        "translucent",
+        "vertical"
+      ],
+      "approx_location": "left-center",
+      "confidence": null,
+      "bbox_2d": [
+        0.0,
+        0.04,
+        0.53,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          10.032874952324862,
+          31.013413714026054,
+          35.15044902115808
+        ],
+        "size": [
+          49.299147577537624,
+          56.568832932565506,
+          20.468318693038498
+        ],
+        "label": "glass-block wall"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "beige stone facade",
+      "attributes": [
+        "building wall"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone paving",
+      "attributes": [
+        "outdoor ground"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "low basement window",
+      "attributes": [
+        "small",
+        "near ground"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "metal grate or drain",
+      "attributes": [
+        "small",
+        "near planting"
+      ],
+      "approx_location": "lower left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "planted facade bed",
+      "description": "small green planting strip beside the building",
+      "approx_location": "center-left",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "glass-block corner",
+      "description": "translucent block wall next to the planted area",
+      "approx_location": "left-center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for planted area, glass-block corner, and facade walkway queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

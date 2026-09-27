@@ -1,0 +1,109 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v020",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v020.png",
+  "depth_path": "depths/v020_depth.npy",
+  "pose_ref": "transforms.json#/frames/19/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Blurry corridor or lobby transition view with columns, reflective or glass surfaces, red wall area in the distance, and carpeted floor.",
+  "visible_regions": [
+    {
+      "label": "corridor transition",
+      "description": "blurred passage between lobby areas",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "red wall distant area",
+      "description": "distant red wall or reception area",
+      "approx_location": "back center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "columns",
+      "attributes": [
+        "large",
+        "blurred"
+      ],
+      "approx_location": "left and right sides",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "reflective wall or glass surface",
+      "attributes": [
+        "blurred",
+        "large"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red wall area",
+      "attributes": [
+        "distant",
+        "dark red"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "carpeted floor",
+      "attributes": [
+        "patterned",
+        "blurred"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling structure",
+      "attributes": [
+        "blurred"
+      ],
+      "approx_location": "upper area",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "red wall area",
+      "description": "distant red decorative wall that can help orient the corridor direction",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "large columns",
+      "description": "blurred but visible columns marking the corridor sides",
+      "approx_location": "left and right sides",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Image is blurry; use with lower confidence for semantic queries.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention.",
+    "Image is blurry; annotation should be reviewed before use as semantic index."
+  ]
+}

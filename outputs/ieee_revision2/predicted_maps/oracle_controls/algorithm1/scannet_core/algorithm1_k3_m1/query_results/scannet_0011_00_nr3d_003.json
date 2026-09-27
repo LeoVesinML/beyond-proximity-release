@@ -1,0 +1,167 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0011_00",
+  "query_id": "scannet_0011_00_nr3d_003",
+  "query": "the cabinet next to a blackboard",
+  "query_type": "simple_object",
+  "structured_plan": {
+    "target": "cabinet next to blackboard",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_011_cabinet"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_011_cabinet"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_wall",
+    "object_v001_002_ceiling",
+    "object_v001_003_window",
+    "object_v001_004_sink",
+    "object_v001_005_refrigerator",
+    "object_v001_006_cabinet",
+    "object_v002_002_chair",
+    "object_v004_001_kitchen_cabinets",
+    "object_v004_003_chair",
+    "object_v004_004_chair",
+    "object_v004_005_chair",
+    "object_v004_006_chair",
+    "object_v004_007_wall",
+    "object_v004_010_refrigerator",
+    "object_v004_011_cabinet",
+    "object_v004_012_window",
+    "object_v004_013_kitchen_counter",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "21",
+    "22",
+    "24",
+    "26",
+    "27",
+    "28",
+    "8",
+    "1",
+    "4",
+    "5",
+    "6",
+    "7",
+    "16",
+    "19",
+    "20",
+    "23",
+    "25"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "cabinet",
+    "selected_object_id": "20",
+    "ranked_object_ids": [
+      "20",
+      "28",
+      "1"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "20",
+        "label": "cabinet",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "28",
+        "label": "cabinet",
+        "score": 0.25,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "1",
+        "label": "kitchen cabinets",
+        "score": 0.06666666666666667,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v004_011_cabinet",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        1.699543,
+        -2.606292,
+        1.56534
+      ],
+      "size": [
+        0.678415,
+        1.07315,
+        1.573044
+      ],
+      "label": "cabinet",
+      "object_id": "20",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.25,
+    "explanation": "algorithm1_k3_m1 selected object 20.",
+    "relation_satisfied": null,
+    "relation_audit": {},
+    "search_score": 0.25,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.333333,
+      "text_overlap": 0.333333,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.25
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0010701250000000329,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0010701250000000329
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 18,
+    "checked_view_count": 3,
+    "checked_object_count": 17,
+    "context_size_chars": 2913,
+    "prompt_size_chars": 2945,
+    "estimated_input_tokens": 736,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,103 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v005",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v005.png",
+  "depth_path": "depths/v005_depth.npy",
+  "pose_ref": "transforms.json#/frames/4/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Blurred aerial view over coastal water with a faint shoreline, waterfront structures, and strong motion blur across the scene.",
+  "visible_regions": [
+    {
+      "label": "blurred water area",
+      "description": "large water surface with motion blur",
+      "approx_location": "foreground and center",
+      "source": "manual"
+    },
+    {
+      "label": "distant shoreline",
+      "description": "faint coastal land and buildings in the background",
+      "approx_location": "background",
+      "source": "manual"
+    },
+    {
+      "label": "waterfront transition",
+      "description": "blurred area where water meets the shore",
+      "approx_location": "center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "water surface",
+      "attributes": [
+        "blurred",
+        "blue-green"
+      ],
+      "approx_location": "foreground and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "distant coastline",
+      "attributes": [
+        "faint",
+        "urban"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "waterfront buildings",
+      "attributes": [
+        "blurred",
+        "far"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "bright reflection or glare",
+      "attributes": [
+        "blue",
+        "near bottom"
+      ],
+      "approx_location": "lower center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "distant coastline",
+      "description": "faint shoreline visible through blur",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "water expanse",
+      "description": "large water area dominating the view",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Image is strongly blurred; use as low-confidence orientation view only.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

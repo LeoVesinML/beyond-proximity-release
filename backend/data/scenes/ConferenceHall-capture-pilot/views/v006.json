@@ -1,0 +1,170 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v006",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v006.png",
+  "depth_path": "depths/v006_depth.npy",
+  "pose_ref": "transforms.json#/frames/5/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Banquet room from another angle with round white tables, covered chairs, beige walls, wall lamps, doorway area, and a ceiling light feature.",
+  "visible_regions": [
+    {
+      "label": "banquet seating area",
+      "description": "round-table seating zone",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "doorway area",
+      "description": "door or entrance area at the far wall",
+      "approx_location": "back center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "round tables",
+      "attributes": [
+        "multiple",
+        "white tablecloths"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.14,
+        0.78,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          37.96952320461848,
+          6.365966546856494,
+          -19.41382921621341
+        ],
+        "size": [
+          28.26783569864833,
+          20.386966901009444,
+          29.023759377355013
+        ],
+        "label": "round tables"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "covered chairs",
+      "attributes": [
+        "multiple",
+        "white"
+      ],
+      "approx_location": "around tables",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.14,
+        0.87,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          38.342310139445296,
+          3.3645034956816997,
+          -23.48860113037626
+        ],
+        "size": [
+          27.5222618289947,
+          19.576237243973374,
+          37.87884721534708
+        ],
+        "label": "covered chairs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "wall lamps",
+      "attributes": [
+        "warm",
+        "vertical"
+      ],
+      "approx_location": "left and right walls",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "doorway",
+      "attributes": [
+        "far wall"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": [
+        0.27,
+        0.06,
+        0.73,
+        0.62
+      ],
+      "bbox_3d": {
+        "center": [
+          30.985374480314533,
+          0.6337584379282621,
+          -26.912929327716988
+        ],
+        "size": [
+          16.393901453007235,
+          8.196642364584482,
+          15.874113835432198
+        ],
+        "label": "doorway"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling light feature",
+      "attributes": [
+        "large",
+        "bright"
+      ],
+      "approx_location": "ceiling",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "doorway at far wall",
+      "description": "door area useful for navigation in the banquet room",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "round table cluster",
+      "description": "main seating cluster in the room",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for queries about banquet seating, tables, chairs, and far doorway.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

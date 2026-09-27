@@ -1,0 +1,161 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v009",
+  "scene_id": "Museume-capture",
+  "image_path": "images/v009.png",
+  "depth_path": "depths/v009_depth.npy",
+  "pose_ref": "transforms.json#/frames/8/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Exhibition corridor with red and white information panels, a white chair, dark wall panels, metal mesh, and a yellow floor marker.",
+  "visible_regions": [
+    {
+      "label": "information panel corridor",
+      "description": "gallery corridor with large wall panels",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "seating corner",
+      "description": "small visitor seating area with a white chair",
+      "approx_location": "left side",
+      "source": "manual"
+    },
+    {
+      "label": "mesh partition area",
+      "description": "black mesh wall or partition beside the panels",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "red exhibition panel",
+      "attributes": [
+        "large",
+        "text",
+        "red"
+      ],
+      "approx_location": "right-center",
+      "confidence": null,
+      "bbox_2d": [
+        0.6344,
+        0.3096,
+        0.8456,
+        0.6704
+      ],
+      "bbox_3d": {
+        "center": [
+          8.628628261117097,
+          3.1642997900933496,
+          -2.3738736954090482
+        ],
+        "size": [
+          23.03895506055253,
+          9.542957390700657,
+          2.475939093535928
+        ],
+        "label": "red exhibition panel"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "white information panel",
+      "attributes": [
+        "large",
+        "printed"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "white chair",
+      "attributes": [
+        "single",
+        "visitor seating"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "metal mesh partition",
+      "attributes": [
+        "black",
+        "grid"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "yellow floor marker",
+      "attributes": [
+        "small",
+        "circular"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": [
+        0.2964,
+        0.58,
+        0.7036,
+        0.88
+      ],
+      "bbox_3d": {
+        "center": [
+          7.638651989279046,
+          11.31047900986632,
+          -14.088116528743495
+        ],
+        "size": [
+          31.16190177267543,
+          17.2966407729203,
+          25.686651014595128
+        ],
+        "label": "yellow floor marker"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "dark wall panels",
+      "attributes": [
+        "plain",
+        "gallery wall"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "red exhibition panel",
+      "description": "large red information panel on the corridor wall",
+      "approx_location": "right-center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "white chair",
+      "description": "single chair beside the panels",
+      "approx_location": "left side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good for locating red/white panels and the chair area.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

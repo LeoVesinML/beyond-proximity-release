@@ -1,0 +1,217 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_trace.v1",
+  "created_at": "2026-09-02T17:58:05.169549+00:00",
+  "query_id": "qv2_027",
+  "scene_id": "ConferenceHall",
+  "query": "Find shower",
+  "method": "graph_instruction",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "calls": [
+    {
+      "phase": "hierarchy_traversal",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find shower\nCandidate C0: conference and banquet hall Main event hall views with round tables, chairs, piano-side hall context, and banquet seating.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C1: elevator and doorway access Elevator, doorway, and golden door-panel access views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C2: exit and wayfinding Exit sign, doorway, and wayfinding views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C3: lounge seating and corridor Lounge, corridor, art-wall, sofa, piano, and transition views around the captured hall.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C4: reception and service counter Reception counter, service counter, red-wall lobby, and adjacent counter views.\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C0: conference and banquet hall Main event hall views with round tables, chairs, piano-side hall context, and banquet seating.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C1: elevator and doorway access Elevator, doorway, and golden door-panel access views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C2: exit and wayfinding Exit sign, doorway, and wayfinding views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C3: lounge seating and corridor Lounge, corridor, art-wall, sofa, piano, and transition views around the captured hall.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C4: reception and service counter Reception counter, service counter, red-wall lobby, and adjacent counter views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C2,C1",
+      "candidate_scores": [
+        {
+          "alias": "C2",
+          "candidate_id": "manual_zone_conferencehall_exit_wayfinding",
+          "relevance_probability": 0.00513417,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "manual_zone_conferencehall_elevator_access",
+          "relevance_probability": 9.017e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "manual_zone_conferencehall_reception_service",
+          "relevance_probability": 5.206e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "manual_zone_conferencehall_lounge_corridor",
+          "relevance_probability": 3.996e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "manual_zone_conferencehall_banquet_hall",
+          "relevance_probability": 6.21e-06,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "manual_zone_conferencehall_banquet_hall",
+        "C1": "manual_zone_conferencehall_elevator_access",
+        "C2": "manual_zone_conferencehall_exit_wayfinding",
+        "C3": "manual_zone_conferencehall_lounge_corridor",
+        "C4": "manual_zone_conferencehall_reception_service"
+      },
+      "ranked_ids": [
+        "manual_zone_conferencehall_exit_wayfinding",
+        "manual_zone_conferencehall_elevator_access"
+      ],
+      "input_tokens": 335,
+      "output_tokens": 5,
+      "total_tokens": 340,
+      "latency_ms": 5457.6613,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    },
+    {
+      "phase": "view_grounding",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find shower\nCandidate C0: v003: Hotel lobby corridor with large columns, lounge seating in the background, a piano or dark console object, elevator doors, and blue patterned carpet.; lobby corridor; elevator area; lounge area; columns; elevator doors; piano; sofa; wall picture; blue patterned carpet; elevator d\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C1: v006: Banquet room from another angle with round white tables, covered chairs, beige walls, wall lamps, doorway area, and a ceiling light feature.; banquet seating area; doorway area; round tables; covered chairs; wall lamps; doorway; blue patterned carpet; ceiling light feature; doorw\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C2: v009: Long lobby corridor with columns, lounge seating on the left, wall artwork on the right, a green exit sign, and a distant reception or corridor end.; long lobby corridor; lounge side; art wall side; columns; sofa; wall artwork; green exit sign; blue patterned carpet; ceiling ligh\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C3: v011: Lobby area with a black piano near a column, elevator doors or golden wall on the left, distant lounge seating, and corridor space.; piano area; corridor area; lounge area; piano; column; elevator doors or golden wall panels; lounge seating; wall artwork; blue patterned carpet; b\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C4: v012: Lobby corridor with two potted plants near elevator or door panels, lounge seating on both sides, columns, framed wall artwork, and blue patterned carpet.; elevator or doorway area; lounge corridor; right seating area; potted plants; elevator or door panels; sofa; bench or sofa; \nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C5: v013: Lobby area with large columns, elevator doors, reception or service counter, lounge seating, wall artwork, and blue patterned carpet.; elevator lobby; service counter area; lounge seating area; columns; elevator doors; service counter; lounge chairs; wall artwork; blue patterned \nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C6: v014: Close lounge seating view with sofas, glass coffee tables, table lamp, wall panels, and a golden door or elevator wall nearby.; lounge seating corner; door or elevator side; sofas; glass coffee tables; table lamp; golden door or elevator panel; wall panels; blue patterned carpet;\nRelevant? Answer exactly Yes or No.",
+        "Query: Find shower\nCandidate C7: v019: Close view of a doorway or exit area with a green exit sign, trash bin, black mat or low platform, wall panels, and carpet.; exit or doorway area; wall corner area; green exit sign; doorway; trash bin; black mat or low platform; wall panels; blue patterned carpet; green exit sign\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C0: v003: Hotel lobby corridor with large columns, lounge seating in the background, a piano or dark console object, elevator doors, and blue patterned carpet.; lobby corridor; elevator area; lounge area; columns; elevator doors; piano; sofa; wall picture; blue patterned carpet; elevator d\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C1: v006: Banquet room from another angle with round white tables, covered chairs, beige walls, wall lamps, doorway area, and a ceiling light feature.; banquet seating area; doorway area; round tables; covered chairs; wall lamps; doorway; blue patterned carpet; ceiling light feature; doorw\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C2: v009: Long lobby corridor with columns, lounge seating on the left, wall artwork on the right, a green exit sign, and a distant reception or corridor end.; long lobby corridor; lounge side; art wall side; columns; sofa; wall artwork; green exit sign; blue patterned carpet; ceiling ligh\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C3: v011: Lobby area with a black piano near a column, elevator doors or golden wall on the left, distant lounge seating, and corridor space.; piano area; corridor area; lounge area; piano; column; elevator doors or golden wall panels; lounge seating; wall artwork; blue patterned carpet; b\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C4: v012: Lobby corridor with two potted plants near elevator or door panels, lounge seating on both sides, columns, framed wall artwork, and blue patterned carpet.; elevator or doorway area; lounge corridor; right seating area; potted plants; elevator or door panels; sofa; bench or sofa; \nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C5: v013: Lobby area with large columns, elevator doors, reception or service counter, lounge seating, wall artwork, and blue patterned carpet.; elevator lobby; service counter area; lounge seating area; columns; elevator doors; service counter; lounge chairs; wall artwork; blue patterned \nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C6: v014: Close lounge seating view with sofas, glass coffee tables, table lamp, wall panels, and a golden door or elevator wall nearby.; lounge seating corner; door or elevator side; sofas; glass coffee tables; table lamp; golden door or elevator panel; wall panels; blue patterned carpet;\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find shower\nCandidate C7: v019: Close view of a doorway or exit area with a green exit sign, trash bin, black mat or low platform, wall panels, and carpet.; exit or doorway area; wall corner area; green exit sign; doorway; trash bin; black mat or low platform; wall panels; blue patterned carpet; green exit sign\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C7,C0,C5",
+      "candidate_scores": [
+        {
+          "alias": "C7",
+          "candidate_id": "v019",
+          "relevance_probability": 0.05382217,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "v003",
+          "relevance_probability": 0.00995712,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "v013",
+          "relevance_probability": 0.00457996,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "v012",
+          "relevance_probability": 0.00142887,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "v009",
+          "relevance_probability": 0.00068202,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "v011",
+          "relevance_probability": 0.00022657,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C6",
+          "candidate_id": "v014",
+          "relevance_probability": 0.00017055,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "v006",
+          "relevance_probability": 2.805e-05,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "v003",
+        "C1": "v006",
+        "C2": "v009",
+        "C3": "v011",
+        "C4": "v012",
+        "C5": "v013",
+        "C6": "v014",
+        "C7": "v019"
+      },
+      "ranked_ids": [
+        "v019",
+        "v003",
+        "v013"
+      ],
+      "input_tokens": 900,
+      "output_tokens": 8,
+      "total_tokens": 908,
+      "latency_ms": 10109.0628,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    }
+  ],
+  "result": {
+    "ranked_view_ids": [
+      "v019",
+      "v003",
+      "v013"
+    ],
+    "selected_view_id": "v019",
+    "found": true,
+    "selected_zone_ids": [
+      "manual_zone_conferencehall_exit_wayfinding",
+      "manual_zone_conferencehall_elevator_access"
+    ],
+    "candidate_view_ids": [
+      "v003",
+      "v006",
+      "v009",
+      "v011",
+      "v012",
+      "v013",
+      "v014",
+      "v019"
+    ],
+    "views_checked": 8,
+    "response_valid": true,
+    "accounting": {
+      "model_call_count": 2,
+      "input_tokens": 1235,
+      "output_tokens": 13,
+      "total_tokens": 1248,
+      "latency_ms": 15566.7241
+    },
+    "quality": {
+      "eligible": false,
+      "expected_view_ids": [],
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "reciprocal_rank": null
+    }
+  }
+}

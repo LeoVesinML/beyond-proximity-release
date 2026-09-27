@@ -1,0 +1,138 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_v3_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0389_00",
+  "query_id": "scannet_0389_00_nr3d_003",
+  "query": "white entry door with handle",
+  "query_type": "attribute",
+  "structured_plan": {
+    "target": "white entry door with handle",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v005_003_door"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v005_003_door"
+  ],
+  "selected_views": [
+    "v005"
+  ],
+  "checked_node_ids": [
+    "object_v003_001_door",
+    "object_v005_003_door",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v003",
+    "v005"
+  ],
+  "checked_object_ids": [
+    "7",
+    "12"
+  ],
+  "search_variant": "v3_graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "door",
+    "selected_object_id": "12",
+    "ranked_object_ids": [
+      "12",
+      "7"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "12",
+        "label": "door",
+        "score": 0.15000000000000002,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "7",
+        "label": "door",
+        "score": 0.15000000000000002,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v005_003_door",
+    "selected_view_id": "v005",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        1.782412,
+        1.669825,
+        1.163
+      ],
+      "size": [
+        0.645421,
+        0.244559,
+        1.083117
+      ],
+      "label": "door",
+      "object_id": "12",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.15000000000000002,
+    "explanation": "v3_graph selected object 12.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.15000000000000002,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.2,
+      "text_overlap": 0.2,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.15,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0005187499999994571,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0005187499999994571
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 3,
+    "checked_view_count": 2,
+    "checked_object_count": 2,
+    "context_size_chars": 317,
+    "prompt_size_chars": 345,
+    "estimated_input_tokens": 86,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

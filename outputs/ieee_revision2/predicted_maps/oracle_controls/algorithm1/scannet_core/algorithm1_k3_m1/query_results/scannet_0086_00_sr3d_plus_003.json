@@ -1,0 +1,188 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0086_00",
+  "query_id": "scannet_0086_00_sr3d_plus_003",
+  "query": "select the plant that is above the paper towel dispenser",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "plant",
+    "relation": "above",
+    "anchor": "paper towel dispenser",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_002_plant"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_002_plant"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_002_plant",
+    "object_v001_003_soap_dispenser",
+    "object_v001_004_trash_can",
+    "object_v001_005_paper_towel_dispenser",
+    "object_v001_006_paper_towel_dispenser",
+    "object_v001_009_bottle",
+    "object_v001_010_wall",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "4",
+    "12",
+    "13",
+    "17",
+    "18",
+    "23",
+    "24"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "plant",
+    "selected_object_id": "4",
+    "ranked_object_ids": [
+      "4",
+      "12",
+      "13"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "4",
+        "label": "plant",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "12",
+        "label": "soap dispenser",
+        "score": 0.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "13",
+        "label": "trash can",
+        "score": 0.0,
+        "relation_confidence": 0.390257,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_002_plant",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.839486,
+        1.655977,
+        1.647337
+      ],
+      "size": [
+        0.209298,
+        0.315886,
+        0.439683
+      ],
+      "label": "plant",
+      "object_id": "4",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 4.",
+    "relation_satisfied": false,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "above",
+      "anchor": "paper towel dispenser",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "17",
+          "matched": false,
+          "margin": -0.021694,
+          "confidence": 0.0
+        },
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "18",
+          "matched": false,
+          "margin": -0.021451,
+          "confidence": 0.0
+        }
+      ],
+      "anchor_evidence": {
+        "status": "ambiguous",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 1.0,
+        "score_margin": 0.0,
+        "candidate_count": 6,
+        "selected_count": 2,
+        "selected_object_ids": [
+          "17",
+          "18"
+        ],
+        "confidence": 0.5
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0054033340000003705,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0054033340000003705
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 8,
+    "checked_view_count": 1,
+    "checked_object_count": 7,
+    "context_size_chars": 1338,
+    "prompt_size_chars": 1394,
+    "estimated_input_tokens": 348,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

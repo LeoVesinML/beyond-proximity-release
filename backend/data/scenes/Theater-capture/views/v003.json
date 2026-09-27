@@ -1,0 +1,131 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v003",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v003.png",
+  "depth_path": "depths/v003_depth.npy",
+  "pose_ref": "transforms.json#/frames/2/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Narrow theater service corridor or storage passage with worn walls, a distant lit area, and backstage objects along the sides.",
+  "visible_regions": [
+    {
+      "label": "narrow backstage passage",
+      "description": "long service corridor with dark and worn surfaces",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "distant lit area",
+      "description": "brighter area at the far end of the passage",
+      "approx_location": "back center",
+      "source": "manual"
+    },
+    {
+      "label": "side storage area",
+      "description": "objects and wall structures along the corridor sides",
+      "approx_location": "left and right",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "corridor passage",
+      "attributes": [
+        "narrow",
+        "backstage"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.14,
+        0.78,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -8.767275603937861,
+          2.6840187101148705,
+          16.122970336965334
+        ],
+        "size": [
+          8.630546934834546,
+          6.6928317291525365,
+          20.25536958696224
+        ],
+        "label": "corridor passage"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "worn wall surfaces",
+      "attributes": [
+        "gray",
+        "uneven"
+      ],
+      "approx_location": "left and right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "distant doorway or opening",
+      "attributes": [
+        "lit",
+        "far end"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "side equipment or boxes",
+      "attributes": [
+        "unclear",
+        "backstage storage"
+      ],
+      "approx_location": "along corridor sides",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "floor path",
+      "attributes": [
+        "narrow",
+        "leading forward"
+      ],
+      "approx_location": "center floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "distant lit opening",
+      "description": "bright opening at the end of the narrow passage",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "narrow backstage passage",
+      "description": "distinct worn corridor useful for backstage navigation",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Low-detail backstage corridor view; useful mainly for passage and doorway orientation.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

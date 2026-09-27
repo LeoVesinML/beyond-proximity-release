@@ -1,0 +1,139 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v011",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v011.png",
+  "depth_path": "depths/v011_depth.npy",
+  "pose_ref": "transforms.json#/frames/10/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Lobby area with a black piano near a column, elevator doors or golden wall on the left, distant lounge seating, and corridor space.",
+  "visible_regions": [
+    {
+      "label": "piano area",
+      "description": "area around the black piano near the wall",
+      "approx_location": "left-center",
+      "source": "manual"
+    },
+    {
+      "label": "corridor area",
+      "description": "open passage behind and to the right of the piano",
+      "approx_location": "right side",
+      "source": "manual"
+    },
+    {
+      "label": "lounge area",
+      "description": "seating visible in the distance",
+      "approx_location": "rear center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "piano",
+      "attributes": [
+        "black",
+        "large"
+      ],
+      "approx_location": "left-center",
+      "confidence": null,
+      "bbox_2d": [
+        0.04,
+        0.18,
+        0.48,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          24.009989351627258,
+          12.571171141478484,
+          -49.21525154281468
+        ],
+        "size": [
+          42.94269267656828,
+          27.69561953599068,
+          56.55871926205863
+        ],
+        "label": "piano"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "column",
+      "attributes": [
+        "large"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "elevator doors or golden wall panels",
+      "attributes": [
+        "golden"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "lounge seating",
+      "attributes": [
+        "distant"
+      ],
+      "approx_location": "rear center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall artwork",
+      "attributes": [
+        "framed"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "black piano",
+      "description": "large dark piano useful as a distinctive landmark",
+      "approx_location": "left-center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "golden elevator wall",
+      "description": "gold-colored vertical wall/door area near the piano",
+      "approx_location": "left side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for queries involving piano, elevator/golden wall area, and corridor direction.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

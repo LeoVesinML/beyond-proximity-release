@@ -1,0 +1,150 @@
+{
+  "query_id": "qv2_077",
+  "scene_id": "Theater",
+  "query": "Find the red upholstered seats in the lobby seating area",
+  "query_type": "multi_hop",
+  "expected_view_ids": [
+    "v004"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "f2bd839ff2e7c7cf9a5d8fc8ae43ba5773b5520d18728c59d55a37eee34b4238",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 1416,
+      "output_tokens": 5,
+      "latency_ms": 3669.4576,
+      "correct": true,
+      "target_in_context": true
+    },
+    "all_records__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "f2bd839ff2e7c7cf9a5d8fc8ae43ba5773b5520d18728c59d55a37eee34b4238",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 1416,
+      "output_tokens": 5,
+      "latency_ms": 3525.1933,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v010",
+        "v012"
+      ],
+      "prompt_sha256": "427a9219c1f30694352bba918aafbd33f2e8417b9a23e29954d9aecc5c5faa77",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 277,
+      "output_tokens": 5,
+      "latency_ms": 920.7972,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v010",
+        "v012"
+      ],
+      "prompt_sha256": "427a9219c1f30694352bba918aafbd33f2e8417b9a23e29954d9aecc5c5faa77",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 277,
+      "output_tokens": 5,
+      "latency_ms": 898.656,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v010",
+        "v015"
+      ],
+      "prompt_sha256": "67def88f498926314e127d6dec9c21127af29ff345f5c10b12e21344213d94d3",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 274,
+      "output_tokens": 5,
+      "latency_ms": 903.8105,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v004",
+        "v010",
+        "v015"
+      ],
+      "prompt_sha256": "67def88f498926314e127d6dec9c21127af29ff345f5c10b12e21344213d94d3",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v004",
+      "chosen_id": "v004",
+      "valid": true,
+      "input_tokens": 274,
+      "output_tokens": 5,
+      "latency_ms": 898.0819,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "dev",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

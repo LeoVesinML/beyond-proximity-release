@@ -1,0 +1,153 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v017",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v017.png",
+  "depth_path": "depths/v017_depth.npy",
+  "pose_ref": "transforms.json#/frames/16/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Banquet room side view with round tables, white covered chairs, beige wall panels, a blue service cart or object, and floral decoration.",
+  "visible_regions": [
+    {
+      "label": "banquet seating side",
+      "description": "side area of the banquet room with round tables",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "service or wall area",
+      "description": "right wall area with blue object and floral decoration",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "round tables",
+      "attributes": [
+        "white tablecloths",
+        "multiple"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": [
+        0.0,
+        0.14,
+        0.53,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          15.284847162267521,
+          4.563098299601515,
+          -38.67543903391159
+        ],
+        "size": [
+          15.535718654356806,
+          13.359736842181196,
+          14.898460541404493
+        ],
+        "label": "round tables"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "covered chairs",
+      "attributes": [
+        "white",
+        "multiple"
+      ],
+      "approx_location": "around tables",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.14,
+        0.87,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          9.20739894869877,
+          2.8326178180819417,
+          -44.138441494601935
+        ],
+        "size": [
+          38.79569488308463,
+          22.040086645684518,
+          25.420361685138523
+        ],
+        "label": "covered chairs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "blue service cart or box",
+      "attributes": [
+        "blue",
+        "small"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "floral decoration",
+      "attributes": [
+        "purple flowers"
+      ],
+      "approx_location": "right side near wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "beige wall panels",
+      "attributes": [
+        "large",
+        "geometric pattern"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling lights",
+      "attributes": [
+        "bright"
+      ],
+      "approx_location": "upper area",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "blue service cart or box",
+      "description": "distinct blue object near the wall",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "geometric wall panels",
+      "description": "large patterned wall panels defining this banquet room side",
+      "approx_location": "background",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for side-wall banquet views and blue object/flower queries.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

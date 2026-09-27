@@ -1,0 +1,38 @@
+{
+  "per_scorer": {
+    "lexical": {
+      "positive_queries": 125,
+      "queries_with_tied_top_score": 82,
+      "cells_checked": 1500,
+      "cells_where_top1_equals_flat_top1": 1369,
+      "queries_whose_hit1_differs_across_hierarchies_or_budgets": 25,
+      "of_which_have_tied_top_score": 25
+    },
+    "bge": {
+      "positive_queries": 125,
+      "queries_with_tied_top_score": 0,
+      "cells_checked": 1500,
+      "cells_where_top1_equals_flat_top1": 1497,
+      "queries_whose_hit1_differs_across_hierarchies_or_budgets": 0,
+      "of_which_have_tied_top_score": 0
+    },
+    "clip": {
+      "positive_queries": 125,
+      "queries_with_tied_top_score": 0,
+      "cells_checked": 1500,
+      "cells_where_top1_equals_flat_top1": 1491,
+      "queries_whose_hit1_differs_across_hierarchies_or_budgets": 0,
+      "of_which_have_tied_top_score": 0
+    }
+  },
+  "manual_views_not_in_any_zone": {
+    "ConferenceHall-capture-pilot": [],
+    "Museume-capture": [],
+    "Theater-capture": [
+      "v008"
+    ],
+    "outdoor-street-capture": [],
+    "outdoor-drone-capture": []
+  },
+  "mechanism": "scripts/run_ieee_hierarchy_scorer_grid.py:_matched_rank orders branches by max leaf score (zone_score = max member score), adds whole branches until the union has >= k views, and then ranks the union with the SAME global leaf order. The first branch therefore contains the flat argmax view whenever the argmax is unique and covered by some branch, so the rank-1 view (and hit@1) equals flat retrieval for continuous BGE/CLIP scores. The lexical grid score is overlap + 1e-3*overlap/|q|, a monotone function of the integer token overlap, so several views tie at the maximum; branch ties are broken by zone_id and view ties by view_id (both descending), so the rank-1 view depends on which tied branch is expanded first. Hit@1 is not computed with a different branch score; the variation is purely tie-breaking."
+}

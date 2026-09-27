@@ -1,0 +1,168 @@
+{
+  "schema_version": "beyond_proximity.ieee_public_scale_ann.v1",
+  "generated_at": "2026-09-01T18:28:05.760896+00:00",
+  "status": "complete",
+  "model_name": "BAAI/bge-small-en-v1.5",
+  "seed": 20260901,
+  "queries_per_size_requested": 10,
+  "collection_sizes": [
+    1000
+  ],
+  "data_manifest": {
+    "nr3d": {
+      "path": "C:\\GitProjects\\beyond-proximity\\external\\datasets\\scanrefer_public\\nr3d.csv",
+      "sha256": "5de4f1b47130803c88f7c57903e7b6df5473f1b903c32cf28d06fa9c25996a67",
+      "source_url": "https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view"
+    },
+    "sr3d_plus": {
+      "path": "C:\\GitProjects\\beyond-proximity\\external\\datasets\\scanrefer_public\\sr3d\\sr3d+.csv",
+      "sha256": "b6cd28ed18cbce716a3103198851d39a3dfb221d55eea66899d5f2c07a597d0d",
+      "source_url": "https://drive.google.com/drive/folders/1DS4uQq7fCmbJHeE-rEbO8G1-XatGEqNV"
+    },
+    "raw_rows": {
+      "nr3d": 41503,
+      "sr3d_plus": 114532
+    },
+    "deduplicated_records_available": 155535,
+    "deduplicated_records_indexed": 1000,
+    "scene_count": 574,
+    "object_count": 956,
+    "instance_type_count": 74
+  },
+  "protocol": {
+    "record": "one deduplicated ReferIt3D referring expression linked to a ScanNet scene and target object",
+    "query_leakage_control": "the query record itself is excluded; relevance requires another expression linked to the same scene/object",
+    "scope": "scene_scoped_dense_exact assumes the active ScanNet scene ID is supplied by external localization; it does not infer the scene from language",
+    "flat": "exact cosine search over all records in the measured collection",
+    "hierarchical": "exact cosine search restricted to the known-scene branch",
+    "ann": "USearch HNSW over the same normalized BGE vectors",
+    "top_k": 3,
+    "statistics": "Wilson intervals for proportions; paired 10,000-resample bootstrap differences"
+  },
+  "index_build": [
+    {
+      "collection_size": 1000,
+      "build_seconds": 0.01076,
+      "dimensions": 384,
+      "connectivity": 16,
+      "expansion_add": 128,
+      "expansion_search": 64
+    }
+  ],
+  "summaries": [
+    {
+      "method": "flat_dense_exact",
+      "query_count": 10,
+      "hit_at_1": 0.0,
+      "hit_at_3": 0.1,
+      "mrr": 0.05,
+      "mean_latency_ms": 0.25355,
+      "median_latency_ms": 0.0642,
+      "mean_scored_records": 1000.0,
+      "mean_serialized_top3_tokens": 37.6,
+      "hit_at_1_wilson_95": {
+        "low": 0.0,
+        "high": 0.277533
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.017876,
+        "high": 0.40415
+      },
+      "collection_size": 1000
+    },
+    {
+      "method": "scene_scoped_dense_exact",
+      "query_count": 10,
+      "hit_at_1": 0.7,
+      "hit_at_3": 1.0,
+      "mrr": 0.85,
+      "mean_latency_ms": 0.02148,
+      "median_latency_ms": 0.0186,
+      "mean_scored_records": 4.7,
+      "mean_serialized_top3_tokens": 30.1,
+      "hit_at_1_wilson_95": {
+        "low": 0.396778,
+        "high": 0.892209
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.722467,
+        "high": 1.0
+      },
+      "collection_size": 1000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.7,
+        "ci_95": {
+          "low": 0.4,
+          "high": 1.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.9,
+        "ci_95": {
+          "low": 0.7,
+          "high": 1.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": 0.8,
+        "ci_95": {
+          "low": 0.65,
+          "high": 0.95
+        },
+        "samples": 10000,
+        "seed": 20261901
+      }
+    },
+    {
+      "method": "hnsw_dense",
+      "query_count": 10,
+      "hit_at_1": 0.0,
+      "hit_at_3": 0.1,
+      "mrr": 0.05,
+      "mean_latency_ms": 0.11354,
+      "median_latency_ms": 0.10685,
+      "mean_scored_records": null,
+      "mean_serialized_top3_tokens": 37.6,
+      "hit_at_1_wilson_95": {
+        "low": 0.0,
+        "high": 0.277533
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.017876,
+        "high": 0.40415
+      },
+      "collection_size": 1000,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      },
+      "paired_mrr_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20261901
+      }
+    }
+  ]
+}

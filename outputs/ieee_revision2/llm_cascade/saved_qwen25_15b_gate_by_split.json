@@ -1,0 +1,119 @@
+{
+  "source": "outputs/ieee_revision/qwen25_15b_pair_v1/per_query_results.json",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "hardware": {
+    "device": "cpu",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "AMD64 Family 25 Model 80 Stepping 0, AuthenticAMD",
+    "threads": 12,
+    "peak_process_rss_mb": 6307.289
+  },
+  "torch": "2.13.0+cpu",
+  "note": "saved view_grounding call kept only the top-3 ranked IDs, so MRR here is MRR@3",
+  "test75": {
+    "flat_instruction": {
+      "n": 75,
+      "hit_at_1": 0.733333,
+      "hit_at_3": 0.906667,
+      "mrr_at_3": 0.806667,
+      "mean_views_checked": 19.4,
+      "mean_input_tokens": 2236.227,
+      "mean_model_calls": 1.0,
+      "median_latency_ms_cpu": 20607.34,
+      "mean_latency_ms_cpu": 20339.614
+    },
+    "graph_instruction": {
+      "n": 75,
+      "hit_at_1": 0.666667,
+      "hit_at_3": 0.866667,
+      "mrr_at_3": 0.744444,
+      "mean_views_checked": 10.8,
+      "mean_input_tokens": 1727.813,
+      "mean_model_calls": 2.0,
+      "median_latency_ms_cpu": 17224.155,
+      "mean_latency_ms_cpu": 17172.393
+    },
+    "paired_bootstrap_graph_minus_flat": {
+      "hit_at_1": {
+        "estimate": -0.066667,
+        "ci_95": {
+          "low": -0.146667,
+          "high": 0.013333
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "hit_at_3": {
+        "estimate": -0.04,
+        "ci_95": {
+          "low": -0.133333,
+          "high": 0.04
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "mrr_at_3": {
+        "estimate": -0.062222,
+        "ci_95": {
+          "low": -0.131111,
+          "high": -0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    }
+  },
+  "all125": {
+    "flat_instruction": {
+      "n": 125,
+      "hit_at_1": 0.736,
+      "hit_at_3": 0.912,
+      "mrr_at_3": 0.812,
+      "mean_views_checked": 19.4,
+      "mean_input_tokens": 2235.104,
+      "mean_model_calls": 1.0,
+      "median_latency_ms_cpu": 20679.433,
+      "mean_latency_ms_cpu": 20236.022
+    },
+    "graph_instruction": {
+      "n": 125,
+      "hit_at_1": 0.672,
+      "hit_at_3": 0.856,
+      "mrr_at_3": 0.748,
+      "mean_views_checked": 10.896,
+      "mean_input_tokens": 1738.184,
+      "mean_model_calls": 2.0,
+      "median_latency_ms_cpu": 17458.88,
+      "mean_latency_ms_cpu": 17260.634
+    },
+    "paired_bootstrap_graph_minus_flat": {
+      "hit_at_1": {
+        "estimate": -0.064,
+        "ci_95": {
+          "low": -0.128,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "hit_at_3": {
+        "estimate": -0.056,
+        "ci_95": {
+          "low": -0.12,
+          "high": 0.008
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "mrr_at_3": {
+        "estimate": -0.064,
+        "ci_95": {
+          "low": -0.12,
+          "high": -0.013333
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    }
+  }
+}

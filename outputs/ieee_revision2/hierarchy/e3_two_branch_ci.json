@@ -1,0 +1,94 @@
+{
+  "n": 125,
+  "source": "outputs/raw_rgbd_hierarchy/five_scene_clip_v1/per_query_results.json",
+  "means": {
+    "flat_clip": {
+      "hit_at_1": 0.432,
+      "hit_at_3": 0.624
+    },
+    "manual_hierarchy_clip": {
+      "hit_at_1": 0.424,
+      "hit_at_3": 0.592
+    },
+    "raw_rgbd_hierarchy_clip": {
+      "hit_at_1": 0.368,
+      "hit_at_3": 0.528
+    }
+  },
+  "paired": {
+    "raw_minus_manual_hierarchy_clip_hit_at_1": {
+      "estimate": -0.056,
+      "ci_95": {
+        "low": -0.12,
+        "high": 0.0
+      },
+      "samples": 10000,
+      "seed": 20260901
+    },
+    "raw_minus_manual_hierarchy_clip_hit_at_3": {
+      "estimate": -0.064,
+      "ci_95": {
+        "low": -0.136,
+        "high": 0.008
+      },
+      "samples": 10000,
+      "seed": 20260901
+    },
+    "raw_minus_flat_clip_hit_at_1": {
+      "estimate": -0.064,
+      "ci_95": {
+        "low": -0.112,
+        "high": -0.016
+      },
+      "samples": 10000,
+      "seed": 20260901
+    },
+    "raw_minus_flat_clip_hit_at_3": {
+      "estimate": -0.096,
+      "ci_95": {
+        "low": -0.168,
+        "high": -0.032
+      },
+      "samples": 10000,
+      "seed": 20260901
+    }
+  },
+  "target_outside_two_best_branches_saved_run": {
+    "manual_hierarchy_clip": 21,
+    "raw_rgbd_hierarchy_clip": 29
+  },
+  "target_outside_two_best_branches_recomputed": {
+    "manual_hierarchy_clip": 21,
+    "raw_rgbd_hierarchy_clip": 29,
+    "pose_only_clip": 2,
+    "pose_semantic_merge_clip": 2,
+    "flat_clip": 0
+  },
+  "recomputed_gate_means": {
+    "manual_hierarchy_clip": {
+      "hit_at_1": 0.424,
+      "hit_at_3": 0.592,
+      "mean_views_checked": 10.544
+    },
+    "raw_rgbd_hierarchy_clip": {
+      "hit_at_1": 0.368,
+      "hit_at_3": 0.528,
+      "mean_views_checked": 10.152
+    },
+    "pose_only_clip": {
+      "hit_at_1": 0.432,
+      "hit_at_3": 0.624,
+      "mean_views_checked": 18.672
+    },
+    "pose_semantic_merge_clip": {
+      "hit_at_1": 0.432,
+      "hit_at_3": 0.624,
+      "mean_views_checked": 18.872
+    },
+    "flat_clip": {
+      "hit_at_1": 0.432,
+      "hit_at_3": 0.624,
+      "mean_views_checked": 19.4
+    }
+  }
+}

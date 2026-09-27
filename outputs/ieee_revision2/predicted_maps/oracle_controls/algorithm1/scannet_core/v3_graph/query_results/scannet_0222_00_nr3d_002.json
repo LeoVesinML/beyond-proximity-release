@@ -1,0 +1,162 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_v3_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0222_00",
+  "query_id": "scannet_0222_00_nr3d_002",
+  "query": "The door with the handle on the right side, which is also the door you use to enter and exit the room.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "door with handle on right side also door you use to enter and exit room",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v005_007_door"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v005_007_door"
+  ],
+  "selected_views": [
+    "v005"
+  ],
+  "checked_node_ids": [
+    "object_v003_002_door",
+    "object_v003_003_doorframe",
+    "object_v005_007_door",
+    "object_v005_008_doorframe",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v003",
+    "v005"
+  ],
+  "checked_object_ids": [
+    "3",
+    "4",
+    "24",
+    "25"
+  ],
+  "search_variant": "v3_graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "door",
+    "selected_object_id": "24",
+    "ranked_object_ids": [
+      "24",
+      "3",
+      "25",
+      "4"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "24",
+        "label": "door",
+        "score": 0.07500000000000001,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "3",
+        "label": "door",
+        "score": 0.07500000000000001,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "25",
+        "label": "doorframe",
+        "score": 0.020000000000000004,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 4,
+        "object_id": "4",
+        "label": "doorframe",
+        "score": 0.020000000000000004,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v005_007_door",
+    "selected_view_id": "v005",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.921944,
+        -2.379053,
+        0.950434
+      ],
+      "size": [
+        0.263672,
+        0.876466,
+        1.993546
+      ],
+      "label": "door",
+      "object_id": "24",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.07500000000000001,
+    "explanation": "v3_graph selected object 24.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.07500000000000001,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.1,
+      "text_overlap": 0.1,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [
+        "exit"
+      ],
+      "lexical_score": 0.075,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0012002080000002024,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0012002080000002024
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 5,
+    "checked_view_count": 2,
+    "checked_object_count": 4,
+    "context_size_chars": 692,
+    "prompt_size_chars": 794,
+    "estimated_input_tokens": 198,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

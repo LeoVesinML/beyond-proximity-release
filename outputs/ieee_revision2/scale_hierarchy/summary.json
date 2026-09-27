@@ -1,0 +1,2578 @@
+{
+  "schema_version": "beyond_proximity.ieee_scale_hierarchy.v1",
+  "generated_at": "2026-09-27T19:26:02.813467+00:00",
+  "status": "complete",
+  "model_name": "BAAI/bge-small-en-v1.5",
+  "seed": 20260901,
+  "platform": {
+    "python": "3.9.6",
+    "machine": "arm64",
+    "system": "macOS-26.5.2-arm64-arm-64bit",
+    "numpy": "1.26.4",
+    "cpu_count": 14,
+    "load_average_start": [
+      16.5029296875,
+      32.744140625,
+      31.68017578125
+    ],
+    "load_average_end": [
+      27.365234375,
+      41.12841796875,
+      38.4013671875
+    ],
+    "timing": "per query min over 5 interleaved repetitions after 5 warm-up queries; single-thread Python, numpy default BLAS threads"
+  },
+  "data_manifest": {
+    "nr3d": {
+      "path": "external/datasets/scanrefer_public/nr3d.csv",
+      "sha256": "5de4f1b47130803c88f7c57903e7b6df5473f1b903c32cf28d06fa9c25996a67",
+      "source_url": "https://drive.google.com/file/d/1qswKclq4BlnHSGMSgzLmUu8iqdUXD8ZC/view"
+    },
+    "sr3d_plus": {
+      "path": "external/datasets/scanrefer_public/sr3d/sr3d+.csv",
+      "sha256": "b6cd28ed18cbce716a3103198851d39a3dfb221d55eea66899d5f2c07a597d0d",
+      "source_url": "https://drive.google.com/drive/folders/1DS4uQq7fCmbJHeE-rEbO8G1-XatGEqNV"
+    },
+    "embedding_cache": {
+      "path": "external/datasets/scanrefer_public/referit3d_bge_small.npy",
+      "sha256": "74958b6f739808d927df706e713ead5f43a65bbaabeafb5ee27698982028aa79"
+    },
+    "deduplicated_records": 155535,
+    "scene_count": 1436,
+    "object_count": 16650
+  },
+  "query_accounting": {
+    "per_pool": [
+      {
+        "collection_size": 1000,
+        "eligible_queries": 88,
+        "evaluation_queries": 88,
+        "tuning_queries": 0
+      },
+      {
+        "collection_size": 10000,
+        "eligible_queries": 5523,
+        "evaluation_queries": 500,
+        "tuning_queries": 500
+      },
+      {
+        "collection_size": 50000,
+        "eligible_queries": 46333,
+        "evaluation_queries": 500,
+        "tuning_queries": 500
+      },
+      {
+        "collection_size": 100000,
+        "eligible_queries": 98125,
+        "evaluation_queries": 500,
+        "tuning_queries": 500
+      },
+      {
+        "collection_size": 155535,
+        "eligible_queries": 155528,
+        "evaluation_queries": 500,
+        "tuning_queries": 500
+      }
+    ],
+    "evaluation_query_pool_pairs_total": 2088,
+    "unique_evaluation_query_records": 1444,
+    "tuning_query_pool_pairs_total": 2000,
+    "unique_tuning_query_records": 1710,
+    "tuning_evaluation_overlap": 0,
+    "rule": "per pool, eligible = records whose (scan_id, target_id) has >=2 expressions inside that pool; eligible records are ordered by sha256(seed:query:record_key) and the first min(500, eligible) are evaluated (base._query_indices).",
+    "tuning_rule": "per pool, the eligible records after the first 500 in the same hash order, excluding any record that is an evaluation query in any pool, first 500 kept"
+  },
+  "grid": {
+    "tau": [
+      0.5,
+      0.7,
+      0.9
+    ],
+    "T": [
+      0.01,
+      0.02,
+      0.05,
+      0.1
+    ],
+    "B": [
+      1,
+      3,
+      5,
+      10
+    ],
+    "m": [
+      0,
+      1,
+      3
+    ],
+    "hnsw_shortlist_search_count": 12,
+    "hnsw_proxy_search_count": 64,
+    "hnsw_params": {
+      "connectivity": 16,
+      "expansion_add": 128,
+      "expansion_search": 64,
+      "metric": "cos"
+    }
+  },
+  "tuning": {
+    "flat_hit_at_1": 0.092,
+    "flat_hit_at_3": 0.1825,
+    "queries": 2000,
+    "selection_rules": {
+      "accuracy": "max tuning hit@3, ties by hit@1 then fewer mean leaf records",
+      "budget": "fewest mean leaf records among configs with tuning hit@3 >= flat tuning hit@3",
+      "gate_only": "accuracy rule restricted to m=0 (no safety shortlist); added after tuning-only inspection",
+      "budget_1pp": "fewest mean leaf records with tuning hit@3 >= flat tuning hit@3 - 0.01; added after tuning-only inspection"
+    },
+    "selected": {
+      "maxleaf_accuracy": {
+        "variant": "maxleaf",
+        "rule": "accuracy",
+        "config": {
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 1,
+          "m": 3
+        },
+        "tuning": {
+          "variant": "maxleaf",
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 1,
+          "m": 3,
+          "hit_at_1": 0.092,
+          "hit_at_3": 0.1825,
+          "mean_leaf_records": 132.89
+        },
+        "also_selected_by": [
+          "budget",
+          "budget_1pp"
+        ]
+      },
+      "maxleaf_gate_only": {
+        "variant": "maxleaf",
+        "rule": "gate_only",
+        "config": {
+          "tau": 0.9,
+          "T": 0.02,
+          "B": 3,
+          "m": 0
+        },
+        "tuning": {
+          "variant": "maxleaf",
+          "tau": 0.9,
+          "T": 0.02,
+          "B": 3,
+          "m": 0,
+          "hit_at_1": 0.092,
+          "hit_at_3": 0.1825,
+          "mean_leaf_records": 391.4725
+        }
+      },
+      "summary_accuracy": {
+        "variant": "summary",
+        "rule": "accuracy",
+        "config": {
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 3,
+          "m": 3
+        },
+        "tuning": {
+          "variant": "summary",
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 3,
+          "m": 3,
+          "hit_at_1": 0.092,
+          "hit_at_3": 0.18,
+          "mean_leaf_records": 86.366
+        }
+      },
+      "summary_gate_only": {
+        "variant": "summary",
+        "rule": "gate_only",
+        "config": {
+          "tau": 0.9,
+          "T": 0.02,
+          "B": 10,
+          "m": 0
+        },
+        "tuning": {
+          "variant": "summary",
+          "tau": 0.9,
+          "T": 0.02,
+          "B": 10,
+          "m": 0,
+          "hit_at_1": 0.055,
+          "hit_at_3": 0.099,
+          "mean_leaf_records": 422.0005
+        }
+      },
+      "summary_budget_1pp": {
+        "variant": "summary",
+        "rule": "budget_1pp",
+        "config": {
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 1,
+          "m": 3
+        },
+        "tuning": {
+          "variant": "summary",
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 1,
+          "m": 3,
+          "hit_at_1": 0.0915,
+          "hit_at_3": 0.179,
+          "mean_leaf_records": 31.555
+        }
+      },
+      "hnswproxy_accuracy": {
+        "variant": "hnswproxy",
+        "rule": "accuracy",
+        "config": {
+          "tau": 0.7,
+          "T": 0.02,
+          "B": 3,
+          "m": 3
+        },
+        "tuning": {
+          "variant": "hnswproxy",
+          "tau": 0.7,
+          "T": 0.02,
+          "B": 3,
+          "m": 3,
+          "hit_at_1": 0.091,
+          "hit_at_3": 0.181,
+          "mean_leaf_records": 381.9695
+        }
+      },
+      "hnswproxy_gate_only": {
+        "variant": "hnswproxy",
+        "rule": "gate_only",
+        "config": {
+          "tau": 0.5,
+          "T": 0.05,
+          "B": 3,
+          "m": 0
+        },
+        "tuning": {
+          "variant": "hnswproxy",
+          "tau": 0.5,
+          "T": 0.05,
+          "B": 3,
+          "m": 0,
+          "hit_at_1": 0.091,
+          "hit_at_3": 0.181,
+          "mean_leaf_records": 393.037
+        }
+      },
+      "hnswproxy_budget_1pp": {
+        "variant": "hnswproxy",
+        "rule": "budget_1pp",
+        "config": {
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 1,
+          "m": 3
+        },
+        "tuning": {
+          "variant": "hnswproxy",
+          "tau": 0.5,
+          "T": 0.01,
+          "B": 1,
+          "m": 3,
+          "hit_at_1": 0.091,
+          "hit_at_3": 0.179,
+          "mean_leaf_records": 133.321
+        }
+      }
+    },
+    "rules_with_no_qualifying_config": [
+      {
+        "variant": "summary",
+        "rule": "budget"
+      },
+      {
+        "variant": "hnswproxy",
+        "rule": "budget"
+      }
+    ]
+  },
+  "protocol": {
+    "quality_source": "hit@1/hit@3 for every method (flat included) come from one canonical exact score vector per query (pool sorted_matrix @ q) with deterministic tie-breaking (score desc, position asc), so flat and hierarchy break near-ties identically",
+    "timed_path": "latency and scored-record counts come from separate end-to-end executions; timed_path_hit_* re-derive quality from those executions (flat uses the unchanged base._top_indices); disagreements are counted in timed_vs_grid_mismatches",
+    "oracle_scan_id_used": false,
+    "query_exclusion": "query record excluded from leaves; summary variant removes the query vector from its own branch mean (leave-one-out); HNSW results drop the query key",
+    "record_count_convention": "leaf_records counts all records of selected branches (query included, as in scene_scoped_dense_exact) plus shortlist records outside them"
+  },
+  "timed_vs_grid_mismatches": {
+    "flat_dense_exact": 20
+  },
+  "pools": [
+    {
+      "collection_size": 1000,
+      "branches": 574,
+      "mean_records_per_branch": 1.742,
+      "hnsw_build_seconds": 0.022
+    },
+    {
+      "collection_size": 10000,
+      "branches": 1251,
+      "mean_records_per_branch": 7.994,
+      "hnsw_build_seconds": 0.375
+    },
+    {
+      "collection_size": 50000,
+      "branches": 1419,
+      "mean_records_per_branch": 35.236,
+      "hnsw_build_seconds": 1.482
+    },
+    {
+      "collection_size": 100000,
+      "branches": 1430,
+      "mean_records_per_branch": 69.93,
+      "hnsw_build_seconds": 3.416
+    },
+    {
+      "collection_size": 155535,
+      "branches": 1436,
+      "mean_records_per_branch": 108.311,
+      "hnsw_build_seconds": 5.938
+    }
+  ],
+  "summaries": [
+    {
+      "method": "flat_dense_exact",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "median_latency_ms": 0.02875,
+      "mean_latency_ms": 0.046712,
+      "median_first_run_latency_ms": 0.046583,
+      "timed_path_hit_at_3": 0.272727,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 1000.0,
+      "mean_scored_records": 1000.0,
+      "median_leaf_records": 1000.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "near_tie_rank3_rank4_queries": 1,
+      "near_tie_rank1_rank2_queries": 2,
+      "flat_misses_at_3": 64,
+      "flat_misses_top3_all_other_scene": 61,
+      "flat_misses_top3_all_other_scene_fraction": 0.953125
+    },
+    {
+      "method": "hier_maxleaf_accuracy",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "median_latency_ms": 0.063479,
+      "mean_latency_ms": 0.087843,
+      "median_first_run_latency_ms": 0.116646,
+      "timed_path_hit_at_3": 0.272727,
+      "mean_proxy_records": 1000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 4.761364,
+      "mean_scored_records": 1000.0,
+      "median_leaf_records": 4.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "variant": "maxleaf",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.181818,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_maxleaf_gate_only",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.261364,
+      "median_latency_ms": 0.050229,
+      "mean_latency_ms": 0.077037,
+      "median_first_run_latency_ms": 0.086083,
+      "timed_path_hit_at_3": 0.261364,
+      "mean_proxy_records": 1000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 7.863636,
+      "mean_scored_records": 1000.0,
+      "median_leaf_records": 7.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.180932,
+        "high": 0.361758
+      },
+      "variant": "maxleaf",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 2.784091,
+      "query_scene_selected_rate": 0.295455,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.011364,
+        "ci_95": {
+          "low": -0.034091,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_accuracy",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "median_latency_ms": 0.118,
+      "mean_latency_ms": 0.15354,
+      "median_first_run_latency_ms": 0.246625,
+      "timed_path_hit_at_3": 0.272727,
+      "mean_proxy_records": 574.0,
+      "mean_hnsw_computed_distances": 457.238636,
+      "mean_leaf_records": 4.897727,
+      "mean_scored_records": 1036.136364,
+      "median_leaf_records": 4.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "variant": "summary",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 1.375,
+      "query_scene_selected_rate": 0.159091,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_gate_only",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.147727,
+      "hit_at_3": 0.227273,
+      "median_latency_ms": 0.058896,
+      "mean_latency_ms": 0.078042,
+      "median_first_run_latency_ms": 0.103666,
+      "timed_path_hit_at_3": 0.227273,
+      "mean_proxy_records": 574.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 22.636364,
+      "mean_scored_records": 596.636364,
+      "median_leaf_records": 23.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.088413,
+        "high": 0.236511
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.152217,
+        "high": 0.325143
+      },
+      "variant": "summary",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 10,
+        "m": 0
+      },
+      "mean_selected_branches": 8.954545,
+      "query_scene_selected_rate": 0.397727,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.011364,
+        "ci_95": {
+          "low": -0.034091,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.045455,
+        "ci_95": {
+          "low": -0.090909,
+          "high": -0.011364
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_budget_1pp",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "median_latency_ms": 0.114687,
+      "mean_latency_ms": 0.1409,
+      "median_first_run_latency_ms": 0.181063,
+      "timed_path_hit_at_3": 0.272727,
+      "mean_proxy_records": 574.0,
+      "mean_hnsw_computed_distances": 457.238636,
+      "mean_leaf_records": 4.113636,
+      "mean_scored_records": 1035.352273,
+      "median_leaf_records": 4.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "variant": "summary",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.136364,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_accuracy",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "median_latency_ms": 0.103854,
+      "mean_latency_ms": 0.114668,
+      "median_first_run_latency_ms": 0.158042,
+      "timed_path_hit_at_3": 0.272727,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 457.238636,
+      "mean_leaf_records": 7.386364,
+      "mean_scored_records": 464.625,
+      "median_leaf_records": 7.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.7,
+        "T": 0.02,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.386364,
+      "query_scene_selected_rate": 0.272727,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_gate_only",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "median_latency_ms": 0.099917,
+      "mean_latency_ms": 0.110194,
+      "median_first_run_latency_ms": 0.142833,
+      "timed_path_hit_at_3": 0.272727,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 457.238636,
+      "mean_leaf_records": 8.693182,
+      "mean_scored_records": 465.931818,
+      "median_leaf_records": 8.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.5,
+        "T": 0.05,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 3.0,
+      "query_scene_selected_rate": 0.318182,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_budget_1pp",
+      "collection_size": 1000,
+      "query_count": 88,
+      "hit_at_1": 0.159091,
+      "hit_at_3": 0.272727,
+      "median_latency_ms": 0.100229,
+      "mean_latency_ms": 0.109346,
+      "median_first_run_latency_ms": 0.150979,
+      "timed_path_hit_at_3": 0.272727,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 457.238636,
+      "mean_leaf_records": 4.761364,
+      "mean_scored_records": 462.0,
+      "median_leaf_records": 4.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.097199,
+        "high": 0.249501
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.190655,
+        "high": 0.373812
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.181818,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.196188,
+      "mean_latency_ms": 0.380224,
+      "median_first_run_latency_ms": 0.306021,
+      "timed_path_hit_at_3": 0.156,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 10000.0,
+      "mean_scored_records": 10000.0,
+      "median_leaf_records": 10000.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "near_tie_rank3_rank4_queries": 27,
+      "near_tie_rank1_rank2_queries": 23,
+      "flat_misses_at_3": 421,
+      "flat_misses_top3_all_other_scene": 410,
+      "flat_misses_top3_all_other_scene_fraction": 0.973872
+    },
+    {
+      "method": "hier_maxleaf_accuracy",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.263208,
+      "mean_latency_ms": 0.439626,
+      "median_first_run_latency_ms": 0.42,
+      "timed_path_hit_at_3": 0.158,
+      "mean_proxy_records": 10000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 20.466,
+      "mean_scored_records": 10000.0,
+      "median_leaf_records": 15.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "variant": "maxleaf",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.084,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_maxleaf_gate_only",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.1515,
+      "mean_latency_ms": 0.337741,
+      "median_first_run_latency_ms": 0.244958,
+      "timed_path_hit_at_3": 0.158,
+      "mean_proxy_records": 10000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 54.688,
+      "mean_scored_records": 10000.0,
+      "median_leaf_records": 47.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "variant": "maxleaf",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 2.962,
+      "query_scene_selected_rate": 0.182,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_accuracy",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.214021,
+      "mean_latency_ms": 0.422234,
+      "median_first_run_latency_ms": 0.463021,
+      "timed_path_hit_at_3": 0.158,
+      "mean_proxy_records": 1251.0,
+      "mean_hnsw_computed_distances": 645.448,
+      "mean_leaf_records": 18.2,
+      "mean_scored_records": 1914.648,
+      "median_leaf_records": 14.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "variant": "summary",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.1,
+      "query_scene_selected_rate": 0.058,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_gate_only",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.038,
+      "hit_at_3": 0.074,
+      "median_latency_ms": 0.088604,
+      "mean_latency_ms": 0.497862,
+      "median_first_run_latency_ms": 0.140209,
+      "timed_path_hit_at_3": 0.074,
+      "mean_proxy_records": 1251.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 88.742,
+      "mean_scored_records": 1339.742,
+      "median_leaf_records": 79.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.02446,
+        "high": 0.058585
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "variant": "summary",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 10,
+        "m": 0
+      },
+      "mean_selected_branches": 9.936,
+      "query_scene_selected_rate": 0.214,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.036,
+        "ci_95": {
+          "low": -0.058,
+          "high": -0.014
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.084,
+        "ci_95": {
+          "low": -0.116,
+          "high": -0.054
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_budget_1pp",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.201104,
+      "mean_latency_ms": 0.342344,
+      "median_first_run_latency_ms": 0.248708,
+      "timed_path_hit_at_3": 0.158,
+      "mean_proxy_records": 1251.0,
+      "mean_hnsw_computed_distances": 645.448,
+      "mean_leaf_records": 8.96,
+      "mean_scored_records": 1905.408,
+      "median_leaf_records": 7.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "variant": "summary",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.034,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_accuracy",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.184688,
+      "mean_latency_ms": 0.274853,
+      "median_first_run_latency_ms": 0.220396,
+      "timed_path_hit_at_3": 0.158,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 645.448,
+      "mean_leaf_records": 51.264,
+      "mean_scored_records": 696.712,
+      "median_leaf_records": 42.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.7,
+        "T": 0.02,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.766,
+      "query_scene_selected_rate": 0.166,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_gate_only",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.181729,
+      "mean_latency_ms": 0.259438,
+      "median_first_run_latency_ms": 0.209603,
+      "timed_path_hit_at_3": 0.158,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 645.448,
+      "mean_leaf_records": 55.42,
+      "mean_scored_records": 700.868,
+      "median_leaf_records": 48.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.5,
+        "T": 0.05,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 3.0,
+      "query_scene_selected_rate": 0.182,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_budget_1pp",
+      "collection_size": 10000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.158,
+      "median_latency_ms": 0.178104,
+      "mean_latency_ms": 0.193049,
+      "median_first_run_latency_ms": 0.193396,
+      "timed_path_hit_at_3": 0.158,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 645.448,
+      "mean_leaf_records": 20.428,
+      "mean_scored_records": 665.876,
+      "median_leaf_records": 15.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.128653,
+        "high": 0.192562
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.086,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.106,
+      "hit_at_3": 0.208,
+      "median_latency_ms": 1.413353,
+      "mean_latency_ms": 1.837581,
+      "median_first_run_latency_ms": 2.762437,
+      "timed_path_hit_at_3": 0.204,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 50000.0,
+      "mean_scored_records": 50000.0,
+      "median_leaf_records": 50000.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.081957,
+        "high": 0.136051
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.174716,
+        "high": 0.245736
+      },
+      "near_tie_rank3_rank4_queries": 97,
+      "near_tie_rank1_rank2_queries": 100,
+      "flat_misses_at_3": 396,
+      "flat_misses_top3_all_other_scene": 381,
+      "flat_misses_top3_all_other_scene_fraction": 0.962121
+    },
+    {
+      "method": "hier_maxleaf_accuracy",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.106,
+      "hit_at_3": 0.208,
+      "median_latency_ms": 1.687334,
+      "mean_latency_ms": 2.161487,
+      "median_first_run_latency_ms": 3.384334,
+      "timed_path_hit_at_3": 0.208,
+      "mean_proxy_records": 50000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 93.85,
+      "mean_scored_records": 50000.0,
+      "median_leaf_records": 68.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.081957,
+        "high": 0.136051
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.174716,
+        "high": 0.245736
+      },
+      "variant": "maxleaf",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.118,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_maxleaf_gate_only",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.106,
+      "hit_at_3": 0.208,
+      "median_latency_ms": 1.110062,
+      "mean_latency_ms": 1.556664,
+      "median_first_run_latency_ms": 2.835209,
+      "timed_path_hit_at_3": 0.208,
+      "mean_proxy_records": 50000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 272.41,
+      "mean_scored_records": 50000.0,
+      "median_leaf_records": 238.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.081957,
+        "high": 0.136051
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.174716,
+        "high": 0.245736
+      },
+      "variant": "maxleaf",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 2.994,
+      "query_scene_selected_rate": 0.252,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_accuracy",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.106,
+      "hit_at_3": 0.21,
+      "median_latency_ms": 0.691812,
+      "mean_latency_ms": 1.392277,
+      "median_first_run_latency_ms": 3.589416,
+      "timed_path_hit_at_3": 0.21,
+      "mean_proxy_records": 1419.0,
+      "mean_hnsw_computed_distances": 633.684,
+      "mean_leaf_records": 58.772,
+      "mean_scored_records": 2111.456,
+      "median_leaf_records": 43.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.081957,
+        "high": 0.136051
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.176577,
+        "high": 0.247845
+      },
+      "variant": "summary",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.38,
+      "query_scene_selected_rate": 0.076,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_gate_only",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.074,
+      "hit_at_3": 0.12,
+      "median_latency_ms": 0.177958,
+      "mean_latency_ms": 1.242886,
+      "median_first_run_latency_ms": 3.157104,
+      "timed_path_hit_at_3": 0.12,
+      "mean_proxy_records": 1419.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 300.484,
+      "mean_scored_records": 1719.484,
+      "median_leaf_records": 257.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.054161,
+        "high": 0.100335
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.094375,
+        "high": 0.15142
+      },
+      "variant": "summary",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 10,
+        "m": 0
+      },
+      "mean_selected_branches": 10.0,
+      "query_scene_selected_rate": 0.216,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.032,
+        "ci_95": {
+          "low": -0.06,
+          "high": -0.004
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.088,
+        "ci_95": {
+          "low": -0.124,
+          "high": -0.052
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_budget_1pp",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.106,
+      "hit_at_3": 0.21,
+      "median_latency_ms": 0.288999,
+      "mean_latency_ms": 0.795262,
+      "median_first_run_latency_ms": 1.728541,
+      "timed_path_hit_at_3": 0.21,
+      "mean_proxy_records": 1419.0,
+      "mean_hnsw_computed_distances": 633.684,
+      "mean_leaf_records": 20.684,
+      "mean_scored_records": 2073.368,
+      "median_leaf_records": 16.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.081957,
+        "high": 0.136051
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.176577,
+        "high": 0.247845
+      },
+      "variant": "summary",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.042,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_accuracy",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.108,
+      "hit_at_3": 0.21,
+      "median_latency_ms": 0.282521,
+      "mean_latency_ms": 0.68961,
+      "median_first_run_latency_ms": 1.328209,
+      "timed_path_hit_at_3": 0.21,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 633.684,
+      "mean_leaf_records": 264.792,
+      "mean_scored_records": 898.476,
+      "median_leaf_records": 233.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.083723,
+        "high": 0.138255
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.176577,
+        "high": 0.247845
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.7,
+        "T": 0.02,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.904,
+      "query_scene_selected_rate": 0.246,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_gate_only",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.108,
+      "hit_at_3": 0.21,
+      "median_latency_ms": 0.283459,
+      "mean_latency_ms": 0.716583,
+      "median_first_run_latency_ms": 1.895437,
+      "timed_path_hit_at_3": 0.21,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 633.684,
+      "mean_leaf_records": 272.826,
+      "mean_scored_records": 906.51,
+      "median_leaf_records": 238.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.083723,
+        "high": 0.138255
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.176577,
+        "high": 0.247845
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.5,
+        "T": 0.05,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 3.0,
+      "query_scene_selected_rate": 0.254,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_budget_1pp",
+      "collection_size": 50000,
+      "query_count": 500,
+      "hit_at_1": 0.108,
+      "hit_at_3": 0.21,
+      "median_latency_ms": 0.219208,
+      "mean_latency_ms": 0.57723,
+      "median_first_run_latency_ms": 1.121271,
+      "timed_path_hit_at_3": 0.21,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 633.684,
+      "mean_leaf_records": 93.924,
+      "mean_scored_records": 727.608,
+      "median_leaf_records": 68.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.083723,
+        "high": 0.138255
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.176577,
+        "high": 0.247845
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.12,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.006
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.09,
+      "hit_at_3": 0.196,
+      "median_latency_ms": 2.837249,
+      "mean_latency_ms": 3.08307,
+      "median_first_run_latency_ms": 4.870354,
+      "timed_path_hit_at_3": 0.198,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 100000.0,
+      "mean_scored_records": 100000.0,
+      "median_leaf_records": 100000.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.067943,
+        "high": 0.118309
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.163578,
+        "high": 0.233057
+      },
+      "near_tie_rank3_rank4_queries": 137,
+      "near_tie_rank1_rank2_queries": 157,
+      "flat_misses_at_3": 402,
+      "flat_misses_top3_all_other_scene": 386,
+      "flat_misses_top3_all_other_scene_fraction": 0.960199
+    },
+    {
+      "method": "hier_maxleaf_accuracy",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.09,
+      "hit_at_3": 0.196,
+      "median_latency_ms": 3.184146,
+      "mean_latency_ms": 3.492165,
+      "median_first_run_latency_ms": 5.356521,
+      "timed_path_hit_at_3": 0.196,
+      "mean_proxy_records": 100000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 176.242,
+      "mean_scored_records": 100000.0,
+      "median_leaf_records": 123.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.067943,
+        "high": 0.118309
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.163578,
+        "high": 0.233057
+      },
+      "variant": "maxleaf",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.114,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_maxleaf_gate_only",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.09,
+      "hit_at_3": 0.196,
+      "median_latency_ms": 2.131312,
+      "mean_latency_ms": 2.449732,
+      "median_first_run_latency_ms": 4.032291,
+      "timed_path_hit_at_3": 0.196,
+      "mean_proxy_records": 100000.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 515.244,
+      "mean_scored_records": 100000.0,
+      "median_leaf_records": 438.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.067943,
+        "high": 0.118309
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.163578,
+        "high": 0.233057
+      },
+      "variant": "maxleaf",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 2.992,
+      "query_scene_selected_rate": 0.238,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_accuracy",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.09,
+      "hit_at_3": 0.198,
+      "median_latency_ms": 2.018417,
+      "mean_latency_ms": 2.546074,
+      "median_first_run_latency_ms": 5.739667,
+      "timed_path_hit_at_3": 0.198,
+      "mean_proxy_records": 1430.0,
+      "mean_hnsw_computed_distances": 605.494,
+      "mean_leaf_records": 113.652,
+      "mean_scored_records": 2149.146,
+      "median_leaf_records": 80.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.067943,
+        "high": 0.118309
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.165431,
+        "high": 0.235174
+      },
+      "variant": "summary",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.454,
+      "query_scene_selected_rate": 0.07,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.01
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_gate_only",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.078,
+      "hit_at_3": 0.13,
+      "median_latency_ms": 1.842874,
+      "mean_latency_ms": 2.275051,
+      "median_first_run_latency_ms": 5.923438,
+      "timed_path_hit_at_3": 0.13,
+      "mean_proxy_records": 1430.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 552.144,
+      "mean_scored_records": 1982.144,
+      "median_leaf_records": 462.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.057581,
+        "high": 0.104854
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.103321,
+        "high": 0.162321
+      },
+      "variant": "summary",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 10,
+        "m": 0
+      },
+      "mean_selected_branches": 10.0,
+      "query_scene_selected_rate": 0.22,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.012,
+        "ci_95": {
+          "low": -0.038,
+          "high": 0.014
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.066,
+        "ci_95": {
+          "low": -0.104,
+          "high": -0.028
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_budget_1pp",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.09,
+      "hit_at_3": 0.198,
+      "median_latency_ms": 0.952896,
+      "mean_latency_ms": 1.516781,
+      "median_first_run_latency_ms": 4.284333,
+      "timed_path_hit_at_3": 0.198,
+      "mean_proxy_records": 1430.0,
+      "mean_hnsw_computed_distances": 605.494,
+      "mean_leaf_records": 40.092,
+      "mean_scored_records": 2075.586,
+      "median_leaf_records": 27.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.067943,
+        "high": 0.118309
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.165431,
+        "high": 0.235174
+      },
+      "variant": "summary",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.04,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.01
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_accuracy",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.088,
+      "hit_at_3": 0.192,
+      "median_latency_ms": 0.683646,
+      "mean_latency_ms": 1.014499,
+      "median_first_run_latency_ms": 3.035792,
+      "timed_path_hit_at_3": 0.192,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 605.494,
+      "mean_leaf_records": 508.928,
+      "mean_scored_records": 1114.422,
+      "median_leaf_records": 435.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.066206,
+        "high": 0.116076
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.159876,
+        "high": 0.22882
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.7,
+        "T": 0.02,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.944,
+      "query_scene_selected_rate": 0.226,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.004,
+        "ci_95": {
+          "low": -0.01,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_gate_only",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.088,
+      "hit_at_3": 0.192,
+      "median_latency_ms": 0.81848,
+      "mean_latency_ms": 1.079713,
+      "median_first_run_latency_ms": 2.879646,
+      "timed_path_hit_at_3": 0.192,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 605.494,
+      "mean_leaf_records": 517.242,
+      "mean_scored_records": 1122.736,
+      "median_leaf_records": 439.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.066206,
+        "high": 0.116076
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.159876,
+        "high": 0.22882
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.5,
+        "T": 0.05,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 3.0,
+      "query_scene_selected_rate": 0.23,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.004,
+        "ci_95": {
+          "low": -0.01,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_budget_1pp",
+      "collection_size": 100000,
+      "query_count": 500,
+      "hit_at_1": 0.088,
+      "hit_at_3": 0.192,
+      "median_latency_ms": 0.599063,
+      "mean_latency_ms": 0.910854,
+      "median_first_run_latency_ms": 2.941917,
+      "timed_path_hit_at_3": 0.192,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 605.494,
+      "mean_leaf_records": 175.424,
+      "mean_scored_records": 780.918,
+      "median_leaf_records": 122.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.066206,
+        "high": 0.116076
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.159876,
+        "high": 0.22882
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.11,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.004,
+        "ci_95": {
+          "low": -0.012,
+          "high": 0.004
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "flat_dense_exact",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.138,
+      "hit_at_3": 0.234,
+      "median_latency_ms": 3.591417,
+      "mean_latency_ms": 3.683137,
+      "median_first_run_latency_ms": 4.61325,
+      "timed_path_hit_at_3": 0.236,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 155535.0,
+      "mean_scored_records": 155535.0,
+      "median_leaf_records": 155535.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.110518,
+        "high": 0.171002
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.199005,
+        "high": 0.273051
+      },
+      "near_tie_rank3_rank4_queries": 190,
+      "near_tie_rank1_rank2_queries": 197,
+      "flat_misses_at_3": 383,
+      "flat_misses_top3_all_other_scene": 371,
+      "flat_misses_top3_all_other_scene_fraction": 0.968668
+    },
+    {
+      "method": "hier_maxleaf_accuracy",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.138,
+      "hit_at_3": 0.234,
+      "median_latency_ms": 3.827896,
+      "mean_latency_ms": 3.975331,
+      "median_first_run_latency_ms": 5.282813,
+      "timed_path_hit_at_3": 0.234,
+      "mean_proxy_records": 155535.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 274.592,
+      "mean_scored_records": 155535.0,
+      "median_leaf_records": 189.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.110518,
+        "high": 0.171002
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.199005,
+        "high": 0.273051
+      },
+      "variant": "maxleaf",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.15,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_maxleaf_gate_only",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.138,
+      "hit_at_3": 0.234,
+      "median_latency_ms": 2.225875,
+      "mean_latency_ms": 2.431946,
+      "median_first_run_latency_ms": 3.574666,
+      "timed_path_hit_at_3": 0.234,
+      "mean_proxy_records": 155535.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 806.274,
+      "mean_scored_records": 155535.0,
+      "median_leaf_records": 673.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.110518,
+        "high": 0.171002
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.199005,
+        "high": 0.273051
+      },
+      "variant": "maxleaf",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 2.994,
+      "query_scene_selected_rate": 0.268,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_accuracy",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.136,
+      "hit_at_3": 0.232,
+      "median_latency_ms": 0.435146,
+      "mean_latency_ms": 0.881298,
+      "median_first_run_latency_ms": 1.944459,
+      "timed_path_hit_at_3": 0.232,
+      "mean_proxy_records": 1436.0,
+      "mean_hnsw_computed_distances": 583.744,
+      "mean_leaf_records": 167.16,
+      "mean_scored_records": 2186.904,
+      "median_leaf_records": 131.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.108715,
+        "high": 0.168835
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.197129,
+        "high": 0.270957
+      },
+      "variant": "summary",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.488,
+      "query_scene_selected_rate": 0.068,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.012,
+          "high": 0.008
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_gate_only",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.07,
+      "hit_at_3": 0.116,
+      "median_latency_ms": 0.158104,
+      "mean_latency_ms": 0.564766,
+      "median_first_run_latency_ms": 1.287917,
+      "timed_path_hit_at_3": 0.116,
+      "mean_proxy_records": 1436.0,
+      "mean_hnsw_computed_distances": 0.0,
+      "mean_leaf_records": 807.11,
+      "mean_scored_records": 2243.11,
+      "median_leaf_records": 690.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.05076,
+        "high": 0.095797
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.090814,
+        "high": 0.147042
+      },
+      "variant": "summary",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 10,
+        "m": 0
+      },
+      "mean_selected_branches": 10.0,
+      "query_scene_selected_rate": 0.198,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.068,
+        "ci_95": {
+          "low": -0.1,
+          "high": -0.038
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.118,
+        "ci_95": {
+          "low": -0.16,
+          "high": -0.078
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_summary_budget_1pp",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.136,
+      "hit_at_3": 0.232,
+      "median_latency_ms": 0.192709,
+      "mean_latency_ms": 0.439963,
+      "median_first_run_latency_ms": 0.823187,
+      "timed_path_hit_at_3": 0.232,
+      "mean_proxy_records": 1436.0,
+      "mean_hnsw_computed_distances": 583.744,
+      "mean_leaf_records": 56.876,
+      "mean_scored_records": 2076.62,
+      "median_leaf_records": 39.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.108715,
+        "high": 0.168835
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.197129,
+        "high": 0.270957
+      },
+      "variant": "summary",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.03,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.006,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.002,
+        "ci_95": {
+          "low": -0.012,
+          "high": 0.008
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_accuracy",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.134,
+      "hit_at_3": 0.228,
+      "median_latency_ms": 0.227875,
+      "mean_latency_ms": 0.349117,
+      "median_first_run_latency_ms": 0.635251,
+      "timed_path_hit_at_3": 0.228,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 583.744,
+      "mean_leaf_records": 796.98,
+      "mean_scored_records": 1380.724,
+      "median_leaf_records": 670.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.106915,
+        "high": 0.166666
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.193382,
+        "high": 0.266766
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "accuracy",
+      "config": {
+        "tau": 0.7,
+        "T": 0.02,
+        "B": 3,
+        "m": 3
+      },
+      "mean_selected_branches": 2.95,
+      "query_scene_selected_rate": 0.258,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.004,
+        "ci_95": {
+          "low": -0.01,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.006,
+        "ci_95": {
+          "low": -0.014,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_gate_only",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.134,
+      "hit_at_3": 0.228,
+      "median_latency_ms": 0.238542,
+      "mean_latency_ms": 0.404356,
+      "median_first_run_latency_ms": 0.660875,
+      "timed_path_hit_at_3": 0.228,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 583.744,
+      "mean_leaf_records": 807.242,
+      "mean_scored_records": 1390.986,
+      "median_leaf_records": 675.5,
+      "hit_at_1_wilson_95": {
+        "low": 0.106915,
+        "high": 0.166666
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.193382,
+        "high": 0.266766
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "gate_only",
+      "config": {
+        "tau": 0.5,
+        "T": 0.05,
+        "B": 3,
+        "m": 0
+      },
+      "mean_selected_branches": 2.998,
+      "query_scene_selected_rate": 0.262,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.004,
+        "ci_95": {
+          "low": -0.01,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.006,
+        "ci_95": {
+          "low": -0.014,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    },
+    {
+      "method": "hier_hnswproxy_budget_1pp",
+      "collection_size": 155535,
+      "query_count": 500,
+      "hit_at_1": 0.134,
+      "hit_at_3": 0.228,
+      "median_latency_ms": 0.179625,
+      "mean_latency_ms": 0.323542,
+      "median_first_run_latency_ms": 0.550895,
+      "timed_path_hit_at_3": 0.228,
+      "mean_proxy_records": 0.0,
+      "mean_hnsw_computed_distances": 583.744,
+      "mean_leaf_records": 274.544,
+      "mean_scored_records": 858.288,
+      "median_leaf_records": 189.0,
+      "hit_at_1_wilson_95": {
+        "low": 0.106915,
+        "high": 0.166666
+      },
+      "hit_at_3_wilson_95": {
+        "low": 0.193382,
+        "high": 0.266766
+      },
+      "variant": "hnswproxy",
+      "selection_rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "mean_selected_branches": 1.0,
+      "query_scene_selected_rate": 0.146,
+      "paired_hit_at_1_difference_vs_flat": {
+        "estimate": -0.004,
+        "ci_95": {
+          "low": -0.01,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260901
+      },
+      "paired_hit_at_3_difference_vs_flat": {
+        "estimate": -0.006,
+        "ci_95": {
+          "low": -0.016,
+          "high": 0.004
+        },
+        "samples": 10000,
+        "seed": 20260901
+      }
+    }
+  ],
+  "flat_miss_scene_analysis_all_pools": {
+    "flat_misses_at_3": 1666,
+    "top3_all_other_scene": 1609,
+    "fraction": 0.965786
+  }
+}

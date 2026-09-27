@@ -1,0 +1,160 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v005",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v005.png",
+  "depth_path": "depths/v005_depth.npy",
+  "pose_ref": "transforms.json#/frames/4/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Close view of a theater notice wall with a digital schedule screen, printed notices, a timetable board, and black background panels.",
+  "visible_regions": [
+    {
+      "label": "notice board area",
+      "description": "wall area with schedules and posted information",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "digital schedule area",
+      "description": "screen showing a schedule or list",
+      "approx_location": "left-center",
+      "source": "manual"
+    },
+    {
+      "label": "printed timetable area",
+      "description": "white timetable or calendar board",
+      "approx_location": "right-center",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "digital schedule screen",
+      "attributes": [
+        "rectangular",
+        "green text or table"
+      ],
+      "approx_location": "left-center",
+      "confidence": null,
+      "bbox_2d": [
+        0.1544,
+        0.3704,
+        0.3656,
+        0.6696
+      ],
+      "bbox_3d": {
+        "center": [
+          -26.64098469416703,
+          10.046763756404253,
+          -9.435141636056422
+        ],
+        "size": [
+          32.12863145040055,
+          16.65709162431913,
+          17.198763298896907
+        ],
+        "label": "digital schedule screen"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "printed notices",
+      "attributes": [
+        "white papers",
+        "posted"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "timetable board",
+      "attributes": [
+        "large",
+        "white",
+        "grid"
+      ],
+      "approx_location": "right-center",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.18,
+        0.96,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          -20.89046580486171,
+          9.83142728597673,
+          6.811909963818799
+        ],
+        "size": [
+          23.27083296948198,
+          19.940308107952866,
+          13.758291459810021
+        ],
+        "label": "timetable board"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "black wall panel",
+      "attributes": [
+        "dark",
+        "background"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small photo or poster",
+      "attributes": [
+        "mounted"
+      ],
+      "approx_location": "lower left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "paper sign",
+      "attributes": [
+        "small",
+        "white"
+      ],
+      "approx_location": "upper center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "digital schedule screen",
+      "description": "bright rectangular schedule display on the notice wall",
+      "approx_location": "left-center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "large timetable board",
+      "description": "white grid-like board useful for orientation",
+      "approx_location": "right-center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Strong view for queries about schedules, notices, and theater information wall.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

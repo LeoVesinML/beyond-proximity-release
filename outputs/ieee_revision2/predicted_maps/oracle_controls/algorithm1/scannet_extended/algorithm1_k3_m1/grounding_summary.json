@@ -1,0 +1,6592 @@
+{
+  "schema_version": "semanticsplat.grounding_metrics.v2",
+  "benchmark_id": "scannet_bbq_grounding_extended_v2",
+  "generated_at": "2026-09-27T18:55:08.058087+00:00",
+  "coverage": {
+    "benchmark_queries": 64,
+    "result_files": 64,
+    "canonical_results": 64,
+    "legacy_adapted_results": 0,
+    "schema_valid_results": 64
+  },
+  "metrics": {
+    "query_count": 64,
+    "bbox_eligible_count": 56,
+    "bbox_iou_3d": {
+      "value": 0.590986,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "mrr_exact_object_id": {
+      "value": 0.675595,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "negative_accuracy": {
+      "value": 1.0,
+      "numerator": 8,
+      "denominator": 8,
+      "status": "measured"
+    },
+    "efficiency": {
+      "runtime_seconds": {
+        "mean": 0.002479,
+        "total": 0.15865,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "checked_nodes": {
+        "mean": 1.5,
+        "total": 96.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "checked_views": {
+        "mean": 3.53125,
+        "total": 226.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "checked_objects": {
+        "mean": 24.234375,
+        "total": 1551.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "context_chars": {
+        "mean": 4167.0625,
+        "total": 266692.0,
+        "denominator": 64,
+        "status": "measured"
+      },
+      "estimated_tokens": {
+        "mean": 1053.03125,
+        "total": 67394.0,
+        "denominator": 64,
+        "status": "measured"
+      }
+    },
+    "recall_at_1_exact_object_id": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "recall_at_3_exact_object_id": {
+      "value": 0.767857,
+      "numerator": 43,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "recall_at_5_exact_object_id": {
+      "value": 0.767857,
+      "numerator": 43,
+      "denominator": 56,
+      "status": "measured"
+    },
+    "acc_at_0_1": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.1,
+      "status": "measured"
+    },
+    "bbox_acc_at_0_1": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.1,
+      "status": "measured"
+    },
+    "acc_at_0_25": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.25,
+      "status": "measured"
+    },
+    "bbox_acc_at_0_25": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.25,
+      "status": "measured"
+    },
+    "acc_at_0_5": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.5,
+      "status": "measured"
+    },
+    "bbox_acc_at_0_5": {
+      "value": 0.589286,
+      "numerator": 33,
+      "denominator": 56,
+      "threshold": 0.5,
+      "status": "measured"
+    },
+    "segmentation": {
+      "mAcc": {
+        "status": "N/A",
+        "value": null,
+        "reason": "Segmentation prediction and GT arrays/masks are not jointly available; object retrieval or oracle object IDs are not segmentation evidence.",
+        "query_count": 0
+      },
+      "mIoU": {
+        "status": "N/A",
+        "value": null,
+        "reason": "Segmentation prediction and GT arrays/masks are not jointly available; object retrieval or oracle object IDs are not segmentation evidence.",
+        "query_count": 0
+      },
+      "fmIoU": {
+        "status": "N/A",
+        "value": null,
+        "reason": "Segmentation prediction and GT arrays/masks are not jointly available; object retrieval or oracle object IDs are not segmentation evidence.",
+        "query_count": 0
+      }
+    }
+  },
+  "construction_cost": {
+    "status": "reported",
+    "scope": "one-time construction; excluded from per-query efficiency",
+    "run": {
+      "runtime_seconds": 0.003449,
+      "candidate_count": 392,
+      "scope": "one-time canonical candidate construction"
+    },
+    "per_query_records": [],
+    "record_count": 0
+  },
+  "strata": {
+    "scene": {
+      "scannet_0011_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.714494,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.785714,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.00134,
+            "total": 0.01072,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.75,
+            "total": 14.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.25,
+            "total": 26.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 16.5,
+            "total": 132.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 2820.5,
+            "total": 22564.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 717.375,
+            "total": 5739.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0030_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.428571,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.547619,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.00566,
+            "total": 0.045276,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.25,
+            "total": 34.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 46.5,
+            "total": 372.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 7630.125,
+            "total": 61041.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1919.375,
+            "total": 15355.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0046_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.571429,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.571429,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002926,
+            "total": 0.023408,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 2.75,
+            "total": 22.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 26.5,
+            "total": 212.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 4616.625,
+            "total": 36933.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1166.375,
+            "total": 9331.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0086_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.717255,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.714286,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001899,
+            "total": 0.015193,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 2.125,
+            "total": 17.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 14.75,
+            "total": 118.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 2796.375,
+            "total": 22371.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 710.875,
+            "total": 5687.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0222_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.428571,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001894,
+            "total": 0.015155,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.0,
+            "total": 8.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.5,
+            "total": 36.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 26.625,
+            "total": 213.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 4714.125,
+            "total": 37713.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1190.875,
+            "total": 9527.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.571429,
+          "numerator": 4,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0378_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.714286,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.785714,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.00217,
+            "total": 0.01736,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.5,
+            "total": 36.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 24.875,
+            "total": 199.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 4303.25,
+            "total": 34426.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1084.5,
+            "total": 8676.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0389_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.724711,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.857143,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001148,
+            "total": 0.009181,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.75,
+            "total": 14.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.125,
+            "total": 25.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 15.125,
+            "total": 121.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 2547.875,
+            "total": 20383.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 645.5,
+            "total": 5164.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 1.0,
+          "numerator": 7,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 1.0,
+          "numerator": 7,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.714286,
+          "numerator": 5,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "scannet_0435_00": {
+        "query_count": 8,
+        "bbox_eligible_count": 7,
+        "bbox_iou_3d": {
+          "value": 0.428571,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.642857,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 1,
+          "denominator": 1,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002795,
+            "total": 0.022356,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 12.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.75,
+            "total": 30.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 23.0,
+            "total": 184.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 3907.625,
+            "total": 31261.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 989.375,
+            "total": 7915.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.857143,
+          "numerator": 6,
+          "denominator": 7,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.428571,
+          "numerator": 3,
+          "denominator": 7,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    },
+    "source": {
+      "Nr3D": {
+        "query_count": 24,
+        "bbox_eligible_count": 24,
+        "bbox_iou_3d": {
+          "value": 0.378968,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.520833,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002487,
+            "total": 0.059689,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.75,
+            "total": 42.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.666667,
+            "total": 88.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 26.75,
+            "total": 642.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 4592.0,
+            "total": 110208.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1160.5,
+            "total": 27852.0,
+            "denominator": 24,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.666667,
+          "numerator": 16,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.666667,
+          "numerator": 16,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.375,
+          "numerator": 9,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "ScanNet-derived official GT": {
+        "query_count": 16,
+        "bbox_eligible_count": 8,
+        "bbox_iou_3d": {
+          "value": 0.5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 8,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002288,
+            "total": 0.03661,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 0.5,
+            "total": 8.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.25,
+            "total": 68.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 33.0625,
+            "total": 529.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5694.25,
+            "total": 91108.0,
+            "denominator": 16,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1429.375,
+            "total": 22870.0,
+            "denominator": 16,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "Sr3D+": {
+        "query_count": 24,
+        "bbox_eligible_count": 24,
+        "bbox_iou_3d": {
+          "value": 0.833333,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.888889,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002598,
+            "total": 0.06235,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.916667,
+            "total": 46.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 2.916667,
+            "total": 70.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 15.833333,
+            "total": 380.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 2724.0,
+            "total": 65376.0,
+            "denominator": 24,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 694.666667,
+            "total": 16672.0,
+            "denominator": 24,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.958333,
+          "numerator": 23,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.958333,
+          "numerator": 23,
+          "denominator": 24,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.833333,
+          "numerator": 20,
+          "denominator": 24,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    },
+    "query_type": {
+      "attribute": {
+        "query_count": 2,
+        "bbox_eligible_count": 2,
+        "bbox_iou_3d": {
+          "value": 0.010393,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.25,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.001043,
+            "total": 0.002086,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 2.0,
+            "total": 4.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.5,
+            "total": 7.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 19.0,
+            "total": 38.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 3375.0,
+            "total": 6750.0,
+            "denominator": 2,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 850.5,
+            "total": 1701.0,
+            "denominator": 2,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.5,
+          "numerator": 1,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.5,
+          "numerator": 1,
+          "denominator": 2,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.0,
+          "numerator": 0,
+          "denominator": 2,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "functional": {
+        "query_count": 8,
+        "bbox_eligible_count": 8,
+        "bbox_iou_3d": {
+          "value": 0.5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.5,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.003066,
+            "total": 0.024532,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.0,
+            "total": 8.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.375,
+            "total": 35.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 33.125,
+            "total": 265.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5715.625,
+            "total": 45725.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1436.375,
+            "total": 11491.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 4,
+          "denominator": 8,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "negative": {
+        "query_count": 8,
+        "bbox_eligible_count": 0,
+        "bbox_iou_3d": {
+          "value": null,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "mrr_exact_object_id": {
+          "value": null,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 8,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.00151,
+            "total": 0.012079,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 0.0,
+            "total": 0.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 4.125,
+            "total": 33.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 33.0,
+            "total": 264.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5672.875,
+            "total": 45383.0,
+            "denominator": 8,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1422.375,
+            "total": 11379.0,
+            "denominator": 8,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "acc_at_0_1": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.1,
+          "status": "N/A"
+        },
+        "bbox_acc_at_0_1": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.1,
+          "status": "N/A"
+        },
+        "acc_at_0_25": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.25,
+          "status": "N/A"
+        },
+        "bbox_acc_at_0_25": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.25,
+          "status": "N/A"
+        },
+        "acc_at_0_5": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.5,
+          "status": "N/A"
+        },
+        "bbox_acc_at_0_5": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "threshold": 0.5,
+          "status": "N/A"
+        }
+      },
+      "relational": {
+        "query_count": 40,
+        "bbox_eligible_count": 40,
+        "bbox_iou_3d": {
+          "value": 0.651861,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.733333,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002672,
+            "total": 0.106878,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.85,
+            "total": 74.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.2,
+            "total": 128.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 19.85,
+            "total": 794.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 3413.6,
+            "total": 136544.0,
+            "denominator": 40,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 867.425,
+            "total": 34697.0,
+            "denominator": 40,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.825,
+          "numerator": 33,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.825,
+          "numerator": 33,
+          "denominator": 40,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.65,
+          "numerator": 26,
+          "denominator": 40,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      },
+      "simple_object": {
+        "query_count": 6,
+        "bbox_eligible_count": 6,
+        "bbox_iou_3d": {
+          "value": 0.5,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.666667,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": null,
+          "numerator": 0,
+          "denominator": 0,
+          "status": "N/A"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002179,
+            "total": 0.013076,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.666667,
+            "total": 10.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.833333,
+            "total": 23.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 31.666667,
+            "total": 190.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 5381.666667,
+            "total": 32290.0,
+            "denominator": 6,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1354.333333,
+            "total": 8126.0,
+            "denominator": 6,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.833333,
+          "numerator": 5,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.833333,
+          "numerator": 5,
+          "denominator": 6,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.5,
+          "numerator": 3,
+          "denominator": 6,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    },
+    "search_variant": {
+      "algorithm1_k3_m1": {
+        "query_count": 64,
+        "bbox_eligible_count": 56,
+        "bbox_iou_3d": {
+          "value": 0.590986,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "mrr_exact_object_id": {
+          "value": 0.675595,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "negative_accuracy": {
+          "value": 1.0,
+          "numerator": 8,
+          "denominator": 8,
+          "status": "measured"
+        },
+        "efficiency": {
+          "runtime_seconds": {
+            "mean": 0.002479,
+            "total": 0.15865,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "checked_nodes": {
+            "mean": 1.5,
+            "total": 96.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "checked_views": {
+            "mean": 3.53125,
+            "total": 226.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "checked_objects": {
+            "mean": 24.234375,
+            "total": 1551.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "context_chars": {
+            "mean": 4167.0625,
+            "total": 266692.0,
+            "denominator": 64,
+            "status": "measured"
+          },
+          "estimated_tokens": {
+            "mean": 1053.03125,
+            "total": 67394.0,
+            "denominator": 64,
+            "status": "measured"
+          }
+        },
+        "recall_at_1_exact_object_id": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "recall_at_3_exact_object_id": {
+          "value": 0.767857,
+          "numerator": 43,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "recall_at_5_exact_object_id": {
+          "value": 0.767857,
+          "numerator": 43,
+          "denominator": 56,
+          "status": "measured"
+        },
+        "acc_at_0_1": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_1": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.1,
+          "status": "measured"
+        },
+        "acc_at_0_25": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_25": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.25,
+          "status": "measured"
+        },
+        "acc_at_0_5": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.5,
+          "status": "measured"
+        },
+        "bbox_acc_at_0_5": {
+          "value": 0.589286,
+          "numerator": 33,
+          "denominator": 56,
+          "threshold": 0.5,
+          "status": "measured"
+        }
+      }
+    }
+  },
+  "failure_taxonomy": {
+    "wrong object": 15,
+    "wrong relation": 19,
+    "false positive": 0,
+    "invalid/unavailable prediction": 8,
+    "bad bbox": 8,
+    "missing GT": 0
+  },
+  "per_query": [
+    {
+      "query_id": "scannet_0011_00_nr3d_001",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "17",
+        "2",
+        "25"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0014460840000012354,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 25.0,
+        "context_chars": 4259.0,
+        "estimated_tokens": 1078.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.001459,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "22",
+        "24"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "28"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011918340000001137,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 9.0,
+        "context_chars": 1579.0,
+        "estimated_tokens": 405.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_003",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "20",
+        "28",
+        "1"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "20"
+      ],
+      "predicted_object_id": "20",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.001045292000000586,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 17.0,
+        "context_chars": 2913.0,
+        "estimated_tokens": 736.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_001",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "17",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0012874580000001856,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1346.0,
+        "estimated_tokens": 350.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "15",
+        "32",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "15"
+      ],
+      "predicted_object_id": "15",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0014978330000001705,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 16.0,
+        "context_chars": 2740.0,
+        "estimated_tokens": 700.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_003",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "1",
+        "25",
+        "22"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "1"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0017727499999988794,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 9.0,
+        "context_chars": 1579.0,
+        "estimated_tokens": 416.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003986084000001,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 45.0,
+        "context_chars": 7415.0,
+        "estimated_tokens": 1866.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_002",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "24"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0032372499999997473,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 56.0,
+        "context_chars": 9216.0,
+        "estimated_tokens": 2316.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "26",
+        "27",
+        "58"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "27"
+      ],
+      "predicted_object_id": "26",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003174042000001265,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 56.0,
+        "context_chars": 9109.0,
+        "estimated_tokens": 2288.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "expected_rank": 3,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "2"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0032110839999983654,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 12.0,
+        "context_chars": 2119.0,
+        "estimated_tokens": 540.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_002",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "19",
+        "17",
+        "18"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "19"
+      ],
+      "predicted_object_id": "19",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.003915750000000884,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 34.0,
+        "context_chars": 5513.0,
+        "estimated_tokens": 1391.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "13",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.011115374999999261,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 56.0,
+        "context_chars": 9109.0,
+        "estimated_tokens": 2300.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_001",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "18",
+        "3",
+        "50"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "52"
+      ],
+      "predicted_object_id": "18",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.006361583000000337,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 29.0,
+        "context_chars": 5139.0,
+        "estimated_tokens": 1306.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_002",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "21",
+        "26",
+        "48"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "49"
+      ],
+      "predicted_object_id": "21",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002596000000000487,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 35.0,
+        "context_chars": 6033.0,
+        "estimated_tokens": 1523.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_003",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "48",
+        "49",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "48"
+      ],
+      "predicted_object_id": "48",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.003346499999999253,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 35.0,
+        "context_chars": 6033.0,
+        "estimated_tokens": 1518.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_001",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "18",
+        "50",
+        "52"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "18"
+      ],
+      "predicted_object_id": "18",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0024855000000005845,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 22.0,
+        "context_chars": 3975.0,
+        "estimated_tokens": 1005.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_002",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "21",
+        "26",
+        "24"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "21"
+      ],
+      "predicted_object_id": "21",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.002243583000000271,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 14.0,
+        "context_chars": 2435.0,
+        "estimated_tokens": 620.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_003",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "3",
+        "47"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00250195799999986,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 7.0,
+        "context_chars": 1164.0,
+        "estimated_tokens": 309.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_001",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "13",
+        "14",
+        "2"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "13"
+      ],
+      "predicted_object_id": "13",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0050144999999997,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 22.0,
+        "context_chars": 3959.0,
+        "estimated_tokens": 1011.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_002",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0022291669999994213,
+        "checked_nodes": 2.0,
+        "checked_views": 1.0,
+        "checked_objects": 7.0,
+        "context_chars": 1338.0,
+        "estimated_tokens": 352.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.020786,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "10",
+        "21"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0010317910000008368,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 15.0,
+        "context_chars": 2879.0,
+        "estimated_tokens": 726.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_001",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "1",
+        "28",
+        "10"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "1"
+      ],
+      "predicted_object_id": "1",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0012681250000010635,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1544.0,
+        "estimated_tokens": 398.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_002",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "6",
+        "7",
+        "21"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "6",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0013454999999993333,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 15.0,
+        "context_chars": 2879.0,
+        "estimated_tokens": 732.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0022222079999991706,
+        "checked_nodes": 2.0,
+        "checked_views": 1.0,
+        "checked_objects": 7.0,
+        "context_chars": 1338.0,
+        "estimated_tokens": 348.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_001",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "16"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023539590000005717,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1436.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_002",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "24",
+        "3",
+        "25"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "24"
+      ],
+      "predicted_object_id": "24",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0023101670000009733,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1446.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_003",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.001668208999999976,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1430.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_001",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "5",
+        "1"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.00206954099999912,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 21.0,
+        "context_chars": 3656.0,
+        "estimated_tokens": 925.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_002",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "24",
+        "3",
+        "25"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": "24",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0019711660000005793,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 21.0,
+        "context_chars": 3793.0,
+        "estimated_tokens": 959.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_003",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "7",
+        "6",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "7"
+      ],
+      "predicted_object_id": "7",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0020621250000001368,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 11.0,
+        "context_chars": 1844.0,
+        "estimated_tokens": 480.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "11"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "38"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0017836249999998444,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 33.0,
+        "context_chars": 5680.0,
+        "estimated_tokens": 1429.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "31",
+        "32",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "31"
+      ],
+      "predicted_object_id": "31",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0016790419999992423,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 11.0,
+        "context_chars": 1926.0,
+        "estimated_tokens": 488.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_003",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "2",
+        "35"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0015298340000011734,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 34.0,
+        "context_chars": 5860.0,
+        "estimated_tokens": 1474.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.005011582999999931,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 22.0,
+        "context_chars": 3837.0,
+        "estimated_tokens": 968.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "35"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002083833000000368,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 22.0,
+        "context_chars": 3837.0,
+        "estimated_tokens": 971.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_003",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "0",
+        "1"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0022373330000000635,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 11.0,
+        "context_chars": 1926.0,
+        "estimated_tokens": 496.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_001",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.072976,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "22",
+        "23",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "23"
+      ],
+      "predicted_object_id": "22",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.001107665999999341,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 22.0,
+        "context_chars": 3744.0,
+        "estimated_tokens": 942.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_002",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "3",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0011577919999989916,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1320.0,
+        "estimated_tokens": 337.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_003",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "12",
+        "7",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "7"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0010541669999994951,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 23.0,
+        "context_chars": 3871.0,
+        "estimated_tokens": 975.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_001",
+      "scene_id": "scannet_0389_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "3",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0011566250000001332,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1320.0,
+        "estimated_tokens": 341.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_002",
+      "scene_id": "scannet_0389_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "3",
+        "2",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": "3",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0011609159999999008,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1320.0,
+        "estimated_tokens": 341.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_sr3d_plus_003",
+      "scene_id": "scannet_0389_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "6",
+        "0",
+        "2"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "6",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.001605375000000464,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1320.0,
+        "estimated_tokens": 347.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_001",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "38",
+        "50",
+        "10"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "50"
+      ],
+      "predicted_object_id": "38",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003478874999998993,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 32.0,
+        "context_chars": 5438.0,
+        "estimated_tokens": 1394.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_002",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "28",
+        "57",
+        "1"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "57"
+      ],
+      "predicted_object_id": "28",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004593915999999254,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 16.0,
+        "context_chars": 2754.0,
+        "estimated_tokens": 696.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "37"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "11"
+      ],
+      "predicted_object_id": "10",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023119999999998697,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 16.0,
+        "context_chars": 2691.0,
+        "estimated_tokens": 680.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_001",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "37"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10"
+      ],
+      "predicted_object_id": "10",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.002692375000000524,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 16.0,
+        "context_chars": 2691.0,
+        "estimated_tokens": 685.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_002",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "11",
+        "10",
+        "37"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "11"
+      ],
+      "predicted_object_id": "11",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.002529249999998484,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 16.0,
+        "context_chars": 2691.0,
+        "estimated_tokens": 687.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "12",
+        "31",
+        "26"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "12"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00290308299999964,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1400.0,
+        "estimated_tokens": 363.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_functional_gt_001",
+      "scene_id": "scannet_0011_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "3",
+        "10",
+        "11"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10",
+        "11",
+        "12",
+        "13",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "predicted_object_id": "3",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0014201249999992172,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 24.0,
+        "context_chars": 4074.0,
+        "estimated_tokens": 1031.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_negative_gt_001",
+      "scene_id": "scannet_0011_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "10",
+        "11"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0010590840000013202,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 24.0,
+        "context_chars": 4074.0,
+        "estimated_tokens": 1023.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_functional_gt_001",
+      "scene_id": "scannet_0030_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "52",
+        "0",
+        "1"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0",
+        "1",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "2",
+        "3",
+        "4",
+        "5",
+        "52",
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "predicted_object_id": "52",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.013941749999998976,
+        "checked_nodes": 2.0,
+        "checked_views": 6.0,
+        "checked_objects": 57.0,
+        "context_chars": 9451.0,
+        "estimated_tokens": 2374.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_negative_gt_001",
+      "scene_id": "scannet_0030_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "13",
+        "17"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0026948750000013177,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 56.0,
+        "context_chars": 9109.0,
+        "estimated_tokens": 2280.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_functional_gt_001",
+      "scene_id": "scannet_0046_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0020572500000000105,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 35.0,
+        "context_chars": 6077.0,
+        "estimated_tokens": 1525.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_negative_gt_001",
+      "scene_id": "scannet_0046_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "14",
+        "15"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0018156250000007645,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 35.0,
+        "context_chars": 6077.0,
+        "estimated_tokens": 1525.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_functional_gt_001",
+      "scene_id": "scannet_0086_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "10",
+        "11"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "19",
+        "20"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011345000000009264,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 22.0,
+        "context_chars": 4217.0,
+        "estimated_tokens": 1062.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_negative_gt_001",
+      "scene_id": "scannet_0086_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "10",
+        "11"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0009473750000008607,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 22.0,
+        "context_chars": 4217.0,
+        "estimated_tokens": 1058.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_functional_gt_001",
+      "scene_id": "scannet_0222_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0",
+        "5"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0014238750000004075,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1426.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_negative_gt_001",
+      "scene_id": "scannet_0222_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0012957499999988187,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1425.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_functional_gt_001",
+      "scene_id": "scannet_0378_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "40",
+        "41",
+        "42"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "40",
+        "41",
+        "42",
+        "43"
+      ],
+      "predicted_object_id": "40",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0015311249999996335,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 33.0,
+        "context_chars": 5680.0,
+        "estimated_tokens": 1427.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_negative_gt_001",
+      "scene_id": "scannet_0378_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "11"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0015035420000000244,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 33.0,
+        "context_chars": 5680.0,
+        "estimated_tokens": 1423.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_functional_gt_001",
+      "scene_id": "scannet_0389_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "2",
+        "3",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2",
+        "3"
+      ],
+      "predicted_object_id": "2",
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0010305420000005228,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 22.0,
+        "context_chars": 3744.0,
+        "estimated_tokens": 941.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_negative_gt_001",
+      "scene_id": "scannet_0389_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "15"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0009078329999994139,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 22.0,
+        "context_chars": 3744.0,
+        "estimated_tokens": 940.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_functional_gt_001",
+      "scene_id": "scannet_0435_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10",
+        "11"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0019923750000003793,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 40.0,
+        "context_chars": 6798.0,
+        "estimated_tokens": 1705.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_negative_gt_001",
+      "scene_id": "scannet_0435_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "negative",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_negative_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": true,
+      "bbox_eligible": false,
+      "bbox_iou_3d": null,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": false,
+      "recall_at_1": null,
+      "recall_at_3": null,
+      "recall_at_5": null,
+      "reciprocal_rank": null,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "12"
+      ],
+      "negative_eligible": true,
+      "negative_correct": true,
+      "expected_object_ids": [],
+      "predicted_object_id": null,
+      "failures": [],
+      "efficiency": {
+        "runtime_seconds": 0.0018544590000004746,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 40.0,
+        "context_chars": 6798.0,
+        "estimated_tokens": 1705.0
+      },
+      "construction_cost": null
+    }
+  ],
+  "failures": [
+    {
+      "query_id": "scannet_0011_00_nr3d_001",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "17",
+        "2",
+        "25"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0014460840000012354,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 25.0,
+        "context_chars": 4259.0,
+        "estimated_tokens": 1078.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_nr3d_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.001459,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "22",
+        "24"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "28"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011918340000001137,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 9.0,
+        "context_chars": 1579.0,
+        "estimated_tokens": 405.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_002",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "15",
+        "32",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "15"
+      ],
+      "predicted_object_id": "15",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0014978330000001705,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 16.0,
+        "context_chars": 2740.0,
+        "estimated_tokens": 700.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0011_00_sr3d_plus_003",
+      "scene_id": "scannet_0011_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0011_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "1",
+        "25",
+        "22"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "1"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0017727499999988794,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 9.0,
+        "context_chars": 1579.0,
+        "estimated_tokens": 416.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003986084000001,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 45.0,
+        "context_chars": 7415.0,
+        "estimated_tokens": 1866.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_002",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "19"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "24"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0032372499999997473,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 56.0,
+        "context_chars": 9216.0,
+        "estimated_tokens": 2316.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_nr3d_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "26",
+        "27",
+        "58"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "27"
+      ],
+      "predicted_object_id": "26",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003174042000001265,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 56.0,
+        "context_chars": 9109.0,
+        "estimated_tokens": 2288.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_001",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.3333333333333333,
+      "expected_rank": 3,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "2"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "2"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0032110839999983654,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 12.0,
+        "context_chars": 2119.0,
+        "estimated_tokens": 540.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0030_00_sr3d_plus_003",
+      "scene_id": "scannet_0030_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0030_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "13",
+        "17"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.011115374999999261,
+        "checked_nodes": 0.0,
+        "checked_views": 4.0,
+        "checked_objects": 56.0,
+        "context_chars": 9109.0,
+        "estimated_tokens": 2300.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_001",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "18",
+        "3",
+        "50"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "52"
+      ],
+      "predicted_object_id": "18",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.006361583000000337,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 29.0,
+        "context_chars": 5139.0,
+        "estimated_tokens": 1306.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_nr3d_002",
+      "scene_id": "scannet_0046_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "21",
+        "26",
+        "48"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "49"
+      ],
+      "predicted_object_id": "21",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002596000000000487,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 35.0,
+        "context_chars": 6033.0,
+        "estimated_tokens": 1523.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_sr3d_plus_003",
+      "scene_id": "scannet_0046_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "3",
+        "47"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00250195799999986,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 7.0,
+        "context_chars": 1164.0,
+        "estimated_tokens": 309.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_001",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "13",
+        "14",
+        "2"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "13"
+      ],
+      "predicted_object_id": "13",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0050144999999997,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 22.0,
+        "context_chars": 3959.0,
+        "estimated_tokens": 1011.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_002",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "17",
+        "18",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": "17",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0022291669999994213,
+        "checked_nodes": 2.0,
+        "checked_views": 1.0,
+        "checked_objects": 7.0,
+        "context_chars": 1338.0,
+        "estimated_tokens": 352.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_nr3d_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.020786,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "10",
+        "21"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "6"
+      ],
+      "predicted_object_id": "1",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0010317910000008368,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 15.0,
+        "context_chars": 2879.0,
+        "estimated_tokens": 726.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_sr3d_plus_003",
+      "scene_id": "scannet_0086_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "12",
+        "13"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0022222079999991706,
+        "checked_nodes": 2.0,
+        "checked_views": 1.0,
+        "checked_objects": 7.0,
+        "context_chars": 1338.0,
+        "estimated_tokens": 348.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_001",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "16"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023539590000005717,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1436.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_nr3d_003",
+      "scene_id": "scannet_0222_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "17"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.001668208999999976,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1430.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_sr3d_plus_002",
+      "scene_id": "scannet_0222_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "24",
+        "3",
+        "25"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": "24",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0019711660000005793,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 21.0,
+        "context_chars": 3793.0,
+        "estimated_tokens": 959.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "11"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "38"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0017836249999998444,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 33.0,
+        "context_chars": 5680.0,
+        "estimated_tokens": 1429.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_nr3d_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "31",
+        "32",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "31"
+      ],
+      "predicted_object_id": "31",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0016790419999992423,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 11.0,
+        "context_chars": 1926.0,
+        "estimated_tokens": 488.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_001",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_sr3d_plus_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.005011582999999931,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 22.0,
+        "context_chars": 3837.0,
+        "estimated_tokens": 968.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_002",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_sr3d_plus_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "0",
+        "35",
+        "44"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "35"
+      ],
+      "predicted_object_id": "0",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.002083833000000368,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 22.0,
+        "context_chars": 3837.0,
+        "estimated_tokens": 971.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0378_00_sr3d_plus_003",
+      "scene_id": "scannet_0378_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0378_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "4",
+        "0",
+        "1"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "4"
+      ],
+      "predicted_object_id": "4",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0022373330000000635,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 11.0,
+        "context_chars": 1926.0,
+        "estimated_tokens": 496.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_001",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.072976,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "22",
+        "23",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "23"
+      ],
+      "predicted_object_id": "22",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.001107665999999341,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 22.0,
+        "context_chars": 3744.0,
+        "estimated_tokens": 942.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0389_00_nr3d_003",
+      "scene_id": "scannet_0389_00",
+      "source": "Nr3D",
+      "query_type": "attribute",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0389_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "12",
+        "7",
+        "0"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "7"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0010541669999994951,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 23.0,
+        "context_chars": 3871.0,
+        "estimated_tokens": 975.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_001",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_nr3d_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "38",
+        "50",
+        "10"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "50"
+      ],
+      "predicted_object_id": "38",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.003478874999998993,
+        "checked_nodes": 2.0,
+        "checked_views": 4.0,
+        "checked_objects": 32.0,
+        "context_chars": 5438.0,
+        "estimated_tokens": 1394.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_002",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_nr3d_002.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "28",
+        "57",
+        "1"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "57"
+      ],
+      "predicted_object_id": "28",
+      "failures": [
+        "wrong object",
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.004593915999999254,
+        "checked_nodes": 2.0,
+        "checked_views": 5.0,
+        "checked_objects": 16.0,
+        "context_chars": 2754.0,
+        "estimated_tokens": 696.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_nr3d_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Nr3D",
+      "query_type": "simple_object",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_nr3d_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 0.5,
+      "expected_rank": 2,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "37"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "11"
+      ],
+      "predicted_object_id": "10",
+      "failures": [
+        "wrong object"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0023119999999998697,
+        "checked_nodes": 2.0,
+        "checked_views": 3.0,
+        "checked_objects": 16.0,
+        "context_chars": 2691.0,
+        "estimated_tokens": 680.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_sr3d_plus_003",
+      "scene_id": "scannet_0435_00",
+      "source": "Sr3D+",
+      "query_type": "relational",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_sr3d_plus_003.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": true,
+      "result_valid": true,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 1.0,
+      "bbox_prediction_valid": true,
+      "recall_at_1_eligible": true,
+      "recall_at_1": true,
+      "recall_at_3": true,
+      "recall_at_5": true,
+      "reciprocal_rank": 1.0,
+      "expected_rank": 1,
+      "ranked_object_ids": [
+        "12",
+        "31",
+        "26"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "12"
+      ],
+      "predicted_object_id": "12",
+      "failures": [
+        "wrong relation"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.00290308299999964,
+        "checked_nodes": 2.0,
+        "checked_views": 2.0,
+        "checked_objects": 8.0,
+        "context_chars": 1400.0,
+        "estimated_tokens": 363.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0046_00_functional_gt_001",
+      "scene_id": "scannet_0046_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0046_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "14",
+        "15"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "3"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0020572500000000105,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 35.0,
+        "context_chars": 6077.0,
+        "estimated_tokens": 1525.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0086_00_functional_gt_001",
+      "scene_id": "scannet_0086_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0086_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "1",
+        "10",
+        "11"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "19",
+        "20"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0011345000000009264,
+        "checked_nodes": 0.0,
+        "checked_views": 3.0,
+        "checked_objects": 22.0,
+        "context_chars": 4217.0,
+        "estimated_tokens": 1062.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0222_00_functional_gt_001",
+      "scene_id": "scannet_0222_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0222_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "10",
+        "11",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "0",
+        "5"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0014238750000004075,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 32.0,
+        "context_chars": 5684.0,
+        "estimated_tokens": 1426.0
+      },
+      "construction_cost": null
+    },
+    {
+      "query_id": "scannet_0435_00_functional_gt_001",
+      "scene_id": "scannet_0435_00",
+      "source": "ScanNet-derived official GT",
+      "query_type": "functional",
+      "search_variant": "algorithm1_k3_m1",
+      "result_file": "scannet_0435_00_functional_gt_001.json",
+      "input_shape": "canonical",
+      "schema_valid": true,
+      "schema_errors": [],
+      "prediction_available": false,
+      "result_valid": false,
+      "bbox_eligible": true,
+      "bbox_iou_3d": 0.0,
+      "bbox_prediction_valid": false,
+      "recall_at_1_eligible": true,
+      "recall_at_1": false,
+      "recall_at_3": false,
+      "recall_at_5": false,
+      "reciprocal_rank": 0.0,
+      "expected_rank": null,
+      "ranked_object_ids": [
+        "0",
+        "1",
+        "12"
+      ],
+      "negative_eligible": false,
+      "negative_correct": null,
+      "expected_object_ids": [
+        "10",
+        "11"
+      ],
+      "predicted_object_id": null,
+      "failures": [
+        "bad bbox",
+        "invalid/unavailable prediction"
+      ],
+      "efficiency": {
+        "runtime_seconds": 0.0019923750000003793,
+        "checked_nodes": 0.0,
+        "checked_views": 5.0,
+        "checked_objects": 40.0,
+        "context_chars": 6798.0,
+        "estimated_tokens": 1705.0
+      },
+      "construction_cost": null
+    }
+  ],
+  "warnings": []
+}

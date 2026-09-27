@@ -1,0 +1,150 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0030_00",
+  "query_id": "scannet_0030_00_nr3d_003",
+  "query": "It is the window next to the bookshelves.",
+  "query_type": "simple_object",
+  "structured_plan": {
+    "target": "it window next to bookshelves",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_004_window"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_004_window"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v001_002_window",
+    "object_v004_004_window",
+    "object_v005_023_window",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v004",
+    "v005"
+  ],
+  "checked_object_ids": [
+    "27",
+    "26",
+    "58"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "window",
+    "selected_object_id": "26",
+    "ranked_object_ids": [
+      "26",
+      "27",
+      "58"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "26",
+        "label": "window",
+        "score": 0.1875,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "27",
+        "label": "window",
+        "score": 0.1875,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "58",
+        "label": "window",
+        "score": 0.1875,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v004_004_window",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        2.220426,
+        -2.947345,
+        1.488618
+      ],
+      "size": [
+        1.941256,
+        0.270463,
+        1.236393
+      ],
+      "label": "window",
+      "object_id": "26",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.1875,
+    "explanation": "graph selected object 26.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.1875,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.25,
+      "text_overlap": 0.25,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.1875,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0013900000000000023,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0013900000000000023
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 4,
+    "checked_view_count": 3,
+    "checked_object_count": 3,
+    "context_size_chars": 490,
+    "prompt_size_chars": 531,
+    "estimated_input_tokens": 133,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

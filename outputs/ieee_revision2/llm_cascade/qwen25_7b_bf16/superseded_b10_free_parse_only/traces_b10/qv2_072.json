@@ -1,0 +1,78 @@
+{
+  "query_id": "qv2_072",
+  "scene_id": "Theater",
+  "query": "Find the clock above the bookcase",
+  "query_type": "relational",
+  "expected_view_ids": [
+    "v010"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "f1ac33c3c0b805966447e5f9661c15ac5d854692d03a493edf53d35fba09dd2d",
+      "raw_output": "v010",
+      "chosen_id": "v010",
+      "valid": true,
+      "input_tokens": 1412,
+      "output_tokens": 5,
+      "latency_ms": 3737.3144,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v005",
+        "v008"
+      ],
+      "prompt_sha256": "ea2e197647eb7c3b8eaf5de457db10de8ca9bb3dc56833d1f34afb4519fd59a9",
+      "raw_output": "None",
+      "chosen_id": null,
+      "valid": false,
+      "input_tokens": 199,
+      "output_tokens": 2,
+      "latency_ms": 734.0431,
+      "correct": false,
+      "target_in_context": false
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v005",
+        "v010",
+        "v016"
+      ],
+      "prompt_sha256": "2bf28a5a42be8094f879a6410712f338f73d2484cd474280a6e48d13029aa177",
+      "raw_output": "v010",
+      "chosen_id": "v010",
+      "valid": true,
+      "input_tokens": 264,
+      "output_tokens": 5,
+      "latency_ms": 962.5737,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "dev",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

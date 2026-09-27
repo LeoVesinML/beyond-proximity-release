@@ -1,0 +1,114 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v007",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v007.png",
+  "depth_path": "depths/v007_depth.npy",
+  "pose_ref": "transforms.json#/frames/6/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Long corridor section with a large window or glass wall on the left, blank light floor area, and a colorful floral wall artwork on the right.",
+  "visible_regions": [
+    {
+      "label": "corridor",
+      "description": "long open passage",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "art wall side",
+      "description": "right wall with colorful artwork",
+      "approx_location": "right side",
+      "source": "manual"
+    },
+    {
+      "label": "window side",
+      "description": "glass or window wall area",
+      "approx_location": "left side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "large wall artwork",
+      "attributes": [
+        "colorful",
+        "floral",
+        "red and green"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "window or glass wall",
+      "attributes": [
+        "dark",
+        "long"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "corridor floor",
+      "attributes": [
+        "light colored"
+      ],
+      "approx_location": "center floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall panels",
+      "attributes": [
+        "dark",
+        "decorative"
+      ],
+      "approx_location": "sides",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling lights",
+      "attributes": [
+        "recessed"
+      ],
+      "approx_location": "ceiling",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "colorful floral artwork",
+      "description": "large bright artwork useful as a corridor landmark",
+      "approx_location": "right wall",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "window wall",
+      "description": "long dark glass wall that defines one side of the corridor",
+      "approx_location": "left side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for corridor navigation and artwork/window side queries.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

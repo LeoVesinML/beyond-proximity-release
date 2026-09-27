@@ -1,0 +1,173 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v002",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v002.png",
+  "depth_path": "depths/v002_depth.npy",
+  "pose_ref": "transforms.json#/frames/1/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Lounge seating area with sofas, armchairs, glass coffee tables, table lamps, columns, and a blue patterned carpet.",
+  "visible_regions": [
+    {
+      "label": "lounge seating area",
+      "description": "soft seating zone with sofas and coffee tables",
+      "approx_location": "center and left side of the view",
+      "source": "manual"
+    },
+    {
+      "label": "corridor transition",
+      "description": "open passage leading away from the lounge",
+      "approx_location": "right rear side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "sofas",
+      "attributes": [
+        "cream",
+        "multiple",
+        "lounge seating"
+      ],
+      "approx_location": "center and right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.14,
+        1.0,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -16.043859269641633,
+          8.48140539676856,
+          -0.9157818706431984
+        ],
+        "size": [
+          26.495763972504257,
+          17.87129737109603,
+          21.190391305034282
+        ],
+        "label": "sofas"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "armchair",
+      "attributes": [
+        "cream",
+        "single"
+      ],
+      "approx_location": "left foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.04,
+        0.48,
+        0.48,
+        0.98
+      ],
+      "bbox_3d": {
+        "center": [
+          -7.208075637706957,
+          9.814423298699898,
+          -12.377996365828004
+        ],
+        "size": [
+          14.594136870905015,
+          14.834734226930653,
+          6.2946999195696325
+        ],
+        "label": "armchair"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "glass coffee tables",
+      "attributes": [
+        "round",
+        "transparent",
+        "central"
+      ],
+      "approx_location": "center foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "table lamps",
+      "attributes": [
+        "two",
+        "warm light"
+      ],
+      "approx_location": "left and right sides near sofas",
+      "confidence": null,
+      "bbox_2d": [
+        0.05,
+        0.42,
+        0.95,
+        0.96
+      ],
+      "bbox_3d": {
+        "center": [
+          -10.184991333484957,
+          7.9343062013230465,
+          -6.853652573165102
+        ],
+        "size": [
+          21.06406786371532,
+          11.64520114257586,
+          19.785523775585673
+        ],
+        "label": "table lamps"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "columns",
+      "attributes": [
+        "large",
+        "marble-like"
+      ],
+      "approx_location": "left and right sides",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "across the floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "lounge seating cluster",
+      "description": "distinct sofa and coffee-table group useful for orientation",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "marble columns",
+      "description": "large vertical columns framing the lounge",
+      "approx_location": "left and right sides",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good view for queries about lounge seating, sofas, lamps, columns, and coffee tables.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

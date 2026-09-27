@@ -1,0 +1,126 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "replica_bbq_aligned_public_dataset_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "replica_room0",
+  "query_id": "replica_room0_multi_hop_001",
+  "query": "First inspect the scene objects, then find the picture",
+  "query_type": "multi_hop",
+  "structured_plan": {
+    "target": "first inspect scene objects then picture",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_079_picture"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_079_picture"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_079_picture",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "63"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "picture",
+    "selected_object_id": "63",
+    "ranked_object_ids": [
+      "63"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "63",
+        "label": "picture",
+        "score": 0.125,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v001_079_picture",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -1.098223,
+        -3.670491,
+        0.066464
+      ],
+      "size": [
+        0.052588,
+        1.854844,
+        1.269224
+      ],
+      "label": "picture",
+      "object_id": "63",
+      "coordinate_frame": "replica_habitat_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.125,
+    "explanation": "graph selected object 63.",
+    "relation_satisfied": null,
+    "relation_audit": {
+      "evaluated_candidate_count": 0,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": []
+    },
+    "search_score": 0.125,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.166667,
+      "text_overlap": 0.166667,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.125,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.001274333999999988,
+    "stage_runtime_seconds": {
+      "answer_query": 0.001274333999999988
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 2,
+    "checked_view_count": 1,
+    "checked_object_count": 1,
+    "context_size_chars": 98,
+    "prompt_size_chars": 152,
+    "estimated_input_tokens": 38,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

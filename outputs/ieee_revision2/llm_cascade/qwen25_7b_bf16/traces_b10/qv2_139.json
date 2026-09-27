@@ -1,0 +1,142 @@
+{
+  "query_id": "qv2_139",
+  "scene_id": "outdoor-drone",
+  "query": "Find the bridge or road lines over bay water",
+  "query_type": "multi_hop",
+  "expected_view_ids": [
+    "v009"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016"
+      ],
+      "prompt_sha256": "31e451871d90ff761d5dc31ed3b5d1339420a2bb74660be16bb7f05d24183178",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 1116,
+      "output_tokens": 5,
+      "latency_ms": 2901.7536,
+      "correct": false,
+      "target_in_context": true
+    },
+    "all_records__constrained": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016"
+      ],
+      "prompt_sha256": "31e451871d90ff761d5dc31ed3b5d1339420a2bb74660be16bb7f05d24183178",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 1116,
+      "output_tokens": 5,
+      "latency_ms": 2878.2438,
+      "correct": false,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "e46d8cfd807f49ed99b41aedcf211da809f1b5a568d597202440a709fb555a63",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 268,
+      "output_tokens": 5,
+      "latency_ms": 942.7055,
+      "correct": false,
+      "target_in_context": true
+    },
+    "alg1_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "e46d8cfd807f49ed99b41aedcf211da809f1b5a568d597202440a709fb555a63",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 268,
+      "output_tokens": 5,
+      "latency_ms": 913.7254,
+      "correct": false,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "e46d8cfd807f49ed99b41aedcf211da809f1b5a568d597202440a709fb555a63",
+      "decoding": "free_greedy_parsed",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 268,
+      "output_tokens": 5,
+      "latency_ms": 894.9024,
+      "correct": false,
+      "target_in_context": true
+    },
+    "flat_bge_top3__constrained": {
+      "record_ids_in_prompt": [
+        "v006",
+        "v009",
+        "v015"
+      ],
+      "prompt_sha256": "e46d8cfd807f49ed99b41aedcf211da809f1b5a568d597202440a709fb555a63",
+      "decoding": "trie_constrained_greedy",
+      "raw_output": "v006",
+      "chosen_id": "v006",
+      "valid": true,
+      "input_tokens": 268,
+      "output_tokens": 5,
+      "latency_ms": 903.7882,
+      "correct": false,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

@@ -1,0 +1,177 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v001",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v001.png",
+  "depth_path": "depths/v001_depth.npy",
+  "pose_ref": "transforms.json#/frames/0/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Outdoor building courtyard with a wide stairway, beige stone facade, rows of windows, and a paved walkway between tall buildings.",
+  "visible_regions": [
+    {
+      "label": "building courtyard",
+      "description": "open paved space between modern building facades",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "stair entrance area",
+      "description": "wide outdoor stairs leading toward the building level",
+      "approx_location": "left side",
+      "source": "manual"
+    },
+    {
+      "label": "window facade side",
+      "description": "long beige facade with repeated windows",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "wide outdoor stairs",
+      "attributes": [
+        "concrete or stone",
+        "multi-step"
+      ],
+      "approx_location": "left foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.0,
+        0.44,
+        0.53,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          22.75005908880193,
+          3.2605977165609787,
+          5.584295766371143
+        ],
+        "size": [
+          46.06077151164815,
+          11.044097938061164,
+          14.592544251419667
+        ],
+        "label": "wide outdoor stairs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "beige building facade",
+      "attributes": [
+        "stone",
+        "long",
+        "modern"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.04,
+        1.0,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          1.462890684472479,
+          5.593305252477702,
+          -2.9780400719384774
+        ],
+        "size": [
+          11.88732503965468,
+          7.237118103393995,
+          14.020312583527344
+        ],
+        "label": "beige building facade"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "rows of windows",
+      "attributes": [
+        "rectangular",
+        "repeated"
+      ],
+      "approx_location": "right facade",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "paved walkway",
+      "attributes": [
+        "cobblestone or concrete"
+      ],
+      "approx_location": "center ground",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.44,
+        0.78,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          16.689957867901867,
+          6.305054405494678,
+          -12.458076388529129
+        ],
+        "size": [
+          35.44292370311601,
+          9.135861502295864,
+          31.443054278246578
+        ],
+        "label": "paved walkway"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "tall building wall",
+      "attributes": [
+        "dark",
+        "vertical"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "low basement windows",
+      "attributes": [
+        "small",
+        "near ground"
+      ],
+      "approx_location": "right lower facade",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "wide outdoor stairs",
+      "description": "large stair set that anchors this courtyard view",
+      "approx_location": "left foreground",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "long beige window facade",
+      "description": "repeated window facade useful for orientation",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Good overview for outdoor courtyard, stairs, walkway, and building facade queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

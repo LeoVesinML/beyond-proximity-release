@@ -1,0 +1,190 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0435_00",
+  "query_id": "scannet_0435_00_nr3d_001",
+  "query": "The lamp that is at the end of the room between the brown curtains, with a black mini fridge on the left and a brown chair on the right.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "lamp at end of room",
+    "relation": "between",
+    "anchor": "brown curtains with black mini fridge on left",
+    "anchor_secondary": "brown chair on right"
+  },
+  "visited_nodes": [
+    "root",
+    "object_v003_002_lamp"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v003_002_lamp"
+  ],
+  "selected_views": [
+    "v003"
+  ],
+  "checked_node_ids": [
+    "object_v002_006_lamp",
+    "object_v003_002_lamp",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v002",
+    "v003"
+  ],
+  "checked_object_ids": [
+    "50",
+    "38"
+  ],
+  "search_variant": "graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "lamp",
+    "selected_object_id": "38",
+    "ranked_object_ids": [
+      "38",
+      "50"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "38",
+        "label": "lamp",
+        "score": 0.375,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "50",
+        "label": "lamp",
+        "score": 0.375,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v003_002_lamp",
+    "selected_view_id": "v003",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        1.789518,
+        0.259465,
+        1.285317
+      ],
+      "size": [
+        0.358742,
+        0.451954,
+        0.277266
+      ],
+      "label": "lamp",
+      "object_id": "38",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.375,
+    "explanation": "graph selected object 38.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 2,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "38",
+          "label": "lamp",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "50",
+          "label": "lamp",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 2
+        }
+      ]
+    },
+    "search_score": 0.375,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.5,
+      "text_overlap": 0.5,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.375,
+      "relation": "between",
+      "anchor": "brown curtains with black mini fridge on left",
+      "anchor_secondary": "brown chair on right",
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [],
+      "anchor_evidence": {
+        "status": "rejected",
+        "reason": "low_anchor_confidence",
+        "top_score": 0.214286,
+        "second_score": 0.0,
+        "score_margin": 0.214286,
+        "candidate_count": 1,
+        "confidence": 0.0
+      },
+      "secondary_anchor_evidence": {
+        "status": "rejected",
+        "reason": "low_anchor_confidence",
+        "top_score": 0.25,
+        "second_score": 0.25,
+        "score_margin": 0.0,
+        "candidate_count": 2,
+        "confidence": 0.0
+      },
+      "pre_relation_score": 0.375,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.002835000000001031,
+    "stage_runtime_seconds": {
+      "answer_query": 0.002835000000001031
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 3,
+    "checked_view_count": 2,
+    "checked_object_count": 2,
+    "context_size_chars": 318,
+    "prompt_size_chars": 454,
+    "estimated_input_tokens": 114,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_extended_grounding_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0011_00",
+  "query_id": "scannet_0011_00_functional_gt_001",
+  "query": "Find a place where someone can sit for the meeting.",
+  "query_type": "functional",
+  "structured_plan": {
+    "target": "place someone can sit for meeting",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v002_001_armchair"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v002_001_armchair"
+  ],
+  "selected_views": [
+    "v002"
+  ],
+  "checked_node_ids": [
+    "object_v001_001_wall",
+    "object_v002_001_armchair",
+    "object_v002_003_chair",
+    "object_v002_004_wall",
+    "object_v002_005_doors",
+    "object_v002_006_doorframe",
+    "object_v002_007_trash_can",
+    "object_v003_001_floor",
+    "object_v003_002_chair",
+    "object_v003_003_chair",
+    "object_v003_004_chair",
+    "object_v003_005_chair",
+    "object_v003_006_wall",
+    "object_v003_007_trash_can",
+    "object_v004_002_table",
+    "object_v004_003_chair",
+    "object_v004_004_chair",
+    "object_v004_005_chair",
+    "object_v004_007_wall",
+    "object_v004_008_table",
+    "object_v004_009_tv",
+    "object_v004_010_refrigerator",
+    "object_v004_011_cabinet",
+    "object_v004_012_window",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v002",
+    "v003",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "21",
+    "3",
+    "9",
+    "29",
+    "30",
+    "31",
+    "32",
+    "0",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "2",
+    "4",
+    "5",
+    "6",
+    "16",
+    "17",
+    "18",
+    "19",
+    "20",
+    "23"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "armchair",
+    "selected_object_id": "3",
+    "ranked_object_ids": [
+      "3",
+      "10",
+      "11"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "3",
+        "label": "armchair",
+        "score": 0.05,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "10",
+        "label": "chair",
+        "score": 0.025,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "11",
+        "label": "chair",
+        "score": 0.025,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v002_001_armchair",
+    "selected_view_id": "v002",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -3.289758,
+        2.13813,
+        0.400647
+      ],
+      "size": [
+        0.33948,
+        0.842274,
+        0.800877
+      ],
+      "label": "armchair",
+      "object_id": "3",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.05,
+    "explanation": "algorithm1_k3_m1 selected object 3.",
+    "relation_satisfied": null,
+    "relation_audit": {},
+    "search_score": 0.05,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.0,
+      "text_overlap": 0.0,
+      "synonym_affordance_overlap": 0.2,
+      "affordance_keys": [
+        "meeting",
+        "sit"
+      ],
+      "lexical_score": 0.05
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0014201249999992172,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0014201249999992172
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 25,
+    "checked_view_count": 4,
+    "checked_object_count": 24,
+    "context_size_chars": 4074,
+    "prompt_size_chars": 4125,
+    "estimated_input_tokens": 1031,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v004",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v004.png",
+  "depth_path": "depths/v004_depth.npy",
+  "pose_ref": "transforms.json#/frames/3/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "High aerial panorama of a coastal city and marina, with dense urban area, shoreline, boats or harbor structures, and open water.",
+  "visible_regions": [
+    {
+      "label": "coastal city",
+      "description": "dense urban area along the shoreline",
+      "approx_location": "right and center",
+      "source": "manual"
+    },
+    {
+      "label": "marina or harbor",
+      "description": "waterfront area with many small structures or boats",
+      "approx_location": "center-right",
+      "source": "manual"
+    },
+    {
+      "label": "open water",
+      "description": "sea or bay water next to the city",
+      "approx_location": "left and foreground",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "city buildings",
+      "attributes": [
+        "dense",
+        "coastal"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": [
+        0.52,
+        0.18,
+        0.96,
+        0.86
+      ],
+      "bbox_3d": {
+        "center": [
+          -20.340189325466074,
+          7.243625179282623,
+          -5.378060852138658
+        ],
+        "size": [
+          36.92088664040414,
+          13.21419600921943,
+          19.065487840401826
+        ],
+        "label": "city buildings"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "marina or boat area",
+      "attributes": [
+        "many small white elements",
+        "harbor"
+      ],
+      "approx_location": "center-right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "shoreline",
+      "attributes": [
+        "curved",
+        "city edge"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "open water",
+      "attributes": [
+        "blue-green",
+        "wide"
+      ],
+      "approx_location": "left and foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.0,
+        0.44,
+        0.53,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          6.239521844325973,
+          8.26749477951022,
+          -21.019083967001794
+        ],
+        "size": [
+          22.474606545355602,
+          6.916856257514906,
+          41.26341648634679
+        ],
+        "label": "open water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "distant hills",
+      "attributes": [
+        "low",
+        "background"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "roads or waterfront lines",
+      "attributes": [
+        "thin",
+        "linear"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "coastal city skyline",
+      "description": "dense city area along the water",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "marina cluster",
+      "description": "cluster of boats or harbor elements near the shoreline",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Wide aerial view useful for city, marina, shoreline, and water orientation.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

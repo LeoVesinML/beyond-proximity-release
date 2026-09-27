@@ -1,0 +1,113 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v016",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v016.png",
+  "depth_path": "depths/v016_depth.npy",
+  "pose_ref": "transforms.json#/frames/15/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Very blurred covered passage or building interior-exterior transition with dark walls, a light doorway, and red building wall outside.",
+  "visible_regions": [
+    {
+      "label": "blurred passage",
+      "description": "low-quality view through a covered passage or doorway",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "light opening",
+      "description": "bright opening leading outside",
+      "approx_location": "back center",
+      "source": "manual"
+    },
+    {
+      "label": "red exterior side",
+      "description": "red building wall visible outside",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "dark passage walls",
+      "attributes": [
+        "blurred",
+        "covered"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "bright doorway opening",
+      "attributes": [
+        "overexposed",
+        "exit"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "red exterior wall",
+      "attributes": [
+        "red",
+        "outside"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "floor surface",
+      "attributes": [
+        "blurred"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ceiling light or reflection",
+      "attributes": [
+        "blurred"
+      ],
+      "approx_location": "upper area",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "bright passage opening",
+      "description": "bright exit point from the blurred covered passage",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "red exterior wall",
+      "description": "red facade visible outside the opening",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Strong blur; annotation should be reviewed before semantic use.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Image is blurry or overexposed; annotation should be reviewed before semantic execution."
+  ]
+}

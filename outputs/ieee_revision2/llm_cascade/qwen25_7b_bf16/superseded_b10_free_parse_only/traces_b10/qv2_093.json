@@ -1,0 +1,80 @@
+{
+  "query_id": "qv2_093",
+  "scene_id": "outdoor-street",
+  "query": "Find the traffic signs",
+  "query_type": "simple_object",
+  "expected_view_ids": [
+    "v003"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020",
+        "v021"
+      ],
+      "prompt_sha256": "97dc84719cfac47a8531529ed28a8aee62c5c25644f4e646fb99ad2378001cc0",
+      "raw_output": "v003",
+      "chosen_id": "v003",
+      "valid": true,
+      "input_tokens": 1450,
+      "output_tokens": 5,
+      "latency_ms": 3925.724,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v003",
+        "v014",
+        "v015"
+      ],
+      "prompt_sha256": "e2c165ebc8962b1954928cc3c4a2393ed0902ff9bf435501b1bac9482cd97377",
+      "raw_output": "v003",
+      "chosen_id": "v003",
+      "valid": true,
+      "input_tokens": 255,
+      "output_tokens": 5,
+      "latency_ms": 993.0073,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v002",
+        "v003",
+        "v015"
+      ],
+      "prompt_sha256": "f9fe53f17cc44c476b136246f07e0404d10403d17d1fe9cbde2020403eeb84ef",
+      "raw_output": "v003",
+      "chosen_id": "v003",
+      "valid": true,
+      "input_tokens": 258,
+      "output_tokens": 5,
+      "latency_ms": 948.8392,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "test",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

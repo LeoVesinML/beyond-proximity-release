@@ -1,0 +1,150 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v009",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v009.png",
+  "depth_path": "depths/v009_depth.npy",
+  "pose_ref": "transforms.json#/frames/8/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Theater lounge or green room with a long table, chairs, framed pictures, chandeliers, curtains, and a large window wall.",
+  "visible_regions": [
+    {
+      "label": "green room lounge",
+      "description": "large lounge or meeting room for theater visitors or staff",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "long table area",
+      "description": "long table or covered surface along the room",
+      "approx_location": "left and center",
+      "source": "manual"
+    },
+    {
+      "label": "window side",
+      "description": "large bright window or curtain wall",
+      "approx_location": "right side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "long table",
+      "attributes": [
+        "covered",
+        "central"
+      ],
+      "approx_location": "left and center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "chairs",
+      "attributes": [
+        "multiple",
+        "around room"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.14,
+        1.0,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -27.40348012881776,
+          11.75545403211872,
+          16.979512368070907
+        ],
+        "size": [
+          39.34474784637985,
+          28.317969228154595,
+          68.31477846163833
+        ],
+        "label": "chairs"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "framed pictures",
+      "attributes": [
+        "wall-mounted",
+        "theater photos"
+      ],
+      "approx_location": "left wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "chandeliers",
+      "attributes": [
+        "ceiling lights",
+        "decorative"
+      ],
+      "approx_location": "ceiling",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "curtains",
+      "attributes": [
+        "light colored",
+        "window side"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "large wall mirror or framed artwork",
+      "attributes": [
+        "large",
+        "wall-mounted"
+      ],
+      "approx_location": "left foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "long table area",
+      "description": "large table defining the lounge/green room",
+      "approx_location": "left and center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "bright window wall",
+      "description": "large window/curtain side of the room",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "chandelier ceiling",
+      "description": "decorative ceiling lights in the lounge",
+      "approx_location": "ceiling",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Wide room view useful for table, chairs, window wall, and lounge queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "query_id": "qv2_021",
+  "scene_id": "ConferenceHall",
+  "query": "Find an area where someone can sit",
+  "query_type": "functional",
+  "expected_view_ids": [
+    "v001",
+    "v002",
+    "v005",
+    "v010",
+    "v013",
+    "v014"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "36b6321994949753725e44c1afd2e75023ae09e6ebcf19b4bc3b6bd2edcf5cf0",
+      "raw_output": "v0010",
+      "chosen_id": null,
+      "valid": false,
+      "input_tokens": 1400,
+      "output_tokens": 6,
+      "latency_ms": 3498.912,
+      "correct": false,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v011",
+        "v015",
+        "v016"
+      ],
+      "prompt_sha256": "e1ba328313633120e921fa779876daf703aab8b9e8356aa93dac944d5567a291",
+      "raw_output": "v015",
+      "chosen_id": "v015",
+      "valid": true,
+      "input_tokens": 274,
+      "output_tokens": 5,
+      "latency_ms": 925.4396,
+      "correct": false,
+      "target_in_context": false
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v011",
+        "v015",
+        "v016"
+      ],
+      "prompt_sha256": "e1ba328313633120e921fa779876daf703aab8b9e8356aa93dac944d5567a291",
+      "raw_output": "v015",
+      "chosen_id": "v015",
+      "valid": true,
+      "input_tokens": 274,
+      "output_tokens": 5,
+      "latency_ms": 908.2066,
+      "correct": false,
+      "target_in_context": false
+    }
+  },
+  "split": "dev",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

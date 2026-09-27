@@ -1,0 +1,138 @@
+{
+  "session_id": "auto_b2aed653_g",
+  "scene_id": "default",
+  "original_query": "find the projector in the ballroom",
+  "source": "benchmark_auto_graph",
+  "started_at": "2026-06-11T17:45:47.376279+00:00",
+  "finished_at": "2026-06-11T17:45:47.376907+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "projector",
+        "location_constraints": "ballroom",
+        "query_type": "object_finding",
+        "output_type": "3d_bbox",
+        "source": "graph_auto"
+      },
+      "prompt_excerpt": "Decompose query for semantic tree navigation: find the projector in the ballroom",
+      "reasoning": "Parsed query 'find the projector in the ballroom'. Target keywords and room constraints extracted; navigating semantic tree instead of scanning all views.",
+      "ts": "2026-06-11T17:45:47.376279+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_lobby_reception"
+      ],
+      "reasoning": "At 'Conference Hall' (root). Zone summary: Full venue: lobby reception wing and main ballroom with stage, service, and exits. Descending into 'Lobby & reception' — summary 'Circulation, lounges, foyer, bar, vestibule, and reception desk before the main ballroom doors.' matches query room/object constraints. Siblings not taken: Ballroom.",
+      "ts": "2026-06-11T17:45:47.376283+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_lobby_reception",
+      "node_name": "Lobby & reception",
+      "children_count": 3,
+      "children_names": [
+        "Corridor & lounge wing",
+        "Foyer & pre-function lounge",
+        "Bar, vestibule & reception"
+      ],
+      "descend_into": [
+        "leaf_lobby_corridor_lounge"
+      ],
+      "reasoning": "At 'Lobby & reception' (zone). Zone summary: Circulation, lounges, foyer, bar, vestibule, and reception desk before the main ballroom doors. Descending into 'Corridor & lounge wing' — summary 'Hotel corridor, marble pillars, and upholstered lounge seating along the main circulation spine.' matches query room/object constraints. Siblings not taken: Foyer & pre-function lounge, Bar, vestibule & reception.",
+      "ts": "2026-06-11T17:45:47.376286+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "leaf_lobby_corridor_lounge",
+      "node_name": "Corridor & lounge wing",
+      "children_count": 0,
+      "children_names": [],
+      "descend_into": [
+        "leaf_lobby_foyer_prefunction"
+      ],
+      "reasoning": "At 'Corridor & lounge wing' (leaf). Zone summary: Hotel corridor, marble pillars, and upholstered lounge seating along the main circulation spine. Descending into 'Foyer & pre-function lounge' — summary 'Grand piano foyer, double doors, and pre-function lounge with artwork and egress signage.' matches query room/object constraints. Siblings not taken: none.",
+      "ts": "2026-06-11T17:45:47.376290+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "leaf_lobby_foyer_prefunction",
+      "node_name": "Foyer & pre-function lounge",
+      "children_count": 0,
+      "children_names": [],
+      "descend_into": [
+        "leaf_lobby_bar_reception"
+      ],
+      "reasoning": "At 'Foyer & pre-function lounge' (leaf). Zone summary: Grand piano foyer, double doors, and pre-function lounge with artwork and egress signage. Descending into 'Bar, vestibule & reception' — summary 'Curved bar counter, wood-panelled vestibule with ornate doors, and hotel reception desk with banquet staging.' matches query room/object constraints. Siblings not taken: none.",
+      "ts": "2026-06-11T17:45:47.376292+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "leaf_lobby_bar_reception",
+      "node_name": "Bar, vestibule & reception",
+      "children_count": 0,
+      "children_names": [],
+      "descend_into": [
+        "zone_ballroom"
+      ],
+      "reasoning": "At 'Bar, vestibule & reception' (leaf). Zone summary: Curved bar counter, wood-panelled vestibule with ornate doors, and hotel reception desk with banquet staging. Descending into 'Ballroom' — summary 'Grand event hall with banquet tables, projection screen, stage wall, service corner, and egress.' matches query room/object constraints. Siblings not taken: none.",
+      "ts": "2026-06-11T17:45:47.376293+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_ballroom",
+      "node_name": "Ballroom",
+      "children_count": 3,
+      "children_names": [
+        "Ballroom — floor & sides",
+        "Ballroom — stage & screen",
+        "Ballroom — exit passage"
+      ],
+      "descend_into": [
+        "leaf_ballroom_main_floor"
+      ],
+      "reasoning": "At 'Ballroom' (zone). Zone summary: Grand event hall with banquet tables, projection screen, stage wall, service corner, and egress. Descending into 'Ballroom — floor & sides' — summary 'Entrance through double doors, side wall with AV, service prep corner, main banquet tables, and ceiling chandelier view.' matches query room/object constraints. Siblings not taken: Ballroom — stage & screen, Ballroom — exit passage.",
+      "ts": "2026-06-11T17:45:47.376295+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom — floor & sides",
+      "view_id": "v012",
+      "found": false,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "View through open double doors into a bright ballroom with round banquet tables, chandeliers, projection screen, and a green exit sign above a distant doorway.",
+      "reasoning": "Confirm object in view v012 within leaf 'Ballroom — floor & sides'. No match.",
+      "ts": "2026-06-11T17:45:47.376337+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom — floor & sides",
+      "view_id": "v013",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": null,
+      "matched_object": "projector",
+      "explanation": "Ballroom side wall with marble panels, glowing vertical sconces, green exit sign upper left above a passage, AV projector on a draped stand in the foreground, and banquet tables along the far wall.",
+      "reasoning": "Confirm object in view v013 within leaf 'Ballroom — floor & sides'. Match — correct zone for query.",
+      "ts": "2026-06-11T17:45:47.376386+00:00"
+    }
+  ],
+  "result": {
+    "found": true,
+    "view_id": "v013",
+    "mode": "graph_auto",
+    "explanation": "Ballroom side wall with marble panels, glowing vertical sconces, green exit sign upper left above a passage, AV projector on a draped stand in the foreground, and banquet tables along the far wall."
+  }
+}

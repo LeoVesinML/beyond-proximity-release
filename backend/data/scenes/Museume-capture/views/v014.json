@@ -1,0 +1,113 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v014",
+  "scene_id": "Museume-capture",
+  "image_path": "images/v014.png",
+  "depth_path": "depths/v014_depth.npy",
+  "pose_ref": "transforms.json#/frames/13/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Gallery corner with a tall window, wall text panel, dark wall area, and a view outside to trees.",
+  "visible_regions": [
+    {
+      "label": "window corner",
+      "description": "corner area with a tall window and outside view",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "text panel wall",
+      "description": "wall section with printed museum text",
+      "approx_location": "right side",
+      "source": "manual"
+    },
+    {
+      "label": "dark wall area",
+      "description": "dark plain wall beside the window",
+      "approx_location": "left side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "tall window",
+      "attributes": [
+        "large",
+        "outside trees visible"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall text panel",
+      "attributes": [
+        "large",
+        "printed text"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "dark wall panel",
+      "attributes": [
+        "plain",
+        "black or dark gray"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small exhibit panel",
+      "attributes": [
+        "low",
+        "near wall"
+      ],
+      "approx_location": "lower right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "outdoor trees",
+      "attributes": [
+        "visible through window"
+      ],
+      "approx_location": "outside",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "tall window",
+      "description": "large window with visible trees, useful as an orientation point",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "text panel wall",
+      "description": "printed wall text next to the window",
+      "approx_location": "right side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for orientation near the window and text wall.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

@@ -1,0 +1,568 @@
+{
+  "schema_version": "semanticsplat.benchmark_queries.v1",
+  "benchmark_id": "six_scene_mixed_gt_v1",
+  "status": "mixed_verified_and_missing_gt",
+  "scene_scope": ["default", "ConferenceHall", "Museume", "outdoor-drone", "outdoor-street", "Theater"],
+  "query_count": 90,
+  "query_type_counts": {
+    "simple_object": 15,
+    "attribute": 15,
+    "relational": 15,
+    "multi_hop": 15,
+    "functional": 15,
+    "negative": 15
+  },
+  "ground_truth_scope": "The legacy default-scene expectations were checked against ViewJSON and the root-connected semantic tree. The five PLY-only scenes have no semantic GT, so their expected fields are empty and excluded from accuracy metrics.",
+  "queries": [
+    {
+      "query_id": "q001", "scene_id": "default", "query": "Find the grand piano", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v006", "v007"], "expected_object_labels": ["grand piano"],
+      "acceptance_rule": "found=true and selected_view_id is v006 or v007", "notes": "Verified from the foyer ViewJSON records; not independent dataset GT.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v006.json", "backend/data/scenes/default/views/v007.json"]
+    },
+    {
+      "query_id": "q002", "scene_id": "default", "query": "Find the bar counter", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v009"], "expected_object_labels": ["bar counter"],
+      "acceptance_rule": "found=true and selected_view_id is v009", "notes": "Verified from the bar ViewJSON record.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v009.json"]
+    },
+    {
+      "query_id": "q003", "scene_id": "default", "query": "Find the reception desk", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v011"], "expected_object_labels": ["reception desk"],
+      "acceptance_rule": "found=true and selected_view_id is v011", "notes": "Verified from the reception ViewJSON record.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v011.json"]
+    },
+    {
+      "query_id": "q004", "scene_id": "default", "query": "Find the projector", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v013"], "expected_object_labels": ["projector"],
+      "acceptance_rule": "found=true and selected_view_id is v013", "notes": "Verified from the ballroom side-wall ViewJSON record.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v013.json"]
+    },
+    {
+      "query_id": "q005", "scene_id": "default", "query": "Find a projection screen", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor", "leaf_ballroom_stage_front"], "expected_view_ids": ["v012", "v015", "v017", "v018"], "expected_object_labels": ["projection screen"],
+      "acceptance_rule": "found=true and selected_view_id is one of the verified screen views", "notes": "Multiple valid views exist; no single canonical visual GT view is asserted.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v012.json", "backend/data/scenes/default/views/v015.json", "backend/data/scenes/default/views/v017.json", "backend/data/scenes/default/views/v018.json"]
+    },
+    {
+      "query_id": "q006", "scene_id": "default", "query": "Find the round coffee table", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v005"], "expected_object_labels": ["coffee table"],
+      "acceptance_rule": "found=true and selected_view_id is v005", "notes": "Verified from the lounge ViewJSON record.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v005.json"]
+    },
+    {
+      "query_id": "q007", "scene_id": "default", "query": "Find the chandelier in the lobby corridor", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v001"], "expected_object_labels": ["chandelier"],
+      "acceptance_rule": "found=true and selected_view_id is v001", "notes": "Location phrase disambiguates lobby from ballroom chandeliers.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v001.json"]
+    },
+    {
+      "query_id": "q008", "scene_id": "default", "query": "Find a sofa in the lounge", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge", "leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v001", "v004", "v005", "v008"], "expected_object_labels": ["sofa"],
+      "acceptance_rule": "found=true and selected_view_id is a verified lounge sofa view", "notes": "Multiple valid semantic-index views exist.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v004.json", "backend/data/scenes/default/views/v005.json", "backend/data/scenes/default/views/v008.json"]
+    },
+    {
+      "query_id": "q009", "scene_id": "default", "query": "Find the orchid", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v014"], "expected_object_labels": ["orchid"],
+      "acceptance_rule": "found=true and selected_view_id is v014", "notes": "Verified from the service-area ViewJSON record.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v014.json"]
+    },
+    {
+      "query_id": "q010", "scene_id": "default", "query": "Find the fire extinguisher", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v008"], "expected_object_labels": ["fire extinguisher"],
+      "acceptance_rule": "found=true and selected_view_id is v008", "notes": "A cabinet is described in v002, but the exact object label is verified in v008 only.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v008.json"]
+    },
+
+    {
+      "query_id": "q011", "scene_id": "default", "query": "Find the black grand piano", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v006", "v007"], "expected_object_labels": ["grand piano"],
+      "acceptance_rule": "found=true and selected_view_id is v006 or v007", "notes": "Black color is present in both scene summaries.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v006.json", "backend/data/scenes/default/views/v007.json"]
+    },
+    {
+      "query_id": "q012", "scene_id": "default", "query": "Find a grey armchair", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v003"], "expected_object_labels": ["armchair"],
+      "acceptance_rule": "found=true and selected_view_id is v003", "notes": "Grey attribute is present in the scene summary.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v003.json"]
+    },
+    {
+      "query_id": "q013", "scene_id": "default", "query": "Find the curved dark bar counter", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v009"], "expected_object_labels": ["bar counter"],
+      "acceptance_rule": "found=true and selected_view_id is v009", "notes": "Shape and color are present in the scene summary.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v009.json"]
+    },
+    {
+      "query_id": "q014", "scene_id": "default", "query": "Find the purple orchid", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v014"], "expected_object_labels": ["orchid"],
+      "acceptance_rule": "found=true and selected_view_id is v014", "notes": "Purple attribute is present in the scene summary.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v014.json"]
+    },
+    {
+      "query_id": "q015", "scene_id": "default", "query": "Find the green exit sign above the dark doorway", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_egress"], "expected_view_ids": ["v019"], "expected_object_labels": ["exit sign"],
+      "acceptance_rule": "found=true and selected_view_id is v019", "notes": "Attributes and doorway relation identify the dedicated egress view.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v019.json"]
+    },
+    {
+      "query_id": "q016", "scene_id": "default", "query": "Find the large abstract painting above the sofa", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v004"], "expected_object_labels": ["painting"],
+      "acceptance_rule": "found=true and selected_view_id is v004", "notes": "Large abstract painting is stated in the summary and relation.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v004.json"]
+    },
+    {
+      "query_id": "q017", "scene_id": "default", "query": "Find the round glass coffee table", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v005"], "expected_object_labels": ["coffee table"],
+      "acceptance_rule": "found=true and selected_view_id is v005", "notes": "Shape and material are present in the scene summary.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v005.json"]
+    },
+    {
+      "query_id": "q018", "scene_id": "default", "query": "Find the large rectangular crystal chandelier", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v016"], "expected_object_labels": ["chandelier"],
+      "acceptance_rule": "found=true and selected_view_id is v016", "notes": "The ceiling view supplies the rectangular crystal attributes.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v016.json"]
+    },
+
+    {
+      "query_id": "q019", "scene_id": "default", "query": "Find an armchair beside the console table", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v003"], "expected_object_labels": ["armchair"],
+      "acceptance_rule": "found=true and selected_view_id is v003", "notes": "ViewJSON states that the console table is centered between two armchairs.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v003.json"]
+    },
+    {
+      "query_id": "q020", "scene_id": "default", "query": "Find the painting above the sofa", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v004"], "expected_object_labels": ["painting"],
+      "acceptance_rule": "found=true and selected_view_id is v004", "notes": "Relation is explicitly recorded in ViewJSON.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v004.json"]
+    },
+    {
+      "query_id": "q021", "scene_id": "default", "query": "Find the coffee table centered among three sofas", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v005"], "expected_object_labels": ["coffee table"],
+      "acceptance_rule": "found=true and selected_view_id is v005", "notes": "Relation is explicitly recorded in ViewJSON.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v005.json"]
+    },
+    {
+      "query_id": "q022", "scene_id": "default", "query": "Find the piano left of the double doors", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v006"], "expected_object_labels": ["grand piano"],
+      "acceptance_rule": "found=true and selected_view_id is v006", "notes": "Left-of relation is explicitly recorded in v006.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v006.json"]
+    },
+    {
+      "query_id": "q023", "scene_id": "default", "query": "Find the exit sign above the fire equipment recess", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge"], "expected_view_ids": ["v002"], "expected_object_labels": ["exit sign"],
+      "acceptance_rule": "found=true and selected_view_id is v002", "notes": "Relation is explicitly recorded in v002.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v002.json"]
+    },
+    {
+      "query_id": "q024", "scene_id": "default", "query": "Find a lamp on the curved bar", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v009"], "expected_object_labels": ["table lamp"],
+      "acceptance_rule": "found=true and selected_view_id is v009", "notes": "ViewJSON states that lamps sit on raised ends of the bar.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v009.json"]
+    },
+    {
+      "query_id": "q025", "scene_id": "default", "query": "Find the exit sign left of the reception desk", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v011"], "expected_object_labels": ["exit sign"],
+      "acceptance_rule": "found=true and selected_view_id is v011", "notes": "Relation is explicitly recorded in v011.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v011.json"]
+    },
+    {
+      "query_id": "q026", "scene_id": "default", "query": "Find the projector on a stand facing the hall", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v013"], "expected_object_labels": ["projector"],
+      "acceptance_rule": "found=true and selected_view_id is v013", "notes": "Projector and equipment stand are both recorded in v013.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v013.json"]
+    },
+    {
+      "query_id": "q027", "scene_id": "default", "query": "Find the screen between the wall sconces", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_stage_front"], "expected_view_ids": ["v017"], "expected_object_labels": ["projection screen"],
+      "acceptance_rule": "found=true and selected_view_id is v017", "notes": "Screen-between-sconces relation is explicit in v017.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v017.json"]
+    },
+    {
+      "query_id": "q028", "scene_id": "default", "query": "Find the exit sign between two wall sconces", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_egress"], "expected_view_ids": ["v019"], "expected_object_labels": ["exit sign"],
+      "acceptance_rule": "found=true and selected_view_id is v019", "notes": "The egress opening is framed symmetrically by sconces in v019.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v019.json"]
+    },
+
+    {
+      "query_id": "q029", "scene_id": "default", "query": "Find the projection screen in the ballroom stage area", "query_type": "multi_hop", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_stage_front"], "expected_view_ids": ["v017", "v018"], "expected_object_labels": ["projection screen"],
+      "acceptance_rule": "traversal visits zone_ballroom and leaf_ballroom_stage_front, then found=true in v017 or v018", "notes": "Tests zone-to-leaf traversal rather than any distant screen view.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/tree/node_leaf_ballroom_stage_front.json", "backend/data/scenes/default/views/v017.json"]
+    },
+    {
+      "query_id": "q030", "scene_id": "default", "query": "Find the exit next to the ballroom presentation screen", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_stage_front"], "expected_view_ids": ["v017", "v018"], "expected_object_labels": ["exit sign"],
+      "acceptance_rule": "found=true in a stage-front view containing both screen and exit sign", "notes": "Semantic-index relation only; physical nearest-distance GT is not asserted.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v017.json", "backend/data/scenes/default/views/v018.json"]
+    },
+    {
+      "query_id": "q031", "scene_id": "default", "query": "Find the reception desk in the lobby and reception wing", "query_type": "multi_hop", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v011"], "expected_object_labels": ["reception desk"],
+      "acceptance_rule": "traversal visits zone_lobby_reception and leaf_lobby_bar_reception, then selects v011", "notes": "Root-connected tree path is verified.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/tree/node_zone_lobby_reception.json", "backend/data/scenes/default/views/v011.json"]
+    },
+    {
+      "query_id": "q032", "scene_id": "default", "query": "Find the AV projector on the main ballroom floor", "query_type": "multi_hop", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v013"], "expected_object_labels": ["projector"],
+      "acceptance_rule": "traversal visits zone_ballroom and leaf_ballroom_main_floor, then selects v013", "notes": "Root-connected tree path is verified.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/tree/node_leaf_ballroom_main_floor.json", "backend/data/scenes/default/views/v013.json"]
+    },
+    {
+      "query_id": "q033", "scene_id": "default", "query": "Find the grand piano in the foyer inside the lobby wing", "query_type": "multi_hop", "expected_output_type": "object",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v006", "v007"], "expected_object_labels": ["grand piano"],
+      "acceptance_rule": "traversal visits zone_lobby_reception and leaf_lobby_foyer_prefunction, then selects v006 or v007", "notes": "Root-connected tree path is verified.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/tree/node_leaf_lobby_foyer_prefunction.json", "backend/data/scenes/default/views/v006.json"]
+    },
+    {
+      "query_id": "q034", "scene_id": "default", "query": "Find the catering preparation area inside the ballroom wing", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v014"], "expected_object_labels": ["prep table", "plate stack"],
+      "acceptance_rule": "found=true and selected_view_id is v014 after entering zone_ballroom", "notes": "Tree groups the service view into main floor; this evaluates the existing index, not an ideal hierarchy.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v014.json", "backend/data/scenes/default/tree/node_leaf_ballroom_main_floor.json"]
+    },
+    {
+      "query_id": "q035", "scene_id": "default", "query": "Find the dedicated exit passage at the edge of the ballroom", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_egress"], "expected_view_ids": ["v019"], "expected_object_labels": ["exit sign", "doorway"],
+      "acceptance_rule": "traversal visits zone_ballroom and leaf_ballroom_egress, then selects v019", "notes": "Root-connected egress leaf is verified.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/tree/node_leaf_ballroom_egress.json", "backend/data/scenes/default/views/v019.json"]
+    },
+
+    {
+      "query_id": "q036", "scene_id": "default", "query": "Where can a presenter show slides?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_stage_front"], "expected_view_ids": ["v017", "v018"], "expected_object_labels": ["projection screen", "podium", "lectern"],
+      "acceptance_rule": "found=true in v017 or v018", "notes": "Functional context identifies the presentation setup.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v017.json", "backend/data/scenes/default/views/v018.json"]
+    },
+    {
+      "query_id": "q037", "scene_id": "default", "query": "Where is the AV equipment for a presentation?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v013"], "expected_object_labels": ["projector", "equipment stand"],
+      "acceptance_rule": "found=true and selected_view_id is v013", "notes": "Functional context states AV presentation use.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v013.json"]
+    },
+    {
+      "query_id": "q038", "scene_id": "default", "query": "Where can guests get drinks?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v009"], "expected_object_labels": ["bar counter"],
+      "acceptance_rule": "found=true and selected_view_id is v009", "notes": "Functional context states hospitality bar service.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v009.json"]
+    },
+    {
+      "query_id": "q039", "scene_id": "default", "query": "Where can event guests check in?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_bar_reception"], "expected_view_ids": ["v011"], "expected_object_labels": ["reception desk"],
+      "acceptance_rule": "found=true and selected_view_id is v011", "notes": "Reception use is explicit in room type and summary.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v011.json"]
+    },
+    {
+      "query_id": "q040", "scene_id": "default", "query": "Where can guests sit and wait in the lounge?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_corridor_lounge", "leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v003", "v004", "v005", "v008"], "expected_object_labels": ["sofa", "armchair"],
+      "acceptance_rule": "found=true in a verified lounge seating view", "notes": "Multiple valid semantic-index views exist.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v003.json", "backend/data/scenes/default/views/v005.json", "backend/data/scenes/default/views/v008.json"]
+    },
+    {
+      "query_id": "q041", "scene_id": "default", "query": "Where can catering staff prepare plates?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_main_floor"], "expected_view_ids": ["v014"], "expected_object_labels": ["prep table", "plate stack"],
+      "acceptance_rule": "found=true and selected_view_id is v014", "notes": "Service-area functional context is explicit.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v014.json"]
+    },
+    {
+      "query_id": "q042", "scene_id": "default", "query": "Where can someone play the piano?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_lobby_reception"], "expected_node_ids": ["leaf_lobby_foyer_prefunction"], "expected_view_ids": ["v006", "v007"], "expected_object_labels": ["grand piano"],
+      "acceptance_rule": "found=true and selected_view_id is v006 or v007", "notes": "Foyer performance-piano context is explicit.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v006.json", "backend/data/scenes/default/views/v007.json"]
+    },
+    {
+      "query_id": "q043", "scene_id": "default", "query": "Where should people leave the ballroom in an emergency?", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": ["zone_ballroom"], "expected_node_ids": ["leaf_ballroom_egress"], "expected_view_ids": ["v019"], "expected_object_labels": ["exit sign", "doorway"],
+      "acceptance_rule": "found=true and selected_view_id is v019", "notes": "Dedicated egress leaf is used; this is semantic-index evidence, not a safety certification.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/v019.json"]
+    },
+
+    {
+      "query_id": "q044", "scene_id": "default", "query": "Find the swimming pool", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": ["swimming pool"],
+      "acceptance_rule": "found=false", "notes": "Verified absent from the existing 19 ViewJSON records only; scene-level visual absence is not independently proven.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/"]
+    },
+    {
+      "query_id": "q045", "scene_id": "default", "query": "Find the elevator", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": ["elevator"],
+      "acceptance_rule": "found=false", "notes": "Verified absent from the existing ViewJSON records only.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/"]
+    },
+    {
+      "query_id": "q046", "scene_id": "default", "query": "Find the kitchen stove", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": ["stove"],
+      "acceptance_rule": "found=false", "notes": "Verified absent from the existing ViewJSON records only.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/"]
+    },
+    {
+      "query_id": "q047", "scene_id": "default", "query": "Find a bed", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": ["bed"],
+      "acceptance_rule": "found=false", "notes": "Verified absent from the existing ViewJSON records only.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/"]
+    },
+    {
+      "query_id": "q048", "scene_id": "default", "query": "Find the shower", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": ["shower"],
+      "acceptance_rule": "found=false", "notes": "Verified absent from the existing ViewJSON records only.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/"]
+    },
+    {
+      "query_id": "q049", "scene_id": "default", "query": "Find the television", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": ["television"],
+      "acceptance_rule": "found=false", "notes": "Projection screens are not accepted as televisions; label is absent from ViewJSON records.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/"]
+    },
+    {
+      "query_id": "q050", "scene_id": "default", "query": "Find a bicycle", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": ["bicycle"],
+      "acceptance_rule": "found=false", "notes": "Verified absent from the existing ViewJSON records only.",
+      "verification_status": "verified_from_view_json", "verification_source": ["backend/data/scenes/default/views/"]
+    },
+
+    {
+      "query_id": "q051", "scene_id": "ConferenceHall", "query": "Find a chair", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q052", "scene_id": "ConferenceHall", "query": "Find a red object", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q053", "scene_id": "ConferenceHall", "query": "Find a large table", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q054", "scene_id": "ConferenceHall", "query": "Find an object next to a doorway", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q055", "scene_id": "ConferenceHall", "query": "Find a room containing seating near an entrance", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q056", "scene_id": "ConferenceHall", "query": "Find an area suitable for a meeting", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q057", "scene_id": "ConferenceHall", "query": "Find a bicycle", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q058", "scene_id": "ConferenceHall", "query": "Find a bed", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+
+    {
+      "query_id": "q059", "scene_id": "Museume", "query": "Find a display object", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q060", "scene_id": "Museume", "query": "Find a blue object", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q061", "scene_id": "Museume", "query": "Find a tall object", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q062", "scene_id": "Museume", "query": "Find an object beside a wall", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q063", "scene_id": "Museume", "query": "Find a room containing a display near a passage", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q064", "scene_id": "Museume", "query": "Find an area suitable for viewing exhibits", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q065", "scene_id": "Museume", "query": "Find a swimming pool", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q066", "scene_id": "Museume", "query": "Find a kitchen stove", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+
+    {
+      "query_id": "q067", "scene_id": "outdoor-drone", "query": "Find a vehicle", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q068", "scene_id": "outdoor-drone", "query": "Find a light-colored structure", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q069", "scene_id": "outdoor-drone", "query": "Find an object beside a road", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q070", "scene_id": "outdoor-drone", "query": "Find an open area containing a path near a structure", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q071", "scene_id": "outdoor-drone", "query": "Find a region containing vegetation beyond a paved area", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q072", "scene_id": "outdoor-drone", "query": "Find an area suitable for vehicle access", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q073", "scene_id": "outdoor-drone", "query": "Find an area suitable for walking", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q074", "scene_id": "outdoor-drone", "query": "Find an indoor bedroom", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+
+    {
+      "query_id": "q075", "scene_id": "outdoor-street", "query": "Find a street object", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q076", "scene_id": "outdoor-street", "query": "Find a dark-colored vehicle", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q077", "scene_id": "outdoor-street", "query": "Find an object near the roadside", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q078", "scene_id": "outdoor-street", "query": "Find a road segment containing a vehicle near a building", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q079", "scene_id": "outdoor-street", "query": "Find a path passing structures beside the road", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q080", "scene_id": "outdoor-street", "query": "Find an area suitable for crossing the street", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q081", "scene_id": "outdoor-street", "query": "Find a grand piano", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q082", "scene_id": "outdoor-street", "query": "Find a shower", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+
+    {
+      "query_id": "q083", "scene_id": "Theater", "query": "Find a seat", "query_type": "simple_object", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q084", "scene_id": "Theater", "query": "Find a red seat", "query_type": "attribute", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q085", "scene_id": "Theater", "query": "Find an object facing a stage", "query_type": "relational", "expected_output_type": "object",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q086", "scene_id": "Theater", "query": "Find a room containing seats facing a performance area", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q087", "scene_id": "Theater", "query": "Find an entrance leading toward a seating area", "query_type": "multi_hop", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q088", "scene_id": "Theater", "query": "Find an area suitable for watching a performance", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q089", "scene_id": "Theater", "query": "Find an area suitable for performing", "query_type": "functional", "expected_output_type": "region",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    },
+    {
+      "query_id": "q090", "scene_id": "Theater", "query": "Find a swimming pool", "query_type": "negative", "expected_output_type": "not_found",
+      "expected_zone_ids": [], "expected_node_ids": [], "expected_view_ids": [], "expected_object_labels": [],
+      "acceptance_rule": "N/A - GT unavailable", "notes": "GT unavailable; excluded from accuracy metrics",
+      "verification_status": "missing_gt", "verification_source": []
+    }
+  ]
+}

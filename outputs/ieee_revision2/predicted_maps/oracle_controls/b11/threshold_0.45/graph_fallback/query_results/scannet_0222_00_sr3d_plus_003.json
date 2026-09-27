@@ -1,0 +1,208 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_graph_fallback",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0222_00",
+  "query_id": "scannet_0222_00_sr3d_plus_003",
+  "query": "choose the chair that is in the center of the laundry hamper and the backpack",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "chair",
+    "relation": "between",
+    "anchor": "laundry hamper",
+    "anchor_secondary": "backpack"
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_003_chair"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_003_chair"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_003_chair",
+    "object_v005_001_chair",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001",
+    "v005"
+  ],
+  "checked_object_ids": [
+    "7",
+    "6"
+  ],
+  "search_variant": "graph_fallback",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "chair",
+    "selected_object_id": "7",
+    "ranked_object_ids": [
+      "7",
+      "6"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "7",
+        "label": "chair",
+        "score": 1.0,
+        "relation_confidence": 0.777104,
+        "relation_applied": true
+      },
+      {
+        "rank": 2,
+        "object_id": "6",
+        "label": "chair",
+        "score": 1.0,
+        "relation_confidence": 0.599819,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v001_003_chair",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.429796,
+        -0.158952,
+        0.322323
+      ],
+      "size": [
+        0.745341,
+        0.679067,
+        0.797749
+      ],
+      "label": "chair",
+      "object_id": "7",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "graph_fallback selected object 7.",
+    "relation_satisfied": true,
+    "relation_audit": {
+      "evaluated_candidate_count": 2,
+      "applied_candidate_count": 1,
+      "ranking_changed": true,
+      "candidate_evidence": [
+        {
+          "object_id": "7",
+          "label": "chair",
+          "relation_score": 1.0,
+          "relation_confidence": 0.777104,
+          "relation_applied": true,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "6",
+          "label": "chair",
+          "relation_score": 1.0,
+          "relation_confidence": 0.599819,
+          "relation_applied": false,
+          "relation_source": "bbox_3d",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 2
+        }
+      ]
+    },
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "between",
+      "anchor": "laundry hamper",
+      "anchor_secondary": "backpack",
+      "relation_score": 1.0,
+      "relation_source": "bbox_3d",
+      "relation_confidence": 0.777104,
+      "relation_applied": true,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "matched": true,
+          "projection": 0.401169,
+          "perpendicular_distance": 0.233844,
+          "confidence": 0.777104,
+          "anchor_object_id": "15",
+          "secondary_anchor_object_id": "31"
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "15"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "31"
+        ],
+        "confidence": 1.0
+      },
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": true,
+      "pre_relation_rank": 2,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.001646749999999031,
+    "stage_runtime_seconds": {
+      "answer_query": 0.001646749999999031
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 3,
+    "checked_view_count": 2,
+    "checked_object_count": 2,
+    "context_size_chars": 320,
+    "prompt_size_chars": 397,
+    "estimated_input_tokens": 99,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

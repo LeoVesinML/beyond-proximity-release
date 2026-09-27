@@ -1,0 +1,398 @@
+{
+  "session_id": "79e3904d",
+  "scene_id": "default",
+  "original_query": "find all exit signs",
+  "started_at": "2026-04-08T01:33:58.166411+00:00",
+  "finished_at": "2026-04-08T01:37:06.810015+00:00",
+  "steps": [
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "output_type": "3d_bbox",
+        "relational_constraints": null,
+        "query_type": "aggregation",
+        "functional_constraints": "emergency egress wayfinding signage",
+        "attribute_constraints": null,
+        "target": "exit sign",
+        "location_constraints": null
+      },
+      "prompt_excerpt": "Extract aggregation query for all exit signs in scene",
+      "ts": "2026-04-08T01:34:05.400445+00:00"
+    },
+    {
+      "step_type": "decomposition",
+      "structured_plan": {
+        "target": "exit sign",
+        "location_constraints": null,
+        "attribute_constraints": null,
+        "relational_constraints": null,
+        "functional_constraints": "emergency egress wayfinding signage",
+        "query_type": "aggregation",
+        "output_type": "3d_bbox"
+      },
+      "prompt_excerpt": "Aggregation: enumerate every visible exit sign instance across views.",
+      "ts": "2026-04-08T01:34:10.677584+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "root_conference_hall",
+      "node_name": "Conference Hall",
+      "children_count": 2,
+      "children_names": [
+        "Lobby & reception",
+        "Ballroom"
+      ],
+      "descend_into": [
+        "zone_lobby_reception",
+        "zone_ballroom"
+      ],
+      "reasoning": "Exit signs are required throughout the venue; both lobby circulation and ballroom have egress signage.",
+      "ts": "2026-04-08T01:34:27.863869+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_lobby_reception",
+      "node_name": "Lobby & reception",
+      "children_count": 3,
+      "children_names": [
+        "Corridor & lounge wing",
+        "Foyer & pre-function lounge",
+        "Bar, vestibule & reception"
+      ],
+      "descend_into": [
+        "leaf_lobby_corridor_lounge",
+        "leaf_lobby_foyer_prefunction",
+        "leaf_lobby_bar_reception"
+      ],
+      "reasoning": "Aggregation requires checking every leaf for exit signage; all three lobby leaves may contain egress signs.",
+      "ts": "2026-04-08T01:35:06.307843+00:00"
+    },
+    {
+      "step_type": "traversal",
+      "node_id": "zone_ballroom",
+      "node_name": "Ballroom",
+      "children_count": 3,
+      "children_names": [
+        "Ballroom floor & sides",
+        "Ballroom stage & screen",
+        "Ballroom egress"
+      ],
+      "descend_into": [
+        "leaf_ballroom_main_floor",
+        "leaf_ballroom_stage_front",
+        "leaf_ballroom_egress"
+      ],
+      "reasoning": "Exit signs appear on ballroom walls and egress; all three ballroom leaves must be searched.",
+      "ts": "2026-04-08T01:35:06.369061+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_corridor_lounge",
+      "node_name": "Corridor & lounge wing",
+      "view_id": "v001",
+      "found": true,
+      "confidence": "medium",
+      "bbox_2d": [
+        0.41,
+        0.59,
+        0.46,
+        0.64
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Green exit sign visible far down the corridor centre-left.",
+      "ts": "2026-04-08T01:36:54.128308+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_corridor_lounge",
+      "node_name": "Corridor & lounge wing",
+      "view_id": "v002",
+      "found": true,
+      "confidence": "medium",
+      "bbox_2d": [
+        0.6,
+        0.05,
+        0.67,
+        0.12
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Exit sign above fire equipment recess on right marble pillar.",
+      "ts": "2026-04-08T01:36:54.161388+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_corridor_lounge",
+      "node_name": "Corridor & lounge wing",
+      "view_id": "v003",
+      "found": false,
+      "confidence": "low",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "No exit signage in frame; lounge seating and mirrors only.",
+      "ts": "2026-04-08T01:36:54.178527+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_corridor_lounge",
+      "node_name": "Corridor & lounge wing",
+      "view_id": "v004",
+      "found": false,
+      "confidence": "low",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Tight framing on sofa and artwork; no exit sign visible.",
+      "ts": "2026-04-08T01:36:54.208819+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_corridor_lounge",
+      "node_name": "Corridor & lounge wing",
+      "view_id": "v005",
+      "found": false,
+      "confidence": "low",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Symmetrical lounge toward feature wall; no exit sign in view.",
+      "ts": "2026-04-08T01:36:54.228441+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_foyer_prefunction",
+      "node_name": "Foyer & pre-function lounge",
+      "view_id": "v006",
+      "found": true,
+      "confidence": "low",
+      "bbox_2d": [
+        0.37,
+        0.94,
+        0.42,
+        0.98
+      ],
+      "matched_object": "fire exit sign",
+      "explanation": "Small red fire-exit style sign at far right wall edge.",
+      "ts": "2026-04-08T01:36:54.246914+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_foyer_prefunction",
+      "node_name": "Foyer & pre-function lounge",
+      "view_id": "v007",
+      "found": false,
+      "confidence": "low",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Piano and doors; no illuminated exit sign detected in annotations.",
+      "ts": "2026-04-08T01:36:54.261194+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_foyer_prefunction",
+      "node_name": "Foyer & pre-function lounge",
+      "view_id": "v008",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.43,
+        0,
+        0.46,
+        0.06
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Two green exit signs: primary on left pillar (bbox); second above distant doorway.",
+      "ts": "2026-04-08T01:36:54.296723+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_bar_reception",
+      "node_name": "Bar, vestibule & reception",
+      "view_id": "v009",
+      "found": true,
+      "confidence": "medium",
+      "bbox_2d": [
+        0.09,
+        0.16,
+        0.12,
+        0.22
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Green exit sign far left above passage past the bar.",
+      "ts": "2026-04-08T01:36:54.328658+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_bar_reception",
+      "node_name": "Bar, vestibule & reception",
+      "view_id": "v010",
+      "found": false,
+      "confidence": "low",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Vestibule focused on double doors; no exit sign in frame.",
+      "ts": "2026-04-08T01:36:54.346337+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_lobby_bar_reception",
+      "node_name": "Bar, vestibule & reception",
+      "view_id": "v011",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.664,
+        0.332,
+        0.679,
+        0.353
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Green exit sign above back doorway left of reception desk.",
+      "ts": "2026-04-08T01:36:54.377488+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom — floor & sides",
+      "view_id": "v012",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.45,
+        0.35,
+        0.47,
+        0.38
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Exit sign centred above rear doorway through open ballroom doors.",
+      "ts": "2026-04-08T01:36:54.395745+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom — floor & sides",
+      "view_id": "v013",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.13,
+        0.21,
+        0.17,
+        0.26
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Green exit sign upper left above side passage.",
+      "ts": "2026-04-08T01:36:54.413119+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom — floor & sides",
+      "view_id": "v014",
+      "found": false,
+      "confidence": "low",
+      "bbox_2d": null,
+      "matched_object": null,
+      "explanation": "Service prep corner only; no egress signage.",
+      "ts": "2026-04-08T01:36:54.428940+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom — floor & sides",
+      "view_id": "v015",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.44,
+        0.39,
+        0.47,
+        0.41
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Exit sign above doorway left of projection screen at far wall.",
+      "ts": "2026-04-08T01:36:54.465813+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_main_floor",
+      "node_name": "Ballroom — floor & sides",
+      "view_id": "v016",
+      "found": true,
+      "confidence": "medium",
+      "bbox_2d": [
+        0.49,
+        0.95,
+        0.52,
+        0.97
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Tiny green exit sign at vanishing point above far doorway (ceiling-tilt view).",
+      "ts": "2026-04-08T01:36:54.480321+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_stage_front",
+      "node_name": "Ballroom — stage & screen",
+      "view_id": "v017",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.15,
+        0.35,
+        0.18,
+        0.38
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Exit sign directly above left egress doorway beside stage wall.",
+      "ts": "2026-04-08T01:36:54.513294+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_stage_front",
+      "node_name": "Ballroom — stage & screen",
+      "view_id": "v018",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0,
+        0.75,
+        0.03,
+        0.79
+      ],
+      "matched_object": "exit sign",
+      "explanation": "EXIT sign at far left above door beside projection screen.",
+      "ts": "2026-04-08T01:36:54.544189+00:00"
+    },
+    {
+      "step_type": "leaf_check",
+      "node_id": "leaf_ballroom_egress",
+      "node_name": "Ballroom — exit passage",
+      "view_id": "v019",
+      "found": true,
+      "confidence": "high",
+      "bbox_2d": [
+        0.4782,
+        0.2796,
+        0.5718,
+        0.3536
+      ],
+      "matched_object": "exit sign",
+      "explanation": "Large green EXIT sign centred above doorway (refined bbox); flanked by sconces.",
+      "ts": "2026-04-08T01:36:54.561854+00:00"
+    },
+    {
+      "step_type": "found",
+      "view_id": "v019",
+      "explanation": "Aggregation: 13 views contain at least one visible exit (or fire-exit) sign: v001, v002, v006, v008 (2 signs in scene), v009, v011, v012, v013, v015, v016, v017, v018, v019. Best single view for clear frontal EXIT: v019 (refined bbox). Misses: v003-v005, v007, v010, v014.",
+      "confidence": 0.92,
+      "bbox_3d": null,
+      "ts": "2026-04-08T01:37:06.810015+00:00"
+    }
+  ],
+  "result": {
+    "confidence": 0.92,
+    "found": true,
+    "view_id": "v019",
+    "explanation": "Aggregation: 13 views contain at least one visible exit (or fire-exit) sign: v001, v002, v006, v008 (2 signs in scene), v009, v011, v012, v013, v015, v016, v017, v018, v019. Best single view for clear frontal EXIT: v019 (refined bbox). Misses: v003-v005, v007, v010, v014.",
+    "bbox_3d": null,
+    "query": "find all exit signs"
+  }
+}

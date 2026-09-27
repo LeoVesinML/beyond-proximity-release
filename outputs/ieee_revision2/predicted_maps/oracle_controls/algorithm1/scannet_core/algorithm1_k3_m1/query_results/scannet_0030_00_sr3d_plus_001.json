@@ -1,0 +1,192 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0030_00",
+  "query_id": "scannet_0030_00_sr3d_plus_001",
+  "query": "the office chair that is close to the bag",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "office chair",
+    "relation": "closest",
+    "anchor": "bag",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v006_001_office_chair"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v006_001_office_chair"
+  ],
+  "selected_views": [
+    "v006"
+  ],
+  "checked_node_ids": [
+    "object_v003_003_clock",
+    "object_v004_003_blackboard",
+    "object_v005_001_office_chair",
+    "object_v005_002_office_chair",
+    "object_v005_003_chair",
+    "object_v006_001_office_chair",
+    "object_v006_003_chair",
+    "object_v006_004_chair",
+    "object_v006_005_chair",
+    "object_v006_006_wall",
+    "object_v006_007_table",
+    "object_v006_009_armchair",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v003",
+    "v004",
+    "v005",
+    "v006"
+  ],
+  "checked_object_ids": [
+    "56",
+    "21",
+    "1",
+    "2",
+    "4",
+    "0",
+    "11",
+    "12",
+    "14",
+    "28",
+    "47",
+    "52"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "office chair",
+    "selected_object_id": "0",
+    "ranked_object_ids": [
+      "0",
+      "1",
+      "2"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "0",
+        "label": "office chair",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "1",
+        "label": "office chair",
+        "score": 1.0,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "2",
+        "label": "office chair",
+        "score": 1.0,
+        "relation_confidence": 0.633747,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v006_001_office_chair",
+    "selected_view_id": "v006",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        1.845924,
+        0.34225,
+        0.458625
+      ],
+      "size": [
+        0.680743,
+        0.426044,
+        0.776433
+      ],
+      "label": "office chair",
+      "object_id": "0",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 0.",
+    "relation_satisfied": false,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0,
+      "relation": "closest",
+      "anchor": "bag",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "bbox_3d",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [
+        {
+          "source": "bbox_3d",
+          "anchor_object_id": "55",
+          "matched": true,
+          "normalized_distance": 3.992417
+        }
+      ],
+      "anchor_evidence": {
+        "status": "unique",
+        "reason": null,
+        "top_score": 1.0,
+        "second_score": 0.0,
+        "score_margin": 1.0,
+        "candidate_count": 1,
+        "selected_count": 1,
+        "selected_object_ids": [
+          "55"
+        ],
+        "confidence": 1.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 1.0,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0032269580000008347,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0032269580000008347
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 13,
+    "checked_view_count": 4,
+    "checked_object_count": 12,
+    "context_size_chars": 2119,
+    "prompt_size_chars": 2160,
+    "estimated_input_tokens": 540,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

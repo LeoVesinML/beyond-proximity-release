@@ -1,0 +1,135 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v014",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v014.png",
+  "depth_path": "depths/v014_depth.npy",
+  "pose_ref": "transforms.json#/frames/13/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Close lounge seating view with sofas, glass coffee tables, table lamp, wall panels, and a golden door or elevator wall nearby.",
+  "visible_regions": [
+    {
+      "label": "lounge seating corner",
+      "description": "compact seating corner with sofas and tables",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "door or elevator side",
+      "description": "golden door/panel area adjacent to seating",
+      "approx_location": "left side",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "sofas",
+      "attributes": [
+        "cream",
+        "multiple"
+      ],
+      "approx_location": "center and right",
+      "confidence": null,
+      "bbox_2d": [
+        0.47,
+        0.14,
+        1.0,
+        0.9
+      ],
+      "bbox_3d": {
+        "center": [
+          -10.975651307714095,
+          23.453193108375444,
+          -8.92609705905935
+        ],
+        "size": [
+          20.67653978499932,
+          43.067293739918256,
+          29.903595844655722
+        ],
+        "label": "sofas"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "glass coffee tables",
+      "attributes": [
+        "round",
+        "central"
+      ],
+      "approx_location": "center foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "table lamp",
+      "attributes": [
+        "warm light"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "golden door or elevator panel",
+      "attributes": [
+        "left side"
+      ],
+      "approx_location": "left side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall panels",
+      "attributes": [
+        "beige",
+        "decorative"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "lounge seating corner",
+      "description": "distinct seating corner with glass tables",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "golden door or elevator panel",
+      "description": "gold-colored doorway/elevator area beside lounge",
+      "approx_location": "left side",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Close orientation view for lounge corner, coffee tables, lamp, and adjacent door/elevator panel.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

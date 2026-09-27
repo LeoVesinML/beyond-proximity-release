@@ -1,0 +1,131 @@
+{
+  "miss_count": 5,
+  "category_counts": {
+    "candidate_budget_or_membership": 2,
+    "leaf_scorer_failure_in_oracle_branch": 3
+  },
+  "failures": [
+    {
+      "query_id": "qv2_105",
+      "scene_id": "outdoor-street",
+      "query": "Find the glass-block wall on the right side",
+      "category": "leaf_scorer_failure_in_oracle_branch",
+      "selected_branches": [
+        "manual_zone_outdoor_street_facade_entrance_glassblock",
+        "manual_zone_outdoor_street_covered_passage_graffiti",
+        "manual_zone_outdoor_street_courtyard_stair_service"
+      ],
+      "expected_branches": [
+        "manual_zone_outdoor_street_facade_entrance_glassblock"
+      ],
+      "checked_view_ids": [
+        "v021",
+        "v019",
+        "v009"
+      ],
+      "expected_view_ids": [
+        "v007"
+      ],
+      "oracle_hit_at_3": false
+    },
+    {
+      "query_id": "qv2_113",
+      "scene_id": "outdoor-street",
+      "query": "Find an area suitable for moving between street levels",
+      "category": "candidate_budget_or_membership",
+      "selected_branches": [
+        "manual_zone_outdoor_street_walkway_road",
+        "manual_zone_outdoor_street_red_facade_alley",
+        "manual_zone_outdoor_street_courtyard_stair_service"
+      ],
+      "expected_branches": [
+        "manual_zone_outdoor_street_courtyard_stair_service",
+        "manual_zone_outdoor_street_facade_entrance_glassblock"
+      ],
+      "checked_view_ids": [
+        "v018",
+        "v015",
+        "v014"
+      ],
+      "expected_view_ids": [
+        "v001",
+        "v008"
+      ],
+      "oracle_hit_at_3": true
+    },
+    {
+      "query_id": "qv2_114",
+      "scene_id": "outdoor-street",
+      "query": "Find a utility access area",
+      "category": "candidate_budget_or_membership",
+      "selected_branches": [
+        "manual_zone_outdoor_street_walkway_road",
+        "manual_zone_outdoor_street_red_facade_alley",
+        "manual_zone_outdoor_street_facade_entrance_glassblock"
+      ],
+      "expected_branches": [
+        "manual_zone_outdoor_street_courtyard_stair_service",
+        "manual_zone_outdoor_street_facade_entrance_glassblock"
+      ],
+      "checked_view_ids": [
+        "v019",
+        "v018",
+        "v012"
+      ],
+      "expected_view_ids": [
+        "v002",
+        "v006"
+      ],
+      "oracle_hit_at_3": true
+    },
+    {
+      "query_id": "qv2_115",
+      "scene_id": "outdoor-street",
+      "query": "Find a street wayfinding marker",
+      "category": "leaf_scorer_failure_in_oracle_branch",
+      "selected_branches": [
+        "manual_zone_outdoor_street_walkway_road",
+        "manual_zone_outdoor_street_red_facade_alley"
+      ],
+      "expected_branches": [
+        "manual_zone_outdoor_street_covered_passage_graffiti",
+        "manual_zone_outdoor_street_facade_entrance_glassblock"
+      ],
+      "checked_view_ids": [
+        "v018",
+        "v015",
+        "v014"
+      ],
+      "expected_view_ids": [
+        "v003",
+        "v006",
+        "v008"
+      ],
+      "oracle_hit_at_3": false
+    },
+    {
+      "query_id": "qv2_130",
+      "scene_id": "outdoor-drone",
+      "query": "Find the rocky island surrounded by water",
+      "category": "leaf_scorer_failure_in_oracle_branch",
+      "selected_branches": [
+        "manual_zone_outdoor_drone_open_water_bay",
+        "manual_zone_outdoor_drone_harbor_marina",
+        "manual_zone_outdoor_drone_fortress_island"
+      ],
+      "expected_branches": [
+        "manual_zone_outdoor_drone_fortress_island",
+        "manual_zone_outdoor_drone_open_water_bay"
+      ],
+      "checked_view_ids": [
+        "v012",
+        "v007",
+        "v003"
+      ],
+      "expected_view_ids": [
+        "v001"
+      ],
+      "oracle_hit_at_3": false
+    }
+  ]
+}

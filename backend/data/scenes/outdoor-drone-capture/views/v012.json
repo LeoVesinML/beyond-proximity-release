@@ -1,0 +1,159 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v012",
+  "scene_id": "outdoor-drone-capture",
+  "image_path": "images/v012.png",
+  "depth_path": "depths/v012_depth.npy",
+  "pose_ref": "transforms.json#/frames/11/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Aerial view of a small rocky island with a white fortress-like complex, surrounded by green-blue water.",
+  "visible_regions": [
+    {
+      "label": "fortress island",
+      "description": "small rocky island with white buildings",
+      "approx_location": "right-center",
+      "source": "manual"
+    },
+    {
+      "label": "surrounding water",
+      "description": "open water around the island",
+      "approx_location": "foreground and center",
+      "source": "manual"
+    },
+    {
+      "label": "distant shoreline",
+      "description": "faint coastline on the horizon",
+      "approx_location": "background",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "rocky island",
+      "attributes": [
+        "small",
+        "coastal"
+      ],
+      "approx_location": "right-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "white fortress-like buildings",
+      "attributes": [
+        "historic-looking",
+        "clustered"
+      ],
+      "approx_location": "right-center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "tower or lighthouse",
+      "attributes": [
+        "vertical",
+        "on island"
+      ],
+      "approx_location": "upper island area",
+      "confidence": null,
+      "bbox_2d": [
+        0.18,
+        0.02,
+        0.82,
+        0.38
+      ],
+      "bbox_3d": {
+        "center": [
+          1.0713056085799377,
+          -0.7038808673277895,
+          9.26758318518951
+        ],
+        "size": [
+          7.822527580815355,
+          1.6382885154127973,
+          8.418806132567237
+        ],
+        "label": "tower or lighthouse"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "sea water",
+      "attributes": [
+        "green-blue",
+        "calm"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.44,
+        0.87,
+        1.0
+      ],
+      "bbox_3d": {
+        "center": [
+          9.701325770957151,
+          9.85530483761596,
+          21.182863904048812
+        ],
+        "size": [
+          43.359477752735195,
+          18.343903854340496,
+          18.364839390201034
+        ],
+        "label": "sea water"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "island vegetation",
+      "attributes": [
+        "green patches"
+      ],
+      "approx_location": "island surface",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "distant land",
+      "attributes": [
+        "faint",
+        "horizon"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "white fortress island",
+      "description": "most distinctive island/building complex in the scene",
+      "approx_location": "right-center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "tower on island",
+      "description": "vertical tower or lighthouse feature on the island",
+      "approx_location": "upper island area",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Strong view for island, fortress, tower, and sea navigation queries.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

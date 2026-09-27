@@ -1,0 +1,148 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v017",
+  "scene_id": "Theater-capture",
+  "image_path": "images/v017.png",
+  "depth_path": "depths/v017_depth.npy",
+  "pose_ref": "transforms.json#/frames/16/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Grand stairwell view with ornate railings, red-carpeted stairs or red stair covering, pale walls, and wall lamps.",
+  "visible_regions": [
+    {
+      "label": "grand staircase",
+      "description": "main staircase zone with ornate railings",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "upper landing",
+      "description": "top or landing area of the stairs",
+      "approx_location": "back center",
+      "source": "manual"
+    },
+    {
+      "label": "balcony railing area",
+      "description": "decorative railing around the stair opening",
+      "approx_location": "foreground",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "red-carpeted stairs",
+      "attributes": [
+        "red",
+        "ascending"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "ornate black railings",
+      "attributes": [
+        "metal",
+        "decorative"
+      ],
+      "approx_location": "foreground and sides",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "wall lamps",
+      "attributes": [
+        "warm",
+        "mounted"
+      ],
+      "approx_location": "side walls",
+      "confidence": null,
+      "bbox_2d": [
+        0.13,
+        0.04,
+        0.87,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -3.98345599787547,
+          3.117202126450409,
+          -49.07858298936989
+        ],
+        "size": [
+          10.483660354202325,
+          5.651055210732901,
+          4.878422425241048
+        ],
+        "label": "wall lamps"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "pale green walls",
+      "attributes": [
+        "historic interior"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "stair landing",
+      "attributes": [
+        "upper",
+        "central"
+      ],
+      "approx_location": "back center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "stone or tile floor",
+      "attributes": [
+        "light"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "red-carpeted staircase",
+      "description": "red stairs serving as the main vertical circulation landmark",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "ornate railing",
+      "description": "decorative black railing around the stair opening",
+      "approx_location": "foreground",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "upper stair landing",
+      "description": "landing at the top of the staircase",
+      "approx_location": "back center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Strong stair navigation view with red stairs and ornate railings.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

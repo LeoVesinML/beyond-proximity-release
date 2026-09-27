@@ -1,0 +1,632 @@
+{
+  "per_pool": [
+    {
+      "collection_size": 1000,
+      "eligible_queries": 88,
+      "evaluation_queries": 88,
+      "tuning_queries": 0
+    },
+    {
+      "collection_size": 10000,
+      "eligible_queries": 5523,
+      "evaluation_queries": 500,
+      "tuning_queries": 500
+    },
+    {
+      "collection_size": 50000,
+      "eligible_queries": 46333,
+      "evaluation_queries": 500,
+      "tuning_queries": 500
+    },
+    {
+      "collection_size": 100000,
+      "eligible_queries": 98125,
+      "evaluation_queries": 500,
+      "tuning_queries": 500
+    },
+    {
+      "collection_size": 155535,
+      "eligible_queries": 155528,
+      "evaluation_queries": 500,
+      "tuning_queries": 500
+    }
+  ],
+  "evaluation_query_pool_pairs_total": 2088,
+  "unique_evaluation_query_records": 1444,
+  "tuning_query_pool_pairs_total": 2000,
+  "unique_tuning_query_records": 1710,
+  "tuning_evaluation_overlap": 0,
+  "rule": "per pool, eligible = records whose (scan_id, target_id) has >=2 expressions inside that pool; eligible records are ordered by sha256(seed:query:record_key) and the first min(500, eligible) are evaluated (base._query_indices).",
+  "tuning_rule": "per pool, the eligible records after the first 500 in the same hash order, excluding any record that is an evaluation query in any pool, first 500 kept"
+}
+grid done size=1000 branches=574
+grid done size=10000 branches=1251
+grid done size=50000 branches=1419
+grid done size=100000 branches=1430
+grid done size=155535 branches=1436
+{
+  "flat_tuning_hit3": 0.1825,
+  "selected": {
+    "maxleaf_accuracy": {
+      "variant": "maxleaf",
+      "rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "tuning": {
+        "variant": "maxleaf",
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3,
+        "hit_at_1": 0.092,
+        "hit_at_3": 0.1825,
+        "mean_leaf_records": 132.89
+      },
+      "also_selected_by": [
+        "budget",
+        "budget_1pp"
+      ]
+    },
+    "maxleaf_gate_only": {
+      "variant": "maxleaf",
+      "rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 3,
+        "m": 0
+      },
+      "tuning": {
+        "variant": "maxleaf",
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 3,
+        "m": 0,
+        "hit_at_1": 0.092,
+        "hit_at_3": 0.1825,
+        "mean_leaf_records": 391.4725
+      }
+    },
+    "summary_accuracy": {
+      "variant": "summary",
+      "rule": "accuracy",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 3,
+        "m": 3
+      },
+      "tuning": {
+        "variant": "summary",
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 3,
+        "m": 3,
+        "hit_at_1": 0.092,
+        "hit_at_3": 0.18,
+        "mean_leaf_records": 86.366
+      }
+    },
+    "summary_gate_only": {
+      "variant": "summary",
+      "rule": "gate_only",
+      "config": {
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 10,
+        "m": 0
+      },
+      "tuning": {
+        "variant": "summary",
+        "tau": 0.9,
+        "T": 0.02,
+        "B": 10,
+        "m": 0,
+        "hit_at_1": 0.055,
+        "hit_at_3": 0.099,
+        "mean_leaf_records": 422.0005
+      }
+    },
+    "summary_budget_1pp": {
+      "variant": "summary",
+      "rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "tuning": {
+        "variant": "summary",
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3,
+        "hit_at_1": 0.0915,
+        "hit_at_3": 0.179,
+        "mean_leaf_records": 31.555
+      }
+    },
+    "hnswproxy_accuracy": {
+      "variant": "hnswproxy",
+      "rule": "accuracy",
+      "config": {
+        "tau": 0.7,
+        "T": 0.02,
+        "B": 3,
+        "m": 3
+      },
+      "tuning": {
+        "variant": "hnswproxy",
+        "tau": 0.7,
+        "T": 0.02,
+        "B": 3,
+        "m": 3,
+        "hit_at_1": 0.091,
+        "hit_at_3": 0.181,
+        "mean_leaf_records": 381.9695
+      }
+    },
+    "hnswproxy_gate_only": {
+      "variant": "hnswproxy",
+      "rule": "gate_only",
+      "config": {
+        "tau": 0.5,
+        "T": 0.05,
+        "B": 3,
+        "m": 0
+      },
+      "tuning": {
+        "variant": "hnswproxy",
+        "tau": 0.5,
+        "T": 0.05,
+        "B": 3,
+        "m": 0,
+        "hit_at_1": 0.091,
+        "hit_at_3": 0.181,
+        "mean_leaf_records": 393.037
+      }
+    },
+    "hnswproxy_budget_1pp": {
+      "variant": "hnswproxy",
+      "rule": "budget_1pp",
+      "config": {
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3
+      },
+      "tuning": {
+        "variant": "hnswproxy",
+        "tau": 0.5,
+        "T": 0.01,
+        "B": 1,
+        "m": 3,
+        "hit_at_1": 0.091,
+        "hit_at_3": 0.179,
+        "mean_leaf_records": 133.321
+      }
+    }
+  }
+}
+timed done size=1000
+timed done size=10000
+timed done size=50000
+timed done size=100000
+timed done size=155535
+{
+ "mismatches": {
+  "flat_dense_exact": 20
+ },
+ "summaries": [
+  {
+   "method": "flat_dense_exact",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.272727,
+   "median_latency_ms": 0.02875,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 1000.0
+  },
+  {
+   "method": "hier_maxleaf_accuracy",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.272727,
+   "median_latency_ms": 0.063479,
+   "mean_proxy_records": 1000.0,
+   "mean_leaf_records": 4.761364
+  },
+  {
+   "method": "hier_maxleaf_gate_only",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.261364,
+   "median_latency_ms": 0.050229,
+   "mean_proxy_records": 1000.0,
+   "mean_leaf_records": 7.863636
+  },
+  {
+   "method": "hier_summary_accuracy",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.272727,
+   "median_latency_ms": 0.118,
+   "mean_proxy_records": 574.0,
+   "mean_leaf_records": 4.897727
+  },
+  {
+   "method": "hier_summary_gate_only",
+   "collection_size": 1000,
+   "hit_at_1": 0.147727,
+   "hit_at_3": 0.227273,
+   "median_latency_ms": 0.058896,
+   "mean_proxy_records": 574.0,
+   "mean_leaf_records": 22.636364
+  },
+  {
+   "method": "hier_summary_budget_1pp",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.272727,
+   "median_latency_ms": 0.114687,
+   "mean_proxy_records": 574.0,
+   "mean_leaf_records": 4.113636
+  },
+  {
+   "method": "hier_hnswproxy_accuracy",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.272727,
+   "median_latency_ms": 0.103854,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 7.386364
+  },
+  {
+   "method": "hier_hnswproxy_gate_only",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.272727,
+   "median_latency_ms": 0.099917,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 8.693182
+  },
+  {
+   "method": "hier_hnswproxy_budget_1pp",
+   "collection_size": 1000,
+   "hit_at_1": 0.159091,
+   "hit_at_3": 0.272727,
+   "median_latency_ms": 0.100229,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 4.761364
+  },
+  {
+   "method": "flat_dense_exact",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.196188,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 10000.0
+  },
+  {
+   "method": "hier_maxleaf_accuracy",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.263208,
+   "mean_proxy_records": 10000.0,
+   "mean_leaf_records": 20.466
+  },
+  {
+   "method": "hier_maxleaf_gate_only",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.1515,
+   "mean_proxy_records": 10000.0,
+   "mean_leaf_records": 54.688
+  },
+  {
+   "method": "hier_summary_accuracy",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.214021,
+   "mean_proxy_records": 1251.0,
+   "mean_leaf_records": 18.2
+  },
+  {
+   "method": "hier_summary_gate_only",
+   "collection_size": 10000,
+   "hit_at_1": 0.038,
+   "hit_at_3": 0.074,
+   "median_latency_ms": 0.088604,
+   "mean_proxy_records": 1251.0,
+   "mean_leaf_records": 88.742
+  },
+  {
+   "method": "hier_summary_budget_1pp",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.201104,
+   "mean_proxy_records": 1251.0,
+   "mean_leaf_records": 8.96
+  },
+  {
+   "method": "hier_hnswproxy_accuracy",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.184688,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 51.264
+  },
+  {
+   "method": "hier_hnswproxy_gate_only",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.181729,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 55.42
+  },
+  {
+   "method": "hier_hnswproxy_budget_1pp",
+   "collection_size": 10000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.158,
+   "median_latency_ms": 0.178104,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 20.428
+  },
+  {
+   "method": "flat_dense_exact",
+   "collection_size": 50000,
+   "hit_at_1": 0.106,
+   "hit_at_3": 0.208,
+   "median_latency_ms": 1.413353,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 50000.0
+  },
+  {
+   "method": "hier_maxleaf_accuracy",
+   "collection_size": 50000,
+   "hit_at_1": 0.106,
+   "hit_at_3": 0.208,
+   "median_latency_ms": 1.687334,
+   "mean_proxy_records": 50000.0,
+   "mean_leaf_records": 93.85
+  },
+  {
+   "method": "hier_maxleaf_gate_only",
+   "collection_size": 50000,
+   "hit_at_1": 0.106,
+   "hit_at_3": 0.208,
+   "median_latency_ms": 1.110062,
+   "mean_proxy_records": 50000.0,
+   "mean_leaf_records": 272.41
+  },
+  {
+   "method": "hier_summary_accuracy",
+   "collection_size": 50000,
+   "hit_at_1": 0.106,
+   "hit_at_3": 0.21,
+   "median_latency_ms": 0.691812,
+   "mean_proxy_records": 1419.0,
+   "mean_leaf_records": 58.772
+  },
+  {
+   "method": "hier_summary_gate_only",
+   "collection_size": 50000,
+   "hit_at_1": 0.074,
+   "hit_at_3": 0.12,
+   "median_latency_ms": 0.177958,
+   "mean_proxy_records": 1419.0,
+   "mean_leaf_records": 300.484
+  },
+  {
+   "method": "hier_summary_budget_1pp",
+   "collection_size": 50000,
+   "hit_at_1": 0.106,
+   "hit_at_3": 0.21,
+   "median_latency_ms": 0.288999,
+   "mean_proxy_records": 1419.0,
+   "mean_leaf_records": 20.684
+  },
+  {
+   "method": "hier_hnswproxy_accuracy",
+   "collection_size": 50000,
+   "hit_at_1": 0.108,
+   "hit_at_3": 0.21,
+   "median_latency_ms": 0.282521,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 264.792
+  },
+  {
+   "method": "hier_hnswproxy_gate_only",
+   "collection_size": 50000,
+   "hit_at_1": 0.108,
+   "hit_at_3": 0.21,
+   "median_latency_ms": 0.283459,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 272.826
+  },
+  {
+   "method": "hier_hnswproxy_budget_1pp",
+   "collection_size": 50000,
+   "hit_at_1": 0.108,
+   "hit_at_3": 0.21,
+   "median_latency_ms": 0.219208,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 93.924
+  },
+  {
+   "method": "flat_dense_exact",
+   "collection_size": 100000,
+   "hit_at_1": 0.09,
+   "hit_at_3": 0.196,
+   "median_latency_ms": 2.837249,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 100000.0
+  },
+  {
+   "method": "hier_maxleaf_accuracy",
+   "collection_size": 100000,
+   "hit_at_1": 0.09,
+   "hit_at_3": 0.196,
+   "median_latency_ms": 3.184146,
+   "mean_proxy_records": 100000.0,
+   "mean_leaf_records": 176.242
+  },
+  {
+   "method": "hier_maxleaf_gate_only",
+   "collection_size": 100000,
+   "hit_at_1": 0.09,
+   "hit_at_3": 0.196,
+   "median_latency_ms": 2.131312,
+   "mean_proxy_records": 100000.0,
+   "mean_leaf_records": 515.244
+  },
+  {
+   "method": "hier_summary_accuracy",
+   "collection_size": 100000,
+   "hit_at_1": 0.09,
+   "hit_at_3": 0.198,
+   "median_latency_ms": 2.018417,
+   "mean_proxy_records": 1430.0,
+   "mean_leaf_records": 113.652
+  },
+  {
+   "method": "hier_summary_gate_only",
+   "collection_size": 100000,
+   "hit_at_1": 0.078,
+   "hit_at_3": 0.13,
+   "median_latency_ms": 1.842874,
+   "mean_proxy_records": 1430.0,
+   "mean_leaf_records": 552.144
+  },
+  {
+   "method": "hier_summary_budget_1pp",
+   "collection_size": 100000,
+   "hit_at_1": 0.09,
+   "hit_at_3": 0.198,
+   "median_latency_ms": 0.952896,
+   "mean_proxy_records": 1430.0,
+   "mean_leaf_records": 40.092
+  },
+  {
+   "method": "hier_hnswproxy_accuracy",
+   "collection_size": 100000,
+   "hit_at_1": 0.088,
+   "hit_at_3": 0.192,
+   "median_latency_ms": 0.683646,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 508.928
+  },
+  {
+   "method": "hier_hnswproxy_gate_only",
+   "collection_size": 100000,
+   "hit_at_1": 0.088,
+   "hit_at_3": 0.192,
+   "median_latency_ms": 0.81848,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 517.242
+  },
+  {
+   "method": "hier_hnswproxy_budget_1pp",
+   "collection_size": 100000,
+   "hit_at_1": 0.088,
+   "hit_at_3": 0.192,
+   "median_latency_ms": 0.599063,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 175.424
+  },
+  {
+   "method": "flat_dense_exact",
+   "collection_size": 155535,
+   "hit_at_1": 0.138,
+   "hit_at_3": 0.234,
+   "median_latency_ms": 3.591417,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 155535.0
+  },
+  {
+   "method": "hier_maxleaf_accuracy",
+   "collection_size": 155535,
+   "hit_at_1": 0.138,
+   "hit_at_3": 0.234,
+   "median_latency_ms": 3.827896,
+   "mean_proxy_records": 155535.0,
+   "mean_leaf_records": 274.592
+  },
+  {
+   "method": "hier_maxleaf_gate_only",
+   "collection_size": 155535,
+   "hit_at_1": 0.138,
+   "hit_at_3": 0.234,
+   "median_latency_ms": 2.225875,
+   "mean_proxy_records": 155535.0,
+   "mean_leaf_records": 806.274
+  },
+  {
+   "method": "hier_summary_accuracy",
+   "collection_size": 155535,
+   "hit_at_1": 0.136,
+   "hit_at_3": 0.232,
+   "median_latency_ms": 0.435146,
+   "mean_proxy_records": 1436.0,
+   "mean_leaf_records": 167.16
+  },
+  {
+   "method": "hier_summary_gate_only",
+   "collection_size": 155535,
+   "hit_at_1": 0.07,
+   "hit_at_3": 0.116,
+   "median_latency_ms": 0.158104,
+   "mean_proxy_records": 1436.0,
+   "mean_leaf_records": 807.11
+  },
+  {
+   "method": "hier_summary_budget_1pp",
+   "collection_size": 155535,
+   "hit_at_1": 0.136,
+   "hit_at_3": 0.232,
+   "median_latency_ms": 0.192709,
+   "mean_proxy_records": 1436.0,
+   "mean_leaf_records": 56.876
+  },
+  {
+   "method": "hier_hnswproxy_accuracy",
+   "collection_size": 155535,
+   "hit_at_1": 0.134,
+   "hit_at_3": 0.228,
+   "median_latency_ms": 0.227875,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 796.98
+  },
+  {
+   "method": "hier_hnswproxy_gate_only",
+   "collection_size": 155535,
+   "hit_at_1": 0.134,
+   "hit_at_3": 0.228,
+   "median_latency_ms": 0.238542,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 807.242
+  },
+  {
+   "method": "hier_hnswproxy_budget_1pp",
+   "collection_size": 155535,
+   "hit_at_1": 0.134,
+   "hit_at_3": 0.228,
+   "median_latency_ms": 0.179625,
+   "mean_proxy_records": 0.0,
+   "mean_leaf_records": 274.544
+  }
+ ]
+}

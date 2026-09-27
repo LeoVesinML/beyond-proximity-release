@@ -1,0 +1,81 @@
+{
+  "query_id": "qv2_017",
+  "scene_id": "ConferenceHall",
+  "query": "Find the round tables in the banquet seating area",
+  "query_type": "multi_hop",
+  "expected_view_ids": [
+    "v005",
+    "v006",
+    "v018"
+  ],
+  "conditions": {
+    "all_records": {
+      "record_ids_in_prompt": [
+        "v001",
+        "v002",
+        "v003",
+        "v004",
+        "v005",
+        "v006",
+        "v007",
+        "v008",
+        "v009",
+        "v010",
+        "v011",
+        "v012",
+        "v013",
+        "v014",
+        "v015",
+        "v016",
+        "v017",
+        "v018",
+        "v019",
+        "v020"
+      ],
+      "prompt_sha256": "0175cd406e868b5c8260e195a89533cbcc6c0e01d667c46850326e2d20e592b2",
+      "raw_output": "v005",
+      "chosen_id": "v005",
+      "valid": true,
+      "input_tokens": 1402,
+      "output_tokens": 5,
+      "latency_ms": 3462.5528,
+      "correct": true,
+      "target_in_context": true
+    },
+    "alg1_bge_top3": {
+      "record_ids_in_prompt": [
+        "v005",
+        "v006",
+        "v018"
+      ],
+      "prompt_sha256": "0a48844bc7ecb9a25f4d386a6ea05a802d99d27b8e3aa3a7d36bc8f62b1ac91f",
+      "raw_output": "v005",
+      "chosen_id": "v005",
+      "valid": true,
+      "input_tokens": 274,
+      "output_tokens": 5,
+      "latency_ms": 1008.3791,
+      "correct": true,
+      "target_in_context": true
+    },
+    "flat_bge_top3": {
+      "record_ids_in_prompt": [
+        "v005",
+        "v006",
+        "v018"
+      ],
+      "prompt_sha256": "0a48844bc7ecb9a25f4d386a6ea05a802d99d27b8e3aa3a7d36bc8f62b1ac91f",
+      "raw_output": "v005",
+      "chosen_id": "v005",
+      "valid": true,
+      "input_tokens": 274,
+      "output_tokens": 5,
+      "latency_ms": 907.9216,
+      "correct": true,
+      "target_in_context": true
+    }
+  },
+  "split": "dev",
+  "model": "Qwen/Qwen2.5-7B-Instruct",
+  "model_revision": "a09a35458c702b33eeacc393d103063234e8bc28"
+}

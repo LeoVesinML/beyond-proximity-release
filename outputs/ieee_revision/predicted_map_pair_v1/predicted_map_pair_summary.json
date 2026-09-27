@@ -1,0 +1,263 @@
+{
+  "schema_version": "beyond_proximity.predicted_map_pair.v1",
+  "generated_at": "2026-09-02T13:58:29.185387+00:00",
+  "status": "complete",
+  "model_name": "BAAI/bge-small-en-v1.5",
+  "protocol": {
+    "map_source": "native ConceptGraphs predicted object maps",
+    "hierarchy": "deterministic recursive spatial median split, maximum 12 objects per branch",
+    "branch_gate": "max cached BGE leaf proxy, adaptive mass 0.7, cap 5",
+    "safety_shortlist": 1,
+    "retained_object_budget": 3,
+    "quality": "official dataset 3D boxes; top-1 Acc@0.25/0.50 and top-3 Recall@IoU0.25",
+    "accounting": "proxy comparisons, retained objects, and serialized top-3 tokens are separate"
+  },
+  "construction": [
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0011_00",
+      "object_count": 36,
+      "branch_count": 4,
+      "max_leaf_size": 9,
+      "construction_ms": 292.2984
+    },
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0030_00",
+      "object_count": 69,
+      "branch_count": 8,
+      "max_leaf_size": 9,
+      "construction_ms": 567.1798
+    },
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0046_00",
+      "object_count": 43,
+      "branch_count": 4,
+      "max_leaf_size": 11,
+      "construction_ms": 330.9803
+    },
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0086_00",
+      "object_count": 19,
+      "branch_count": 2,
+      "max_leaf_size": 10,
+      "construction_ms": 184.4106
+    },
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0222_00",
+      "object_count": 73,
+      "branch_count": 8,
+      "max_leaf_size": 10,
+      "construction_ms": 1572.7571
+    },
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0378_00",
+      "object_count": 70,
+      "branch_count": 8,
+      "max_leaf_size": 9,
+      "construction_ms": 983.7432
+    },
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0389_00",
+      "object_count": 37,
+      "branch_count": 4,
+      "max_leaf_size": 10,
+      "construction_ms": 281.3888
+    },
+    {
+      "dataset": "ScanNet",
+      "scene_id": "scannet_0435_00",
+      "object_count": 56,
+      "branch_count": 8,
+      "max_leaf_size": 7,
+      "construction_ms": 754.3673
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_office0",
+      "object_count": 29,
+      "branch_count": 4,
+      "max_leaf_size": 8,
+      "construction_ms": 564.0637
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_office1",
+      "object_count": 27,
+      "branch_count": 4,
+      "max_leaf_size": 7,
+      "construction_ms": 488.6134
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_office2",
+      "object_count": 44,
+      "branch_count": 4,
+      "max_leaf_size": 11,
+      "construction_ms": 894.7822
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_office3",
+      "object_count": 61,
+      "branch_count": 8,
+      "max_leaf_size": 8,
+      "construction_ms": 849.547
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_office4",
+      "object_count": 60,
+      "branch_count": 8,
+      "max_leaf_size": 8,
+      "construction_ms": 1181.6364
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_room0",
+      "object_count": 66,
+      "branch_count": 8,
+      "max_leaf_size": 9,
+      "construction_ms": 1445.1015
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_room1",
+      "object_count": 32,
+      "branch_count": 4,
+      "max_leaf_size": 8,
+      "construction_ms": 449.8276
+    },
+    {
+      "dataset": "Replica",
+      "scene_id": "replica_room2",
+      "object_count": 54,
+      "branch_count": 8,
+      "max_leaf_size": 7,
+      "construction_ms": 1107.3175
+    }
+  ],
+  "summaries": [
+    {
+      "method": "flat_bge_predicted_map",
+      "query_count": 48,
+      "acc_at_0_25": 0.125,
+      "acc_at_0_50": 0.020833,
+      "recall_at_3_iou_0_25": 0.1875,
+      "mean_checked_objects": 50.375,
+      "mean_proxy_object_comparisons": 50.375,
+      "mean_serialized_top3_tokens": 93.3125,
+      "mean_elapsed_ms": 0.237852,
+      "acc_at_0_25_wilson_95": {
+        "low": 0.058571,
+        "high": 0.247005
+      }
+    },
+    {
+      "method": "graph_bge_predicted_map",
+      "query_count": 48,
+      "acc_at_0_25": 0.125,
+      "acc_at_0_50": 0.020833,
+      "recall_at_3_iou_0_25": 0.1875,
+      "mean_checked_objects": 3.0,
+      "mean_proxy_object_comparisons": 50.375,
+      "mean_serialized_top3_tokens": 93.229167,
+      "mean_elapsed_ms": 0.260579,
+      "acc_at_0_25_wilson_95": {
+        "low": 0.058571,
+        "high": 0.247005
+      },
+      "paired_acc_at_0_25_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260902
+      },
+      "paired_acc_at_0_50_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260902
+      },
+      "paired_recall_at_3_iou_0_25_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260902
+      },
+      "checked_object_reduction_vs_flat": 0.940447
+    },
+    {
+      "method": "flat_bge_predicted_map",
+      "query_count": 56,
+      "acc_at_0_25": 0.053571,
+      "acc_at_0_50": 0.0,
+      "recall_at_3_iou_0_25": 0.071429,
+      "mean_checked_objects": 46.625,
+      "mean_proxy_object_comparisons": 46.625,
+      "mean_serialized_top3_tokens": 95.089286,
+      "mean_elapsed_ms": 0.248866,
+      "acc_at_0_25_wilson_95": {
+        "low": 0.018386,
+        "high": 0.146073
+      }
+    },
+    {
+      "method": "graph_bge_predicted_map",
+      "query_count": 56,
+      "acc_at_0_25": 0.053571,
+      "acc_at_0_50": 0.0,
+      "recall_at_3_iou_0_25": 0.071429,
+      "mean_checked_objects": 3.0,
+      "mean_proxy_object_comparisons": 46.625,
+      "mean_serialized_top3_tokens": 95.053571,
+      "mean_elapsed_ms": 0.26835,
+      "acc_at_0_25_wilson_95": {
+        "low": 0.018386,
+        "high": 0.146073
+      },
+      "paired_acc_at_0_25_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260902
+      },
+      "paired_acc_at_0_50_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260902
+      },
+      "paired_recall_at_3_iou_0_25_difference_vs_flat": {
+        "estimate": 0.0,
+        "ci_95": {
+          "low": 0.0,
+          "high": 0.0
+        },
+        "samples": 10000,
+        "seed": 20260902
+      },
+      "checked_object_reduction_vs_flat": 0.935657
+    }
+  ]
+}

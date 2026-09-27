@@ -1,0 +1,117 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v015",
+  "scene_id": "ConferenceHall-capture-pilot",
+  "image_path": "images/v015.png",
+  "depth_path": "depths/v015_depth.npy",
+  "pose_ref": "transforms.json#/frames/14/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Lobby seating along a wall with a sofa, bench, framed picture, glass or marble wall panels, and blue patterned carpet.",
+  "visible_regions": [
+    {
+      "label": "wall seating area",
+      "description": "seating placed along the wall",
+      "approx_location": "center and right",
+      "source": "manual"
+    },
+    {
+      "label": "decorative wall area",
+      "description": "wall with panels and framed picture",
+      "approx_location": "background",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "sofa",
+      "attributes": [
+        "cream",
+        "right side"
+      ],
+      "approx_location": "right side",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "bench",
+      "attributes": [
+        "dark",
+        "low"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "framed picture",
+      "attributes": [
+        "wall art"
+      ],
+      "approx_location": "right wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "glass or marble wall panels",
+      "attributes": [
+        "decorative"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "columns or wall partitions",
+      "attributes": [
+        "vertical"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "blue patterned carpet",
+      "attributes": [
+        "floor covering"
+      ],
+      "approx_location": "floor",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "framed picture",
+      "description": "large framed artwork above seating useful for orientation",
+      "approx_location": "right wall",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "wall seating area",
+      "description": "bench and sofa against the decorative wall",
+      "approx_location": "center-right",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for wall seating, sofa, bench, and wall-art queries.",
+  "warnings": [
+    "Manual visual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated.",
+    "Depth, pose, and intrinsics references are assumed from the captured scene naming convention."
+  ]
+}

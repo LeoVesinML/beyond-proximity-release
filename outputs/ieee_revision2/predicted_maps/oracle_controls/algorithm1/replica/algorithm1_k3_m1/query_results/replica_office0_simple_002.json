@@ -1,0 +1,147 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "replica_bbq_aligned_public_dataset_v2_algorithm1_k3_m1",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "replica_office0",
+  "query_id": "replica_office0_simple_002",
+  "query": "Find the rug",
+  "query_type": "simple_object",
+  "structured_plan": {
+    "target": "rug",
+    "relation": null,
+    "anchor": null,
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v001_049_rug"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v001_049_rug"
+  ],
+  "selected_views": [
+    "v001"
+  ],
+  "checked_node_ids": [
+    "object_v001_004_tablet",
+    "object_v001_009_other_leaf",
+    "object_v001_019_undefined",
+    "object_v001_032_camera",
+    "object_v001_038_anonymize_text",
+    "object_v001_041_undefined",
+    "object_v001_047_anonymize_text",
+    "object_v001_049_rug",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v001"
+  ],
+  "checked_object_ids": [
+    "64",
+    "59",
+    "49",
+    "11",
+    "1",
+    "32",
+    "13",
+    "5"
+  ],
+  "search_variant": "algorithm1_k3_m1",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "rug",
+    "selected_object_id": "5",
+    "ranked_object_ids": [
+      "5",
+      "1",
+      "11"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "5",
+        "label": "rug",
+        "score": 1.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 2,
+        "object_id": "1",
+        "label": "anonymize_text",
+        "score": 0.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      },
+      {
+        "rank": 3,
+        "object_id": "11",
+        "label": "camera",
+        "score": 0.0,
+        "relation_confidence": null,
+        "relation_applied": null
+      }
+    ],
+    "selected_node_id": "object_v001_049_rug",
+    "selected_view_id": "v001",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        0.111201,
+        -0.905234,
+        -1.075389
+      ],
+      "size": [
+        3.915008,
+        4.283991,
+        0.154982
+      ],
+      "label": "rug",
+      "object_id": "5",
+      "coordinate_frame": "replica_habitat_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 1.0,
+    "explanation": "algorithm1_k3_m1 selected object 5.",
+    "relation_satisfied": null,
+    "relation_audit": {},
+    "search_score": 1.0,
+    "score_details": {
+      "exact_label": true,
+      "label_overlap": 1.0,
+      "text_overlap": 1.0,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 1.0
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.0015450000000001296,
+    "stage_runtime_seconds": {
+      "answer_query": 0.0015450000000001296
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 9,
+    "checked_view_count": 1,
+    "checked_object_count": 8,
+    "context_size_chars": 797,
+    "prompt_size_chars": 809,
+    "estimated_input_tokens": 202,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}

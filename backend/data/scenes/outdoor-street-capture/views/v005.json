@@ -1,0 +1,142 @@
+{
+  "schema_version": "semanticsplat.captured_view_json.v1",
+  "view_id": "v005",
+  "scene_id": "outdoor-street-capture",
+  "image_path": "images/v005.png",
+  "depth_path": "depths/v005_depth.npy",
+  "pose_ref": "transforms.json#/frames/4/transform_matrix",
+  "intrinsics_ref": "transforms.json",
+  "semantic_index_mode": "manual",
+  "summary": "Building entrance area with glass-block columns, a recessed doorway, beige facade, small wall alarm or sign, and cobblestone ground.",
+  "visible_regions": [
+    {
+      "label": "glass-block entrance",
+      "description": "entrance zone framed by glass-block vertical walls",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "recessed doorway",
+      "description": "dark doorway set back inside the entrance",
+      "approx_location": "center",
+      "source": "manual"
+    },
+    {
+      "label": "facade wall",
+      "description": "beige building wall around the entrance",
+      "approx_location": "left and right",
+      "source": "manual"
+    }
+  ],
+  "visible_objects": [
+    {
+      "label": "glass-block columns",
+      "attributes": [
+        "translucent",
+        "vertical",
+        "entrance frame"
+      ],
+      "approx_location": "center-left and center-right",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "recessed door",
+      "attributes": [
+        "dark",
+        "partly hidden"
+      ],
+      "approx_location": "center",
+      "confidence": null,
+      "bbox_2d": [
+        0.22,
+        0.04,
+        0.78,
+        0.94
+      ],
+      "bbox_3d": {
+        "center": [
+          -5.764762226720089,
+          -2.696713914515513,
+          1.3650803718785784
+        ],
+        "size": [
+          15.541189377120464,
+          9.675056404187373,
+          15.114314871476669
+        ],
+        "label": "recessed door"
+      },
+      "source": "manual"
+    },
+    {
+      "label": "wall alarm or small red sign",
+      "attributes": [
+        "small",
+        "red"
+      ],
+      "approx_location": "left wall",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "beige stone facade",
+      "attributes": [
+        "building wall"
+      ],
+      "approx_location": "background",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "cobblestone paving",
+      "attributes": [
+        "outdoor ground"
+      ],
+      "approx_location": "foreground",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    },
+    {
+      "label": "small wall light",
+      "attributes": [
+        "round",
+        "near doorway"
+      ],
+      "approx_location": "center-left",
+      "confidence": null,
+      "bbox_2d": null,
+      "bbox_3d": null,
+      "source": "manual"
+    }
+  ],
+  "landmarks": [
+    {
+      "label": "glass-block entrance",
+      "description": "distinct translucent glass-block doorway structure",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    },
+    {
+      "label": "recessed doorway",
+      "description": "dark door inside the glass-block entrance",
+      "approx_location": "center",
+      "source": "manual",
+      "kind": "landmark"
+    }
+  ],
+  "free_text_notes": "Useful for queries about entrance, glass blocks, doorway, and facade.",
+  "warnings": [
+    "Manual annotation from uploaded RGB image; not independent ground truth.",
+    "bbox_2d and bbox_3d are not annotated."
+  ]
+}

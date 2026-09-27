@@ -1,0 +1,247 @@
+{
+  "schema_version": "semanticsplat.instruction_agent_trace.v1",
+  "created_at": "2026-09-02T18:57:14.657183+00:00",
+  "query_id": "qv2_120",
+  "scene_id": "outdoor-street",
+  "query": "Find open sea water",
+  "method": "graph_instruction",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "model_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "calls": [
+    {
+      "phase": "hierarchy_traversal",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find open sea water\nCandidate C0: courtyard stairs and service facade Courtyard, stair entrance, service wall, emergency doors, and basement-window side views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C1: covered passage and graffiti wall Covered passage, graffiti wall, underpass, alley, red wall side, and bright opening views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C2: facade entrances and glass-block wall Glass-block entrance, numbered entrance, facade details, utility panels, and service entry views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C3: red facade and side alley Red facade, side alley, barred doorway/window, and distant opening views.\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C4: street walkway and roadway Street walkway, cobblestone ground, roadway, sidewalk, and street-corner views.\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C0: courtyard stairs and service facade Courtyard, stair entrance, service wall, emergency doors, and basement-window side views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C1: covered passage and graffiti wall Covered passage, graffiti wall, underpass, alley, red wall side, and bright opening views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C2: facade entrances and glass-block wall Glass-block entrance, numbered entrance, facade details, utility panels, and service entry views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C3: red facade and side alley Red facade, side alley, barred doorway/window, and distant opening views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C4: street walkway and roadway Street walkway, cobblestone ground, roadway, sidewalk, and street-corner views.\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C4,C1",
+      "candidate_scores": [
+        {
+          "alias": "C4",
+          "candidate_id": "manual_zone_outdoor_street_walkway_road",
+          "relevance_probability": 6.003e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "manual_zone_outdoor_street_covered_passage_graffiti",
+          "relevance_probability": 4.499e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "manual_zone_outdoor_street_courtyard_stair_service",
+          "relevance_probability": 1.293e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "manual_zone_outdoor_street_facade_entrance_glassblock",
+          "relevance_probability": 8.68e-06,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C3",
+          "candidate_id": "manual_zone_outdoor_street_red_facade_alley",
+          "relevance_probability": 8.56e-06,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "manual_zone_outdoor_street_courtyard_stair_service",
+        "C1": "manual_zone_outdoor_street_covered_passage_graffiti",
+        "C2": "manual_zone_outdoor_street_facade_entrance_glassblock",
+        "C3": "manual_zone_outdoor_street_red_facade_alley",
+        "C4": "manual_zone_outdoor_street_walkway_road"
+      },
+      "ranked_ids": [
+        "manual_zone_outdoor_street_walkway_road",
+        "manual_zone_outdoor_street_covered_passage_graffiti"
+      ],
+      "input_tokens": 365,
+      "output_tokens": 5,
+      "total_tokens": 370,
+      "latency_ms": 4302.9437,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    },
+    {
+      "phase": "view_grounding",
+      "system_prompt": "Judge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.",
+      "user_prompts": [
+        "Query: Find open sea water\nCandidate C0: v003: Covered service passage or wall corner with graffiti, red-and-blue traffic signs, tiled walls, and a paved open area.; graffiti wall area; covered passage; open paved area; graffiti; traffic signs; tiled wall; overhead structure; paved ground; glass-block or grid wall; graffiti w\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C1: v004: Blurred covered passage leading out to a red brick building or courtyard, with tiled walls and a bright outdoor opening.; covered passage; bright courtyard opening; brick building view; covered walkway; tiled wall; bright outdoor opening; red brick building; paved floor; bright p\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C2: v010: Building corner with a rounded metal facade, red and yellow wall section, checkerboard pattern, windows, and cobblestone pavement.; rounded facade corner; red-yellow facade section; street walkway; rounded metal facade; red wall section; yellow and blue checker pattern; windows; \nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C3: v011: Outdoor service corner with a beige building wall, cobblestone ground, a small recessed door or utility panel, and grass growing along the base.; service corner; cobblestone ground; wall base vegetation; small utility door or panel; beige stone wall; cobblestone pavement; grass a\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C4: v012: Narrow alley between a red building wall and a brick or stone wall, with windows at the far end and cobblestone ground.; narrow alley; red wall side; brick wall side; red building wall; brick or stone wall; narrow cobblestone path; far windows; small wall fixtures; drain or groun\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C5: v013: Covered outdoor underpass or building entrance passage with stone columns, tiled walls, ceiling lights, and cobblestone ground.; covered underpass; stone column area; interior passage opening; stone columns; covered ceiling; ceiling lights; cobblestone ground; tiled walls; red wa\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C6: v014: Street-side building corner with a red facade, sidewalk, metal handrail, and view toward another building across the street.; street corner; red facade side; street view; red building facade; sidewalk or pavement; metal handrail; neighboring building; window openings; street curb\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C7: v015: Blurry outdoor street view with trees, parked cars, roadway, and surrounding buildings.; street roadway; tree-lined side; building side; parked car; trees; roadway; building facades; sidewalk or curb; white parked car; tree-lined street\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C8: v016: Very blurred covered passage or building interior-exterior transition with dark walls, a light doorway, and red building wall outside.; blurred passage; light opening; red exterior side; dark passage walls; bright doorway opening; red exterior wall; floor surface; ceiling light o\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C9: v017: Narrow outdoor alley beside a beige building wall, with cobblestone path and a distant opening toward another building.; narrow side alley; beige wall side; distant opening; beige building wall; cobblestone path; wall windows; distant building; red wall edge; drain or ground seam\nRelevant? Answer exactly Yes or No.",
+        "Query: Find open sea water\nCandidate C10: v018: Red building facade with barred windows or doors, blue vertical pipes, and cobblestone pavement.; red facade area; barred doorway/window area; paved sidewalk; red building facade; barred windows or doors; blue vertical pipes; small upper window; cobblestone pavement; yellow-black\nRelevant? Answer exactly Yes or No."
+      ],
+      "rendered_prompts": [
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C0: v003: Covered service passage or wall corner with graffiti, red-and-blue traffic signs, tiled walls, and a paved open area.; graffiti wall area; covered passage; open paved area; graffiti; traffic signs; tiled wall; overhead structure; paved ground; glass-block or grid wall; graffiti w\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C1: v004: Blurred covered passage leading out to a red brick building or courtyard, with tiled walls and a bright outdoor opening.; covered passage; bright courtyard opening; brick building view; covered walkway; tiled wall; bright outdoor opening; red brick building; paved floor; bright p\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C2: v010: Building corner with a rounded metal facade, red and yellow wall section, checkerboard pattern, windows, and cobblestone pavement.; rounded facade corner; red-yellow facade section; street walkway; rounded metal facade; red wall section; yellow and blue checker pattern; windows; \nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C3: v011: Outdoor service corner with a beige building wall, cobblestone ground, a small recessed door or utility panel, and grass growing along the base.; service corner; cobblestone ground; wall base vegetation; small utility door or panel; beige stone wall; cobblestone pavement; grass a\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C4: v012: Narrow alley between a red building wall and a brick or stone wall, with windows at the far end and cobblestone ground.; narrow alley; red wall side; brick wall side; red building wall; brick or stone wall; narrow cobblestone path; far windows; small wall fixtures; drain or groun\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C5: v013: Covered outdoor underpass or building entrance passage with stone columns, tiled walls, ceiling lights, and cobblestone ground.; covered underpass; stone column area; interior passage opening; stone columns; covered ceiling; ceiling lights; cobblestone ground; tiled walls; red wa\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C6: v014: Street-side building corner with a red facade, sidewalk, metal handrail, and view toward another building across the street.; street corner; red facade side; street view; red building facade; sidewalk or pavement; metal handrail; neighboring building; window openings; street curb\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C7: v015: Blurry outdoor street view with trees, parked cars, roadway, and surrounding buildings.; street roadway; tree-lined side; building side; parked car; trees; roadway; building facades; sidewalk or curb; white parked car; tree-lined street\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C8: v016: Very blurred covered passage or building interior-exterior transition with dark walls, a light doorway, and red building wall outside.; blurred passage; light opening; red exterior side; dark passage walls; bright doorway opening; red exterior wall; floor surface; ceiling light o\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C9: v017: Narrow outdoor alley beside a beige building wall, with cobblestone path and a distant opening toward another building.; narrow side alley; beige wall side; distant opening; beige building wall; cobblestone path; wall windows; distant building; red wall edge; drain or ground seam\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n",
+        "<|im_start|>system\nJudge scene-query relevance using semantic meaning and affordances. Answer exactly Yes or No.<|im_end|>\n<|im_start|>user\nQuery: Find open sea water\nCandidate C10: v018: Red building facade with barred windows or doors, blue vertical pipes, and cobblestone pavement.; red facade area; barred doorway/window area; paved sidewalk; red building facade; barred windows or doors; blue vertical pipes; small upper window; cobblestone pavement; yellow-black\nRelevant? Answer exactly Yes or No.<|im_end|>\n<|im_start|>assistant\n"
+      ],
+      "raw_response": "C3,C0,C10",
+      "candidate_scores": [
+        {
+          "alias": "C3",
+          "candidate_id": "v011",
+          "relevance_probability": 0.00032896,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C0",
+          "candidate_id": "v003",
+          "relevance_probability": 0.00025388,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C10",
+          "candidate_id": "v018",
+          "relevance_probability": 7.478e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C5",
+          "candidate_id": "v013",
+          "relevance_probability": 7.258e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C4",
+          "candidate_id": "v012",
+          "relevance_probability": 6.664e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C9",
+          "candidate_id": "v017",
+          "relevance_probability": 5.621e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C7",
+          "candidate_id": "v015",
+          "relevance_probability": 4.475e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C6",
+          "candidate_id": "v014",
+          "relevance_probability": 4.442e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C1",
+          "candidate_id": "v004",
+          "relevance_probability": 4.435e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C2",
+          "candidate_id": "v010",
+          "relevance_probability": 3.814e-05,
+          "generated_decision": "No"
+        },
+        {
+          "alias": "C8",
+          "candidate_id": "v016",
+          "relevance_probability": 1.941e-05,
+          "generated_decision": "No"
+        }
+      ],
+      "alias_map": {
+        "C0": "v003",
+        "C1": "v004",
+        "C2": "v010",
+        "C3": "v011",
+        "C4": "v012",
+        "C5": "v013",
+        "C6": "v014",
+        "C7": "v015",
+        "C8": "v016",
+        "C9": "v017",
+        "C10": "v018"
+      },
+      "ranked_ids": [
+        "v011",
+        "v003",
+        "v018"
+      ],
+      "input_tokens": 1226,
+      "output_tokens": 11,
+      "total_tokens": 1237,
+      "latency_ms": 11328.7629,
+      "token_method": "transformers_native:Qwen/Qwen2.5-1.5B-Instruct",
+      "valid_response": true,
+      "scoring_method": "instruction_yes_no_next_token_probability"
+    }
+  ],
+  "result": {
+    "ranked_view_ids": [
+      "v011",
+      "v003",
+      "v018"
+    ],
+    "selected_view_id": "v011",
+    "found": true,
+    "selected_zone_ids": [
+      "manual_zone_outdoor_street_walkway_road",
+      "manual_zone_outdoor_street_covered_passage_graffiti"
+    ],
+    "candidate_view_ids": [
+      "v003",
+      "v004",
+      "v010",
+      "v011",
+      "v012",
+      "v013",
+      "v014",
+      "v015",
+      "v016",
+      "v017",
+      "v018"
+    ],
+    "views_checked": 11,
+    "response_valid": true,
+    "accounting": {
+      "model_call_count": 2,
+      "input_tokens": 1591,
+      "output_tokens": 16,
+      "total_tokens": 1607,
+      "latency_ms": 15631.7066
+    },
+    "quality": {
+      "eligible": false,
+      "expected_view_ids": [],
+      "hit_at_1": null,
+      "hit_at_3": null,
+      "reciprocal_rank": null
+    }
+  }
+}

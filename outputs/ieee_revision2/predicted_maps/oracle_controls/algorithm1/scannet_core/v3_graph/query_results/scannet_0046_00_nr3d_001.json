@@ -1,0 +1,224 @@
+{
+  "schema_version": "semanticsplat.query_result.v1",
+  "run_id": "scannet_bbq_grounding_official_gt_v2_v3_graph",
+  "method": "semantic_splat_grounding",
+  "mode": "stub",
+  "availability_status": "available",
+  "availability_reason": null,
+  "scene_id": "scannet_0046_00",
+  "query_id": "scannet_0046_00_nr3d_001",
+  "query": "Find the backpack that is near the foot of the bed and in front of the tall cabinet.",
+  "query_type": "relational",
+  "structured_plan": {
+    "target": "backpack near foot of bed and",
+    "relation": "front",
+    "anchor": "tall cabinet",
+    "anchor_secondary": null
+  },
+  "visited_nodes": [
+    "root",
+    "object_v004_011_backpack"
+  ],
+  "traversal_path": [
+    "root",
+    "object_v004_011_backpack"
+  ],
+  "selected_views": [
+    "v004"
+  ],
+  "checked_node_ids": [
+    "object_v002_002_bed",
+    "object_v002_022_backpack",
+    "object_v004_011_backpack",
+    "object_v004_013_backpack",
+    "root"
+  ],
+  "checked_view_ids": [
+    "v002",
+    "v004"
+  ],
+  "checked_object_ids": [
+    "3",
+    "50",
+    "18",
+    "52"
+  ],
+  "search_variant": "v3_graph",
+  "fallback_used": false,
+  "fallback_reason": null,
+  "result": {
+    "found": true,
+    "matched_object": "backpack",
+    "selected_object_id": "18",
+    "ranked_object_ids": [
+      "18",
+      "3",
+      "50",
+      "52"
+    ],
+    "ranked_candidates": [
+      {
+        "rank": 1,
+        "object_id": "18",
+        "label": "backpack",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 2,
+        "object_id": "3",
+        "label": "bed",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 3,
+        "object_id": "50",
+        "label": "backpack",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      },
+      {
+        "rank": 4,
+        "object_id": "52",
+        "label": "backpack",
+        "score": 0.25,
+        "relation_confidence": 0.0,
+        "relation_applied": false
+      }
+    ],
+    "selected_node_id": "object_v004_011_backpack",
+    "selected_view_id": "v004",
+    "bbox_2d": null,
+    "bbox_3d": {
+      "center": [
+        -0.534086,
+        2.056117,
+        0.165508
+      ],
+      "size": [
+        0.440535,
+        0.544184,
+        0.385934
+      ],
+      "label": "backpack",
+      "object_id": "18",
+      "coordinate_frame": "scannet_axis_aligned_mesh"
+    },
+    "bbox_availability_status": "available",
+    "bbox_unavailable_reason": null,
+    "camera_pose": null,
+    "confidence": 0.25,
+    "explanation": "v3_graph selected object 18.",
+    "relation_satisfied": false,
+    "relation_audit": {
+      "evaluated_candidate_count": 4,
+      "applied_candidate_count": 0,
+      "ranking_changed": false,
+      "candidate_evidence": [
+        {
+          "object_id": "18",
+          "label": "backpack",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 1,
+          "post_relation_rank": 1
+        },
+        {
+          "object_id": "3",
+          "label": "bed",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 2,
+          "post_relation_rank": 2
+        },
+        {
+          "object_id": "50",
+          "label": "backpack",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 3,
+          "post_relation_rank": 3
+        },
+        {
+          "object_id": "52",
+          "label": "backpack",
+          "relation_score": 0.0,
+          "relation_confidence": 0.0,
+          "relation_applied": false,
+          "relation_source": "unresolved",
+          "pre_relation_rank": 4,
+          "post_relation_rank": 4
+        }
+      ]
+    },
+    "search_score": 0.25,
+    "score_details": {
+      "exact_label": false,
+      "label_overlap": 0.333333,
+      "text_overlap": 0.333333,
+      "synonym_affordance_overlap": 0.0,
+      "affordance_keys": [],
+      "lexical_score": 0.25,
+      "relation": "front",
+      "anchor": "tall cabinet",
+      "anchor_secondary": null,
+      "relation_score": 0.0,
+      "relation_source": "unresolved",
+      "relation_confidence": 0.0,
+      "relation_applied": false,
+      "relation_score_margin_eligible": true,
+      "relation_evidence": [],
+      "anchor_evidence": {
+        "status": "rejected",
+        "reason": "low_anchor_confidence",
+        "top_score": 0.0,
+        "second_score": 0.0,
+        "score_margin": 0.0,
+        "candidate_count": 0,
+        "confidence": 0.0
+      },
+      "secondary_anchor_evidence": null,
+      "pre_relation_score": 0.25,
+      "relation_changed_ranking": false,
+      "pre_relation_rank": 1,
+      "post_relation_rank": 1,
+      "bbox_quality": {
+        "bbox_3d_valid": true,
+        "bbox_3d_reason": "valid",
+        "bbox_2d_valid": false,
+        "bbox_2d_reason": "missing_bbox_2d"
+      }
+    }
+  },
+  "metrics_log": {
+    "runtime_seconds": 0.002197208000000117,
+    "stage_runtime_seconds": {
+      "answer_query": 0.002197208000000117
+    },
+    "token_usage": null,
+    "model_call_count": 0,
+    "cache_hits": 0,
+    "retry_count": 0,
+    "failure_count": 0,
+    "visited_node_count": 2,
+    "checked_node_count": 5,
+    "checked_view_count": 2,
+    "checked_object_count": 4,
+    "context_size_chars": 726,
+    "prompt_size_chars": 810,
+    "estimated_input_tokens": 202,
+    "estimated_token_method": "chars_div_4",
+    "construction_cost": null
+  },
+  "warnings": []
+}
