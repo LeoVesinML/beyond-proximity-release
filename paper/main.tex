@@ -42,9 +42,6 @@ A Controlled Study of Hierarchical Context Reduction}
 {Kuznetsov \headeretal: How Much of a 3D Scene Should a Language Model Read?}
 \corresp{Corresponding author: Aleksandr Medvedev
 (e-mail: medvedguk@gmail.com).}
-\tfootnote{ORCID: Aleksandr Medvedev, 0009-0008-9941-4428; Leo Vesin,
-0009-0003-9418-5076; Telman Nuruzov, 0009-0003-1615-3204; Nikita Shankin,
-0009-0009-0783-4132.}
 
 \begin{abstract}
 Language interfaces to digital twins and robot maps increasingly hand the final
@@ -516,9 +513,9 @@ listed in Section~\ref{sec:repro}.
 \subsection{Internal benchmark}
 The internal benchmark is built from five 3D Gaussian splatting
 reconstructions~\cite{kerbl20233dgs}: a conference hall, a museum, a theater, an
-outdoor street, and an aerial scene around an island (Fig.~\ref{fig:scenes}). The
-reconstructions were obtained as SuperSplat exports; their original capture
-provenance is not recorded. An operator placed 97 camera poses interactively in
+outdoor street, and an aerial scene around an island (Fig.~\ref{fig:scenes}). The reconstructions are public scenes from the SuperSplat platform
+(\url{https://superspl.at}); scene titles, authors, and links are listed in the
+release. An operator placed 97 camera poses interactively in
 a browser viewer, and an RGB image and a depth map were rendered from the
 reconstruction at each pose, so depth is renderer-derived rather than measured by
 a sensor, and rendering artifacts of the reconstructions are part of the input. The authors wrote 150 queries covering object
@@ -1103,9 +1100,12 @@ all views are renders of existing 3D Gaussian splatting reconstructions. We
 inspected every released view: none shows an identifiable person, and the only
 vehicle, in one street view, has no legible license plate. Some views show
 framed photographs and exhibition panels that are part of the reconstructed
-interiors. Because the provenance of the reconstructions is not recorded,
-neither the reconstructions nor the rendered views are redistributed; the
-released records, poses, and results do not contain image content.
+interiors. The reconstructions were published by their authors on the SuperSplat
+platform, whose terms of use allow others to use, reproduce, and create derivative
+works from publicly posted content with attribution to its authors; we credit
+each scene's author in the release. We do not redistribute the reconstructions
+or the rendered views; the released records, poses, and results contain no image
+content.
 
 % =========================================================================
 \section{Conclusion}

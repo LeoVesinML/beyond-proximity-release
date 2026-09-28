@@ -28,6 +28,18 @@ cd scripts && python3 -B export_ieee_revision2_figures.py --out ../paper/figures
 
 ## Not included
 
-- **Rendered RGB-D views of the five internal scenes.** They are renders of 3D Gaussian splatting reconstructions whose provenance is not recorded, so neither the reconstructions nor the renders are redistributed. Experiments that read images (the raw RGB-D constructor and the CLIP scorer) therefore cannot be rerun from this release alone. Their saved outputs are included.
+- **Rendered RGB-D views of the five internal scenes.** They are renders of public 3D Gaussian splatting scenes from SuperSplat (see Scene credits). We do not redistribute the reconstructions or the renders. Experiments that read images (the raw RGB-D constructor and the CLIP scorer) therefore cannot be rerun from this release alone. Their saved outputs are included.
 - **ScanNet, Replica, ReferIt3D (Nr3D/Sr3D+).** Obtain these from their providers under their licenses. Only derived records and identifiers are included.
 - **ConceptGraphs predicted maps and model weights.**
+
+## Scene credits
+
+The five internal scenes are public 3D Gaussian splatting reconstructions published on [SuperSplat](https://superspl.at) by their authors:
+
+| Scene in the paper | SuperSplat scene | Author |
+|---|---|---|
+| Outdoor drone (island) | [Alcatraz Island](https://superspl.at/scene/6fd4ec6c) | vwoo |
+| Museum | [Castle Reichenstein - Museum](https://superspl.at/scene/c0da7173) | schindelar3d |
+| Conference hall | to be added | |
+| Theater | to be added | |
+| Outdoor street | to be added | |
